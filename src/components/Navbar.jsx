@@ -34,8 +34,8 @@ export default function Navbar() {
 
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 1000, width: '100%' }}>
-      {/* Top Bar (Solid Navy) */}
-      <div style={{
+      {/* Top Bar (Solid Navy) - Visible on Desktop/Tablet, Hidden on Mobile for clean Fullscreen feel */}
+      <div className="topbar" style={{
         background: 'var(--navy-950)',
         borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
         color: 'var(--slate-300)',
@@ -98,18 +98,18 @@ export default function Navbar() {
       <nav style={{
         background: 'var(--navy-900)',
         borderBottom: isScrolled ? '1px solid var(--gold-500)' : '1px solid rgba(255, 255, 255, 0.1)',
-        padding: isScrolled ? '10px 0' : '14px 0',
+        padding: isScrolled ? '8px 0' : '11px 0',
         transition: 'padding 0.2s ease'
       }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
           
-          {/* Brand Logo */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+          {/* Brand Logo & Name (Flexible, never overcrowded) */}
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', minWidth: 0, flexShrink: 1 }}>
             <div style={{
-              width: '38px',
-              height: '38px',
+              width: '34px',
+              height: '34px',
               background: 'var(--navy-950)',
-              border: '2px solid var(--gold-500)',
+              border: '1.5px solid var(--gold-500)',
               borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
@@ -118,7 +118,7 @@ export default function Navbar() {
             }}>
               <span style={{
                 fontFamily: 'var(--font-heading)',
-                fontSize: '1.15rem',
+                fontSize: '1rem',
                 fontWeight: 800,
                 color: 'var(--gold-400)',
                 letterSpacing: '0.04em'
@@ -126,27 +126,30 @@ export default function Navbar() {
                 SMB
               </span>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-                <span style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.2rem',
-                  fontWeight: 800,
-                  color: 'var(--white)',
-                  letterSpacing: '0.02em',
-                  lineHeight: 1.1
-                }}>
-                  PT. SMB
-                </span>
-              </div>
+            <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
               <span style={{
-                fontSize: '0.66rem',
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(0.98rem, 2.4vw, 1.18rem)',
+                fontWeight: 800,
+                color: 'var(--white)',
+                letterSpacing: '0.02em',
+                lineHeight: 1.15,
+                whiteSpace: 'nowrap'
+              }}>
+                PT. SMB
+              </span>
+              <span className="navbar-subtitle" style={{
+                fontSize: '0.62rem',
                 color: 'var(--slate-300)',
                 letterSpacing: '0.03em',
                 textTransform: 'uppercase',
-                fontWeight: 500
+                fontWeight: 500,
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                maxWidth: '240px'
               }}>
-                One Stop Consultant & Service Management
+                One Stop Consultant & Service
               </span>
             </div>
           </Link>
@@ -172,7 +175,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Action CTA */}
+          {/* Action CTA Desktop */}
           <div className="desktop-cta" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <Link
               to="/kontak"
@@ -183,42 +186,84 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="mobile-toggle"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            style={{
-              display: 'none',
-              padding: '7px 10px',
-              color: 'var(--gold-400)',
-              background: 'rgba(255,255,255,0.06)',
-              borderRadius: '6px',
-              border: '1px solid rgba(212, 175, 55, 0.3)'
-            }}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          {/* Mobile Right Controls: Quick WA + Hamburger Button */}
+          <div className="mobile-controls" style={{ display: 'none', alignItems: 'center', gap: '8px' }}>
+            <a 
+              href={`https://wa.me/${companyData.info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20ingin%20berkonsultasi.`} 
+              target="_blank" 
+              rel="noreferrer"
+              className="mobile-wa-btn"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                padding: '5px 9px',
+                background: 'rgba(212, 175, 55, 0.12)',
+                border: '1px solid rgba(212, 175, 55, 0.4)',
+                borderRadius: '6px',
+                color: 'var(--gold-400)',
+                fontSize: '0.74rem',
+                fontWeight: 600
+              }}
+            >
+              <MessageCircle size={13} />
+              <span>WA</span>
+            </a>
+
+            <button
+              className="mobile-toggle"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              style={{
+                padding: '6px 9px',
+                color: 'var(--gold-400)',
+                background: 'rgba(255,255,255,0.06)',
+                borderRadius: '6px',
+                border: '1px solid rgba(212, 175, 55, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </nav>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Menu Drawer (Fullscreen Backdrop Style) */}
       {mobileMenuOpen && (
-        <div style={{
-          position: 'fixed',
-          top: '96px',
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'var(--navy-950)',
-          zIndex: 999,
-          padding: '20px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '12px',
-          borderTop: '1px solid rgba(212, 175, 55, 0.3)',
-          overflowY: 'auto'
-        }}>
+        <div className="mobile-drawer">
+          {/* Language & Contact Header in Drawer */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingBottom: '12px',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            marginBottom: '4px'
+          }}>
+            <div style={{ fontSize: '0.76rem', color: 'var(--gold-400)', fontWeight: 600 }}>
+              PT. SMB Navigation
+            </div>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.78rem', background: 'rgba(255,255,255,0.08)', padding: '2px 8px', borderRadius: '4px' }}>
+              <Globe size={12} color="var(--gold-400)" />
+              <button 
+                onClick={() => setLang('ID')} 
+                style={{ color: lang === 'ID' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'ID' ? 700 : 400, fontSize: '0.74rem' }}
+              >
+                ID
+              </button>
+              <span style={{ opacity: 0.4 }}>|</span>
+              <button 
+                onClick={() => setLang('EN')} 
+                style={{ color: lang === 'EN' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'EN' ? 700 : 400, fontSize: '0.74rem' }}
+              >
+                EN
+              </button>
+            </div>
+          </div>
+
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
@@ -243,7 +288,7 @@ export default function Navbar() {
             </NavLink>
           ))}
 
-          <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <Link
               to="/kontak"
               onClick={() => setMobileMenuOpen(false)}
@@ -261,21 +306,58 @@ export default function Navbar() {
               style={{ width: '100%' }}
             >
               <MessageCircle size={14} />
-              <span>WhatsApp Direct</span>
+              <span>WhatsApp Direct ({companyData.info.phone})</span>
             </a>
+          </div>
+
+          <div style={{
+            marginTop: 'auto',
+            paddingTop: '14px',
+            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+            fontSize: '0.72rem',
+            color: 'var(--slate-400)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '3px'
+          }}>
+            <div>📧 {companyData.info.email}</div>
+            <div>📞 {companyData.info.phone}</div>
           </div>
         </div>
       )}
 
       <style>{`
+        .mobile-drawer {
+          position: fixed;
+          top: 90px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(7, 19, 34, 0.98);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          z-index: 999;
+          padding: 20px 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          border-top: 1px solid rgba(212, 175, 55, 0.3);
+          overflow-y: auto;
+        }
+
         @media (max-width: 1024px) {
           .desktop-menu { display: none !important; }
           .desktop-cta { display: none !important; }
-          .mobile-toggle { display: block !important; }
+          .mobile-controls { display: flex !important; }
         }
+
+        @media (max-width: 768px) {
+          .navbar-subtitle { display: none !important; }
+        }
+
         @media (max-width: 640px) {
-          .topbar-hours { display: none !important; }
-          .topbar-email { display: none !important; }
+          .topbar { display: none !important; }
+          .mobile-drawer { top: 52px !important; }
         }
       `}</style>
     </header>

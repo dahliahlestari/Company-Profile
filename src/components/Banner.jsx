@@ -63,15 +63,15 @@ export default function Banner() {
       }} />
 
       {/* Banner Content Container (Expansive Fullscreen Width) */}
-      <div className="container" style={{
+      <div className="container banner-inner-container" style={{
         position: 'relative',
         zIndex: 2,
-        paddingTop: 'clamp(56px, 7vw, 96px)',
-        paddingBottom: 'clamp(56px, 7vw, 96px)',
+        paddingTop: 'clamp(48px, 6vw, 96px)',
+        paddingBottom: 'clamp(48px, 6vw, 96px)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: 'clamp(440px, 58vh, 560px)'
+        minHeight: 'clamp(460px, 60vh, 580px)'
       }}>
         <div style={{ maxWidth: '820px' }}>
           
@@ -213,7 +213,7 @@ export default function Banner() {
         borderTop: '1px solid rgba(212, 175, 55, 0.25)',
         padding: '11px 0'
       }}>
-        <div className="container" style={{
+        <div className="container highlights-strip-grid" style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -240,6 +240,29 @@ export default function Banner() {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .banner-section {
+            min-height: calc(100svh - 52px) !important;
+            display: flex !important;
+            flex-direction: column !important;
+          }
+          .banner-inner-container {
+            flex: 1 !important;
+            min-height: calc(100svh - 110px) !important;
+            justify-content: space-between !important;
+            padding-top: 24px !important;
+            padding-bottom: 20px !important;
+          }
+          .highlights-strip-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+            font-size: 0.74rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
