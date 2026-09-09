@@ -38,9 +38,10 @@ export default function Navbar() {
       top: 0, 
       zIndex: 1000, 
       width: '100%',
-      background: 'rgba(7, 19, 34, 0.96)',
+      background: 'rgba(7, 19, 34, 0.98)',
       backdropFilter: 'saturate(180%) blur(20px)',
-      WebkitBackdropFilter: 'saturate(180%) blur(20px)'
+      WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+      paddingTop: 'env(safe-area-inset-top, 0px)'
     }}>
       {/* Top Bar (Solid Navy) - Visible on Desktop/Tablet, Hidden on Mobile */}
       <div className="topbar" style={{
@@ -109,18 +110,19 @@ export default function Navbar() {
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
           
-          {/* Brand Logo & Name (Flexible, never overcrowded) */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', minWidth: 0, flexShrink: 1 }}>
+          {/* Brand Logo & Name (SEMBADA Branding) */}
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '9px', textDecoration: 'none', minWidth: 0, flexShrink: 1 }}>
             <div style={{
-              width: '34px',
-              height: '34px',
+              width: '36px',
+              height: '36px',
               background: 'var(--navy-950)',
               border: '1.5px solid var(--gold-500)',
-              borderRadius: '6px',
+              borderRadius: '7px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              flexShrink: 0
+              flexShrink: 0,
+              boxShadow: '0 2px 8px rgba(229, 168, 59, 0.25)'
             }}>
               <span style={{
                 fontFamily: 'var(--font-heading)',
@@ -135,14 +137,15 @@ export default function Navbar() {
             <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
               <span style={{
                 fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(0.98rem, 2.4vw, 1.18rem)',
+                fontSize: 'clamp(1.05rem, 2.5vw, 1.25rem)',
                 fontWeight: 800,
                 color: 'var(--white)',
-                letterSpacing: '0.02em',
-                lineHeight: 1.15,
-                whiteSpace: 'nowrap'
+                letterSpacing: '0.04em',
+                lineHeight: 1.12,
+                whiteSpace: 'nowrap',
+                textTransform: 'uppercase'
               }}>
-                PT. SMB
+                SEMBADA
               </span>
               <span className="navbar-subtitle" style={{
                 fontSize: '0.62rem',
@@ -155,7 +158,7 @@ export default function Navbar() {
                 textOverflow: 'ellipsis',
                 maxWidth: '240px'
               }}>
-                One Stop Consultant & Service
+                PT. Sembada Makmur Bersama
               </span>
             </div>
           </Link>
@@ -194,9 +197,9 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Right Controls: Quick WA Pill + Apple Circle Toggle */}
-          <div className="mobile-controls" style={{ display: 'none', alignItems: 'center', gap: '8px' }}>
+          <div className="mobile-controls">
             <a 
-              href={`https://wa.me/${companyData.info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20ingin%20berkonsultasi.`} 
+              href={`https://wa.me/${companyData.info.whatsapp}?text=Halo%20Sembada,%20saya%20ingin%20berkonsultasi.`} 
               target="_blank" 
               rel="noreferrer"
               className="mobile-wa-btn"
@@ -205,12 +208,12 @@ export default function Navbar() {
                 alignItems: 'center',
                 gap: '5px',
                 padding: '6px 12px',
-                background: 'rgba(229, 168, 59, 0.12)',
+                background: 'rgba(229, 168, 59, 0.15)',
                 border: '1px solid rgba(229, 168, 59, 0.4)',
                 borderRadius: 'var(--radius-pill)',
                 color: 'var(--gold-400)',
-                fontSize: '0.76rem',
-                fontWeight: 600
+                fontSize: '0.78rem',
+                fontWeight: 650
               }}
             >
               <MessageCircle size={13} />
@@ -221,12 +224,12 @@ export default function Navbar() {
               className="mobile-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{
-                width: '36px',
-                height: '36px',
+                width: '38px',
+                height: '38px',
                 borderRadius: '50%',
-                color: 'var(--white)',
+                color: 'var(--gold-400)',
                 background: 'rgba(255, 255, 255, 0.08)',
-                border: '1px solid rgba(255, 255, 255, 0.15)',
+                border: '1px solid rgba(229, 168, 59, 0.35)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -234,7 +237,7 @@ export default function Navbar() {
               }}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+              {mobileMenuOpen ? <X size={20} color="var(--white)" /> : <Menu size={20} color="var(--gold-400)" />}
             </button>
           </div>
         </div>
@@ -252,8 +255,8 @@ export default function Navbar() {
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             marginBottom: '6px'
           }}>
-            <div style={{ fontSize: '0.74rem', color: 'var(--gold-400)', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-              PT. SMB Navigation
+            <div style={{ fontSize: '0.8rem', color: 'var(--gold-400)', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+              SEMBADA Navigation
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.78rem', background: 'rgba(255, 255, 255, 0.08)', padding: '3px 10px', borderRadius: 'var(--radius-pill)' }}>
               <Globe size={12} color="var(--gold-400)" />
@@ -345,9 +348,15 @@ export default function Navbar() {
       )}
 
       <style>{`
+        .mobile-controls {
+          display: none;
+          align-items: center;
+          gap: 8px;
+        }
+
         .mobile-drawer {
           position: fixed;
-          top: 86px;
+          top: calc(env(safe-area-inset-top, 0px) + 88px);
           left: 0;
           right: 0;
           bottom: 0;
@@ -373,7 +382,7 @@ export default function Navbar() {
 
         @media (max-width: 640px) {
           .topbar { display: none !important; }
-          .mobile-drawer { top: 56px !important; }
+          .mobile-drawer { top: calc(env(safe-area-inset-top, 0px) + 58px) !important; }
         }
       `}</style>
     </header>

@@ -10,13 +10,13 @@
 export const companyData = {
   // 1. Informasi Umum Perusahaan (Berdasarkan Flyer Resmi PT. SMB)
   info: {
-    name: "PT. SMB",
-    brandName: "PT. SMB",
-    legalName: "PT. SMB",
+    name: "SEMBADA",
+    brandName: "SEMBADA",
+    legalName: "PT. Sembada Makmur Bersama",
     tagline: "One Stop Consultant and Service Management",
     subTagline: "Partner Strategis Untuk Kesuksesan Bisnis Anda",
     slogan: "Partner Strategis Untuk Kesuksesan Bisnis Anda",
-    aboutBrief: "PT. SMB adalah perusahaan One Stop Consultant and Service Management terpercaya di Indonesia. Kami menghadirkan solusi profesional dan terintegrasi meliputi Pendampingan SPPG, IT Solutions, Pest Control, dan Risk Insurance untuk menjamin efisiensi biaya, waktu, dan hasil optimal bagi bisnis Anda.",
+    aboutBrief: "SEMBADA (PT. Sembada Makmur Bersama) adalah perusahaan One Stop Consultant and Service Management terpercaya di Indonesia. Kami menghadirkan solusi profesional dan terintegrasi meliputi Pendampingan SPPG, IT Solutions, Pest Control, dan Risk Insurance untuk menjamin efisiensi biaya, waktu, dan hasil optimal bagi bisnis Anda.",
     establishedYear: "2012",
     experienceYears: "12+",
     phone: "+62 812-9972-3970",
