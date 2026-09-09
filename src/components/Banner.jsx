@@ -84,37 +84,38 @@ export default function Banner() {
             fontFamily: 'var(--font-heading)',
             fontSize: '0.78rem',
             fontWeight: 600,
-            letterSpacing: '0.08em',
+            letterSpacing: '0.06em',
             textTransform: 'uppercase',
-            marginBottom: '10px'
+            marginBottom: '12px'
           }}>
             <span>{current.badge}</span>
           </div>
 
           {/* Title (Apple Standard Scale) */}
           <h2 style={{
-            fontSize: 'clamp(1.3rem, 2.4vw, 2.25rem)',
+            fontSize: 'clamp(1.65rem, 3vw, 2.6rem)',
             color: 'var(--white)',
-            lineHeight: 1.22,
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            marginBottom: '12px'
+            lineHeight: 1.14,
+            fontWeight: 650,
+            letterSpacing: '-0.032em',
+            marginBottom: '14px'
           }}>
             {current.title}
           </h2>
 
           {/* Subtitle */}
           <p style={{
-            fontSize: 'clamp(0.84rem, 1vw, 0.94rem)',
+            fontSize: 'clamp(0.92rem, 1.1vw, 1.04rem)',
             color: 'var(--slate-200)',
-            lineHeight: 1.55,
-            marginBottom: '22px',
+            lineHeight: 1.54,
+            letterSpacing: '-0.01em',
+            marginBottom: '26px',
             maxWidth: '680px'
           }}>
             {current.subtitle}
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons: Apple Pill */}
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
             <Link to={current.primaryLink} className="btn btn-gold btn-md">
               <span>{current.primaryBtn}</span>
@@ -132,9 +133,9 @@ export default function Banner() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginTop: 'clamp(32px, 3.5vw, 48px)',
-          paddingTop: '16px',
-          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+          marginTop: 'clamp(36px, 4vw, 52px)',
+          paddingTop: '18px',
+          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
           flexWrap: 'wrap',
           gap: '14px'
         }}>
@@ -146,39 +147,40 @@ export default function Banner() {
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
                   style={{
-                    width: currentSlide === idx ? '24px' : '8px',
-                    height: '5px',
-                    borderRadius: '3px',
-                    background: currentSlide === idx ? 'var(--gold-500)' : 'rgba(255, 255, 255, 0.25)',
+                    width: currentSlide === idx ? '28px' : '8px',
+                    height: '4px',
+                    borderRadius: 'var(--radius-pill)',
+                    background: currentSlide === idx ? 'var(--gold-500)' : 'rgba(255, 255, 255, 0.22)',
                     border: 'none',
                     cursor: 'pointer',
-                    transition: 'all 0.2s ease',
+                    transition: 'all 0.25s ease',
                     padding: 0
                   }}
                   aria-label={`Buka slide ${idx + 1}`}
                 />
               ))}
             </div>
-            <span style={{ fontSize: '0.8rem', color: 'var(--gold-400)', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>
+            <span style={{ fontSize: '0.8rem', color: 'var(--gold-400)', fontFamily: 'var(--font-heading)', fontWeight: 600, letterSpacing: '0.04em' }}>
               0{currentSlide + 1} / 0{banners.length}
             </span>
           </div>
 
-          {/* Prev / Next Arrows */}
-          <div style={{ display: 'flex', gap: '6px' }}>
+          {/* Prev / Next Arrows: Circular Apple Controls */}
+          <div style={{ display: 'flex', gap: '8px' }}>
             <button
               onClick={handlePrev}
               style={{
-                width: '34px',
-                height: '34px',
-                borderRadius: '6px',
+                width: '36px',
+                height: '36px',
+                borderRadius: '50%',
                 background: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
                 color: 'var(--white)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
               }}
               aria-label="Slide sebelumnya"
             >
@@ -187,16 +189,17 @@ export default function Banner() {
             <button
               onClick={handleNext}
               style={{
-                width: '34px',
-                height: '34px',
-                borderRadius: '6px',
+                width: '36px',
+                height: '36px',
+                borderRadius: '50%',
                 background: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
                 color: 'var(--white)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
               }}
               aria-label="Slide berikutnya"
             >

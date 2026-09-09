@@ -23,39 +23,38 @@ export default function Clients() {
           </p>
         </div>
 
-        {/* Clients Grid (Fluid Expansive Layout) */}
+        {/* Clients Grid (Apple Squircle Clean Layout) */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           gap: '16px',
-          marginBottom: 'clamp(48px, 6vw, 72px)'
+          marginBottom: 'clamp(52px, 6vw, 76px)'
         }}>
           {clients.map((client, idx) => (
             <div
               key={idx}
               className="card-white"
               style={{
-                padding: '18px 16px',
+                padding: '18px 18px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '14px',
                 background: 'var(--white)',
                 border: '1px solid var(--slate-200)',
-                borderRadius: 'var(--radius-md)'
+                borderRadius: 'var(--radius-card-sm)'
               }}
             >
               <div style={{
-                width: '40px',
-                height: '40px',
-                borderRadius: '8px',
+                width: '42px',
+                height: '42px',
+                borderRadius: '12px',
                 background: 'var(--navy-50)',
                 border: '1px solid var(--navy-100)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'var(--navy-800)',
-                fontWeight: 800,
-                fontSize: '1rem'
+                flexShrink: 0
               }}>
                 <Building size={18} color="var(--gold-700)" />
               </div>
@@ -63,20 +62,21 @@ export default function Clients() {
                 <div style={{
                   fontFamily: 'var(--font-heading)',
                   fontSize: '0.88rem',
-                  fontWeight: 700,
+                  fontWeight: 650,
                   color: 'var(--navy-900)',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
-                  textOverflow: 'ellipsis'
+                  textOverflow: 'ellipsis',
+                  letterSpacing: '-0.01em'
                 }}>
                   {client.name}
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '0.72rem', color: 'var(--slate-500)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '3px', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '0.74rem', color: 'var(--slate-apple-light)' }}>
                     {client.sector}
                   </span>
                   <span style={{
-                    fontSize: '0.72rem',
+                    fontSize: '0.74rem',
                     color: 'var(--gold-700)',
                     fontWeight: 600
                   }}>
@@ -88,24 +88,24 @@ export default function Clients() {
           ))}
         </div>
 
-        {/* Section: Testimonials (Flat Solid Navy) */}
+        {/* Section: Testimonials (Apple Squircle Solid Navy Card) */}
         <div style={{
           background: 'var(--navy-900)',
-          borderRadius: 'var(--radius-lg)',
-          padding: 'clamp(24px, 3.5vw, 48px)',
+          borderRadius: 'var(--radius-card)',
+          padding: 'clamp(32px, 4vw, 56px)',
           color: 'var(--white)',
           border: '1px solid rgba(229, 168, 59, 0.3)'
         }}>
           
-          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(20px, 3vw, 36px) auto' }}>
-            <div className="section-badge dark" style={{ marginBottom: '8px' }}>
+          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(24px, 3.5vw, 40px) auto' }}>
+            <div className="section-badge dark" style={{ marginBottom: '10px' }}>
               <Quote size={13} />
               <span>Testimoni Klien</span>
             </div>
-            <h3 style={{ fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--white)', marginBottom: '8px' }}>
+            <h3 style={{ fontSize: 'clamp(1.35rem, 2.2vw, 1.95rem)', color: 'var(--white)', marginBottom: '10px', letterSpacing: '-0.025em', fontWeight: 650 }}>
               Apa Kata <span className="text-gold">Mereka?</span>
             </h3>
-            <p style={{ color: 'var(--slate-300)', fontSize: '0.84rem' }}>
+            <p style={{ color: 'var(--slate-apple-dark)', fontSize: '0.88rem', lineHeight: 1.54 }}>
               Pengalaman langsung dari para pimpinan industri yang telah merasakan dampak positif dari kemitraan bersama PT. SMB.
             </p>
           </div>
@@ -113,16 +113,16 @@ export default function Clients() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '18px'
+            gap: '20px'
           }}>
             {testimonials.map((item) => (
               <div
                 key={item.id}
                 style={{
                   background: 'var(--navy-850)',
-                  border: '1px solid rgba(229, 168, 59, 0.25)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(18px, 2vw, 24px)',
+                  border: '1px solid rgba(229, 168, 59, 0.22)',
+                  borderRadius: 'var(--radius-card-sm)',
+                  padding: 'clamp(20px, 2.5vw, 28px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between'

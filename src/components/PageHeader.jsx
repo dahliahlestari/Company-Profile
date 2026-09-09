@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 export default function PageHeader({ badge, title, subtitle, breadcrumbCurrent }) {
   return (
     <div style={{
-      background: 'var(--navy-900)',
+      background: 'var(--navy-950)',
       color: 'var(--white)',
-      paddingTop: 'clamp(28px, 4vw, 56px)',
-      paddingBottom: 'clamp(28px, 4vw, 56px)',
-      borderBottom: '1px solid rgba(229, 168, 59, 0.25)'
+      paddingTop: 'clamp(36px, 5vw, 64px)',
+      paddingBottom: 'clamp(36px, 5vw, 64px)',
+      borderBottom: '1px solid rgba(229, 168, 59, 0.22)'
     }}>
       <div className="container">
         <div style={{
           display: 'flex',
           alignItems: 'center',
           gap: '8px',
-          marginBottom: '12px',
-          fontSize: '0.78rem',
+          marginBottom: '14px',
+          fontSize: '0.76rem',
           flexWrap: 'wrap'
         }}>
-          <Link to="/" style={{ color: 'var(--gold-400)', fontWeight: 700 }}>
+          <Link to="/" style={{ color: 'var(--gold-400)', fontWeight: 600, letterSpacing: '0.04em' }}>
             BERANDA
           </Link>
-          <span style={{ color: 'var(--slate-500)' }}>/</span>
+          <span style={{ color: 'var(--slate-apple-dark)' }}>/</span>
           <span style={{ color: 'var(--slate-300)', fontWeight: 500 }}>
             {breadcrumbCurrent ? breadcrumbCurrent.toUpperCase() : title.toUpperCase()}
           </span>
@@ -35,22 +35,22 @@ export default function PageHeader({ badge, title, subtitle, breadcrumbCurrent }
         )}
 
         <h1 style={{
-          fontSize: 'clamp(1.25rem, 2.1vw, 1.85rem)',
+          fontSize: 'clamp(1.6rem, 2.6vw, 2.35rem)',
           color: 'var(--white)',
-          fontWeight: 700,
-          letterSpacing: '-0.018em',
-          marginBottom: '8px',
-          lineHeight: 1.25
+          fontWeight: 650,
+          letterSpacing: '-0.028em',
+          marginBottom: '10px',
+          lineHeight: 1.16
         }}>
           {title}
         </h1>
 
         {subtitle && (
           <p style={{
-            fontSize: 'clamp(0.82rem, 0.95vw, 0.92rem)',
+            fontSize: 'clamp(0.9rem, 1.05vw, 1.02rem)',
             color: 'var(--slate-300)',
             maxWidth: '720px',
-            lineHeight: 1.55,
+            lineHeight: 1.54,
             margin: 0
           }}>
             {subtitle}

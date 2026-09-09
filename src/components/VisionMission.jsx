@@ -38,12 +38,12 @@ export default function VisionMission() {
           marginBottom: 'clamp(40px, 5vw, 60px)'
         }} className="vm-grid">
           
-          {/* Visi Card (Flat Solid Navy) */}
+          {/* Visi Card (Apple Squircle Navy Card) */}
           <div style={{
             background: 'var(--navy-900)',
             color: 'var(--white)',
-            borderRadius: 'var(--radius-lg)',
-            padding: 'clamp(22px, 3vw, 34px)',
+            borderRadius: 'var(--radius-card)',
+            padding: 'clamp(26px, 3.5vw, 40px)',
             border: '1px solid rgba(229, 168, 59, 0.35)',
             display: 'flex',
             flexDirection: 'column',
@@ -59,19 +59,20 @@ export default function VisionMission() {
                 color: 'var(--gold-400)',
                 fontSize: '0.74rem',
                 fontWeight: 600,
-                letterSpacing: '0.08em',
+                letterSpacing: '0.06em',
                 textTransform: 'uppercase',
-                marginBottom: '12px'
+                marginBottom: '14px'
               }}>
                 <Target size={14} />
                 <span>Visi Perusahaan</span>
               </div>
 
               <h3 style={{
-                fontSize: 'clamp(1.05rem, 1.4vw, 1.3rem)',
+                fontSize: 'clamp(1.15rem, 1.6vw, 1.45rem)',
                 color: 'var(--white)',
-                lineHeight: 1.45,
-                fontWeight: 700,
+                lineHeight: 1.42,
+                fontWeight: 650,
+                letterSpacing: '-0.02em',
                 fontFamily: 'var(--font-heading)'
               }}>
                 "{visionMission.vision}"
@@ -79,10 +80,10 @@ export default function VisionMission() {
             </div>
 
             <div style={{
-              marginTop: '20px',
-              paddingTop: '14px',
-              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-              fontSize: '0.8rem',
+              marginTop: '24px',
+              paddingTop: '16px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+              fontSize: '0.82rem',
               color: 'var(--gold-300)',
               fontWeight: 600,
               display: 'flex',
@@ -94,11 +95,11 @@ export default function VisionMission() {
             </div>
           </div>
 
-          {/* Misi Card (Flat Light Slate) */}
+          {/* Misi Card (Apple Squircle Slate Card) */}
           <div style={{
             background: 'var(--slate-50)',
-            borderRadius: 'var(--radius-lg)',
-            padding: 'clamp(20px, 3vw, 32px)',
+            borderRadius: 'var(--radius-card)',
+            padding: 'clamp(26px, 3.5vw, 40px)',
             border: '1px solid var(--slate-200)',
             display: 'flex',
             flexDirection: 'column',
@@ -113,33 +114,34 @@ export default function VisionMission() {
                 color: 'var(--navy-800)',
                 fontSize: '0.74rem',
                 fontWeight: 600,
-                letterSpacing: '0.08em',
+                letterSpacing: '0.06em',
                 textTransform: 'uppercase',
-                marginBottom: '14px'
+                marginBottom: '16px'
               }}>
                 <Compass size={14} />
                 <span>Misi Utama</span>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {visionMission.missions.map((misi, i) => (
-                  <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                  <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                     <div style={{
                       minWidth: '22px',
                       height: '22px',
                       borderRadius: '50%',
                       background: 'var(--gold-500)',
                       color: 'var(--navy-950)',
-                      fontWeight: 800,
+                      fontWeight: 700,
                       fontSize: '0.74rem',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginTop: '2px'
+                      marginTop: '2px',
+                      flexShrink: 0
                     }}>
                       {i + 1}
                     </div>
-                    <p style={{ margin: 0, fontSize: '0.84rem', color: 'var(--slate-700)', lineHeight: 1.5 }}>
+                    <p style={{ margin: 0, fontSize: '0.86rem', color: 'var(--slate-700)', lineHeight: 1.54 }}>
                       {misi}
                     </p>
                   </div>
@@ -153,8 +155,8 @@ export default function VisionMission() {
         {/* Keunggulan Kami Section (Berdasarkan Flyer PT. SMB) */}
         <div id="keunggulan-kami" style={{
           background: 'var(--navy-900)',
-          borderRadius: 'var(--radius-lg)',
-          padding: 'clamp(24px, 3vw, 40px)',
+          borderRadius: 'var(--radius-card)',
+          padding: 'clamp(28px, 4vw, 48px)',
           color: 'var(--white)',
           border: '1px solid rgba(229, 168, 59, 0.3)'
         }}>
@@ -175,30 +177,30 @@ export default function VisionMission() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: 'clamp(12px, 1.6vw, 16px)'
+            gap: 'clamp(14px, 2vw, 20px)'
           }} className="spirit-grid">
             {visionMission.workingSpirit.map((spirit) => (
               <div
                 key={spirit.id}
                 style={{
                   background: 'var(--navy-850)',
-                  border: '1px solid rgba(229, 168, 59, 0.25)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(14px, 1.8vw, 20px)',
+                  border: '1px solid rgba(229, 168, 59, 0.22)',
+                  borderRadius: 'var(--radius-card-sm)',
+                  padding: 'clamp(18px, 2.2vw, 24px)',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
                 <div style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '6px',
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '10px',
                   background: 'rgba(229, 168, 59, 0.12)',
                   border: '1px solid var(--gold-500)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginBottom: '12px'
+                  marginBottom: '14px'
                 }}>
                   {spiritIcons[spirit.id] || <Award size={20} color="var(--gold-400)" />}
                 </div>

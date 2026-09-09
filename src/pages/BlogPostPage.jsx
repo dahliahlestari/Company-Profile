@@ -140,11 +140,11 @@ export default function BlogPostPage() {
 
         {/* Article Headline (Apple Editorial Typography Scale) */}
         <h1 style={{
-          fontSize: 'clamp(1.45rem, 2.5vw, 2.15rem)',
+          fontSize: 'clamp(1.75rem, 3.2vw, 2.6rem)',
           color: 'var(--navy-900)',
-          lineHeight: 1.26,
-          fontWeight: 800,
-          letterSpacing: '-0.02em',
+          lineHeight: 1.14,
+          fontWeight: 650,
+          letterSpacing: '-0.032em',
           marginBottom: '18px'
         }}>
           {article.title}
@@ -160,8 +160,8 @@ export default function BlogPostPage() {
           paddingBottom: '20px',
           borderBottom: '1px solid var(--slate-200)',
           marginBottom: '28px',
-          fontSize: '0.8rem',
-          color: 'var(--slate-500)'
+          fontSize: '0.82rem',
+          color: 'var(--slate-apple-light)'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: 'var(--navy-900)', fontWeight: 600 }}>
@@ -174,7 +174,7 @@ export default function BlogPostPage() {
               <span>{article.date}</span>
             </span>
             <span>•</span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
               <Clock size={13} />
               <span>{article.readTime}</span>
             </span>
@@ -186,19 +186,19 @@ export default function BlogPostPage() {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '4px',
-                padding: '4px 9px',
-                borderRadius: 'var(--radius-sm)',
+                gap: '5px',
+                padding: '6px 14px',
+                borderRadius: 'var(--radius-pill)',
                 background: '#dcfce7',
                 color: '#15803d',
-                fontSize: '0.74rem',
+                fontSize: '0.76rem',
                 fontWeight: 600,
                 border: 'none',
                 cursor: 'pointer'
               }}
               title="Bagikan ke WhatsApp"
             >
-              <MessageCircle size={12} />
+              <MessageCircle size={13} />
               <span>WhatsApp</span>
             </button>
 
@@ -207,19 +207,19 @@ export default function BlogPostPage() {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '4px',
-                padding: '4px 9px',
-                borderRadius: 'var(--radius-sm)',
+                gap: '5px',
+                padding: '6px 14px',
+                borderRadius: 'var(--radius-pill)',
                 background: 'var(--slate-100)',
                 color: 'var(--slate-700)',
-                fontSize: '0.74rem',
+                fontSize: '0.76rem',
                 fontWeight: 600,
                 border: '1px solid var(--slate-200)',
                 cursor: 'pointer'
               }}
               title="Salin tautan artikel"
             >
-              <Share2 size={12} />
+              <Share2 size={13} />
               <span>Salin</span>
             </button>
           </div>
@@ -227,7 +227,7 @@ export default function BlogPostPage() {
 
         {/* Featured Banner Image */}
         <div style={{
-          borderRadius: 'var(--radius-md)',
+          borderRadius: 'var(--radius-card)',
           overflow: 'hidden',
           marginBottom: '28px',
           border: '1px solid var(--slate-200)',
@@ -250,12 +250,12 @@ export default function BlogPostPage() {
           <div style={{
             background: 'var(--slate-50)',
             borderLeft: '3px solid var(--gold-500)',
-            borderRadius: '0 var(--radius-md) var(--radius-md) 0',
-            padding: '16px 20px',
+            borderRadius: '0 var(--radius-card-sm) var(--radius-card-sm) 0',
+            padding: '18px 24px',
             marginBottom: '28px',
-            fontSize: '0.92rem',
+            fontSize: '0.94rem',
             color: 'var(--slate-700)',
-            lineHeight: 1.6,
+            lineHeight: 1.56,
             fontStyle: 'italic'
           }}>
             "{article.excerpt}"
@@ -346,7 +346,8 @@ export default function BlogPostPage() {
                     textDecoration: 'none',
                     display: 'flex',
                     flexDirection: 'column',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    borderRadius: 'var(--radius-card-sm)'
                   }}
                 >
                   <div style={{ height: '140px', overflow: 'hidden', background: 'var(--navy-950)' }}>

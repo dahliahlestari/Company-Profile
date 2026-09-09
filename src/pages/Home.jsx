@@ -69,34 +69,34 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Overview Card */}
+            {/* Right Overview Card (Apple Squircle Navy Card) */}
             <div style={{
               background: 'var(--navy-900)',
               color: 'var(--white)',
-              borderRadius: 'var(--radius-lg)',
-              padding: 'clamp(18px, 2.5vw, 28px)',
+              borderRadius: 'var(--radius-card)',
+              padding: 'clamp(24px, 3vw, 36px)',
               border: '1px solid rgba(229, 168, 59, 0.3)'
             }}>
               {/* Tagline without border */}
               <div style={{
-                fontSize: '0.72rem',
-                fontWeight: 700,
+                fontSize: '0.74rem',
+                fontWeight: 600,
                 color: 'var(--gold-400)',
-                letterSpacing: '0.08em',
+                letterSpacing: '0.06em',
                 textTransform: 'uppercase',
-                marginBottom: '8px'
+                marginBottom: '10px'
               }}>
                 PROFIL RESMI PERUSAHAAN
               </div>
-              <h3 style={{ fontSize: 'clamp(1.1rem, 1.5vw, 1.3rem)', color: 'var(--white)', marginBottom: '4px' }}>
+              <h3 style={{ fontSize: 'clamp(1.15rem, 1.6vw, 1.4rem)', color: 'var(--white)', marginBottom: '6px', fontWeight: 650, letterSpacing: '-0.02em' }}>
                 {info.legalName}
               </h3>
-              <p style={{ fontSize: '0.8rem', color: 'var(--gold-300)', fontWeight: 600, marginBottom: '14px' }}>
+              <p style={{ fontSize: '0.84rem', color: 'var(--gold-300)', fontWeight: 600, marginBottom: '16px' }}>
                 {info.tagline}
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {info.pillars.map((pillar, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--slate-200)' }}>
+                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.84rem', color: 'var(--slate-200)' }}>
                     <CheckCircle2 size={14} color="var(--gold-400)" />
                     <span>{pillar}</span>
                   </div>
@@ -118,30 +118,31 @@ export default function Home() {
                 style={{
                   background: 'var(--slate-50)',
                   border: '1px solid var(--slate-200)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(14px, 1.8vw, 18px)'
+                  borderRadius: 'var(--radius-card-sm)',
+                  padding: 'clamp(18px, 2.2vw, 24px)'
                 }}
               >
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: 'clamp(1.35rem, 2vw, 1.85rem)',
-                  fontWeight: 800,
+                  fontSize: 'clamp(1.55rem, 2.2vw, 2.2rem)',
+                  fontWeight: 650,
                   color: 'var(--navy-900)',
                   lineHeight: 1,
-                  marginBottom: '4px'
+                  letterSpacing: '-0.03em',
+                  marginBottom: '6px'
                 }}>
                   {item.value}
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '0.86rem',
-                  fontWeight: 700,
+                  fontSize: '0.88rem',
+                  fontWeight: 600,
                   color: 'var(--gold-700)',
-                  marginBottom: '3px'
+                  marginBottom: '4px'
                 }}>
                   {item.label}
                 </div>
-                <div style={{ fontSize: '0.76rem', color: 'var(--slate-600)', lineHeight: 1.35 }}>
+                <div style={{ fontSize: '0.78rem', color: 'var(--slate-apple-light)', lineHeight: 1.45 }}>
                   {item.description}
                 </div>
               </div>
@@ -173,19 +174,19 @@ export default function Home() {
             gap: 'clamp(16px, 2vw, 22px)',
             marginBottom: '32px'
           }}>
-            {mainServices.map((service, idx) => (
+            {mainServices.map((service) => (
               <div
                 key={service.id}
                 className="card-white"
                 style={{
-                  padding: 'clamp(16px, 2vw, 22px)',
-                  borderTop: idx % 2 === 0 ? '3px solid var(--gold-500)' : '3px solid var(--navy-800)',
+                  padding: 'clamp(18px, 2.2vw, 24px)',
+                  borderRadius: 'var(--radius-card)',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
                 {/* Thumbnail Image */}
-                <div style={{ position: 'relative', height: '150px', overflow: 'hidden', borderRadius: 'var(--radius-md)', marginBottom: '14px', background: 'var(--navy-950)' }}>
+                <div style={{ position: 'relative', height: '165px', overflow: 'hidden', borderRadius: 'var(--radius-card-sm)', marginBottom: '16px', background: 'var(--navy-950)' }}>
                   <img
                     src={service.image}
                     alt={service.title}
@@ -197,43 +198,43 @@ export default function Home() {
                   />
                   <div style={{
                     position: 'absolute',
-                    bottom: '8px',
-                    left: '8px',
-                    width: '32px',
-                    height: '32px',
-                    borderRadius: '6px',
+                    bottom: '10px',
+                    left: '10px',
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '10px',
                     background: 'var(--white)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    boxShadow: 'var(--shadow-flat-sm)'
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
                   }}>
                     {getServiceIcon(service.id)}
                   </div>
                 </div>
 
-                <span style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--gold-700)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '2px' }}>
+                <span style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--gold-700)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>
                   {service.badge}
                 </span>
 
-                <h3 style={{ fontSize: '1.05rem', color: 'var(--navy-900)', margin: '4px 0 8px 0', lineHeight: 1.3 }}>
+                <h3 style={{ fontSize: '1.1rem', color: 'var(--navy-900)', margin: '4px 0 8px 0', lineHeight: 1.25, fontWeight: 650, letterSpacing: '-0.02em' }}>
                   {service.title}
                 </h3>
 
-                <p style={{ fontSize: '0.82rem', color: 'var(--slate-600)', lineHeight: 1.5, marginBottom: '14px' }}>
+                <p style={{ fontSize: '0.84rem', color: 'var(--slate-apple-light)', lineHeight: 1.54, marginBottom: '16px' }}>
                   {service.shortDesc}
                 </p>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '16px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '18px' }}>
                   {service.highlights.map((h, hIdx) => (
-                    <div key={hIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', color: 'var(--slate-700)' }}>
-                      <CheckCircle2 size={13} color={idx % 2 === 0 ? 'var(--gold-600)' : 'var(--navy-600)'} />
+                    <div key={hIdx} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.8rem', color: 'var(--slate-700)' }}>
+                      <CheckCircle2 size={13} color="var(--gold-600)" />
                       <span>{h}</span>
                     </div>
                   ))}
                 </div>
 
-                <Link to="/layanan" className="btn btn-outline-navy btn-sm" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>
+                <Link to="/layanan" className="link-apple" style={{ marginTop: 'auto', alignSelf: 'flex-start', color: 'var(--navy-900)', fontWeight: 600 }}>
                   <span>Pelajari Selengkapnya</span>
                   <ArrowRight size={13} />
                 </Link>
@@ -280,12 +281,13 @@ export default function Home() {
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    borderRadius: 'var(--radius-card)'
                   }}
                 >
                   <Link
                     to={`/blog/${article.id}`}
-                    style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)', display: 'block' }}
+                    style={{ position: 'relative', height: '175px', overflow: 'hidden', background: 'var(--navy-950)', display: 'block' }}
                   >
                     <img
                       src={article.thumbnail}
@@ -296,19 +298,19 @@ export default function Home() {
                     />
                   </Link>
 
-                  <div style={{ padding: 'clamp(14px, 2vw, 18px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <div style={{ padding: 'clamp(18px, 2.2vw, 24px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     <div style={{
-                      fontSize: '0.68rem',
-                      fontWeight: 700,
+                      fontSize: '0.7rem',
+                      fontWeight: 600,
                       color: 'var(--gold-700)',
                       textTransform: 'uppercase',
-                      letterSpacing: '0.06em',
-                      marginBottom: '4px'
+                      letterSpacing: '0.05em',
+                      marginBottom: '6px'
                     }}>
                       {article.category}
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.72rem', color: 'var(--slate-500)', marginBottom: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.74rem', color: 'var(--slate-apple-light)', marginBottom: '8px' }}>
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
                         <Calendar size={11} color="var(--gold-700)" />
                         <span>{article.date}</span>
@@ -323,10 +325,12 @@ export default function Home() {
                     <Link to={`/blog/${article.id}`} style={{ textDecoration: 'none' }}>
                       <h3 
                         style={{
-                          fontSize: '0.98rem',
+                          fontSize: '1.04rem',
                           color: 'var(--navy-900)',
-                          lineHeight: 1.35,
-                          marginBottom: '6px',
+                          lineHeight: 1.3,
+                          fontWeight: 650,
+                          letterSpacing: '-0.015em',
+                          marginBottom: '8px',
                           transition: 'color 0.15s ease'
                         }}
                         onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
@@ -336,24 +340,19 @@ export default function Home() {
                       </h3>
                     </Link>
 
-                    <p style={{ fontSize: '0.8rem', color: 'var(--slate-600)', lineHeight: 1.45, marginBottom: '14px' }}>
+                    <p style={{ fontSize: '0.84rem', color: 'var(--slate-apple-light)', lineHeight: 1.54, marginBottom: '16px' }}>
                       {article.excerpt}
                     </p>
 
                     <Link
                       to={`/blog/${article.id}`}
+                      className="link-apple"
                       style={{
                         marginTop: 'auto',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '4px',
-                        fontSize: '0.78rem',
-                        fontWeight: 700,
                         color: 'var(--navy-900)',
-                        textDecoration: 'none'
+                        fontWeight: 600,
+                        fontSize: '0.84rem'
                       }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
-                      onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
                     >
                       <span>Baca Selengkapnya</span>
                       <ArrowRight size={12} />

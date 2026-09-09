@@ -96,15 +96,16 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '6px',
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: '50%',
                   background: 'rgba(255, 255, 255, 0.06)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--gold-400)',
-                  border: '1px solid rgba(229, 168, 59, 0.2)'
+                  border: '1px solid rgba(229, 168, 59, 0.25)',
+                  transition: 'all 0.2s ease'
                 }}
                 aria-label="LinkedIn SMB"
               >
@@ -115,15 +116,16 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '6px',
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: '50%',
                   background: 'rgba(255, 255, 255, 0.06)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--gold-400)',
-                  border: '1px solid rgba(229, 168, 59, 0.2)'
+                  border: '1px solid rgba(229, 168, 59, 0.25)',
+                  transition: 'all 0.2s ease'
                 }}
                 aria-label="Instagram SMB"
               >
@@ -134,15 +136,16 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '6px',
+                  width: '34px',
+                  height: '34px',
+                  borderRadius: '50%',
                   background: 'rgba(255, 255, 255, 0.06)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--gold-400)',
-                  border: '1px solid rgba(229, 168, 59, 0.2)'
+                  border: '1px solid rgba(229, 168, 59, 0.25)',
+                  transition: 'all 0.2s ease'
                 }}
                 aria-label="YouTube SMB"
               >
@@ -263,11 +266,13 @@ export default function Footer() {
                 gap: '5px',
                 background: 'rgba(229, 168, 59, 0.15)',
                 color: 'var(--gold-400)',
-                padding: '4px 10px',
-                borderRadius: '4px',
-                border: '1px solid rgba(229, 168, 59, 0.3)',
+                padding: '6px 14px',
+                borderRadius: 'var(--radius-pill)',
+                border: '1px solid rgba(229, 168, 59, 0.35)',
                 cursor: 'pointer',
-                fontWeight: 600
+                fontWeight: 600,
+                fontSize: '0.78rem',
+                transition: 'all 0.2s ease'
               }}
             >
               <span>Ke Atas</span>

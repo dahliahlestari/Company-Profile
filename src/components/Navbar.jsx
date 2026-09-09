@@ -90,12 +90,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Main Navigation Bar */}
+      {/* Main Navigation Bar (Apple Translucent Frosted Glass) */}
       <nav style={{
-        background: 'var(--navy-900)',
-        borderBottom: isScrolled ? '1px solid var(--gold-500)' : '1px solid rgba(255, 255, 255, 0.1)',
+        background: isScrolled ? 'rgba(7, 19, 34, 0.88)' : 'rgba(11, 25, 44, 0.82)',
+        backdropFilter: 'saturate(180%) blur(20px)',
+        WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+        borderBottom: isScrolled ? '1px solid rgba(229, 168, 59, 0.35)' : '1px solid rgba(255, 255, 255, 0.08)',
         padding: isScrolled ? '8px 0' : '11px 0',
-        transition: 'padding 0.2s ease'
+        transition: 'all 0.25s ease'
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
           
@@ -150,20 +152,21 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Nav Items with Multi-page NavLink */}
-          <div className="desktop-menu" style={{ display: 'flex', alignItems: 'center', gap: '22px' }}>
+          {/* Desktop Nav Items with Multi-page NavLink (Apple Clean Typography) */}
+          <div className="desktop-menu" style={{ display: 'flex', alignItems: 'center', gap: '26px' }}>
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 style={({ isActive }) => ({
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '0.92rem',
-                  fontWeight: 600,
-                  color: isActive ? 'var(--gold-400)' : 'var(--slate-200)',
-                  borderBottom: isActive ? '2px solid var(--gold-500)' : '2px solid transparent',
+                  fontSize: '0.86rem',
+                  fontWeight: isActive ? 600 : 450,
+                  color: isActive ? 'var(--gold-400)' : 'var(--slate-300)',
+                  borderBottom: isActive ? '2px solid var(--gold-400)' : '2px solid transparent',
                   padding: '4px 0',
-                  transition: 'color 0.15s ease, border-color 0.15s ease'
+                  letterSpacing: '-0.01em',
+                  transition: 'all 0.18s ease'
                 })}
               >
                 {link.label}

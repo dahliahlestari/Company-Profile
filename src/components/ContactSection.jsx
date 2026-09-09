@@ -56,12 +56,12 @@ export default function ContactSection() {
           marginBottom: 'clamp(48px, 6vw, 72px)'
         }} className="contact-grid">
 
-          {/* Form Card (Flat White) */}
-          <div className="card-white" style={{ padding: 'clamp(18px, 2.5vw, 32px)', borderTop: '3px solid var(--gold-500)' }}>
-            <h3 style={{ fontSize: 'clamp(1.1rem, 2vw, 1.3rem)', color: 'var(--navy-900)', marginBottom: '6px' }}>
+          {/* Form Card (Apple Squircle Card) */}
+          <div className="card-white" style={{ padding: 'clamp(24px, 3.5vw, 44px)', borderRadius: 'var(--radius-card)' }}>
+            <h3 style={{ fontSize: 'clamp(1.2rem, 2vw, 1.45rem)', color: 'var(--navy-900)', marginBottom: '8px', fontWeight: 650, letterSpacing: '-0.02em' }}>
               Kirim Permintaan Konsultasi / Penawaran
             </h3>
-            <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', marginBottom: '20px' }}>
+            <p style={{ fontSize: '0.86rem', color: 'var(--slate-apple-light)', lineHeight: 1.54, marginBottom: '24px' }}>
               Isi data di bawah ini. Tim kami akan segera menindaklanjuti via telepon, email, atau WhatsApp dalam waktu kurang dari 24 jam kerja.
             </p>
 
@@ -251,13 +251,13 @@ export default function ContactSection() {
             )}
           </div>
 
-          {/* Office & Contact Info Card (Flat Solid Navy) */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {/* Office & Contact Info Card (Apple Squircle Navy Card) */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
             
             <div style={{
               background: 'var(--navy-900)',
-              borderRadius: 'var(--radius-lg)',
-              padding: 'clamp(20px, 3vw, 28px)',
+              borderRadius: 'var(--radius-card)',
+              padding: 'clamp(26px, 3.5vw, 40px)',
               color: 'var(--white)',
               border: '1px solid rgba(229, 168, 59, 0.3)'
             }}>
@@ -332,18 +332,18 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Slogan Kemitraan Card (Flyer) */}
+            {/* Slogan Kemitraan Card (Apple Squircle Slate Card) */}
             <div style={{
               background: 'var(--slate-100)',
-              borderRadius: 'var(--radius-md)',
-              padding: '14px 16px',
+              borderRadius: 'var(--radius-card-sm)',
+              padding: '18px 20px',
               border: '1px solid var(--slate-200)',
               textAlign: 'center'
             }}>
-              <div style={{ color: 'var(--navy-900)', fontWeight: 700, fontSize: '0.86rem', marginBottom: '4px' }}>
+              <div style={{ color: 'var(--navy-900)', fontWeight: 650, fontSize: '0.9rem', marginBottom: '6px', letterSpacing: '-0.01em' }}>
                 {info.slogan}
               </div>
-              <p style={{ fontSize: '0.78rem', color: 'var(--slate-600)', margin: 0 }}>
+              <p style={{ fontSize: '0.82rem', color: 'var(--slate-apple-light)', lineHeight: 1.5, margin: 0 }}>
                 Komitmen PT. SMB menyediakan solusi konsultan dan manajemen layanan terintegrasi, efisien biaya & waktu, serta berorientasi hasil.
               </p>
             </div>
@@ -364,15 +364,16 @@ export default function ContactSection() {
             </h3>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
                 style={{
                   border: '1px solid var(--slate-200)',
-                  borderRadius: 'var(--radius-md)',
+                  borderRadius: 'var(--radius-card-sm)',
                   background: openFaq === idx ? 'var(--navy-50)' : 'var(--white)',
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  transition: 'background 0.2s ease'
                 }}
               >
                 <button

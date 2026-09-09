@@ -140,43 +140,40 @@ export default function BlogPage() {
       }}>
         <div className="container">
 
-          {/* Top Bar: Controls & Author Authentication Trigger */}
+          {/* Search & Author Controls Bar */}
           <div style={{
-            background: 'var(--white)',
-            border: '1px solid var(--slate-200)',
-            borderRadius: 'var(--radius-md)',
-            padding: '14px 18px',
-            marginBottom: '24px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '12px'
+            gap: '12px',
+            marginBottom: '20px'
           }}>
-            {/* Search Input */}
+            {/* Search Input (Apple Capsule Style) */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
               gap: '8px',
-              background: 'var(--slate-100)',
-              padding: '7px 12px',
-              borderRadius: 'var(--radius-md)',
-              width: '100%',
-              maxWidth: '320px'
+              background: 'var(--white)',
+              border: '1px solid var(--slate-300)',
+              borderRadius: 'var(--radius-pill)',
+              padding: '7px 16px',
+              maxWidth: '320px',
+              width: '100%'
             }}>
-              <Search size={14} color="var(--slate-500)" />
+              <Search size={14} color="var(--slate-400)" />
               <input
                 type="text"
-                placeholder="Cari topik atau artikel berita..."
+                placeholder="Cari topik atau artikel..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 style={{
                   border: 'none',
-                  background: 'transparent',
                   outline: 'none',
-                  fontSize: '0.82rem',
-                  fontFamily: 'inherit',
-                  width: '100%'
+                  background: 'transparent',
+                  fontSize: '0.84rem',
+                  width: '100%',
+                  fontFamily: 'inherit'
                 }}
               />
               {searchQuery && (
@@ -192,11 +189,11 @@ export default function BlogPage() {
                 <>
                   <span style={{
                     fontSize: '0.72rem',
-                    fontWeight: 700,
+                    fontWeight: 600,
                     color: '#15803d',
                     background: '#dcfce7',
-                    padding: '3px 9px',
-                    borderRadius: 'var(--radius-full)',
+                    padding: '4px 12px',
+                    borderRadius: 'var(--radius-pill)',
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '4px'
@@ -254,15 +251,15 @@ export default function BlogPage() {
                   key={cat}
                   onClick={() => setSelectedCategory(catKey)}
                   style={{
-                    padding: '5px 14px',
-                    borderRadius: 'var(--radius-full)',
-                    fontSize: '0.78rem',
-                    fontWeight: 600,
+                    padding: '6px 16px',
+                    borderRadius: 'var(--radius-pill)',
+                    fontSize: '0.8rem',
+                    fontWeight: 500,
                     fontFamily: 'var(--font-heading)',
                     background: isActive ? 'var(--navy-900)' : 'var(--white)',
                     color: isActive ? 'var(--white)' : 'var(--slate-600)',
                     border: isActive ? '1px solid var(--navy-900)' : '1px solid var(--slate-200)',
-                    transition: 'all 0.15s ease'
+                    transition: 'all 0.18s ease'
                   }}
                 >
                   {cat}
@@ -271,20 +268,20 @@ export default function BlogPage() {
             })}
           </div>
 
-          {/* Articles Grid (Apple Clean Grid Style) */}
+          {/* Articles Grid (Apple Squircle Grid Style) */}
           {filteredArticles.length === 0 ? (
             <div style={{
               background: 'var(--white)',
-              borderRadius: 'var(--radius-md)',
+              borderRadius: 'var(--radius-card)',
               border: '1px solid var(--slate-200)',
-              padding: '44px 20px',
+              padding: '48px 24px',
               textAlign: 'center'
             }}>
               <BookOpen size={34} color="var(--slate-400)" style={{ margin: '0 auto 10px auto' }} />
-              <h3 style={{ fontSize: '1.05rem', color: 'var(--navy-900)', marginBottom: '5px' }}>
+              <h3 style={{ fontSize: '1.05rem', color: 'var(--navy-900)', marginBottom: '5px', fontWeight: 650 }}>
                 Tidak ada artikel yang sesuai
               </h3>
-              <p style={{ fontSize: '0.82rem', color: 'var(--slate-500)', maxWidth: '380px', margin: '0 auto 14px auto' }}>
+              <p style={{ fontSize: '0.84rem', color: 'var(--slate-500)', maxWidth: '380px', margin: '0 auto 16px auto' }}>
                 Coba ubah kata kunci pencarian atau pilih kategori layanan yang berbeda.
               </p>
               <button
@@ -298,7 +295,7 @@ export default function BlogPage() {
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))',
-              gap: 'clamp(16px, 2vw, 22px)'
+              gap: 'clamp(18px, 2.2vw, 26px)'
             }}>
               {filteredArticles.map((article) => (
                 <article
@@ -308,13 +305,14 @@ export default function BlogPage() {
                     display: 'flex',
                     flexDirection: 'column',
                     overflow: 'hidden',
+                    borderRadius: 'var(--radius-card)',
                     position: 'relative'
                   }}
                 >
                   {/* Thumbnail Image as Link to Dedicated Article Page */}
                   <Link
                     to={`/blog/${article.id}`}
-                    style={{ position: 'relative', height: '175px', overflow: 'hidden', background: 'var(--navy-950)', display: 'block' }}
+                    style={{ position: 'relative', height: '180px', overflow: 'hidden', background: 'var(--navy-950)', display: 'block' }}
                   >
                     <img
                       src={article.thumbnail}
@@ -333,19 +331,19 @@ export default function BlogPage() {
                         onClick={(e) => handleDelete(e, article.id, article.title)}
                         style={{
                           position: 'absolute',
-                          top: '8px',
-                          right: '8px',
-                          background: 'rgba(239, 68, 68, 0.9)',
+                          top: '10px',
+                          right: '10px',
+                          background: 'rgba(239, 68, 68, 0.92)',
                           color: '#ffffff',
                           border: 'none',
-                          borderRadius: '3px',
-                          padding: '4px 6px',
+                          borderRadius: 'var(--radius-pill)',
+                          padding: '4px 10px',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
-                          gap: '3px',
-                          fontSize: '0.68rem',
-                          fontWeight: 700
+                          gap: '4px',
+                          fontSize: '0.7rem',
+                          fontWeight: 600
                         }}
                         title="Hapus artikel ini"
                       >
@@ -356,12 +354,11 @@ export default function BlogPage() {
                   </Link>
 
                   {/* Card Body */}
-                  <div style={{ padding: 'clamp(14px, 1.8vw, 18px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <div style={{ padding: 'clamp(16px, 2vw, 22px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     <div style={{
-                      fontSize: '0.68rem',
-                      fontWeight: 700,
+                      fontSize: '0.7rem',
+                      fontWeight: 600,
                       color: 'var(--gold-700)',
-                      letterSpacing: '0.06em',
                       textTransform: 'uppercase',
                       marginBottom: '4px'
                     }}>
@@ -387,14 +384,16 @@ export default function BlogPage() {
                       style={{
                         textDecoration: 'none',
                         display: 'block',
-                        marginBottom: '6px'
+                        marginBottom: '8px'
                       }}
                     >
                       <h3
                         style={{
-                          fontSize: '0.98rem',
+                          fontSize: '1.04rem',
                           color: 'var(--navy-900)',
-                          lineHeight: 1.34,
+                          lineHeight: 1.3,
+                          fontWeight: 650,
+                          letterSpacing: '-0.015em',
                           margin: 0,
                           transition: 'color 0.15s ease'
                         }}
@@ -406,10 +405,10 @@ export default function BlogPage() {
                     </Link>
 
                     <p style={{
-                      fontSize: '0.8rem',
-                      color: 'var(--slate-600)',
-                      lineHeight: 1.48,
-                      marginBottom: '14px'
+                      fontSize: '0.84rem',
+                      color: 'var(--slate-apple-light)',
+                      lineHeight: 1.54,
+                      marginBottom: '16px'
                     }}>
                       {article.excerpt}
                     </p>
@@ -417,32 +416,27 @@ export default function BlogPage() {
                     {/* Footer Author & Link to dedicated page */}
                     <div style={{
                       marginTop: 'auto',
-                      paddingTop: '10px',
+                      paddingTop: '12px',
                       borderTop: '1px solid var(--slate-100)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between'
                     }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.74rem', color: 'var(--slate-700)', fontWeight: 600 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.74rem', color: 'var(--slate-apple-light)', fontWeight: 500 }}>
                         <User size={12} color="var(--gold-600)" />
-                        <span style={{ maxWidth: '130px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        <span style={{ maxWidth: '140px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                           {article.author}
                         </span>
                       </div>
 
                       <Link
                         to={`/blog/${article.id}`}
+                        className="link-apple"
                         style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '3px',
-                          fontSize: '0.76rem',
-                          fontWeight: 700,
                           color: 'var(--navy-900)',
-                          textDecoration: 'none'
+                          fontWeight: 600,
+                          fontSize: '0.8rem'
                         }}
-                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
-                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
                       >
                         <span>Baca</span>
                         <ArrowRight size={12} />

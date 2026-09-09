@@ -134,11 +134,11 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 4 Layanan Utama Grid (Apple Clean Grid Style) */}
+        {/* 4 Layanan Utama Grid (Apple Squircle Bento Card Style) */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: 'clamp(16px, 2vw, 22px)'
+          gap: 'clamp(18px, 2.5vw, 26px)'
         }}>
           {filteredServices.map((service, idx) => (
             <div
@@ -149,11 +149,11 @@ export default function Services() {
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
-                borderTop: idx % 2 === 0 ? '3px solid var(--gold-500)' : '3px solid var(--navy-800)'
+                borderRadius: 'var(--radius-card)'
               }}
             >
               {/* Thumbnail Image */}
-              <div style={{ position: 'relative', height: '155px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+              <div style={{ position: 'relative', height: '175px', overflow: 'hidden', background: 'var(--navy-950)' }}>
                 <img
                   src={service.image}
                   alt={service.title}
@@ -165,50 +165,52 @@ export default function Services() {
                 />
                 <div style={{
                   position: 'absolute',
-                  bottom: '10px',
-                  left: '10px',
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '6px',
+                  bottom: '12px',
+                  left: '12px',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '10px',
                   background: 'var(--white)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: 'var(--shadow-flat-sm)'
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
                 }}>
                   {getIcon(service.id)}
                 </div>
               </div>
 
               {/* Card Body */}
-              <div style={{ padding: 'clamp(14px, 2vw, 20px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+              <div style={{ padding: 'clamp(18px, 2.2vw, 24px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 
                 {/* Borderless Badge / Category */}
                 <span style={{
-                  fontSize: '0.7rem',
-                  fontWeight: 700,
-                  color: 'var(--gold-700)',
+                  fontSize: '0.72rem',
+                  fontWeight: 600,
+                  color: 'var(--gold-600)',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  marginBottom: '4px'
+                  letterSpacing: '0.05em',
+                  marginBottom: '6px'
                 }}>
                   {service.badge} • {service.category}
                 </span>
 
                 <h3 style={{
-                  fontSize: '1.05rem',
+                  fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)',
                   color: 'var(--navy-900)',
-                  marginBottom: '6px',
-                  lineHeight: 1.3
+                  marginBottom: '8px',
+                  lineHeight: 1.24,
+                  fontWeight: 650,
+                  letterSpacing: '-0.02em'
                 }}>
                   {service.title}
                 </h3>
 
                 <p style={{
-                  fontSize: '0.82rem',
-                  color: 'var(--slate-600)',
-                  lineHeight: 1.5,
-                  marginBottom: '14px'
+                  fontSize: '0.86rem',
+                  color: 'var(--slate-apple-light)',
+                  lineHeight: 1.54,
+                  marginBottom: '16px'
                 }}>
                   {service.shortDesc}
                 </p>
@@ -216,15 +218,15 @@ export default function Services() {
                 {/* Highlights List from Flyer */}
                 <div style={{
                   marginTop: 'auto',
-                  paddingTop: '10px',
+                  paddingTop: '12px',
                   borderTop: '1px solid var(--slate-100)',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '5px'
+                  gap: '6px'
                 }}>
                   {service.highlights.map((h, hIdx) => (
-                    <div key={hIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', color: 'var(--slate-700)' }}>
-                      <CheckCircle size={13} color={idx % 2 === 0 ? 'var(--gold-600)' : 'var(--navy-600)'} />
+                    <div key={hIdx} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.8rem', color: 'var(--slate-700)' }}>
+                      <CheckCircle size={13} color="var(--gold-600)" />
                       <span>{h}</span>
                     </div>
                   ))}
@@ -232,19 +234,15 @@ export default function Services() {
 
                 <Link
                   to="/kontak"
+                  className="link-apple"
                   style={{
-                    marginTop: '14px',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '5px',
+                    marginTop: '16px',
                     color: 'var(--navy-900)',
-                    fontWeight: 700,
-                    fontSize: '0.8rem'
+                    fontWeight: 600,
+                    fontSize: '0.84rem'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
                 >
-                  <span>Konsultasikan Kebutuhan</span>
+                  <span>Konsultasikan Layanan</span>
                   <ArrowRight size={13} />
                 </Link>
               </div>
