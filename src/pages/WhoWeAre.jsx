@@ -32,10 +32,10 @@ export default function WhoWeAre() {
             <span>Langkah Selanjutnya</span>
           </div>
           <h2 style={{ fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--navy-900)', marginBottom: '10px' }}>
-            Temui Para Ahli di Balik Kesuksesan <span className="text-gold">SMB</span>
+            Temui Para Ahli di Balik Kesuksesan <span className="text-gold">PT. SMB</span>
           </h2>
           <p style={{ fontSize: '0.85rem', color: 'var(--slate-600)', lineHeight: 1.6, marginBottom: '22px' }}>
-            Ketahui lebih dekat dewan direksi dan konsultan senior yang memimpin tata kelola rantai pasok dan advisory bisnis di SMB Sembada.
+            Ketahui lebih dekat dewan direksi dan konsultan senior yang memimpin tata kelola operasional dan advisory bisnis di PT. SMB.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
             <Link to="/pengurus" className="btn btn-navy btn-md">

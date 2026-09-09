@@ -38,25 +38,26 @@ export default function Hero() {
         }} className="hero-grid">
           
           <div>
-            <div className="section-badge dark" style={{ border: 'none', background: 'transparent', padding: 0 }}>
+            <div className="section-badge dark">
               <Award size={13} color="var(--gold-400)" />
               <span>One Stop Consultant and Service Management</span>
             </div>
 
             <h1 style={{
-              fontSize: 'clamp(1.4rem, 2.6vw, 2.2rem)',
+              fontSize: 'clamp(1.3rem, 2.3vw, 2.2rem)',
               color: 'var(--white)',
               lineHeight: 1.22,
               marginBottom: '14px',
-              fontWeight: 800
+              fontWeight: 700,
+              letterSpacing: '-0.02em'
             }}>
-              Solusi Terintegrasi & <span className="text-gold">Mitra Strategis</span> Bisnis Anda.
+              Solusi Terintegrasi & Profesional untuk <span className="text-gold">Kesuksesan Bisnis</span> Anda.
             </h1>
 
             <p style={{
-              fontSize: 'clamp(0.86rem, 1.05vw, 0.96rem)',
+              fontSize: 'clamp(0.84rem, 1vw, 0.94rem)',
               color: 'var(--slate-300)',
-              lineHeight: 1.6,
+              lineHeight: 1.55,
               marginBottom: '22px',
               maxWidth: '660px'
             }}>
@@ -66,17 +67,17 @@ export default function Hero() {
             {/* Action Buttons */}
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <Link to="/layanan" className="btn btn-gold btn-md">
-                <span>Jelajahi Layanan Kami</span>
+                <span>Jelajahi 4 Layanan Utama</span>
                 <ArrowRight size={14} />
               </Link>
               <a
-                href={`https://wa.me/${info.whatsapp}?text=Halo%20PT%20SMB,%20saya%20ingin%20berkonsultasi.`}
+                href={`https://wa.me/${info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20tertarik%20untuk%20berkonsultasi.`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-outline-gold btn-md"
               >
                 <MessageCircle size={14} />
-                <span>Konsultasi WhatsApp</span>
+                <span>Mulai Percakapan</span>
               </a>
             </div>
 
@@ -118,7 +119,7 @@ export default function Hero() {
               </h3>
 
               <p style={{ color: 'var(--slate-300)', fontSize: '0.84rem', lineHeight: 1.55, marginBottom: '14px' }}>
-                Memberikan kepastian solusi terpadu satu pintu mulai dari pendampingan sistem operasional, teknologi IT, sanitasi higienis, hingga perlindungan risiko bisnis.
+                Menghadirkan efisiensi biaya & waktu, kepatuhan bersertifikasi, dan kepastian hasil nyata untuk kesuksesan mitra bisnis kami di seluruh Indonesia.
               </p>
 
               <div style={{
@@ -129,10 +130,10 @@ export default function Hero() {
                 marginBottom: '14px'
               }}>
                 <div style={{ fontSize: '0.72rem', color: 'var(--gold-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '2px' }}>
-                  Komitmen Kami
+                  Slogan Kami
                 </div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--slate-200)', lineHeight: 1.45 }}>
-                  "Terintegrasi, Profesional, Tepercaya, dan Berorientasi Pada Hasil Nyata untuk Kesuksesan Bisnis Klien."
+                <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)', lineHeight: 1.45, fontStyle: 'italic' }}>
+                  "{info.slogan}"
                 </div>
               </div>
 

@@ -10,11 +10,11 @@ export default function LeadershipPage() {
 
   return (
     <div>
-      {/* 1. Header Page ala Prasmul-ELI */}
+      {/* 1. Header Page */}
       <PageHeader
-        badge="Struktur Kepemimpinan SMB Sembada"
+        badge="Struktur Kepemimpinan PT. SMB"
         title="Dewan Pengurus & Konsultan Senior"
-        subtitle="Temui para eksekutif dan pakar industri yang memimpin arah strategis, integritas rantai pasok, dan layanan konsultasi bisnis di SMB Sembada."
+        subtitle="Temui para eksekutif dan konsultan ahli yang memimpin arah strategis, integritas layanan, dan kepuasan klien di PT. SMB."
         breadcrumbCurrent="Tim Pengurus"
       />
 
@@ -25,13 +25,13 @@ export default function LeadershipPage() {
       <section style={{
         background: 'var(--navy-900)',
         color: 'var(--white)',
-        padding: 'clamp(48px, 6vw, 72px) 0',
+        padding: 'clamp(36px, 4.5vw, 56px) 0',
         borderTop: '2px solid var(--gold-500)',
         textAlign: 'center'
       }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <h2 style={{ fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--white)', marginBottom: '10px' }}>
-            Ingin Berdiskusi Langsung dengan Tim Ahli <span className="text-gold">SMB?</span>
+            Ingin Berdiskusi Langsung dengan Tim Ahli <span className="text-gold">PT. SMB?</span>
           </h2>
           <p style={{ fontSize: '0.85rem', color: 'var(--slate-300)', lineHeight: 1.6, marginBottom: '22px' }}>
             Jadwalkan sesi audiensi atau konsultasi strategis bersama dewan pengurus dan konsultan senior kami untuk membahas peluang kemitraan korporasi Anda.
@@ -42,7 +42,7 @@ export default function LeadershipPage() {
               <ArrowRight size={14} />
             </Link>
             <a
-              href={`https://wa.me/${info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20ingin%20berkonsultasi%20dengan%20tim%20pengurus.`}
+              href={`https://wa.me/${info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20ingin%20berkonsultasi%20dengan%20tim%20pengurus.`}
               target="_blank"
               rel="noreferrer"
               className="btn btn-outline-gold btn-md"

@@ -11,23 +11,23 @@ export default function ServicesPage() {
   const workflows = [
     {
       step: '01',
-      title: 'Konsultasi & Analisis Kebutuhan',
-      desc: 'Audiensi mendalam bersama tim konsultan ahli SMB untuk memetakan kebutuhan pendampingan sistem SPPG, solusi IT, proteksi hama, atau mitigasi risiko bisnis.'
+      title: 'Konsultasi Kebutuhan Awal',
+      desc: 'Diskusi mendalam bersama tim spesialis SMB untuk memetakan volume distribusi, spesifikasi barang, atau tantangan bisnis Anda.'
     },
     {
       step: '02',
-      title: 'Perumusan Solusi Terintegrasi',
-      desc: 'Penyusunan rencana kerja sistematis, integrasi data & infrastruktur digital, serta kesepakatan Service Level Agreement (SLA) terukur.'
+      title: 'Perumusan Strategi & SLA',
+      desc: 'Penyusunan blueprint rute distribusi, sistem pergudangan, penetapan Service Level Agreement (SLA), atau modul pendampingan konsultasi.'
     },
     {
       step: '03',
-      title: 'Eksekusi & Pendampingan Lapangan',
-      desc: 'Penerapan langsung oleh tim ahli bersertifikat dengan standar kerja profesional, pelatihan SDM, instalasi sistem, dan inspeksi rutin.'
+      title: 'Integrasi & Eksekusi Lapangan',
+      desc: 'Pengiriman pasokan komoditas, sinkronisasi sistem pencatatan WMS/ERP, serta pendampingan langsung dari konsultan ahli kami.'
     },
     {
       step: '04',
       title: 'Evaluasi & Optimalisasi Berkelanjutan',
-      desc: 'Laporan performa berkala, sertifikasi, serta evaluasi menyeluruh untuk memastikan efisiensi biaya & waktu dan hasil berdampak nyata.'
+      desc: 'Laporan performa berkala, peninjauan efisiensi biaya logistik, dan pengembangan kapasitas bisnis mitra jangka panjang.'
     }
   ];
 
@@ -35,13 +35,13 @@ export default function ServicesPage() {
     <div>
       {/* 1. Header Page */}
       <PageHeader
-        badge="Portofolio Solusi PT. SMB"
-        title="One Stop Consultant and Service Management"
-        subtitle="Solusi terintegrasi mencakup Pendampingan SPPG, IT Solutions, Pest Control, hingga Risk Insurance untuk efisiensi bisnis Anda."
+        badge="Portofolio Layanan Terpadu"
+        title="One Stop Consultant & Service Management"
+        subtitle="Empat solusi terintegrasi: Pendampingan SPPG, IT Solutions, Pest Control, dan Risk Insurance untuk keunggulan operasional bisnis Anda."
         breadcrumbCurrent="Layanan Utama"
       />
 
-      {/* 2. Full Services Catalog with Interactive Tabs */}
+      {/* 2. Full Services Catalog */}
       <Services />
 
       {/* 3. Workflow Steps */}
@@ -55,7 +55,7 @@ export default function ServicesPage() {
               Tahapan Kemitraan <span className="text-gold">PT. SMB</span>
             </h2>
             <p className="section-subtitle">
-              Proses kerja yang profesional, transparan, terstandar, dan berorientasi hasil demi kepastian solusi terbaik bagi bisnis Anda.
+              Proses kerja yang terstruktur, transparan, dan terstandar demi kepastian hasil terbaik bagi bisnis Anda.
             </p>
           </div>
 

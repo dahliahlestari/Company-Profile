@@ -8,8 +8,8 @@ export default function ContactPage() {
       {/* 1. Page Header */}
       <PageHeader
         badge="Saluran Komunikasi Resmi"
-        title="Hubungi SMB Sembada"
-        subtitle="Tim kami siap membantu menjawab pertanyaan Anda seputar pengadaan komoditas, pergudangan, logistik distributor, serta konsultasi manajemen bisnis."
+        title="Hubungi PT. SMB"
+        subtitle="Tim kami siap membantu menjawab pertanyaan Anda seputar Pendampingan SPPG, IT Solutions, Pest Control, Risk Insurance, serta kemitraan bisnis."
         breadcrumbCurrent="Kontak"
       />
 

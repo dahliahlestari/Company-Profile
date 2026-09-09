@@ -15,10 +15,10 @@ export default function Milestones() {
             <span>Perjalanan & Rekam Jejak</span>
           </div>
           <h2 className="section-title">
-            Jejak Langkah <span className="text-gold">SMB Sembada</span>
+            Jejak Langkah <span className="text-gold">PT. SMB</span>
           </h2>
           <p className="section-subtitle">
-            Evolusi kami dari penyedia distribusi komoditas lokal hingga menjadi korporasi penyedia solusi rantai pasok dan konsultasi bisnis nasional.
+            Evolusi PT. SMB dalam membangun kapabilitas One Stop Consultant and Service Management terintegrasi dan tepercaya di Indonesia.
           </p>
         </div>
 

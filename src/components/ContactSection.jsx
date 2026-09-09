@@ -37,14 +37,14 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge">
-            <MessageSquare size={14} />
+            <MessageSquare size={13} />
             <span>Mulai Langkah Kemitraan</span>
           </div>
           <h2 className="section-title">
-            Hubungi <span className="text-gold">SMB Sembada</span>
+            Hubungi <span className="text-gold">PT. SMB</span>
           </h2>
           <p className="section-subtitle">
-            Konsultasikan segala macam kebutuhan distributor, rantai pasok, atau strategi efisiensi bisnis korporasi Anda bersama tim ahli kami.
+            Konsultasikan kebutuhan Pendampingan SPPG, IT Solutions, Pest Control, Risk Insurance, atau efisiensi operasional bisnis Anda bersama tim konsultan PT. SMB.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default function ContactSection() {
                   Permintaan Berhasil Dikirim!
                 </h4>
                 <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', marginBottom: '14px' }}>
-                  Terima kasih <strong>{formData.name}</strong>. Tim spesialis SMB Sembada telah menerima pesan Anda dan membuka saluran komunikasi WhatsApp.
+                  Terima kasih <strong>{formData.name}</strong>. Tim konsultan PT. SMB telah menerima pesan Anda dan membuka saluran komunikasi WhatsApp.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
@@ -209,11 +209,11 @@ export default function ContactSection() {
                       backgroundColor: 'var(--white)'
                     }}
                   >
-                    <option>Pendampingan SPPG</option>
-                    <option>IT Solutions (Sistem Digital & Integrasi Data)</option>
-                    <option>Pest Control (Pengendalian Hama & Sertifikasi)</option>
-                    <option>Risk Insurance (Analisis Risiko & Proteksi)</option>
-                    <option>One Stop Consultant & Service Management Terpadu</option>
+                    <option>Pendampingan SPPG (Implementasi & Audit Sistem)</option>
+                    <option>IT Solutions (Sistem Manajemen Digital & Integrasi Data)</option>
+                    <option>Pest Control (Pengendalian Hama & Sertifikasi Kebersihan)</option>
+                    <option>Risk Insurance (Analisis Risiko Bisnis & Proteksi)</option>
+                    <option>Kemitraan & Konsultasi Manajemen Terpadu</option>
                   </select>
                 </div>
 
@@ -223,7 +223,7 @@ export default function ContactSection() {
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="Jelaskan secara singkat kebutuhan layanan, sistem, atau tantangan bisnis Anda..."
+                    placeholder="Jelaskan secara singkat volume kebutuhan, target operasional, atau tantangan bisnis Anda..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     style={{
@@ -261,52 +261,53 @@ export default function ContactSection() {
               color: 'var(--white)',
               border: '1px solid rgba(212, 175, 55, 0.3)'
             }}>
-              <span style={{
-                display: 'inline-block',
+              {/* Tagline pure text without border */}
+              <div style={{
                 color: 'var(--gold-400)',
                 fontSize: '0.72rem',
                 fontWeight: 700,
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
-                marginBottom: '10px'
+                marginBottom: '8px'
               }}>
-                Kantor Pusat Indonesia
-              </span>
+                Kantor Pusat PT. SMB
+              </div>
 
-              <h3 style={{ fontSize: 'clamp(1.1rem, 2vw, 1.25rem)', color: 'var(--white)', marginBottom: '16px' }}>
+              <h3 style={{ fontSize: 'clamp(1.1rem, 2vw, 1.25rem)', color: 'var(--white)', marginBottom: '4px' }}>
                 {info.legalName}
               </h3>
+              <p style={{ fontSize: '0.78rem', color: 'var(--gold-300)', fontWeight: 600, marginBottom: '16px' }}>
+                {info.tagline}
+              </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <div style={{ display: 'flex', gap: '10px' }}>
-                  <MapPin size={18} color="var(--gold-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                  <div style={{ fontSize: '0.84rem', color: 'var(--slate-200)', lineHeight: 1.5 }}>
+                  <MapPin size={16} color="var(--gold-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)', lineHeight: 1.5 }}>
                     <div><strong>{info.address.street}</strong></div>
-                    <div>{info.address.area}</div>
-                    <div>{info.address.city}</div>
-                    <div>{info.address.country}</div>
+                    <div>{info.address.city}, {info.address.country}</div>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Phone size={16} color="var(--gold-400)" style={{ flexShrink: 0 }} />
-                  <div style={{ fontSize: '0.84rem', color: 'var(--slate-200)' }}>
-                    <span>Telepon: </span>
+                  <Phone size={15} color="var(--gold-400)" style={{ flexShrink: 0 }} />
+                  <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)' }}>
+                    <span>Telepon / WA: </span>
                     <strong style={{ color: 'var(--white)' }}>{info.phone}</strong>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Mail size={16} color="var(--gold-400)" style={{ flexShrink: 0 }} />
-                  <div style={{ fontSize: '0.84rem', color: 'var(--slate-200)' }}>
+                  <Mail size={15} color="var(--gold-400)" style={{ flexShrink: 0 }} />
+                  <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)' }}>
                     <span>Email: </span>
                     <strong style={{ color: 'var(--gold-300)' }}>{info.email}</strong>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Clock size={16} color="var(--gold-400)" style={{ flexShrink: 0 }} />
-                  <div style={{ fontSize: '0.84rem', color: 'var(--slate-200)' }}>
+                  <Clock size={15} color="var(--gold-400)" style={{ flexShrink: 0 }} />
+                  <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)' }}>
                     <span>Operasional: </span>
                     <strong style={{ color: 'var(--white)' }}>{info.operationalHours}</strong>
                   </div>
@@ -315,7 +316,7 @@ export default function ContactSection() {
 
               {/* Direct WhatsApp Callout */}
               <div style={{
-                marginTop: '20px',
+                marginTop: '18px',
                 paddingTop: '14px',
                 borderTop: '1px solid rgba(255, 255, 255, 0.1)',
                 display: 'flex',
@@ -326,10 +327,10 @@ export default function ContactSection() {
               }}>
                 <div>
                   <div style={{ fontSize: '0.72rem', color: 'var(--slate-400)' }}>Respon Cepat Tim SMB:</div>
-                  <div style={{ fontSize: '0.88rem', color: 'var(--gold-300)', fontWeight: 700 }}>{info.whatsappDisplay}</div>
+                  <div style={{ fontSize: '0.86rem', color: 'var(--gold-300)', fontWeight: 700 }}>{info.whatsappDisplay}</div>
                 </div>
                 <a
-                  href={`https://wa.me/${info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20ingin%20berkonsultasi.`}
+                  href={`https://wa.me/${info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20ingin%20berkonsultasi.`}
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn-gold btn-sm"
@@ -339,7 +340,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Flat Location Card */}
+            {/* Slogan Kemitraan Card (Flyer) */}
             <div style={{
               background: 'var(--slate-100)',
               borderRadius: 'var(--radius-md)',
@@ -347,12 +348,11 @@ export default function ContactSection() {
               border: '1px solid var(--slate-200)',
               textAlign: 'center'
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', color: 'var(--navy-900)', fontWeight: 700, fontSize: '0.86rem', marginBottom: '4px' }}>
-                <MapPin size={15} color="var(--gold-700)" />
-                <span>Akses Lokasi & Jaringan Logistik</span>
+              <div style={{ color: 'var(--navy-900)', fontWeight: 700, fontSize: '0.86rem', marginBottom: '4px' }}>
+                {info.slogan}
               </div>
               <p style={{ fontSize: '0.78rem', color: 'var(--slate-600)', margin: 0 }}>
-                Terletak strategis di koridor bisnis TB Simatupang Jakarta dengan akses langsung tol JORR serta akses cepat ke Pelabuhan Tanjung Priok dan Bandara Soekarno-Hatta.
+                Komitmen PT. SMB menyediakan solusi konsultan dan manajemen layanan terintegrasi, efisien biaya & waktu, serta berorientasi hasil.
               </p>
             </div>
 

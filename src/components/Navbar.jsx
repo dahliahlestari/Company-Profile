@@ -25,7 +25,7 @@ export default function Navbar() {
   const navLinks = [
     { label: 'Beranda', to: '/' },
     { label: 'Tentang Kami', to: '/who-we-are' },
-    { label: 'Layanan & Distribusi', to: '/layanan' },
+    { label: 'Layanan Utama', to: '/layanan' },
     { label: 'Tim Pengurus', to: '/pengurus' },
     { label: 'Klien & Mitra', to: '/klien' },
     { label: 'Kontak', to: '/kontak' }
@@ -75,7 +75,7 @@ export default function Navbar() {
               </button>
             </div>
             <a 
-              href={`https://wa.me/${companyData.info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20ingin%20berkonsultasi.`} 
+              href={`https://wa.me/${companyData.info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20ingin%20berkonsultasi.`} 
               target="_blank" 
               rel="noreferrer"
               style={{
@@ -97,26 +97,27 @@ export default function Navbar() {
       <nav style={{
         background: 'var(--navy-900)',
         borderBottom: isScrolled ? '1px solid var(--gold-500)' : '1px solid rgba(255, 255, 255, 0.1)',
-        padding: isScrolled ? '12px 0' : '16px 0',
+        padding: isScrolled ? '10px 0' : '14px 0',
         transition: 'padding 0.2s ease'
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           
           {/* Brand Logo */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
             <div style={{
-              width: '42px',
-              height: '42px',
+              width: '38px',
+              height: '38px',
               background: 'var(--navy-950)',
               border: '2px solid var(--gold-500)',
-              borderRadius: '8px',
+              borderRadius: '6px',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              flexShrink: 0
             }}>
               <span style={{
                 fontFamily: 'var(--font-heading)',
-                fontSize: '1.2rem',
+                fontSize: '1.15rem',
                 fontWeight: 800,
                 color: 'var(--gold-400)',
                 letterSpacing: '0.04em'
@@ -128,7 +129,7 @@ export default function Navbar() {
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
                 <span style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '1.25rem',
+                  fontSize: '1.2rem',
                   fontWeight: 800,
                   color: 'var(--white)',
                   letterSpacing: '0.02em',
@@ -138,27 +139,26 @@ export default function Navbar() {
                 </span>
               </div>
               <span style={{
-                fontSize: '0.68rem',
-                color: 'var(--gold-400)',
-                letterSpacing: '0.04em',
+                fontSize: '0.66rem',
+                color: 'var(--slate-300)',
+                letterSpacing: '0.03em',
                 textTransform: 'uppercase',
-                fontWeight: 600,
-                marginTop: '1px'
+                fontWeight: 500
               }}>
-                One Stop Consultant and Service Management
+                One Stop Consultant & Service Management
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav Items with Multi-page NavLink (Apple Scale) */}
-          <div className="desktop-menu" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          {/* Desktop Nav Items with Multi-page NavLink */}
+          <div className="desktop-menu" style={{ display: 'flex', alignItems: 'center', gap: '22px' }}>
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 style={({ isActive }) => ({
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '0.88rem',
+                  fontSize: '0.92rem',
                   fontWeight: 600,
                   color: isActive ? 'var(--gold-400)' : 'var(--slate-200)',
                   borderBottom: isActive ? '2px solid var(--gold-500)' : '2px solid transparent',

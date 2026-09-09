@@ -1,19 +1,15 @@
 import React from 'react';
-import { Target, Compass, Sparkles, Award, Layers, Clock, ShieldCheck } from 'lucide-react';
+import { Target, Compass, Sparkles, Award, Link2, Lightbulb, ShieldCheck } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function VisionMission() {
   const { visionMission } = companyData;
 
   const spiritIcons = {
-    integrated: <Layers size={22} color="var(--gold-400)" />,
-    professional: <Award size={22} color="var(--gold-400)" />,
-    efficiency: <Clock size={22} color="var(--gold-400)" />,
-    result: <Target size={22} color="var(--gold-400)" />,
-    excellence: <Award size={22} color="var(--gold-400)" />,
-    linkage: <Layers size={22} color="var(--gold-400)" />,
-    innovation: <Clock size={22} color="var(--gold-400)" />,
-    integrity: <ShieldCheck size={22} color="var(--gold-400)" />
+    excellence: <Award size={24} color="var(--gold-400)" />,
+    linkage: <Link2 size={24} color="var(--gold-400)" />,
+    innovation: <Lightbulb size={24} color="var(--gold-400)" />,
+    integrity: <ShieldCheck size={24} color="var(--gold-400)" />
   };
 
   return (
@@ -23,14 +19,14 @@ export default function VisionMission() {
         {/* Section Header */}
         <div className="section-header">
           <div className="section-badge">
-            <Compass size={13} />
+            <Compass size={14} />
             <span>Visi, Misi & Keunggulan</span>
           </div>
           <h2 className="section-title">
             Visi & Misi <span className="text-gold">PT. SMB</span>
           </h2>
           <p className="section-subtitle">
-            Fondasi strategis PT. SMB dalam menghadirkan One Stop Consultant and Service Management terpercaya di Indonesia.
+            Fondasi dan komitmen PT. SMB sebagai One Stop Consultant and Service Management terpercaya bagi kesuksesan bisnis Anda.
           </p>
         </div>
 
@@ -38,8 +34,8 @@ export default function VisionMission() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: 'clamp(18px, 2.5vw, 32px)',
-          marginBottom: 'clamp(36px, 5vw, 56px)'
+          gap: 'clamp(18px, 2.5vw, 30px)',
+          marginBottom: 'clamp(40px, 5vw, 60px)'
         }} className="vm-grid">
           
           {/* Visi Card (Flat Solid Navy) */}
@@ -47,7 +43,7 @@ export default function VisionMission() {
             background: 'var(--navy-900)',
             color: 'var(--white)',
             borderRadius: 'var(--radius-lg)',
-            padding: 'clamp(22px, 3vw, 36px)',
+            padding: 'clamp(22px, 3vw, 34px)',
             border: '1px solid rgba(212, 175, 55, 0.35)',
             display: 'flex',
             flexDirection: 'column',
@@ -55,13 +51,14 @@ export default function VisionMission() {
             position: 'relative'
           }}>
             <div>
+              {/* Tagline / Eyebrow (Pure Text, No Border) */}
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '6px',
                 color: 'var(--gold-400)',
                 fontSize: '0.74rem',
-                fontWeight: 700,
+                fontWeight: 600,
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 marginBottom: '12px'
@@ -71,7 +68,7 @@ export default function VisionMission() {
               </div>
 
               <h3 style={{
-                fontSize: 'clamp(1.05rem, 1.5vw, 1.35rem)',
+                fontSize: 'clamp(1.05rem, 1.4vw, 1.3rem)',
                 color: 'var(--white)',
                 lineHeight: 1.45,
                 fontWeight: 700,
@@ -93,7 +90,7 @@ export default function VisionMission() {
               gap: '6px'
             }}>
               <Sparkles size={14} />
-              <span>Partner Strategis Untuk Kesuksesan Bisnis Anda</span>
+              <span>One Stop Consultant and Service Management</span>
             </div>
           </div>
 
@@ -101,23 +98,24 @@ export default function VisionMission() {
           <div style={{
             background: 'var(--slate-50)',
             borderRadius: 'var(--radius-lg)',
-            padding: 'clamp(18px, 2.8vw, 32px)',
+            padding: 'clamp(20px, 3vw, 32px)',
             border: '1px solid var(--slate-200)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between'
           }}>
             <div>
+              {/* Tagline / Eyebrow (Pure Text, No Border) */}
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '6px',
                 color: 'var(--navy-800)',
                 fontSize: '0.74rem',
-                fontWeight: 700,
+                fontWeight: 600,
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
-                marginBottom: '12px'
+                marginBottom: '14px'
               }}>
                 <Compass size={14} />
                 <span>Misi Utama</span>
@@ -152,8 +150,8 @@ export default function VisionMission() {
 
         </div>
 
-        {/* Working Spirit / Keunggulan Kami Section (Flat Solid Navy) */}
-        <div id="nilai-kerja" style={{
+        {/* Keunggulan Kami Section (Berdasarkan Flyer PT. SMB) */}
+        <div id="keunggulan-kami" style={{
           background: 'var(--navy-900)',
           borderRadius: 'var(--radius-lg)',
           padding: 'clamp(24px, 3vw, 40px)',
@@ -161,23 +159,23 @@ export default function VisionMission() {
           border: '1px solid rgba(212, 175, 55, 0.3)'
         }}>
           
-          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(18px, 2.5vw, 30px) auto' }}>
-            <div className="section-badge dark" style={{ border: 'none', background: 'transparent', padding: 0, marginBottom: '6px' }}>
+          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(18px, 2.5vw, 28px) auto' }}>
+            <div className="section-badge dark" style={{ marginBottom: '6px' }}>
               <Award size={13} />
-              <span>Keunggulan Layanan</span>
+              <span>Keunggulan Kompetitif</span>
             </div>
-            <h3 style={{ fontSize: 'clamp(1.2rem, 1.8vw, 1.65rem)', color: 'var(--white)', marginBottom: '6px' }}>
-              Keunggulan Kami <span className="text-gold">(PT. SMB)</span>
+            <h3 style={{ fontSize: 'clamp(1.18rem, 1.8vw, 1.65rem)', color: 'var(--white)', marginBottom: '6px' }}>
+              Keunggulan <span className="text-gold">PT. SMB</span>
             </h3>
-            <p style={{ color: 'var(--slate-300)', fontSize: '0.84rem', margin: 0 }}>
-              Empat keunggulan terpadu yang menjadikan PT. SMB mitra strategis pilihan untuk efisiensi dan kesuksesan bisnis Anda.
+            <p style={{ color: 'var(--slate-300)', fontSize: '0.84rem' }}>
+              Empat keunggulan utama yang memastikan setiap solusi kami memberikan dampak nyata, terpercaya, dan bernilai tambah.
             </p>
           </div>
 
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: 'clamp(12px, 1.8vw, 18px)'
+            gap: 'clamp(12px, 1.6vw, 16px)'
           }} className="spirit-grid">
             {visionMission.workingSpirit.map((spirit) => (
               <div
@@ -186,49 +184,48 @@ export default function VisionMission() {
                   background: 'var(--navy-850)',
                   border: '1px solid rgba(212, 175, 55, 0.25)',
                   borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(16px, 2vw, 22px)',
+                  padding: 'clamp(14px, 1.8vw, 20px)',
                   display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'border-color 0.2s ease'
+                  flexDirection: 'column'
                 }}
               >
                 <div style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '8px',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '6px',
                   background: 'rgba(212, 175, 55, 0.12)',
                   border: '1px solid var(--gold-500)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginBottom: '14px'
+                  marginBottom: '12px'
                 }}>
-                  {spiritIcons[spirit.id]}
+                  {spiritIcons[spirit.id] || <Award size={20} color="var(--gold-400)" />}
                 </div>
 
                 <h4 style={{
-                  fontSize: '1.05rem',
+                  fontSize: '0.96rem',
                   color: 'var(--gold-400)',
-                  marginBottom: '4px',
+                  marginBottom: '3px',
                   fontFamily: 'var(--font-heading)'
                 }}>
                   {spirit.name}
                 </h4>
 
                 <div style={{
-                  fontSize: '0.8rem',
+                  fontSize: '0.76rem',
                   color: 'var(--white)',
                   fontWeight: 600,
-                  marginBottom: '8px',
+                  marginBottom: '6px',
                   lineHeight: 1.35
                 }}>
                   {spirit.summary}
                 </div>
 
                 <p style={{
-                  fontSize: '0.82rem',
+                  fontSize: '0.8rem',
                   color: 'var(--slate-300)',
-                  lineHeight: 1.5,
+                  lineHeight: 1.45,
                   marginTop: 'auto'
                 }}>
                   {spirit.description}

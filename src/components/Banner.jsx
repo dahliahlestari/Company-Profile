@@ -26,7 +26,8 @@ export default function Banner() {
 
   if (!banners || banners.length === 0) return null;
 
-  const current = banners[currentSlide];
+  const current = banners[currentSlide] || banners[0];
+  if (!current) return null;
 
   return (
     <section
@@ -71,55 +72,56 @@ export default function Banner() {
         justifyContent: 'center',
         minHeight: 'clamp(440px, 58vh, 560px)'
       }}>
-        <div style={{ maxWidth: '880px' }}>
+        <div style={{ maxWidth: '820px' }}>
           
-          {/* Tagline Badge (Borderless Clean Text) */}
+          {/* Tagline / Eyebrow (Pure Text, No Border, Apple Style) */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px',
             color: 'var(--gold-400)',
             fontFamily: 'var(--font-heading)',
-            fontSize: '0.76rem',
-            fontWeight: 700,
+            fontSize: '0.78rem',
+            fontWeight: 600,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            marginBottom: '8px'
+            marginBottom: '10px'
           }}>
             <span>{current.badge}</span>
           </div>
 
-          {/* Title (Apple Scale: Clean, Refined, Never Screaming) */}
+          {/* Title (Apple Standard Scale) */}
           <h2 style={{
-            fontSize: 'clamp(1.4rem, 2.6vw, 2.2rem)',
+            fontSize: 'clamp(1.3rem, 2.4vw, 2.25rem)',
             color: 'var(--white)',
             lineHeight: 1.22,
-            fontWeight: 800,
-            marginBottom: '10px'
+            fontWeight: 700,
+            letterSpacing: '-0.02em',
+            marginBottom: '12px'
           }}>
             {current.title}
           </h2>
 
           {/* Subtitle */}
           <p style={{
-            fontSize: 'clamp(0.86rem, 1.05vw, 0.96rem)',
+            fontSize: 'clamp(0.84rem, 1vw, 0.94rem)',
             color: 'var(--slate-200)',
             lineHeight: 1.55,
-            marginBottom: '20px',
+            marginBottom: '22px',
             maxWidth: '680px'
           }}>
             {current.subtitle}
           </p>
 
           {/* CTA Buttons */}
-          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
-            <a href={current.primaryLink} className="btn btn-gold btn-lg">
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <Link to={current.primaryLink} className="btn btn-gold btn-md">
               <span>{current.primaryBtn}</span>
-              <ArrowRight size={16} />
-            </a>
-            <a href={current.secondaryLink} className="btn btn-outline-gold btn-lg">
+              <ArrowRight size={14} />
+            </Link>
+            <Link to={current.secondaryLink} className="btn btn-outline-gold btn-md">
               <span>{current.secondaryBtn}</span>
-            </a>
+            </Link>
           </div>
 
         </div>
@@ -129,22 +131,22 @@ export default function Banner() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginTop: 'clamp(36px, 4vw, 56px)',
-          paddingTop: '20px',
-          borderTop: '1px solid rgba(255, 255, 255, 0.12)',
+          marginTop: 'clamp(32px, 3.5vw, 48px)',
+          paddingTop: '16px',
+          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
           flexWrap: 'wrap',
-          gap: '16px'
+          gap: '14px'
         }}>
           {/* Indicators & Counter */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{ display: 'flex', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <div style={{ display: 'flex', gap: '6px' }}>
               {banners.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
                   style={{
-                    width: currentSlide === idx ? '28px' : '10px',
-                    height: '6px',
+                    width: currentSlide === idx ? '24px' : '8px',
+                    height: '5px',
                     borderRadius: '3px',
                     background: currentSlide === idx ? 'var(--gold-500)' : 'rgba(255, 255, 255, 0.25)',
                     border: 'none',
@@ -156,18 +158,18 @@ export default function Banner() {
                 />
               ))}
             </div>
-            <span style={{ fontSize: '0.84rem', color: 'var(--gold-400)', fontFamily: 'var(--font-heading)', fontWeight: 700 }}>
+            <span style={{ fontSize: '0.8rem', color: 'var(--gold-400)', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>
               0{currentSlide + 1} / 0{banners.length}
             </span>
           </div>
 
           {/* Prev / Next Arrows */}
-          <div style={{ display: 'flex', gap: '8px' }}>
+          <div style={{ display: 'flex', gap: '6px' }}>
             <button
               onClick={handlePrev}
               style={{
-                width: '38px',
-                height: '38px',
+                width: '34px',
+                height: '34px',
                 borderRadius: '6px',
                 background: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -179,13 +181,13 @@ export default function Banner() {
               }}
               aria-label="Slide sebelumnya"
             >
-              <ChevronLeft size={18} />
+              <ChevronLeft size={16} />
             </button>
             <button
               onClick={handleNext}
               style={{
-                width: '38px',
-                height: '38px',
+                width: '34px',
+                height: '34px',
                 borderRadius: '6px',
                 background: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -197,43 +199,43 @@ export default function Banner() {
               }}
               aria-label="Slide berikutnya"
             >
-              <ChevronRight size={18} />
+              <ChevronRight size={16} />
             </button>
           </div>
         </div>
 
       </div>
 
-      {/* Highlights Strip / Ticker at the base of the Banner */}
+      {/* Highlights Strip (4 Keunggulan PT. SMB) */}
       <div style={{
         background: 'var(--navy-900)',
         borderTop: '1px solid rgba(212, 175, 55, 0.25)',
-        padding: '12px 0'
+        padding: '11px 0'
       }}>
         <div className="container" style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '16px',
-          fontSize: '0.82rem',
+          gap: '14px',
+          fontSize: '0.8rem',
           color: 'var(--slate-300)'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Truck size={15} color="var(--gold-400)" />
-            <span>Jangkauan Armada 38 Provinsi</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+            <Truck size={14} color="var(--gold-400)" />
+            <span>Terintegrasi (One Stop Service)</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <ShieldCheck size={15} color="var(--gold-400)" />
-            <span>Pasokan Komoditas & WMS Terstandar</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+            <ShieldCheck size={14} color="var(--gold-400)" />
+            <span>Profesional & Bersertifikasi</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Users size={15} color="var(--gold-400)" />
-            <span>Advisory Bisnis Bersama Konsultan Senior</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+            <Clock size={14} color="var(--gold-400)" />
+            <span>Efisiensi Biaya & Waktu</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Clock size={15} color="var(--gold-400)" />
-            <span>Respon Cepat Kemitraan &lt; 24 Jam</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+            <Users size={14} color="var(--gold-400)" />
+            <span>Berorientasi Hasil Nyata</span>
           </div>
         </div>
       </div>

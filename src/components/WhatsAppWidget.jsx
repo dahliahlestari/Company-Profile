@@ -11,7 +11,7 @@ export default function WhatsAppWidget() {
     e.preventDefault();
     const text = quickMsg.trim() 
       ? encodeURIComponent(quickMsg)
-      : encodeURIComponent("Halo Tim SMB Sembada, saya ingin bertanya seputar layanan distributor dan konsultasi jasa.");
+      : encodeURIComponent("Halo Tim PT. SMB, saya ingin bertanya seputar layanan One Stop Consultant and Service Management.");
     window.open(`https://wa.me/${info.whatsapp}?text=${text}`, '_blank');
     setIsOpen(false);
   };
@@ -57,7 +57,7 @@ export default function WhatsAppWidget() {
               </div>
               <div>
                 <div style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--white)' }}>
-                  Customer Support SMB
+                  Customer Support PT. SMB
                 </div>
                 <div style={{ fontSize: '0.7rem', color: 'var(--gold-400)', display: 'flex', alignItems: 'center', gap: '4px' }}>
                   <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
@@ -86,9 +86,9 @@ export default function WhatsAppWidget() {
               border: '1px solid var(--slate-200)',
               marginBottom: '12px'
             }}>
-              Halo! Selamat datang di <strong>SMB (Sembada)</strong>.
+              Halo! Selamat datang di <strong>PT. SMB</strong>.
               <br /><br />
-              Ada yang dapat kami bantu terkait <strong>kebutuhan distributor</strong> atau <strong>jasa konsultasi bisnis</strong>?
+              Ada yang dapat kami bantu terkait <strong>Pendampingan SPPG</strong>, <strong>IT Solutions</strong>, <strong>Pest Control</strong>, atau <strong>Risk Insurance</strong>?
             </div>
 
             <form onSubmit={handleSend} style={{ display: 'flex', gap: '6px' }}>
@@ -128,7 +128,7 @@ export default function WhatsAppWidget() {
           {/* Direct WA Button */}
           <div style={{ padding: '8px 14px', background: 'var(--white)', borderTop: '1px solid var(--slate-200)', textAlign: 'center' }}>
             <a
-              href={`https://wa.me/${info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20tertarik%20dengan%20layanan%20Anda.`}
+              href={`https://wa.me/${info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20tertarik%20dengan%20layanan%20Anda.`}
               target="_blank"
               rel="noreferrer"
               style={{

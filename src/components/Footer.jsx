@@ -33,7 +33,7 @@ const SocialIcon = ({ type, size = 16 }) => {
 };
 
 export default function Footer() {
-  const { info, services } = companyData;
+  const { info, mainServices, visionMission } = companyData;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,8 +44,8 @@ export default function Footer() {
       background: 'var(--navy-950)',
       color: 'var(--slate-300)',
       borderTop: '2px solid var(--gold-500)',
-      paddingTop: 'clamp(48px, 6vw, 72px)',
-      paddingBottom: '30px',
+      paddingTop: 'clamp(40px, 5vw, 64px)',
+      paddingBottom: '28px',
       position: 'relative'
     }}>
       <div className="container">
@@ -53,9 +53,9 @@ export default function Footer() {
         {/* Main Footer Columns */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1.4fr 1fr 1fr 1.2fr',
-          gap: 'clamp(24px, 3.5vw, 40px)',
-          marginBottom: 'clamp(36px, 5vw, 56px)'
+          gridTemplateColumns: '1.3fr 1fr 1.1fr 1.2fr',
+          gap: 'clamp(20px, 3vw, 36px)',
+          marginBottom: 'clamp(32px, 4vw, 48px)'
         }} className="footer-grid">
 
           {/* Col 1: Brand */}
@@ -66,12 +66,13 @@ export default function Footer() {
                 height: '36px',
                 background: 'var(--navy-900)',
                 border: '2px solid var(--gold-500)',
-                borderRadius: '8px',
+                borderRadius: '6px',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                flexShrink: 0
               }}>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 800, color: 'var(--gold-400)' }}>
+                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.05rem', fontWeight: 800, color: 'var(--gold-400)' }}>
                   SMB
                 </span>
               </div>
@@ -79,14 +80,14 @@ export default function Footer() {
                 <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 800, color: 'var(--white)' }}>
                   PT. SMB
                 </span>
-                <div style={{ fontSize: '0.68rem', color: 'var(--gold-400)', letterSpacing: '0.04em', textTransform: 'uppercase', fontWeight: 600 }}>
-                  One Stop Consultant & Service Management
+                <div style={{ fontSize: '0.66rem', color: 'var(--gold-400)', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+                  {info.tagline}
                 </div>
               </div>
             </div>
 
-            <p style={{ fontSize: '0.84rem', color: 'var(--slate-400)', lineHeight: 1.6, marginBottom: '18px' }}>
-              Solusi terintegrasi satu pintu untuk pendampingan SPPG, IT solutions, pest control higienis, dan risk insurance terpercaya di Indonesia.
+            <p style={{ fontSize: '0.84rem', color: 'var(--slate-400)', lineHeight: 1.55, marginBottom: '16px' }}>
+              One Stop Consultant and Service Management terpercaya di Indonesia dengan layanan terintegrasi, profesional, dan berorientasi hasil.
             </p>
 
             <div style={{ display: 'flex', gap: '8px' }}>
@@ -105,7 +106,7 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="LinkedIn PT. SMB"
+                aria-label="LinkedIn SMB"
               >
                 <SocialIcon type="linkedin" size={14} />
               </a>
@@ -124,7 +125,7 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="Instagram PT. SMB"
+                aria-label="Instagram SMB"
               >
                 <SocialIcon type="instagram" size={14} />
               </a>
@@ -143,7 +144,7 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="YouTube PT. SMB"
+                aria-label="YouTube SMB"
               >
                 <SocialIcon type="youtube" size={14} />
               </a>
@@ -162,24 +163,24 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="Facebook PT. SMB"
+                aria-label="Facebook SMB"
               >
                 <SocialIcon type="facebook" size={14} />
               </a>
             </div>
           </div>
 
-          {/* Col 2: Layanan Utama */}
+          {/* Col 2: Layanan Utama (Flyer) */}
           <div>
-            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Layanan Utama
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
-              {services.mainServices.map((item) => (
+              {mainServices.map((item) => (
                 <li key={item.id}>
                   <Link
                     to="/layanan"
-                    style={{ fontSize: '0.84rem', color: 'var(--slate-400)', transition: 'color 0.15s' }}
+                    style={{ fontSize: '0.82rem', color: 'var(--slate-400)', transition: 'color 0.15s' }}
                     onMouseEnter={(e) => e.target.style.color = 'var(--gold-400)'}
                     onMouseLeave={(e) => e.target.style.color = 'var(--slate-400)'}
                   >
@@ -190,39 +191,41 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Keunggulan Kami */}
+          {/* Col 3: Keunggulan Kami (Flyer) */}
           <div>
-            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Keunggulan Kami
             </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0, fontSize: '0.84rem', color: 'var(--slate-400)' }}>
-              <li>Terintegrasi (One Stop Service)</li>
-              <li>Profesional & Bersertifikasi</li>
-              <li>Efisiensi Biaya & Waktu</li>
-              <li>Berorientasi Hasil Nyata</li>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
+              {visionMission.keunggulanKami.map((item, idx) => (
+                <li key={idx} style={{ fontSize: '0.82rem', color: 'var(--slate-400)', display: 'flex', alignItems: 'baseline', gap: '5px' }}>
+                  <span style={{ color: 'var(--gold-400)', fontWeight: 700 }}>•</span>
+                  <span>{item.title}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Col 4: Kantor & Kontak */}
+          {/* Col 4: Kontak (Flyer) */}
           <div>
-            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Kantor & Kontak
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.84rem', color: 'var(--slate-400)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.82rem', color: 'var(--slate-400)' }}>
               <div style={{ display: 'flex', gap: '8px' }}>
-                <MapPin size={15} color="var(--gold-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span>{info.address.street}, {info.address.city}</span>
+                <MapPin size={14} color="var(--gold-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <span>{info.address.city}, {info.address.country}</span>
               </div>
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <Phone size={15} color="var(--gold-400)" style={{ flexShrink: 0 }} />
+                <Phone size={14} color="var(--gold-400)" style={{ flexShrink: 0 }} />
                 <span>{info.phone}</span>
               </div>
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <Mail size={15} color="var(--gold-400)" style={{ flexShrink: 0 }} />
+                <Mail size={14} color="var(--gold-400)" style={{ flexShrink: 0 }} />
                 <span style={{ color: 'var(--gold-300)' }}>{info.email}</span>
               </div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--gold-400)', fontWeight: 600, marginTop: '4px' }}>
-                {info.slogan}
+              <div style={{ marginTop: '4px', fontSize: '0.78rem', color: 'var(--gold-400)', fontStyle: 'italic' }}>
+                "{info.slogan}"
               </div>
             </div>
           </div>
@@ -231,14 +234,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div style={{
-          paddingTop: '20px',
+          paddingTop: '18px',
           borderTop: '1px solid rgba(255, 255, 255, 0.08)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
           gap: '12px',
-          fontSize: '0.82rem',
+          fontSize: '0.8rem',
           color: 'var(--slate-500)'
         }}>
           <div>

@@ -8,15 +8,15 @@
  */
 
 export const companyData = {
-  // 1. Informasi Umum Perusahaan (Sesuai Brosur Resmi PT. SMB)
+  // 1. Informasi Umum Perusahaan (Berdasarkan Flyer Resmi PT. SMB)
   info: {
-    name: "SMB",
+    name: "PT. SMB",
     brandName: "PT. SMB",
     legalName: "PT. SMB",
     tagline: "One Stop Consultant and Service Management",
     subTagline: "Partner Strategis Untuk Kesuksesan Bisnis Anda",
     slogan: "Partner Strategis Untuk Kesuksesan Bisnis Anda",
-    aboutBrief: "PT. SMB adalah perusahaan One Stop Consultant and Service Management terintegrasi di Indonesia yang berkomitmen memberikan solusi profesional, terpercaya, dan berorientasi hasil nyata bagi pertumbuhan dan keberlangsungan bisnis klien.",
+    aboutBrief: "PT. SMB adalah perusahaan One Stop Consultant and Service Management terpercaya di Indonesia. Kami menghadirkan solusi profesional dan terintegrasi meliputi Pendampingan SPPG, IT Solutions, Pest Control, dan Risk Insurance untuk menjamin efisiensi biaya, waktu, dan hasil optimal bagi bisnis Anda.",
     establishedYear: "2012",
     experienceYears: "12+",
     phone: "082135608379",
@@ -24,85 +24,87 @@ export const companyData = {
     whatsappDisplay: "0821-3560-8379",
     email: "ptsmb@gmail.com",
     website: "www.ptsmb.com",
+    websiteUrl: "https://www.ptsmb.com",
     address: {
       street: "Kantor Pusat Indonesia",
-      area: "Koridor Bisnis Jakarta",
-      city: "DKI Jakarta",
+      area: "Layanan Seluruh Indonesia",
+      city: "Indonesia",
       country: "Indonesia"
     },
     operationalHours: "Senin - Jumat: 08:30 - 17:30 WIB",
+    pillars: ["Terintegrasi", "Profesional", "Tepercaya", "Berorientasi Hasil"],
     socials: {
-      linkedin: "https://linkedin.com/company/pt-smb",
-      instagram: "https://instagram.com/pt.smb",
-      youtube: "https://youtube.com/@pt-smb",
-      facebook: "https://facebook.com/pt.smb"
-    },
-    coreValues: ["Terintegrasi", "Profesional", "Tepercaya", "Berorientasi Hasil"]
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com",
+      youtube: "https://youtube.com",
+      facebook: "https://facebook.com"
+    }
   },
 
   // 1b. Data Banner Homepage
   banners: [
     {
       id: "banner-1",
-      badge: "One Stop Consultant and Service Management",
-      title: "Solusi Terintegrasi Konsultan & Manajemen Layanan Bisnis",
-      subtitle: "PT. SMB hadir sebagai partner strategis terpercaya dalam menghadirkan pendampingan SPPG, solusi teknologi IT, pest control higienis, dan manajemen risiko asuransi.",
+      badge: "One Stop Consultant & Service Management",
+      title: "Solusi Terintegrasi & Profesional untuk Kesuksesan Bisnis Anda",
+      subtitle: "PT. SMB mendampingi operasional dan manajemen korporasi Anda dengan layanan terpercaya, efisien, dan berorientasi pada hasil nyata.",
       primaryBtn: "Lihat Layanan Utama",
-      primaryLink: "#layanan",
-      secondaryBtn: "Konsultasi Sekarang",
-      secondaryLink: "#kontak",
+      primaryLink: "/layanan",
+      secondaryBtn: "Konsultasi Cepat",
+      secondaryLink: "/kontak",
       bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&auto=format&fit=crop&q=80"
     },
     {
       id: "banner-2",
-      badge: "Profesional & Bersertifikasi",
-      title: "Efisiensi Biaya & Waktu dengan Standar Kerja Teruji",
-      subtitle: "Didampingi oleh tenaga ahli tersertifikasi untuk mengoptimalkan sumber daya bisnis Anda dengan hasil yang cepat, tepat, dan hemat biaya.",
-      primaryBtn: "Hubungi Tim Ahli",
-      primaryLink: "#kontak",
-      secondaryBtn: "Profil Perusahaan",
-      secondaryLink: "#tentang-kami",
+      badge: "Layanan Unggulan PT. SMB",
+      title: "Pendampingan SPPG, IT Solutions, Pest Control & Risk Insurance",
+      subtitle: "Semua kebutuhan operasional dan mitigasi risiko bisnis Anda tersedia dalam satu pintu layanan terpadu dan bersertifikasi.",
+      primaryBtn: "Jelajahi 4 Layanan",
+      primaryLink: "/layanan",
+      secondaryBtn: "Hubungi Kami",
+      secondaryLink: "/kontak",
       bgImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&auto=format&fit=crop&q=80"
     },
     {
       id: "banner-3",
-      badge: "Partner Strategis Bisnis",
-      title: "Berorientasi Hasil Nyata & Solusi Terpadu Satu Pintu",
-      subtitle: "Fokus kami adalah memberikan dampak nyata dan nilai tambah berkelanjutan untuk mendukung kesuksesan jangka panjang perusahaan Anda.",
-      primaryBtn: "Mulai Kemitraan",
-      primaryLink: "#kontak",
-      secondaryBtn: "Lihat Klien & Mitra",
-      secondaryLink: "#klien",
-      bgImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&auto=format&fit=crop&q=80"
+      badge: "Efisiensi Biaya & Waktu",
+      title: "Partner Strategis Untuk Kesuksesan Bisnis Anda di Indonesia",
+      subtitle: "Didukung tim ahli profesional bersertifikat untuk mengoptimalkan sumber daya dan memberikan nilai tambah berkelanjutan bagi klien.",
+      primaryBtn: "Konsultasikan Kebutuhan",
+      primaryLink: "/kontak",
+      secondaryBtn: "Tentang PT. SMB",
+      secondaryLink: "/who-we-are",
+      bgImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&auto=format&fit=crop&q=80"
     }
   ],
 
-  // 2. Statistik Pencapaian Utama
+  // 2. Statistik & Pilar Keunggulan Utama
   stats: [
     {
       value: "100%",
-      label: "One Stop Service",
-      description: "Solusi seluruh kebutuhan bisnis dalam satu pintu layanan terpadu"
+      label: "Terintegrasi",
+      description: "One Stop Service satu pintu layanan terpadu"
     },
     {
-      value: "99.2%",
-      label: "Kepuasan Klien",
-      description: "Jaminan kualitas layanan tinggi dan komitmen kepuasan mitra"
+      value: "ISO+",
+      label: "Profesional & Bersertifikasi",
+      description: "Standar kerja terverifikasi dan tenaga ahli kompeten"
     },
     {
-      value: "4+",
-      label: "Pilar Layanan Utama",
-      description: "Pendampingan SPPG, IT Solutions, Pest Control & Risk Insurance"
+      value: "30%+",
+      label: "Efisiensi Biaya & Waktu",
+      description: "Optimasi alokasi sumber daya secara cepat dan tepat"
     },
     {
-      value: "Nasional",
-      label: "Jangkauan Layanan",
-      description: "Melayani mitra korporasi dan industri di seluruh Indonesia"
+      value: "99.8%",
+      label: "Berorientasi Hasil",
+      description: "Kepuasan klien dan dampak nyata bagi bisnis"
     }
   ],
 
-  // 3. Visi, Misi & Keunggulan Kami (Sesuai Brosur Resmi)
+  // 3. Visi, Misi & Keunggulan Kami (Sesuai Flyer Resmi PT. SMB)
   visionMission: {
+    tagline: "One Stop Consultant and Service Management",
     vision: "Menjadi perusahaan konsultan dan manajemen layanan terintegrasi terpercaya di Indonesia.",
     missions: [
       "Memberikan solusi profesional dan terintegrasi",
@@ -110,134 +112,162 @@ export const companyData = {
       "Mengedepankan inovasi dan teknologi",
       "Menjadi mitra strategis bagi bisnis klien"
     ],
-    // 4 Keunggulan Kami Sesuai Brosur
+    // 4 Keunggulan Kami dari Flyer PT. SMB
+    keunggulanKami: [
+      {
+        id: "terintegrasi",
+        name: "Terintegrasi (One Stop Service)",
+        summary: "Satu pintu layanan terpadu",
+        description: "Semua kebutuhan bisnis tersedia dalam satu pintu layanan terpadu tanpa perlu koordinasi rumit ke banyak vendor."
+      },
+      {
+        id: "profesional",
+        name: "Profesional & Bersertifikasi",
+        summary: "Standar kerja teruji",
+        description: "Tim ahli bersertifikat dengan standar kerja profesional, berpengalaman, dan terpercaya di berbagai sektor industri."
+      },
+      {
+        id: "efisiensi",
+        name: "Efisiensi Biaya & Waktu",
+        summary: "Cepat, tepat, hemat biaya",
+        description: "Mengoptimalkan sumber daya untuk memberikan hasil cepat, tepat, dan hemat biaya bagi operasional perusahaan Anda."
+      },
+      {
+        id: "hasil",
+        name: "Berorientasi Hasil",
+        summary: "Dampak nyata & nilai tambah",
+        description: "Fokus pada hasil nyata, terukur, berdampak positif, dan memberikan nilai tambah berkelanjutan bagi klien."
+      }
+    ],
+    // Tetap sediakan workingSpirit sebagai alias kompatibilitas komponen
     workingSpirit: [
       {
-        id: "integrated",
+        id: "terintegrasi",
         name: "Terintegrasi (One Stop Service)",
-        summary: "Semua kebutuhan bisnis tersedia dalam satu pintu layanan terpadu.",
-        description: "Kami menyediakan ekosistem terpadu satu pintu mulai dari konsultasi sistem, infrastruktur IT, pemeliharaan sanitasi lingkungan, hingga proteksi risiko bisnis tanpa perlu berpindah vendor."
+        summary: "Satu pintu layanan terpadu",
+        description: "Semua kebutuhan bisnis tersedia dalam satu pintu layanan terpadu tanpa perlu koordinasi rumit ke banyak vendor."
       },
       {
-        id: "professional",
+        id: "profesional",
         name: "Profesional & Bersertifikasi",
-        summary: "Tim ahli bersertifikat dengan standar kerja profesional dan terpercaya.",
-        description: "Didukung oleh jajaran konsultan dan praktisi ahli yang memiliki sertifikasi resmi dan rekam jejak panjang dalam menangani berbagai proyek berskala korporat."
+        summary: "Standar kerja teruji",
+        description: "Tim ahli bersertifikat dengan standar kerja profesional, berpengalaman, dan terpercaya di berbagai sektor industri."
       },
       {
-        id: "efficiency",
+        id: "efisiensi",
         name: "Efisiensi Biaya & Waktu",
-        summary: "Mengoptimalkan sumber daya untuk memberikan hasil cepat, tepat, dan hemat biaya.",
-        description: "Pendekatan kerja berbasis metodologi modern memastikan proses operasional berjalan ramping, memangkas inefisiensi, dan memberikan penghematan anggaran yang terukur."
+        summary: "Cepat, tepat, hemat biaya",
+        description: "Mengoptimalkan sumber daya untuk memberikan hasil cepat, tepat, dan hemat biaya bagi operasional perusahaan Anda."
       },
       {
-        id: "result",
+        id: "hasil",
         name: "Berorientasi Hasil",
-        summary: "Fokus pada hasil nyata, berdampak dan memberikan nilai tambah bagi klien.",
-        description: "Setiap langkah dan strategi yang kami rumuskan diorientasikan pada dampak konkret, pencapaian target bisnis, serta peningkatan daya saing klien secara berkelanjutan."
+        summary: "Dampak nyata & nilai tambah",
+        description: "Fokus pada hasil nyata, terukur, berdampak positif, dan memberikan nilai tambah berkelanjutan bagi klien."
       }
     ]
   },
 
-  // 4. Layanan Utama PT. SMB (Sesuai Brosur Resmi)
+  // 4. 4 Layanan Utama PT. SMB (Berdasarkan Flyer Resmi)
+  mainServices: [
+    {
+      id: "sppg",
+      title: "Pendampingan SPPG",
+      badge: "Layanan 01",
+      category: "Konsultasi & Sertifikasi",
+      shortDesc: "Pendampingan menyeluruh implementasi dan standarisasi sistem SPPG untuk kepatuhan operasional, pelatihan SDM, dan tata kelola berstandar tinggi.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80",
+      highlights: [
+        "Implementasi sistem",
+        "Audit dan monitoring",
+        "Pelatihan SDM",
+        "Evaluasi berkala"
+      ]
+    },
+    {
+      id: "it-solutions",
+      title: "IT Solutions",
+      badge: "Layanan 02",
+      category: "Teknologi & Digital",
+      shortDesc: "Ekosistem solusi teknologi informasi terpadu meliputi pengembangan sistem manajemen digital modern, integrasi arsitektur data, dan dukungan maintenance berkala.",
+      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&auto=format&fit=crop&q=80",
+      highlights: [
+        "Sistem manajemen digital",
+        "Integrasi data",
+        "Maintenance & support"
+      ]
+    },
+    {
+      id: "pest-control",
+      title: "Pest Control",
+      badge: "Layanan 03",
+      category: "Facility & Higiene",
+      shortDesc: "Pengendalian hama profesional dan berstandar internasional untuk lingkungan komersial, pergudangan, dan perkantoran dengan sertifikasi kebersihan resmi.",
+      image: "https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&auto=format&fit=crop&q=80",
+      highlights: [
+        "Pengendalian hama terstandar",
+        "Inspeksi rutin",
+        "Sertifikasi kebersihan"
+      ]
+    },
+    {
+      id: "risk-insurance",
+      title: "Risk Insurance",
+      badge: "Layanan 04",
+      category: "Manajemen Risiko",
+      shortDesc: "Manajemen dan analisis mitigasi risiko bisnis komprehensif, perencanaan proteksi aset perusahaan, serta fasilitasi kerjasama asuransi terpercaya.",
+      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
+      highlights: [
+        "Analisis risiko bisnis",
+        "Perencanaan proteksi",
+        "Kerjasama asuransi"
+      ]
+    }
+  ],
+
+  // Kompatibilitas untuk struktur pilar lama (agar komponen lain tetap aman)
   services: {
-    mainServices: [
-      {
-        id: "sppg",
-        title: "Pendampingan SPPG",
-        category: "Layanan Konsultasi",
-        badge: "Konsultasi & Manajemen",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80",
-        shortDesc: "Pendampingan komprehensif mulai dari implementasi sistem terstruktur, audit berkala, hingga pelatihan peningkatan kapasitas SDM.",
-        highlights: [
-          "Implementasi sistem",
-          "Audit dan monitoring",
-          "Pelatihan SDM",
-          "Evaluasi berkala"
-        ]
-      },
-      {
-        id: "it-solutions",
-        title: "IT Solutions",
-        category: "Teknologi Digital",
-        badge: "Teknologi & Sistem",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
-        shortDesc: "Pengembangan dan integrasi sistem manajemen digital modern serta layanan pemeliharaan IT yang andal untuk kelancaran bisnis.",
-        highlights: [
-          "Sistem manajemen digital",
-          "Integrasi data",
-          "Maintenance & support"
-        ]
-      },
-      {
-        id: "pest-control",
-        title: "Pest Control",
-        category: "Manajemen Fasilitas",
-        badge: "Kebersihan & Sanitasi",
-        image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80",
-        shortDesc: "Layanan pengendalian hama profesional terstandar dengan jadwal inspeksi rutin dan sertifikasi kebersihan higienis resmi.",
-        highlights: [
-          "Pengendalian hama terstandar",
-          "Inspeksi rutin",
-          "Sertifikasi kebersihan"
-        ]
-      },
-      {
-        id: "risk-insurance",
-        title: "Risk Insurance",
-        category: "Proteksi Bisnis",
-        badge: "Manajemen Risiko",
-        image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
-        shortDesc: "Analisis risiko bisnis mendalam dan perencanaan proteksi aset perusahaan melalui kemitraan asuransi kredibel dan tepercaya.",
-        highlights: [
-          "Analisis risiko bisnis",
-          "Perencanaan proteksi",
-          "Kerjasama asuransi"
-        ]
-      }
-    ],
-    // Backward-compatibility references for existing components
-    consulting: {
-      category: "Konsultasi & Manajemen",
-      badge: "One Stop Consultant",
-      title: "Layanan Konsultasi Manajemen Terintegrasi",
-      description: "Pendampingan sistem SPPG, audit, pelatihan SDM, dan mitigasi risiko bisnis untuk meningkatkan kepatuhan dan keunggulan operasional.",
+    distributor: {
+      category: "Service Management",
+      badge: "Layanan Operasional",
+      title: "Layanan Manajemen Fasilitas & Operasional Bisnis",
+      description: "Dukungan operasional dan proteksi lingkungan kerja terstandar meliputi Pest Control berizin dan Risk Insurance terpercaya.",
       items: [
         {
-          id: "sppg",
-          title: "Pendampingan SPPG",
-          image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Implementasi sistem kerja terpadu, audit dan monitoring operasional, pelatihan SDM, dan evaluasi berkala.",
-          highlights: ["Implementasi sistem", "Audit dan monitoring", "Pelatihan SDM", "Evaluasi berkala"]
+          id: "pest-control",
+          title: "Pest Control",
+          image: "https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&auto=format&fit=crop&q=80",
+          shortDesc: "Pengendalian hama terstandar internasional untuk fasilitas komersial, industri, dan pergudangan dengan inspeksi berkala.",
+          highlights: ["Pengendalian hama terstandar", "Inspeksi rutin", "Sertifikasi kebersihan"]
         },
         {
           id: "risk-insurance",
           title: "Risk Insurance",
           image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Analisis risiko bisnis, perencanaan proteksi aset korporasi, dan kerjasama dengan jaringan asuransi terpercaya.",
-          highlights: ["Analisis risiko bisnis", "Perencanaan proteksi", "Kerjasama asuransi", "Konsultasi klaim"]
+          shortDesc: "Analisis mitigasi risiko bisnis komprehensif, perencanaan proteksi aset, dan kerjasama program asuransi terpercaya.",
+          highlights: ["Analisis risiko bisnis", "Perencanaan proteksi", "Kerjasama asuransi"]
         }
       ]
     },
-    distributor: {
-      category: "Teknologi & Fasilitas",
-      badge: "Service Management",
-      title: "Layanan Teknologi & Manajemen Fasilitas",
-      description: "Solusi IT terintegrasi dan pengendalian hama terstandar untuk menjaga kelancaran sistem digital serta kebersihan higienis aset perusahaan.",
+    consulting: {
+      category: "One Stop Consultant",
+      badge: "Layanan Konsultasi & TI",
+      title: "Konsultasi Tata Kelola & Solusi Teknologi Informasi",
+      description: "Pendampingan implementasi SPPG terstandar dan pengembangan arsitektur IT Solutions untuk akselerasi manajemen digital.",
       items: [
+        {
+          id: "sppg",
+          title: "Pendampingan SPPG",
+          image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80",
+          shortDesc: "Pendampingan menyeluruh implementasi sistem SPPG, audit monitoring, pelatihan SDM, dan evaluasi berkala.",
+          highlights: ["Implementasi sistem", "Audit dan monitoring", "Pelatihan SDM", "Evaluasi berkala"]
+        },
         {
           id: "it-solutions",
           title: "IT Solutions",
-          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Penyediaan sistem manajemen digital, integrasi data terpusat, dan maintenance & support teknologi berkesinambungan.",
-          highlights: ["Sistem manajemen digital", "Integrasi data", "Maintenance & support", "Keamanan sistem"]
-        },
-        {
-          id: "pest-control",
-          title: "Pest Control",
-          image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Pengendalian hama terstandar, inspeksi rutin berkala, dan penerbitan sertifikasi kebersihan higienis untuk fasilitas bisnis.",
-          highlights: ["Pengendalian hama terstandar", "Inspeksi rutin", "Sertifikasi kebersihan", "Metode ramah lingkungan"]
+          image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&auto=format&fit=crop&q=80",
+          shortDesc: "Sistem manajemen digital terintegrasi, arsitektur data korporat, serta pemeliharaan dan support teknis berkelanjutan.",
+          highlights: ["Sistem manajemen digital", "Integrasi data", "Maintenance & support"]
         }
       ]
     }

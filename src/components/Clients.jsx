@@ -19,7 +19,7 @@ export default function Clients() {
             Klien & <span className="text-gold">Mitra Strategis</span>
           </h2>
           <p className="section-subtitle">
-            Lebih dari 1.450 perusahaan, produsen manufaktur, dan jaringan distributor di seluruh Indonesia mempercayakan rantai pasok serta strategi bisnisnya kepada SMB Sembada.
+            Lebih dari 1.450 perusahaan, produsen, dan institusi di seluruh Indonesia mempercayakan tata kelola layanan operasional dan konsultasi bisnisnya kepada PT. SMB.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function Clients() {
               Apa Kata <span className="text-gold">Mereka?</span>
             </h3>
             <p style={{ color: 'var(--slate-300)', fontSize: '0.84rem' }}>
-              Pengalaman langsung dari para pimpinan industri yang telah merasakan dampak positif dari kemitraan bersama SMB Sembada.
+              Pengalaman langsung dari para pimpinan industri yang telah merasakan dampak positif dari kemitraan bersama PT. SMB.
             </p>
           </div>
 

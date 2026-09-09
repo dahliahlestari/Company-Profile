@@ -32,7 +32,7 @@ export default function Leadership() {
             Dewan Pengurus & <span className="text-gold">Konsultan Senior</span>
           </h2>
           <p className="section-subtitle">
-            Para eksekutif dan konsultan ahli yang berdedikasi memimpin SMB Sembada untuk terus berkembang dan memberikan solusi terbaik bagi bisnis Anda.
+            Para eksekutif dan konsultan ahli yang berdedikasi memimpin PT. SMB untuk terus memberikan solusi profesional, terintegrasi, dan tepercaya bagi bisnis Anda.
           </p>
 
           {/* Flat Category Filter */}
