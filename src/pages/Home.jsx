@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Award, Layers, Users, Monitor, ShieldCheck, ShieldAlert } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Award, Layers, Users, Monitor, ShieldCheck, ShieldAlert, BookOpen, Calendar, Clock } from 'lucide-react';
 import Banner from '../components/Banner';
 import { companyData } from '../data/companyData';
+import { getStoredArticles } from '../data/blogData';
 
 export default function Home() {
   const { info, stats, mainServices } = companyData;
+  const [recentArticles, setRecentArticles] = useState([]);
+
+  useEffect(() => {
+    const list = getStoredArticles();
+    setRecentArticles(list.slice(0, 3));
+  }, []);
 
   const getServiceIcon = (id) => {
     switch (id) {
@@ -243,7 +250,115 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Quick CTA Banner */}
+      {/* 4. Berita & Wawasan Terbaru PT. SMB */}
+      {recentArticles.length > 0 && (
+        <section className="section-pad" style={{ background: 'var(--white)', borderTop: '1px solid var(--slate-200)' }}>
+          <div className="container">
+            <div className="section-header">
+              <div className="section-badge">
+                <BookOpen size={13} />
+                <span>Publikasi & Artikel</span>
+              </div>
+              <h2 className="section-title">
+                Wawasan & <span className="text-gold">Berita Terbaru</span>
+              </h2>
+              <p className="section-subtitle">
+                Ikuti perkembangan terkini, edukasi manajerial, dan analisis strategis dari tim profesional PT. SMB.
+              </p>
+            </div>
+
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 'clamp(16px, 2vw, 24px)',
+              marginBottom: '32px'
+            }}>
+              {recentArticles.map((article) => (
+                <article
+                  key={article.id}
+                  className="card-white"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    overflow: 'hidden'
+                  }}
+                >
+                  <div style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+                    <img
+                      src={article.thumbnail}
+                      alt={article.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      top: '8px',
+                      left: '8px',
+                      background: 'var(--navy-950)',
+                      color: 'var(--gold-400)',
+                      fontSize: '0.66rem',
+                      fontWeight: 700,
+                      padding: '2px 7px',
+                      borderRadius: '3px',
+                      textTransform: 'uppercase'
+                    }}>
+                      {article.category}
+                    </div>
+                  </div>
+
+                  <div style={{ padding: 'clamp(14px, 2vw, 18px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.72rem', color: 'var(--slate-500)', marginBottom: '6px' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                        <Calendar size={11} color="var(--gold-700)" />
+                        <span>{article.date}</span>
+                      </span>
+                      <span>•</span>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                        <Clock size={11} />
+                        <span>{article.readTime}</span>
+                      </span>
+                    </div>
+
+                    <h3 style={{ fontSize: '0.98rem', color: 'var(--navy-900)', lineHeight: 1.35, marginBottom: '6px' }}>
+                      {article.title}
+                    </h3>
+
+                    <p style={{ fontSize: '0.8rem', color: 'var(--slate-600)', lineHeight: 1.45, marginBottom: '14px' }}>
+                      {article.excerpt}
+                    </p>
+
+                    <Link
+                      to="/blog"
+                      style={{
+                        marginTop: 'auto',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        fontSize: '0.78rem',
+                        fontWeight: 700,
+                        color: 'var(--navy-900)'
+                      }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
+                    >
+                      <span>Baca Selengkapnya</span>
+                      <ArrowRight size={12} />
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div style={{ textAlign: 'center' }}>
+              <Link to="/blog" className="btn btn-navy btn-md">
+                <span>Lihat Semua Artikel & Berita</span>
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 5. Quick CTA Banner */}
       <section style={{
         background: 'var(--navy-900)',
         color: 'var(--white)',

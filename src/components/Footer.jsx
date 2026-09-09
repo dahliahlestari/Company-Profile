@@ -253,6 +253,7 @@ export default function Footer() {
             <Link to="/layanan" style={{ color: 'var(--slate-400)' }}>Layanan</Link>
             <Link to="/pengurus" style={{ color: 'var(--slate-400)' }}>Pengurus</Link>
             <Link to="/klien" style={{ color: 'var(--slate-400)' }}>Klien</Link>
+            <Link to="/blog" style={{ color: 'var(--slate-400)' }}>Blog & Berita</Link>
             <Link to="/kontak" style={{ color: 'var(--slate-400)' }}>Kontak</Link>
             <button
               onClick={scrollToTop}

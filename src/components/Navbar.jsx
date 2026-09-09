@@ -28,6 +28,7 @@ export default function Navbar() {
     { label: 'Layanan Utama', to: '/layanan' },
     { label: 'Tim Pengurus', to: '/pengurus' },
     { label: 'Klien & Mitra', to: '/klien' },
+    { label: 'Blog & Berita', to: '/blog' },
     { label: 'Kontak', to: '/kontak' }
   ];
 
