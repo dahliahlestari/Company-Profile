@@ -33,11 +33,19 @@ export default function Navbar() {
   ];
 
   return (
-    <header style={{ position: 'sticky', top: 0, zIndex: 1000, width: '100%' }}>
-      {/* Top Bar (Solid Navy) - Visible on Desktop/Tablet, Hidden on Mobile for clean Fullscreen feel */}
+    <header style={{ 
+      position: 'sticky', 
+      top: 0, 
+      zIndex: 1000, 
+      width: '100%',
+      background: 'rgba(7, 19, 34, 0.96)',
+      backdropFilter: 'saturate(180%) blur(20px)',
+      WebkitBackdropFilter: 'saturate(180%) blur(20px)'
+    }}>
+      {/* Top Bar (Solid Navy) - Visible on Desktop/Tablet, Hidden on Mobile */}
       <div className="topbar" style={{
-        background: 'var(--navy-950)',
-        borderBottom: '1px solid rgba(229, 168, 59, 0.2)',
+        background: 'rgba(7, 19, 34, 0.96)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
         color: 'var(--slate-300)',
         fontSize: '0.82rem',
         padding: '6px 0'
@@ -59,14 +67,14 @@ export default function Navbar() {
               <Globe size={13} color="var(--gold-400)" />
               <button 
                 onClick={() => setLang('ID')} 
-                style={{ color: lang === 'ID' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'ID' ? 700 : 400, fontSize: '0.78rem' }}
+                style={{ color: lang === 'ID' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'ID' ? 700 : 400, fontSize: '0.78rem', background: 'none', border: 'none', cursor: 'pointer' }}
               >
                 ID
               </button>
               <span style={{ opacity: 0.4 }}>|</span>
               <button 
                 onClick={() => setLang('EN')} 
-                style={{ color: lang === 'EN' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'EN' ? 700 : 400, fontSize: '0.78rem' }}
+                style={{ color: lang === 'EN' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'EN' ? 700 : 400, fontSize: '0.78rem', background: 'none', border: 'none', cursor: 'pointer' }}
               >
                 EN
               </button>
@@ -90,14 +98,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Main Navigation Bar (Apple Translucent Frosted Glass) */}
+      {/* Main Navigation Bar */}
       <nav style={{
-        background: isScrolled ? 'rgba(7, 19, 34, 0.88)' : 'rgba(11, 25, 44, 0.82)',
+        background: 'rgba(7, 19, 34, 0.96)',
         backdropFilter: 'saturate(180%) blur(20px)',
         WebkitBackdropFilter: 'saturate(180%) blur(20px)',
         borderBottom: isScrolled ? '1px solid rgba(229, 168, 59, 0.35)' : '1px solid rgba(255, 255, 255, 0.08)',
         padding: isScrolled ? '8px 0' : '11px 0',
-        transition: 'all 0.25s ease'
+        transition: 'padding 0.25s ease, border-color 0.25s ease'
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
           
@@ -232,69 +240,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Apple Local Sub-Navigation Ribbon (apple.com/iphone local nav bar) */}
-      <div className="local-subnav" style={{
-        background: 'rgba(11, 25, 44, 0.94)',
-        backdropFilter: 'saturate(180%) blur(20px)',
-        WebkitBackdropFilter: 'saturate(180%) blur(20px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-        padding: '7px 0',
-        fontSize: '0.8rem',
-        transition: 'all 0.2s ease'
-      }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
-            <span style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '0.94rem',
-              fontWeight: 700,
-              color: 'var(--white)',
-              letterSpacing: '-0.02em',
-              whiteSpace: 'nowrap'
-            }}>
-              PT. Sembada Makmur Bersama
-            </span>
-            <span className="localnav-badge" style={{
-              fontSize: '0.66rem',
-              fontWeight: 600,
-              padding: '2px 7px',
-              borderRadius: 'var(--radius-pill)',
-              background: 'rgba(229, 168, 59, 0.15)',
-              color: 'var(--gold-400)',
-              border: '1px solid rgba(229, 168, 59, 0.35)',
-              whiteSpace: 'nowrap'
-            }}>
-              Overview
-            </span>
-          </div>
-
-          <div className="localnav-links" style={{ display: 'flex', alignItems: 'center', gap: '22px' }}>
-            <a href="#highlights" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
-              Ikhtisar
-            </a>
-            <a href="#lineup" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
-              Lini Layanan
-            </a>
-            <a href="#why-smb" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
-              Keunggulan
-            </a>
-            <a href="#mitra" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
-              Klien & Mitra
-            </a>
-            <Link to="/blog" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
-              Wawasan
-            </Link>
-            <Link
-              to="/kontak"
-              className="btn btn-gold"
-              style={{ padding: '4px 14px', fontSize: '0.76rem', minHeight: '30px', borderRadius: 'var(--radius-pill)' }}
-            >
-              <span>Konsultasi</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-
       {/* Mobile Menu Drawer (Apple iOS Fullscreen Sheet Style) */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
@@ -406,7 +351,7 @@ export default function Navbar() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(7, 19, 34, 0.97);
+          background: rgba(7, 19, 34, 0.98);
           backdrop-filter: saturate(180%) blur(24px);
           -webkit-backdrop-filter: saturate(180%) blur(24px);
           z-index: 999;
@@ -422,17 +367,13 @@ export default function Navbar() {
           .mobile-controls { display: flex !important; }
         }
 
-        @media (max-width: 900px) {
-          .local-subnav { display: none !important; }
-        }
-
         @media (max-width: 768px) {
           .navbar-subtitle { display: none !important; }
         }
 
         @media (max-width: 640px) {
           .topbar { display: none !important; }
-          .mobile-drawer { top: 52px !important; }
+          .mobile-drawer { top: 56px !important; }
         }
       `}</style>
     </header>
