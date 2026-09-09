@@ -1,0 +1,320 @@
+/* ==========================================================================
+   SMB (SEMBADA) - CLEAN & FLAT DESIGN SYSTEM
+   Colors: Solid Deep Navy, Crisp Gold, Clean White
+   Style: Minimalist, Flat, Expansive / Fullscreen Desktop & Fluid Responsive
+   ========================================================================== */
+
+:root {
+  /* Solid Navy Shades (Clean & Flat) */
+  --navy-950: #071322;
+  --navy-900: #0B192C;
+  --navy-850: #0F233D;
+  --navy-800: #142E4F;
+  --navy-700: #1C3B63;
+  --navy-600: #254F85;
+  --navy-100: #EBF2FA;
+  --navy-50:  #F4F8FC;
+
+  /* Solid Gold Accents (No harsh multi-gradients) */
+  --gold-700: #A38022;
+  --gold-600: #BA942A;
+  --gold-500: #D4AF37;
+  --gold-400: #DFC05E;
+  --gold-300: #EBD38B;
+  --gold-100: #F8F4E8;
+  --gold-50:  #FCFAF3;
+
+  /* Crisp Neutrals */
+  --white: #FFFFFF;
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-300: #CBD5E1;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1E293B;
+  --slate-900: #0F172A;
+
+  /* Minimal & Flat Accents (Stripped heavy drop-shadows & heavy gradients) */
+  --border-light: #E2E8F0;
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-gold: rgba(212, 175, 55, 0.35);
+
+  /* Subtle minimal shadows (flat look) */
+  --shadow-flat-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-flat: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-flat-hover: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  /* Borders & Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Typography: Apple San Francisco (SF Pro Display & SF Pro Text) */
+  --font-heading: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+}
+
+/* Reset & Global Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--slate-700);
+  background-color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--navy-900);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+p {
+  color: var(--slate-600);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fluid Fullscreen Container */
+.container {
+  width: 100%;
+  max-width: 1480px; /* Expansive fullscreen width for desktop */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 3.5vw, 48px);
+  padding-right: clamp(16px, 3.5vw, 48px);
+}
+
+.section-pad {
+  padding-top: clamp(48px, 6vw, 90px);
+  padding-bottom: clamp(48px, 6vw, 90px);
+}
+
+/* Section Header Typography */
+.section-header {
+  text-align: center;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  background: var(--gold-50);
+  color: var(--gold-700);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--gold-300);
+  margin-bottom: 14px;
+}
+
+.section-badge.dark {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold-300);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  margin-bottom: 14px;
+  color: var(--navy-900);
+}
+
+.section-title.light {
+  color: var(--white);
+}
+
+.section-subtitle {
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+
+.section-subtitle.light {
+  color: var(--slate-300);
+}
+
+/* Flat Button Utilities */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  text-align: center;
+}
+
+.btn-gold {
+  background: var(--gold-500);
+  color: var(--navy-950);
+  border: 1px solid var(--gold-600);
+}
+
+.btn-gold:hover {
+  background: var(--gold-400);
+  border-color: var(--gold-500);
+}
+
+.btn-navy {
+  background: var(--navy-900);
+  color: var(--white);
+  border: 1px solid var(--navy-800);
+}
+
+.btn-navy:hover {
+  background: var(--navy-800);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-400);
+  border: 1.5px solid var(--gold-500);
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold-500);
+  color: var(--navy-950);
+}
+
+.btn-outline-navy {
+  background: transparent;
+  color: var(--navy-900);
+  border: 1.5px solid var(--navy-900);
+}
+
+.btn-outline-navy:hover {
+  background: var(--navy-900);
+  color: var(--white);
+}
+
+.btn-sm {
+  padding: 7px 16px;
+  font-size: 0.86rem;
+}
+
+.btn-lg {
+  padding: 14px 30px;
+  font-size: 1rem;
+}
+
+/* Solid Flat Color Accents */
+.text-gold {
+  color: var(--gold-500);
+}
+
+/* Clean Flat Cards (No heavy shadows, crisp 1px borders) */
+.card-white {
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-flat);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.card-white:hover {
+  border-color: var(--gold-500);
+}
+
+.card-navy {
+  background: var(--navy-850);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  transition: border-color var(--transition-fast);
+}
+
+.card-navy:hover {
+  border-color: var(--gold-400);
+}
+
+/* Modal Overlay */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 19, 34, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--gold-400);
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--slate-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--slate-300);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-500);
+}
