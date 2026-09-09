@@ -13,7 +13,7 @@ export default function Hero() {
       color: 'var(--white)',
       paddingTop: 'clamp(32px, 4.5vw, 64px)',
       paddingBottom: 'clamp(40px, 5.5vw, 76px)',
-      borderBottom: '1px solid rgba(212, 175, 55, 0.25)'
+      borderBottom: '1px solid rgba(229, 168, 59, 0.25)'
     }}>
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
@@ -98,7 +98,7 @@ export default function Hero() {
           <div>
             <div style={{
               background: 'var(--navy-850)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
+              border: '1px solid rgba(229, 168, 59, 0.3)',
               borderRadius: 'var(--radius-lg)',
               padding: 'clamp(18px, 2.5vw, 28px)',
               position: 'relative'
@@ -161,7 +161,7 @@ export default function Hero() {
               key={idx}
               style={{
                 background: 'var(--navy-850)',
-                border: '1px solid rgba(212, 175, 55, 0.25)',
+                border: '1px solid rgba(229, 168, 59, 0.25)',
                 borderRadius: 'var(--radius-md)',
                 padding: 'clamp(14px, 2vw, 22px)',
                 position: 'relative'

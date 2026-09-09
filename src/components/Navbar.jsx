@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Phone, Mail, Clock, MessageCircle, Menu, X, ChevronDown, ArrowRight, Globe } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Menu, X, ChevronDown, ArrowRight, Globe } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function Navbar() {
@@ -37,7 +37,7 @@ export default function Navbar() {
       {/* Top Bar (Solid Navy) - Visible on Desktop/Tablet, Hidden on Mobile for clean Fullscreen feel */}
       <div className="topbar" style={{
         background: 'var(--navy-950)',
-        borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
+        borderBottom: '1px solid rgba(229, 168, 59, 0.2)',
         color: 'var(--slate-300)',
         fontSize: '0.82rem',
         padding: '6px 0'
@@ -52,10 +52,6 @@ export default function Navbar() {
               <Mail size={13} color="var(--gold-400)" />
               <span>{companyData.info.email}</span>
             </a>
-            <div className="topbar-hours" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Clock size={13} color="var(--gold-400)" />
-              <span>{companyData.info.operationalHours}</span>
-            </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
@@ -198,8 +194,8 @@ export default function Navbar() {
                 alignItems: 'center',
                 gap: '4px',
                 padding: '5px 9px',
-                background: 'rgba(212, 175, 55, 0.12)',
-                border: '1px solid rgba(212, 175, 55, 0.4)',
+                background: 'rgba(229, 168, 59, 0.12)',
+                border: '1px solid rgba(229, 168, 59, 0.4)',
                 borderRadius: '6px',
                 color: 'var(--gold-400)',
                 fontSize: '0.74rem',
@@ -218,7 +214,7 @@ export default function Navbar() {
                 color: 'var(--gold-400)',
                 background: 'rgba(255,255,255,0.06)',
                 borderRadius: '6px',
-                border: '1px solid rgba(212, 175, 55, 0.3)',
+                border: '1px solid rgba(229, 168, 59, 0.3)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
@@ -341,7 +337,7 @@ export default function Navbar() {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          border-top: 1px solid rgba(212, 175, 55, 0.3);
+          border-top: 1px solid rgba(229, 168, 59, 0.3);
           overflow-y: auto;
         }
 

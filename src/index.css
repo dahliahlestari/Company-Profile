@@ -15,14 +15,16 @@
   --navy-100: #EBF2FA;
   --navy-50:  #F4F8FC;
 
-  /* Solid Gold Accents (No harsh multi-gradients) */
-  --gold-700: #A38022;
-  --gold-600: #BA942A;
-  --gold-500: #D4AF37;
-  --gold-400: #DFC05E;
-  --gold-300: #EBD38B;
-  --gold-100: #F8F4E8;
-  --gold-50:  #FCFAF3;
+  /* PT. SMB Official Brand Gold (Sampled from Official Logo & Flyer) */
+  --gold-800: #8E5D13;
+  --gold-700: #AA741E;
+  --gold-600: #C78B29;
+  --gold-500: #E5A83B; /* Authentic Radiant Gold from PT. SMB Logo */
+  --gold-400: #F0BC54; /* Polished Bright Gold Highlight */
+  --gold-300: #F6D183; /* Soft Elegant Gold */
+  --gold-200: #FBE5B5; /* Warm Light Tint */
+  --gold-100: #FDF3DF; /* Soft Warm Gold Background */
+  --gold-50:  #FEF9F0;
 
   /* Crisp Neutrals */
   --white: #FFFFFF;
@@ -40,7 +42,7 @@
   /* Minimal & Flat Accents (Stripped heavy drop-shadows & heavy gradients) */
   --border-light: #E2E8F0;
   --border-dark: rgba(255, 255, 255, 0.12);
-  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-gold: rgba(229, 168, 59, 0.35);
 
   /* Subtle minimal shadows (flat look) */
   --shadow-flat-sm: 0 1px 2px rgba(0, 0, 0, 0.04);

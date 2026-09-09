@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle2, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare, Send, CheckCircle2, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function ContactSection() {
@@ -259,7 +259,7 @@ export default function ContactSection() {
               borderRadius: 'var(--radius-lg)',
               padding: 'clamp(20px, 3vw, 28px)',
               color: 'var(--white)',
-              border: '1px solid rgba(212, 175, 55, 0.3)'
+              border: '1px solid rgba(229, 168, 59, 0.3)'
             }}>
               {/* Tagline pure text without border */}
               <div style={{
@@ -302,14 +302,6 @@ export default function ContactSection() {
                   <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)' }}>
                     <span>Email: </span>
                     <strong style={{ color: 'var(--gold-300)' }}>{info.email}</strong>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Clock size={15} color="var(--gold-400)" style={{ flexShrink: 0 }} />
-                  <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)' }}>
-                    <span>Operasional: </span>
-                    <strong style={{ color: 'var(--white)' }}>{info.operationalHours}</strong>
                   </div>
                 </div>
               </div>

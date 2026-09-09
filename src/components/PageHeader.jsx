@@ -8,10 +8,9 @@ export default function PageHeader({ badge, title, subtitle, breadcrumbCurrent }
       color: 'var(--white)',
       paddingTop: 'clamp(28px, 4vw, 56px)',
       paddingBottom: 'clamp(28px, 4vw, 56px)',
-      borderBottom: '1px solid rgba(212, 175, 55, 0.25)'
+      borderBottom: '1px solid rgba(229, 168, 59, 0.25)'
     }}>
       <div className="container">
-        {/* Breadcrumb ala Prasmul-ELI */}
         <div style={{
           display: 'flex',
           alignItems: 'center',

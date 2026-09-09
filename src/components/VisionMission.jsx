@@ -44,7 +44,7 @@ export default function VisionMission() {
             color: 'var(--white)',
             borderRadius: 'var(--radius-lg)',
             padding: 'clamp(22px, 3vw, 34px)',
-            border: '1px solid rgba(212, 175, 55, 0.35)',
+            border: '1px solid rgba(229, 168, 59, 0.35)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -156,7 +156,7 @@ export default function VisionMission() {
           borderRadius: 'var(--radius-lg)',
           padding: 'clamp(24px, 3vw, 40px)',
           color: 'var(--white)',
-          border: '1px solid rgba(212, 175, 55, 0.3)'
+          border: '1px solid rgba(229, 168, 59, 0.3)'
         }}>
           
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(18px, 2.5vw, 28px) auto' }}>
@@ -182,7 +182,7 @@ export default function VisionMission() {
                 key={spirit.id}
                 style={{
                   background: 'var(--navy-850)',
-                  border: '1px solid rgba(212, 175, 55, 0.25)',
+                  border: '1px solid rgba(229, 168, 59, 0.25)',
                   borderRadius: 'var(--radius-md)',
                   padding: 'clamp(14px, 1.8vw, 20px)',
                   display: 'flex',
@@ -193,7 +193,7 @@ export default function VisionMission() {
                   width: '36px',
                   height: '36px',
                   borderRadius: '6px',
-                  background: 'rgba(212, 175, 55, 0.12)',
+                  background: 'rgba(229, 168, 59, 0.12)',
                   border: '1px solid var(--gold-500)',
                   display: 'flex',
                   alignItems: 'center',

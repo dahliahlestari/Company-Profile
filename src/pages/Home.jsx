@@ -75,7 +75,7 @@ export default function Home() {
               color: 'var(--white)',
               borderRadius: 'var(--radius-lg)',
               padding: 'clamp(18px, 2.5vw, 28px)',
-              border: '1px solid rgba(212, 175, 55, 0.3)'
+              border: '1px solid rgba(229, 168, 59, 0.3)'
             }}>
               {/* Tagline without border */}
               <div style={{

@@ -94,7 +94,7 @@ export default function Clients() {
           borderRadius: 'var(--radius-lg)',
           padding: 'clamp(24px, 3.5vw, 48px)',
           color: 'var(--white)',
-          border: '1px solid rgba(212, 175, 55, 0.3)'
+          border: '1px solid rgba(229, 168, 59, 0.3)'
         }}>
           
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(20px, 3vw, 36px) auto' }}>
@@ -120,7 +120,7 @@ export default function Clients() {
                 key={item.id}
                 style={{
                   background: 'var(--navy-850)',
-                  border: '1px solid rgba(212, 175, 55, 0.25)',
+                  border: '1px solid rgba(229, 168, 59, 0.25)',
                   borderRadius: 'var(--radius-md)',
                   padding: 'clamp(18px, 2vw, 24px)',
                   display: 'flex',

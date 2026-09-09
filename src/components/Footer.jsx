@@ -104,7 +104,7 @@ export default function Footer() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--gold-400)',
-                  border: '1px solid rgba(212, 175, 55, 0.2)'
+                  border: '1px solid rgba(229, 168, 59, 0.2)'
                 }}
                 aria-label="LinkedIn SMB"
               >
@@ -123,7 +123,7 @@ export default function Footer() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--gold-400)',
-                  border: '1px solid rgba(212, 175, 55, 0.2)'
+                  border: '1px solid rgba(229, 168, 59, 0.2)'
                 }}
                 aria-label="Instagram SMB"
               >
@@ -142,7 +142,7 @@ export default function Footer() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--gold-400)',
-                  border: '1px solid rgba(212, 175, 55, 0.2)'
+                  border: '1px solid rgba(229, 168, 59, 0.2)'
                 }}
                 aria-label="YouTube SMB"
               >
@@ -161,7 +161,7 @@ export default function Footer() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: 'var(--gold-400)',
-                  border: '1px solid rgba(212, 175, 55, 0.2)'
+                  border: '1px solid rgba(229, 168, 59, 0.2)'
                 }}
                 aria-label="Facebook SMB"
               >
@@ -261,11 +261,11 @@ export default function Footer() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '5px',
-                background: 'rgba(212, 175, 55, 0.15)',
+                background: 'rgba(229, 168, 59, 0.15)',
                 color: 'var(--gold-400)',
                 padding: '4px 10px',
                 borderRadius: '4px',
-                border: '1px solid rgba(212, 175, 55, 0.3)',
+                border: '1px solid rgba(229, 168, 59, 0.3)',
                 cursor: 'pointer',
                 fontWeight: 600
               }}

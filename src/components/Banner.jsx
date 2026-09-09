@@ -40,7 +40,7 @@ export default function Banner() {
         width: '100%',
         background: 'var(--navy-950)',
         overflow: 'hidden',
-        borderBottom: '1px solid rgba(212, 175, 55, 0.3)'
+        borderBottom: '1px solid rgba(229, 168, 59, 0.3)'
       }}
     >
       {/* Background Image with Solid Dark Navy Overlay */}
@@ -210,7 +210,7 @@ export default function Banner() {
       {/* Highlights Strip (4 Keunggulan PT. SMB) */}
       <div style={{
         background: 'var(--navy-900)',
-        borderTop: '1px solid rgba(212, 175, 55, 0.25)',
+        borderTop: '1px solid rgba(229, 168, 59, 0.25)',
         padding: '11px 0'
       }}>
         <div className="container highlights-strip-grid" style={{
