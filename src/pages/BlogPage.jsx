@@ -328,22 +328,6 @@ export default function BlogPage() {
                       onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.025)'}
                       onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     />
-                    <div style={{
-                      position: 'absolute',
-                      top: '8px',
-                      left: '8px',
-                      background: 'var(--navy-950)',
-                      color: 'var(--gold-400)',
-                      fontSize: '0.66rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.04em',
-                      textTransform: 'uppercase',
-                      padding: '2px 7px',
-                      borderRadius: '3px'
-                    }}>
-                      {article.category}
-                    </div>
-
                     {isAuthor && (
                       <button
                         onClick={(e) => handleDelete(e, article.id, article.title)}
@@ -373,6 +357,17 @@ export default function BlogPage() {
 
                   {/* Card Body */}
                   <div style={{ padding: 'clamp(14px, 1.8vw, 18px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div style={{
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      color: 'var(--gold-700)',
+                      letterSpacing: '0.06em',
+                      textTransform: 'uppercase',
+                      marginBottom: '4px'
+                    }}>
+                      {article.category}
+                    </div>
+
                     {/* Meta info */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.72rem', color: 'var(--slate-500)', marginBottom: '6px', flexWrap: 'wrap' }}>
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>

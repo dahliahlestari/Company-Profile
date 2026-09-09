@@ -123,25 +123,21 @@ export default function Leadership() {
                     objectPosition: 'top'
                   }}
                 />
-                <div style={{
-                  position: 'absolute',
-                  top: '12px',
-                  right: '12px',
-                  background: member.category === 'Dewan Direksi' ? 'var(--gold-500)' : 'var(--navy-900)',
-                  color: member.category === 'Dewan Direksi' ? 'var(--navy-950)' : 'var(--white)',
-                  padding: '3px 9px',
-                  borderRadius: 'var(--radius-full)',
-                  fontSize: '0.7rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.04em',
-                  textTransform: 'uppercase'
-                }}>
-                  {member.category}
-                </div>
               </div>
 
               {/* Info Body */}
               <div style={{ padding: 'clamp(14px, 2vw, 20px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <div style={{
+                  fontSize: '0.68rem',
+                  fontWeight: 700,
+                  color: member.category === 'Dewan Direksi' ? 'var(--gold-700)' : 'var(--slate-500)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.06em',
+                  marginBottom: '4px'
+                }}>
+                  {member.category}
+                </div>
+
                 <h3 style={{
                   fontSize: '1.05rem',
                   color: 'var(--navy-900)',

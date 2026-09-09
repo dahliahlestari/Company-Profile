@@ -76,14 +76,11 @@ export default function Clients() {
                     {client.sector}
                   </span>
                   <span style={{
-                    fontSize: '0.65rem',
-                    background: 'var(--gold-100)',
-                    color: 'var(--gold-900)',
-                    padding: '1px 5px',
-                    borderRadius: '3px',
+                    fontSize: '0.72rem',
+                    color: 'var(--gold-700)',
                     fontWeight: 600
                   }}>
-                    {client.badge}
+                    • {client.badge}
                   </span>
                 </div>
               </div>

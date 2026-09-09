@@ -60,20 +60,16 @@ export default function TeamModal({ member, onClose }) {
             }}
           />
           <div style={{ flex: 1, minWidth: '220px' }}>
-            <span style={{
-              display: 'inline-block',
-              padding: '2px 7px',
-              background: 'rgba(212, 175, 55, 0.2)',
-              color: 'var(--gold-300)',
-              borderRadius: '3px',
-              fontSize: '0.7rem',
+            <div style={{
+              color: 'var(--gold-400)',
+              fontSize: '0.72rem',
               fontWeight: 700,
               textTransform: 'uppercase',
-              letterSpacing: '0.05em',
+              letterSpacing: '0.06em',
               marginBottom: '4px'
             }}>
               {member.category}
-            </span>
+            </div>
             <h3 style={{ fontSize: 'clamp(1.05rem, 2vw, 1.25rem)', color: 'var(--white)', marginBottom: '3px' }}>
               {member.name}
             </h3>

@@ -126,7 +126,6 @@ export default function Hero() {
                 background: 'rgba(255, 255, 255, 0.04)',
                 borderRadius: 'var(--radius-md)',
                 padding: '10px 12px',
-                borderLeft: '3px solid var(--gold-500)',
                 marginBottom: '14px'
               }}>
                 <div style={{ fontSize: '0.72rem', color: 'var(--gold-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '2px' }}>

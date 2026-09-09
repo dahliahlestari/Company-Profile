@@ -294,23 +294,20 @@ export default function Home() {
                       onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.025)'}
                       onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     />
-                    <div style={{
-                      position: 'absolute',
-                      top: '8px',
-                      left: '8px',
-                      background: 'var(--navy-950)',
-                      color: 'var(--gold-400)',
-                      fontSize: '0.66rem',
-                      fontWeight: 700,
-                      padding: '2px 7px',
-                      borderRadius: '3px',
-                      textTransform: 'uppercase'
-                    }}>
-                      {article.category}
-                    </div>
                   </Link>
 
                   <div style={{ padding: 'clamp(14px, 2vw, 18px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div style={{
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      color: 'var(--gold-700)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.06em',
+                      marginBottom: '4px'
+                    }}>
+                      {article.category}
+                    </div>
+
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.72rem', color: 'var(--slate-500)', marginBottom: '6px' }}>
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
                         <Calendar size={11} color="var(--gold-700)" />
