@@ -1,372 +1,249 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Truck, Briefcase, CheckCircle, ArrowRight, Package, Warehouse, Store, LineChart, ShieldAlert, Cpu, Sparkles } from 'lucide-react';
+import { Users, Monitor, ShieldCheck, Umbrella, CheckCircle2, ArrowRight, Briefcase } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('all');
   const { services } = companyData;
+  const mainServices = services.mainServices || [];
 
-  const getIcon = (id) => {
+  const getServiceHeader = (id) => {
     switch (id) {
-      case 'dist-1': return <Package size={20} color="var(--gold-600)" />;
-      case 'dist-2': return <Warehouse size={20} color="var(--gold-600)" />;
-      case 'dist-3': return <Truck size={20} color="var(--gold-600)" />;
-      case 'dist-4': return <Store size={20} color="var(--gold-600)" />;
-      case 'cons-1': return <LineChart size={20} color="var(--navy-700)" />;
-      case 'cons-2': return <Briefcase size={20} color="var(--navy-700)" />;
-      case 'cons-3': return <ShieldAlert size={20} color="var(--navy-700)" />;
-      case 'cons-4': return <Cpu size={20} color="var(--navy-700)" />;
-      default: return <Sparkles size={20} color="var(--gold-600)" />;
+      case 'sppg':
+        return {
+          icon: <Users size={18} color="var(--white)" />,
+          color: 'var(--navy-900)',
+          tag: 'PENDAMPINGAN SPPG'
+        };
+      case 'it-solutions':
+        return {
+          icon: <Monitor size={18} color="var(--white)" />,
+          color: 'var(--navy-800)',
+          tag: 'IT SOLUTIONS'
+        };
+      case 'pest-control':
+        return {
+          icon: <ShieldCheck size={18} color="var(--white)" />,
+          color: '#1A4D2E', // Forest Green accent from poster
+          tag: 'PEST CONTROL'
+        };
+      case 'risk-insurance':
+        return {
+          icon: <Umbrella size={18} color="var(--white)" />,
+          color: '#A35709', // Amber / warm gold accent from poster
+          tag: 'RISK INSURANCE'
+        };
+      default:
+        return {
+          icon: <Briefcase size={18} color="var(--white)" />,
+          color: 'var(--navy-900)',
+          tag: 'LAYANAN SMB'
+        };
     }
   };
+
+  const filteredServices = activeCategory === 'all'
+    ? mainServices
+    : mainServices.filter(s => s.category.toLowerCase().includes(activeCategory.toLowerCase()));
 
   return (
     <section id="layanan" className="section-pad" style={{ background: 'var(--slate-50)', position: 'relative' }}>
       <div className="container">
 
-        {/* Section Header */}
+        {/* Section Header (Apple Scale & Borderless Tagline) */}
         <div className="section-header">
           <div className="section-badge">
-            <Briefcase size={14} />
-            <span>Portofolio Solusi SMB</span>
+            <Briefcase size={13} />
+            <span>Portofolio Layanan Terpadu</span>
           </div>
           <h2 className="section-title">
-            Layanan Terpadu & <span className="text-gold">Kebutuhan Bisnis</span>
+            Layanan Utama <span className="text-gold">PT. SMB</span>
           </h2>
           <p className="section-subtitle">
-            Dua pilar spesialisasi SMB: menjamin ketersediaan rantai pasok distributor dan memberikan bimbingan konsultasi manajemen yang terbukti efektif.
+            One Stop Consultant and Service Management menghadirkan solusi terintegrasi untuk menjamin kepatuhan, keandalan sistem, kebersihan, dan proteksi bisnis Anda.
           </p>
 
-          {/* Flat Interactive Filter Tabs */}
+          {/* Interactive Filter Pills */}
           <div style={{
             display: 'inline-flex',
             background: 'var(--white)',
             padding: '3px',
             borderRadius: 'var(--radius-full)',
-            border: '1px solid var(--slate-300)',
-            marginTop: '18px',
+            border: '1px solid var(--slate-200)',
+            marginTop: '16px',
             gap: '3px',
             flexWrap: 'wrap',
             justifyContent: 'center'
           }}>
             <button
-              onClick={() => setActiveTab('all')}
+              onClick={() => setActiveCategory('all')}
               style={{
-                padding: '6px 16px',
+                padding: '6px 14px',
                 borderRadius: 'var(--radius-full)',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '0.82rem',
+                fontSize: '0.8rem',
                 fontWeight: 600,
-                background: activeTab === 'all' ? 'var(--navy-900)' : 'transparent',
-                color: activeTab === 'all' ? 'var(--white)' : 'var(--slate-600)',
+                background: activeCategory === 'all' ? 'var(--navy-900)' : 'transparent',
+                color: activeCategory === 'all' ? 'var(--white)' : 'var(--slate-600)',
                 transition: 'background 0.15s ease'
               }}
             >
-              Semua Solusi
+              Semua Layanan (4)
             </button>
             <button
-              onClick={() => setActiveTab('distributor')}
+              onClick={() => setActiveCategory('konsultasi')}
               style={{
-                padding: '6px 16px',
+                padding: '6px 14px',
                 borderRadius: 'var(--radius-full)',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '0.82rem',
+                fontSize: '0.8rem',
                 fontWeight: 600,
-                background: activeTab === 'distributor' ? 'var(--gold-500)' : 'transparent',
-                color: activeTab === 'distributor' ? 'var(--navy-950)' : 'var(--slate-600)',
+                background: activeCategory === 'konsultasi' ? 'var(--gold-500)' : 'transparent',
+                color: activeCategory === 'konsultasi' ? 'var(--navy-950)' : 'var(--slate-600)',
                 transition: 'background 0.15s ease'
               }}
             >
-              Kebutuhan Distributor
+              SPPG & Proteksi
             </button>
             <button
-              onClick={() => setActiveTab('consulting')}
+              onClick={() => setActiveCategory('teknologi')}
               style={{
-                padding: '6px 16px',
+                padding: '6px 14px',
                 borderRadius: 'var(--radius-full)',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '0.82rem',
+                fontSize: '0.8rem',
                 fontWeight: 600,
-                background: activeTab === 'consulting' ? 'var(--navy-900)' : 'transparent',
-                color: activeTab === 'consulting' ? 'var(--white)' : 'var(--slate-600)',
+                background: activeCategory === 'teknologi' ? 'var(--navy-900)' : 'transparent',
+                color: activeCategory === 'teknologi' ? 'var(--white)' : 'var(--slate-600)',
                 transition: 'background 0.15s ease'
               }}
             >
-              Konsultasi Jasa Bisnis
+              IT & Pest Control
             </button>
           </div>
         </div>
 
-        {/* 1. Pilar Distributor */}
-        {(activeTab === 'all' || activeTab === 'distributor') && (
-          <div style={{ marginBottom: '48px' }}>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: '20px',
-              paddingBottom: '12px',
-              borderBottom: '1px solid var(--slate-300)',
-              flexWrap: 'wrap',
-              gap: '10px'
-            }}>
-              <div>
-                <span style={{
-                  fontSize: '0.74rem',
-                  fontWeight: 700,
-                  color: 'var(--gold-700)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em'
+        {/* 4 Core Services Grid (Matching Flyer Layout & Apple Scale) */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          gap: '20px',
+          marginBottom: '32px'
+        }}>
+          {filteredServices.map((service) => {
+            const config = getServiceHeader(service.id);
+            return (
+              <div
+                key={service.id}
+                className="card-white"
+                style={{
+                  overflow: 'hidden',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  border: '1px solid var(--slate-200)',
+                  borderRadius: 'var(--radius-md)',
+                  background: 'var(--white)'
+                }}
+              >
+                {/* Flyer-Style Card Header (Solid Colored Badge with Icon & Tag) */}
+                <div style={{
+                  background: config.color,
+                  padding: '12px 16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  color: 'var(--white)'
                 }}>
-                  {services.distributor.badge}
-                </span>
-                <h3 style={{ fontSize: 'clamp(1.2rem, 1.8vw, 1.6rem)', color: 'var(--navy-900)', marginTop: '2px' }}>
-                  {services.distributor.title}
-                </h3>
-              </div>
-              <p style={{ maxWidth: '560px', fontSize: '0.86rem', color: 'var(--slate-600)', margin: 0 }}>
-                {services.distributor.description}
-              </p>
-            </div>
-
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '20px'
-            }}>
-              {services.distributor.items.map((item) => (
-                <div
-                  key={item.id}
-                  className="card-white"
-                  style={{
-                    overflow: 'hidden',
+                  <div style={{
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '50%',
+                    background: 'rgba(255, 255, 255, 0.2)',
                     display: 'flex',
-                    flexDirection: 'column',
-                    position: 'relative',
-                    borderTop: '3px solid var(--gold-500)'
-                  }}
-                >
-                  {/* Thumbnail Image */}
-                  <div style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)' }}>
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
-                      }}
-                    />
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '10px',
-                      left: '10px',
-                      width: '34px',
-                      height: '34px',
-                      borderRadius: '6px',
-                      background: 'var(--white)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: 'var(--shadow-flat-sm)'
-                    }}>
-                      {getIcon(item.id)}
-                    </div>
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0
+                  }}>
+                    {config.icon}
                   </div>
-
-                  {/* Card Content Body */}
-                  <div style={{ padding: 'clamp(16px, 2vw, 22px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                    <h4 style={{
-                      fontSize: '1.05rem',
-                      color: 'var(--navy-900)',
-                      marginBottom: '8px',
-                      lineHeight: 1.3
+                  <div>
+                    <h3 style={{
+                      fontSize: '0.92rem',
+                      fontWeight: 800,
+                      color: 'var(--white)',
+                      margin: 0,
+                      letterSpacing: '0.04em',
+                      textTransform: 'uppercase'
                     }}>
-                      {item.title}
-                    </h4>
-
-                    <p style={{
-                      fontSize: '0.84rem',
-                      color: 'var(--slate-600)',
-                      lineHeight: 1.5,
-                      marginBottom: '14px'
-                    }}>
-                      {item.shortDesc}
-                    </p>
-
-                    <div style={{
-                      marginTop: 'auto',
-                      paddingTop: '12px',
-                      borderTop: '1px solid var(--slate-100)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '5px'
-                    }}>
-                      {item.highlights.map((h, idx) => (
-                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--slate-700)' }}>
-                          <CheckCircle size={13} color="var(--gold-600)" />
-                          <span>{h}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <Link
-                      to="/kontak"
-                      style={{
-                        marginTop: '14px',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '5px',
-                        color: 'var(--navy-800)',
-                        fontWeight: 700,
-                        fontSize: '0.82rem'
-                      }}
-                    >
-                      <span>Konsultasikan Pengadaan</span>
-                      <ArrowRight size={13} />
-                    </Link>
+                      {service.title}
+                    </h3>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
 
-        {/* 2. Pilar Konsultasi */}
-        {(activeTab === 'all' || activeTab === 'consulting') && (
-          <div>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: '24px',
-              paddingBottom: '14px',
-              borderBottom: '1px solid var(--slate-300)',
-              flexWrap: 'wrap',
-              gap: '12px'
-            }}>
-              <div>
-                <span style={{
-                  fontSize: '0.74rem',
-                  fontWeight: 700,
-                  color: 'var(--navy-600)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em'
-                }}>
-                  {services.consulting.badge}
-                </span>
-                <h3 style={{ fontSize: 'clamp(1.2rem, 1.8vw, 1.6rem)', color: 'var(--navy-900)', marginTop: '2px' }}>
-                  {services.consulting.title}
-                </h3>
-              </div>
-              <p style={{ maxWidth: '560px', fontSize: '0.86rem', color: 'var(--slate-600)', margin: 0 }}>
-                {services.consulting.description}
-              </p>
-            </div>
+                {/* Thumbnail Image */}
+                <div style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }}
+                  />
+                </div>
 
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '20px'
-            }}>
-              {services.consulting.items.map((item) => (
-                <div
-                  key={item.id}
-                  className="card-white"
-                  style={{
-                    overflow: 'hidden',
+                {/* Card Content Body */}
+                <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <p style={{
+                    fontSize: '0.82rem',
+                    color: 'var(--slate-600)',
+                    lineHeight: 1.5,
+                    marginBottom: '14px'
+                  }}>
+                    {service.shortDesc}
+                  </p>
+
+                  {/* Bullet Highlights from Poster */}
+                  <div style={{
+                    marginTop: 'auto',
+                    paddingTop: '12px',
+                    borderTop: '1px solid var(--slate-100)',
                     display: 'flex',
                     flexDirection: 'column',
-                    position: 'relative',
-                    borderTop: '3px solid var(--navy-800)'
-                  }}
-                >
-                  {/* Thumbnail Image */}
-                  <div style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)' }}>
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
-                      }}
-                    />
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '10px',
-                      left: '10px',
-                      width: '34px',
-                      height: '34px',
-                      borderRadius: '6px',
-                      background: 'var(--white)',
-                      display: 'flex',
+                    gap: '6px'
+                  }}>
+                    {service.highlights.map((h, idx) => (
+                      <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.78rem', color: 'var(--slate-700)' }}>
+                        <CheckCircle2 size={13} color="var(--gold-600)" />
+                        <span style={{ fontWeight: 500 }}>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link
+                    to="/kontak"
+                    style={{
+                      marginTop: '14px',
+                      display: 'inline-flex',
                       alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: 'var(--shadow-flat-sm)'
-                    }}>
-                      {getIcon(item.id)}
-                    </div>
-                  </div>
-
-                  {/* Card Content Body */}
-                  <div style={{ padding: 'clamp(14px, 2vw, 20px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                    <h4 style={{
-                      fontSize: '1.05rem',
+                      gap: '5px',
                       color: 'var(--navy-900)',
-                      marginBottom: '8px',
-                      lineHeight: 1.35
-                    }}>
-                      {item.title}
-                    </h4>
-
-                    <p style={{
-                      fontSize: '0.84rem',
-                      color: 'var(--slate-600)',
-                      lineHeight: 1.55,
-                      marginBottom: '14px'
-                    }}>
-                      {item.shortDesc}
-                    </p>
-
-                    <div style={{
-                      marginTop: 'auto',
-                      paddingTop: '12px',
-                      borderTop: '1px solid var(--slate-100)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '5px'
-                    }}>
-                      {item.highlights.map((h, idx) => (
-                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--slate-700)' }}>
-                          <CheckCircle size={13} color="var(--navy-600)" />
-                          <span>{h}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <Link
-                      to="/kontak"
-                      style={{
-                        marginTop: '14px',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '5px',
-                        color: 'var(--gold-700)',
-                        fontWeight: 700,
-                        fontSize: '0.82rem'
-                      }}
-                    >
-                      <span>Konsultasikan Kebutuhan</span>
-                      <ArrowRight size={13} />
-                    </Link>
-                  </div>
+                      fontWeight: 700,
+                      fontSize: '0.8rem'
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
+                  >
+                    <span>Konsultasikan Kebutuhan</span>
+                    <ArrowRight size={13} />
+                  </Link>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+              </div>
+            );
+          })}
+        </div>
 
       </div>
     </section>

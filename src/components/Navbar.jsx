@@ -128,48 +128,37 @@ export default function Navbar() {
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
                 <span style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '1.35rem',
+                  fontSize: '1.25rem',
                   fontWeight: 800,
                   color: 'var(--white)',
                   letterSpacing: '0.02em',
                   lineHeight: 1.1
                 }}>
-                  SEMBADA
-                </span>
-                <span style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '0.72rem',
-                  fontWeight: 700,
-                  color: 'var(--gold-400)',
-                  border: '1px solid var(--gold-600)',
-                  padding: '1px 5px',
-                  borderRadius: '3px',
-                  letterSpacing: '0.06em'
-                }}>
-                  SMB
+                  PT. SMB
                 </span>
               </div>
               <span style={{
-                fontSize: '0.7rem',
-                color: 'var(--slate-300)',
-                letterSpacing: '0.05em',
+                fontSize: '0.68rem',
+                color: 'var(--gold-400)',
+                letterSpacing: '0.04em',
                 textTransform: 'uppercase',
-                fontWeight: 500
+                fontWeight: 600,
+                marginTop: '1px'
               }}>
-                Distributor & Business Advisory
+                One Stop Consultant and Service Management
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav Items with Multi-page NavLink */}
-          <div className="desktop-menu" style={{ display: 'flex', alignItems: 'center', gap: '22px' }}>
+          {/* Desktop Nav Items with Multi-page NavLink (Apple Scale) */}
+          <div className="desktop-menu" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 style={({ isActive }) => ({
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '0.92rem',
+                  fontSize: '0.88rem',
                   fontWeight: 600,
                   color: isActive ? 'var(--gold-400)' : 'var(--slate-200)',
                   borderBottom: isActive ? '2px solid var(--gold-500)' : '2px solid transparent',

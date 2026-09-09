@@ -36,20 +36,20 @@ export default function PageHeader({ badge, title, subtitle, breadcrumbCurrent }
         )}
 
         <h1 style={{
-          fontSize: 'clamp(1.35rem, 3.2vw, 2.6rem)',
+          fontSize: 'clamp(1.35rem, 2.4vw, 2.1rem)',
           color: 'var(--white)',
           fontWeight: 800,
-          marginBottom: '10px',
-          lineHeight: 1.2
+          marginBottom: '8px',
+          lineHeight: 1.22
         }}>
           {title}
         </h1>
 
         {subtitle && (
           <p style={{
-            fontSize: 'clamp(0.85rem, 1.15vw, 1.05rem)',
+            fontSize: 'clamp(0.84rem, 1vw, 0.94rem)',
             color: 'var(--slate-300)',
-            maxWidth: '780px',
+            maxWidth: '720px',
             lineHeight: 1.55,
             margin: 0
           }}>

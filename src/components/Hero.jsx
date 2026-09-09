@@ -38,57 +38,57 @@ export default function Hero() {
         }} className="hero-grid">
           
           <div>
-            <div className="section-badge dark">
+            <div className="section-badge dark" style={{ border: 'none', background: 'transparent', padding: 0 }}>
               <Award size={13} color="var(--gold-400)" />
-              <span>Mitra Terpercaya Solusi Distributor & Jasa Konsultasi</span>
+              <span>One Stop Consultant and Service Management</span>
             </div>
 
             <h1 style={{
-              fontSize: 'clamp(1.35rem, 3.4vw, 3.2rem)',
+              fontSize: 'clamp(1.4rem, 2.6vw, 2.2rem)',
               color: 'var(--white)',
-              lineHeight: 1.2,
-              marginBottom: '16px',
+              lineHeight: 1.22,
+              marginBottom: '14px',
               fontWeight: 800
             }}>
-              Membangun Solusi Rantai Pasok & <span className="text-gold">Akselerasi Bisnis</span> Anda.
+              Solusi Terintegrasi & <span className="text-gold">Mitra Strategis</span> Bisnis Anda.
             </h1>
 
             <p style={{
-              fontSize: 'clamp(0.86rem, 1.15vw, 1.05rem)',
+              fontSize: 'clamp(0.86rem, 1.05vw, 0.96rem)',
               color: 'var(--slate-300)',
               lineHeight: 1.6,
-              marginBottom: '26px',
-              maxWidth: '680px'
+              marginBottom: '22px',
+              maxWidth: '660px'
             }}>
               {info.aboutBrief}
             </p>
 
             {/* Action Buttons */}
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link to="/layanan" className="btn btn-gold btn-lg">
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <Link to="/layanan" className="btn btn-gold btn-md">
                 <span>Jelajahi Layanan Kami</span>
-                <ArrowRight size={15} />
+                <ArrowRight size={14} />
               </Link>
               <a
-                href={`https://wa.me/${info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20tertarik%20untuk%20mengetahui%20layanan%20distributor%20dan%20konsultasi%20bisnis.`}
+                href={`https://wa.me/${info.whatsapp}?text=Halo%20PT%20SMB,%20saya%20ingin%20berkonsultasi.`}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-outline-gold btn-lg"
+                className="btn btn-outline-gold btn-md"
               >
-                <MessageCircle size={15} />
-                <span>Mulai Percakapan</span>
+                <MessageCircle size={14} />
+                <span>Konsultasi WhatsApp</span>
               </a>
             </div>
 
             {/* Micro Highlights */}
-            <div style={{ display: 'flex', gap: '18px', marginTop: '24px', flexWrap: 'wrap' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--slate-300)', fontSize: '0.82rem' }}>
-                <CheckCircle2 size={15} color="var(--gold-400)" />
-                <span>Pasokan Bahan & Komoditas Terjamin</span>
+            <div style={{ display: 'flex', gap: '16px', marginTop: '20px', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--slate-300)', fontSize: '0.8rem' }}>
+                <CheckCircle2 size={14} color="var(--gold-400)" />
+                <span>Pendampingan SPPG & IT Solutions</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--slate-300)', fontSize: '0.82rem' }}>
-                <CheckCircle2 size={15} color="var(--gold-400)" />
-                <span>Konsultan Senior Berpengalaman</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--slate-300)', fontSize: '0.8rem' }}>
+                <CheckCircle2 size={14} color="var(--gold-400)" />
+                <span>Pest Control & Risk Insurance</span>
               </div>
             </div>
           </div>
@@ -99,43 +99,40 @@ export default function Hero() {
               background: 'var(--navy-850)',
               border: '1px solid rgba(212, 175, 55, 0.3)',
               borderRadius: 'var(--radius-lg)',
-              padding: 'clamp(20px, 3vw, 32px)',
+              padding: 'clamp(18px, 2.5vw, 28px)',
               position: 'relative'
             }}>
               <div style={{
-                display: 'inline-block',
-                padding: '3px 8px',
-                background: 'rgba(212, 175, 55, 0.12)',
-                color: 'var(--gold-300)',
-                borderRadius: '4px',
+                color: 'var(--gold-400)',
                 fontSize: '0.72rem',
                 fontWeight: 700,
-                letterSpacing: '0.05em',
-                marginBottom: '12px'
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                marginBottom: '8px'
               }}>
-                SEKILAS SEMBADA (SMB)
+                SEKILAS PT. SMB
               </div>
 
-              <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.1rem, 1.6vw, 1.35rem)', marginBottom: '10px', lineHeight: 1.3 }}>
-                Keunggulan Distribusi & Kebijakan Strategis yang Terintegrasi
+              <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.05rem, 1.4vw, 1.25rem)', marginBottom: '8px', lineHeight: 1.3 }}>
+                One Stop Consultant and Service Management
               </h3>
 
-              <p style={{ color: 'var(--slate-300)', fontSize: '0.86rem', lineHeight: 1.55, marginBottom: '16px' }}>
-                Sebagai mitra yang mengedepankan efisiensi operasional dan pertumbuhan jangka panjang, SMB menghadirkan layanan menyeluruh dari pengadaan komoditas hingga pendampingan tata kelola perusahaan.
+              <p style={{ color: 'var(--slate-300)', fontSize: '0.84rem', lineHeight: 1.55, marginBottom: '14px' }}>
+                Memberikan kepastian solusi terpadu satu pintu mulai dari pendampingan sistem operasional, teknologi IT, sanitasi higienis, hingga perlindungan risiko bisnis.
               </p>
 
               <div style={{
                 background: 'rgba(255, 255, 255, 0.04)',
                 borderRadius: 'var(--radius-md)',
-                padding: '12px 14px',
+                padding: '10px 12px',
                 borderLeft: '3px solid var(--gold-500)',
-                marginBottom: '16px'
+                marginBottom: '14px'
               }}>
-                <div style={{ fontSize: '0.75rem', color: 'var(--gold-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '2px' }}>
-                  Fokus Kami
+                <div style={{ fontSize: '0.72rem', color: 'var(--gold-400)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '2px' }}>
+                  Komitmen Kami
                 </div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--slate-200)', lineHeight: 1.45 }}>
-                  "Memberikan inspirasi & solusi praktis manajemen bisnis serta rantai pasok tangguh untuk menggapai target korporasi."
+                <div style={{ fontSize: '0.8rem', color: 'var(--slate-200)', lineHeight: 1.45 }}>
+                  "Terintegrasi, Profesional, Tepercaya, dan Berorientasi Pada Hasil Nyata untuk Kesuksesan Bisnis Klien."
                 </div>
               </div>
 

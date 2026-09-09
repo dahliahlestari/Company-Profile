@@ -11,23 +11,23 @@ export default function ServicesPage() {
   const workflows = [
     {
       step: '01',
-      title: 'Konsultasi Kebutuhan Awal',
-      desc: 'Diskusi mendalam bersama tim spesialis SMB untuk memetakan volume distribusi, spesifikasi barang, atau tantangan bisnis Anda.'
+      title: 'Konsultasi & Analisis Kebutuhan',
+      desc: 'Audiensi mendalam bersama tim konsultan ahli SMB untuk memetakan kebutuhan pendampingan sistem SPPG, solusi IT, proteksi hama, atau mitigasi risiko bisnis.'
     },
     {
       step: '02',
-      title: 'Perumusan Strategi & SLA',
-      desc: 'Penyusunan blueprint rute distribusi, sistem pergudangan, penetapan Service Level Agreement (SLA), atau modul pendampingan konsultasi.'
+      title: 'Perumusan Solusi Terintegrasi',
+      desc: 'Penyusunan rencana kerja sistematis, integrasi data & infrastruktur digital, serta kesepakatan Service Level Agreement (SLA) terukur.'
     },
     {
       step: '03',
-      title: 'Integrasi & Eksekusi Lapangan',
-      desc: 'Pengiriman pasokan komoditas, sinkronisasi sistem pencatatan WMS/ERP, serta pendampingan langsung dari konsultan ahli kami.'
+      title: 'Eksekusi & Pendampingan Lapangan',
+      desc: 'Penerapan langsung oleh tim ahli bersertifikat dengan standar kerja profesional, pelatihan SDM, instalasi sistem, dan inspeksi rutin.'
     },
     {
       step: '04',
       title: 'Evaluasi & Optimalisasi Berkelanjutan',
-      desc: 'Laporan performa berkala, peninjauan efisiensi biaya logistik, dan pengembangan kapasitas bisnis mitra jangka panjang.'
+      desc: 'Laporan performa berkala, sertifikasi, serta evaluasi menyeluruh untuk memastikan efisiensi biaya & waktu dan hasil berdampak nyata.'
     }
   ];
 
@@ -35,10 +35,10 @@ export default function ServicesPage() {
     <div>
       {/* 1. Header Page */}
       <PageHeader
-        badge="Portofolio Lengkap Solusi SMB"
-        title="Layanan Kebutuhan Distributor & Konsultasi Bisnis"
-        subtitle="Solusi terintegrasi untuk menjamin kestabilan pasokan rantai pasok dan mengakselerasi performa manajemen korporasi Anda."
-        breadcrumbCurrent="Layanan & Distribusi"
+        badge="Portofolio Solusi PT. SMB"
+        title="One Stop Consultant and Service Management"
+        subtitle="Solusi terintegrasi mencakup Pendampingan SPPG, IT Solutions, Pest Control, hingga Risk Insurance untuk efisiensi bisnis Anda."
+        breadcrumbCurrent="Layanan Utama"
       />
 
       {/* 2. Full Services Catalog with Interactive Tabs */}
@@ -52,10 +52,10 @@ export default function ServicesPage() {
               <span>Alur Kerjasama</span>
             </div>
             <h2 className="section-title">
-              Tahapan Kemitraan <span className="text-gold">SMB Sembada</span>
+              Tahapan Kemitraan <span className="text-gold">PT. SMB</span>
             </h2>
             <p className="section-subtitle">
-              Proses kerja yang terstruktur, transparan, dan terstandar demi kepastian hasil terbaik bagi bisnis Anda.
+              Proses kerja yang profesional, transparan, terstandar, dan berorientasi hasil demi kepastian solusi terbaik bagi bisnis Anda.
             </p>
           </div>
 

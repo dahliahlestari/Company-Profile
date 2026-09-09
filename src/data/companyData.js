@@ -8,205 +8,236 @@
  */
 
 export const companyData = {
-  // 1. Informasi Umum Perusahaan
+  // 1. Informasi Umum Perusahaan (Sesuai Brosur Resmi PT. SMB)
   info: {
     name: "SMB",
-    brandName: "Sembada",
-    legalName: "PT Sembada Makmur Bersama",
-    tagline: "Mitra Strategis Solusi Distributor & Jasa Konsultasi Bisnis Terpercaya",
-    subTagline: "Menghubungkan rantai pasok terpadu dengan konsultasi manajemen bisnis berstandar tinggi untuk mengakselerasi pertumbuhan bisnis Anda.",
-    aboutBrief: "Berdiri dengan komitmen kokoh untuk memajukan perekonomian nasional, SMB (Sembada) hadir sebagai pionir penyedia solusi terintegrasi: pemenuhan segala kebutuhan distributor modern dan layanan konsultasi jasa manajemen bisnis profesional.",
-    establishedYear: "2008",
-    experienceYears: "16+",
-    phone: "+62 21 5890 2888",
-    whatsapp: "628118899234",
-    whatsappDisplay: "+62 811-8899-234",
-    email: "kontak@sembada-smb.co.id",
+    brandName: "PT. SMB",
+    legalName: "PT. SMB",
+    tagline: "One Stop Consultant and Service Management",
+    subTagline: "Partner Strategis Untuk Kesuksesan Bisnis Anda",
+    slogan: "Partner Strategis Untuk Kesuksesan Bisnis Anda",
+    aboutBrief: "PT. SMB adalah perusahaan One Stop Consultant and Service Management terintegrasi di Indonesia yang berkomitmen memberikan solusi profesional, terpercaya, dan berorientasi hasil nyata bagi pertumbuhan dan keberlangsungan bisnis klien.",
+    establishedYear: "2012",
+    experienceYears: "12+",
+    phone: "082135608379",
+    whatsapp: "6282135608379",
+    whatsappDisplay: "0821-3560-8379",
+    email: "ptsmb@gmail.com",
+    website: "www.ptsmb.com",
     address: {
-      street: "Sembada Tower, Lantai 18, Jl. TB Simatupang No. 88",
-      area: "Cilandak Barat, Pasar Minggu",
-      city: "Jakarta Selatan, DKI Jakarta 12430",
+      street: "Kantor Pusat Indonesia",
+      area: "Koridor Bisnis Jakarta",
+      city: "DKI Jakarta",
       country: "Indonesia"
     },
     operationalHours: "Senin - Jumat: 08:30 - 17:30 WIB",
     socials: {
-      linkedin: "https://linkedin.com/company/sembada-smb",
-      instagram: "https://instagram.com/sembada.smb",
-      youtube: "https://youtube.com/@sembada-smb",
-      facebook: "https://facebook.com/sembada.smb"
-    }
+      linkedin: "https://linkedin.com/company/pt-smb",
+      instagram: "https://instagram.com/pt.smb",
+      youtube: "https://youtube.com/@pt-smb",
+      facebook: "https://facebook.com/pt.smb"
+    },
+    coreValues: ["Terintegrasi", "Profesional", "Tepercaya", "Berorientasi Hasil"]
   },
 
-  // 1b. Data Banner Homepage (Bisa Anda sesuaikan teks, foto, dan link tombolnya)
+  // 1b. Data Banner Homepage
   banners: [
     {
       id: "banner-1",
-      badge: "Pilar Utama • Distribusi Nasional",
-      title: "Solusi Rantai Pasok Terpadu & Jaringan Distributor Terlengkap",
-      subtitle: "Menyediakan pengadaan produk berkualitas, manajemen pergudangan WMS modern, dan armada pengiriman multimoda menjangkau 38 provinsi di Indonesia.",
-      primaryBtn: "Jelajahi Solusi Distributor",
+      badge: "One Stop Consultant and Service Management",
+      title: "Solusi Terintegrasi Konsultan & Manajemen Layanan Bisnis",
+      subtitle: "PT. SMB hadir sebagai partner strategis terpercaya dalam menghadirkan pendampingan SPPG, solusi teknologi IT, pest control higienis, dan manajemen risiko asuransi.",
+      primaryBtn: "Lihat Layanan Utama",
       primaryLink: "#layanan",
-      secondaryBtn: "Konsultasi Pengadaan",
+      secondaryBtn: "Konsultasi Sekarang",
       secondaryLink: "#kontak",
-      bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&auto=format&fit=crop&q=80"
+      bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&auto=format&fit=crop&q=80"
     },
     {
       id: "banner-2",
-      badge: "Pilar Utama • Advisory & Konsultasi",
-      title: "Akselerasi Pertumbuhan & Efisiensi Tata Kelola Bisnis Anda",
-      subtitle: "Didampingi oleh dewan konsultan senior dan praktisi manajemen industri untuk memangkas inefisiensi dan memperluas penetrasi pasar.",
-      primaryBtn: "Ajukan Sesi Konsultasi",
-      primaryLink: "#layanan",
-      secondaryBtn: "Lihat Tim Pengurus",
-      secondaryLink: "#pengurus",
+      badge: "Profesional & Bersertifikasi",
+      title: "Efisiensi Biaya & Waktu dengan Standar Kerja Teruji",
+      subtitle: "Didampingi oleh tenaga ahli tersertifikasi untuk mengoptimalkan sumber daya bisnis Anda dengan hasil yang cepat, tepat, dan hemat biaya.",
+      primaryBtn: "Hubungi Tim Ahli",
+      primaryLink: "#kontak",
+      secondaryBtn: "Profil Perusahaan",
+      secondaryLink: "#tentang-kami",
       bgImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&auto=format&fit=crop&q=80"
     },
     {
       id: "banner-3",
-      badge: "Peluang Kemitraan • Keagenan",
-      title: "Buka Akses Peluang Kemitraan Toko & Distributor Resmi SMB",
-      subtitle: "Bergabunglah bersama lebih dari 1.450 mitra korporat, toko ritel, dan jaringan sub-distributor yang telah mempercayakan bisnisnya pada SMB Sembada.",
-      primaryBtn: "Gabung Menjadi Mitra",
+      badge: "Partner Strategis Bisnis",
+      title: "Berorientasi Hasil Nyata & Solusi Terpadu Satu Pintu",
+      subtitle: "Fokus kami adalah memberikan dampak nyata dan nilai tambah berkelanjutan untuk mendukung kesuksesan jangka panjang perusahaan Anda.",
+      primaryBtn: "Mulai Kemitraan",
       primaryLink: "#kontak",
       secondaryBtn: "Lihat Klien & Mitra",
       secondaryLink: "#klien",
-      bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&auto=format&fit=crop&q=80"
+      bgImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&auto=format&fit=crop&q=80"
     }
   ],
 
-  // 2. Statistik Pencapaian Utama (Quick Stats)
+  // 2. Statistik Pencapaian Utama
   stats: [
     {
-      value: "16+",
-      label: "Tahun Pengalaman",
-      description: "Dedikasi melayani berbagai sektor industri di Indonesia"
+      value: "100%",
+      label: "One Stop Service",
+      description: "Solusi seluruh kebutuhan bisnis dalam satu pintu layanan terpadu"
     },
     {
-      value: "1.450+",
-      label: "Jaringan Mitra & Klien",
-      description: "Distributor, ritel, dan korporasi yang mempercayai kami"
+      value: "99.2%",
+      label: "Kepuasan Klien",
+      description: "Jaminan kualitas layanan tinggi dan komitmen kepuasan mitra"
     },
     {
-      value: "38",
-      label: "Provinsi Terjangkau",
-      description: "Jaringan logistik dan distribusi berskala nasional"
+      value: "4+",
+      label: "Pilar Layanan Utama",
+      description: "Pendampingan SPPG, IT Solutions, Pest Control & Risk Insurance"
     },
     {
-      value: "99.4%",
-      label: "Tingkat Kepuasan Klien",
-      description: "Komitmen pada kehandalan layanan dan hasil nyata"
+      value: "Nasional",
+      label: "Jangkauan Layanan",
+      description: "Melayani mitra korporasi dan industri di seluruh Indonesia"
     }
   ],
 
-  // 3. Visi, Misi & Nilai-Nilai Kerja (Working Spirit)
+  // 3. Visi, Misi & Keunggulan Kami (Sesuai Brosur Resmi)
   visionMission: {
-    vision: "Menjadi rujukan utama dan mitra terpercaya di Indonesia dalam keunggulan solusi rantai pasok distributor serta layanan konsultasi manajemen bisnis yang berdaya saing global.",
+    vision: "Menjadi perusahaan konsultan dan manajemen layanan terintegrasi terpercaya di Indonesia.",
     missions: [
-      "Menyediakan ekosistem pemenuhan kebutuhan distributor yang andal, efisien, dan transparan bagi pelaku usaha di seluruh pelosok negeri.",
-      "Memberikan layanan konsultasi manajemen bisnis berbasis data, riset praktis, dan keahlian mendalam untuk memacu akselerasi dan profitabilitas klien.",
-      "Membangun jejaring kemitraan strategis yang sinergis, saling menguntungkan, dan mengedepankan etika bisnis berintegritas tinggi.",
-      "Mendorong transformasi digital rantai pasok guna meminimalkan hambatan operasional dan meningkatkan daya saing ekonomi nasional."
+      "Memberikan solusi profesional dan terintegrasi",
+      "Menjamin kualitas layanan dan kepuasan klien",
+      "Mengedepankan inovasi dan teknologi",
+      "Menjadi mitra strategis bagi bisnis klien"
     ],
-    // Working Spirit terinspirasi dari Prasmul-ELI
+    // 4 Keunggulan Kami Sesuai Brosur
     workingSpirit: [
       {
-        id: "excellence",
-        name: "Excellence (Keunggulan)",
-        summary: "Standar mutu tanpa kompromi",
-        description: "SMB dengan sepenuh hati selalu berusaha menghadirkan kesempurnaan. Keunggulan operasional (operational excellence) dan keunggulan layanan (service excellence) adalah fondasi utama kepercayaan yang kami bangun bersama Anda."
+        id: "integrated",
+        name: "Terintegrasi (One Stop Service)",
+        summary: "Semua kebutuhan bisnis tersedia dalam satu pintu layanan terpadu.",
+        description: "Kami menyediakan ekosistem terpadu satu pintu mulai dari konsultasi sistem, infrastruktur IT, pemeliharaan sanitasi lingkungan, hingga proteksi risiko bisnis tanpa perlu berpindah vendor."
       },
       {
-        id: "linkage",
-        name: "Linkage (Sinergi & Kemitraan)",
-        summary: "Koneksi kokoh yang saling menguatkan",
-        description: "Kami menjalin hubungan yang erat dengan para prinsipal, jaringan toko, mitra agen, dan konsultan ahli. Dengan kerendahan hati dan ketulusan, kami merawat setiap kolaborasi agar tumbuh berkelanjutan."
+        id: "professional",
+        name: "Profesional & Bersertifikasi",
+        summary: "Tim ahli bersertifikat dengan standar kerja profesional dan terpercaya.",
+        description: "Didukung oleh jajaran konsultan dan praktisi ahli yang memiliki sertifikasi resmi dan rekam jejak panjang dalam menangani berbagai proyek berskala korporat."
       },
       {
-        id: "innovation",
-        name: "Innovation (Inovasi Terarah)",
-        summary: "Solusi kreatif menghadapi tantangan zaman",
-        description: "Dunia perdagangan dan distribusi terus bergerak cepat. Kami senantiasa beradaptasi mengintegrasikan sistem teknologi pergudangan terkini serta metodologi konsultasi modern untuk solusi bisnis terbaik."
+        id: "efficiency",
+        name: "Efisiensi Biaya & Waktu",
+        summary: "Mengoptimalkan sumber daya untuk memberikan hasil cepat, tepat, dan hemat biaya.",
+        description: "Pendekatan kerja berbasis metodologi modern memastikan proses operasional berjalan ramping, memangkas inefisiensi, dan memberikan penghematan anggaran yang terukur."
       },
       {
-        id: "integrity",
-        name: "Integrity (Integritas & Kepercayaan)",
-        summary: "Kejujuran dan transparansi mutlak",
-        description: "Keterbukaan dalam tata kelola, keandalan dalam pengiriman komoditas, dan etika profesional dalam setiap advis bisnis adalah janji kami kepada seluruh pemangku kepentingan."
+        id: "result",
+        name: "Berorientasi Hasil",
+        summary: "Fokus pada hasil nyata, berdampak dan memberikan nilai tambah bagi klien.",
+        description: "Setiap langkah dan strategi yang kami rumuskan diorientasikan pada dampak konkret, pencapaian target bisnis, serta peningkatan daya saing klien secara berkelanjutan."
       }
     ]
   },
 
-  // 4. Dua Pilar Layanan Utama SMB
+  // 4. Layanan Utama PT. SMB (Sesuai Brosur Resmi)
   services: {
-    distributor: {
-      category: "Kebutuhan Distributor",
-      badge: "Pilar 01 • Rantai Pasok Terpadu",
-      title: "Solusi Terlengkap Segala Kebutuhan Distributor",
-      description: "Kami menyediakan infrastruktur pasokan, pergudangan, armada, hingga penyaluran produk untuk memastikan alur distribusi bisnis Anda berjalan tanpa hambatan.",
+    mainServices: [
+      {
+        id: "sppg",
+        title: "Pendampingan SPPG",
+        category: "Layanan Konsultasi",
+        badge: "Konsultasi & Manajemen",
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80",
+        shortDesc: "Pendampingan komprehensif mulai dari implementasi sistem terstruktur, audit berkala, hingga pelatihan peningkatan kapasitas SDM.",
+        highlights: [
+          "Implementasi sistem",
+          "Audit dan monitoring",
+          "Pelatihan SDM",
+          "Evaluasi berkala"
+        ]
+      },
+      {
+        id: "it-solutions",
+        title: "IT Solutions",
+        category: "Teknologi Digital",
+        badge: "Teknologi & Sistem",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
+        shortDesc: "Pengembangan dan integrasi sistem manajemen digital modern serta layanan pemeliharaan IT yang andal untuk kelancaran bisnis.",
+        highlights: [
+          "Sistem manajemen digital",
+          "Integrasi data",
+          "Maintenance & support"
+        ]
+      },
+      {
+        id: "pest-control",
+        title: "Pest Control",
+        category: "Manajemen Fasilitas",
+        badge: "Kebersihan & Sanitasi",
+        image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80",
+        shortDesc: "Layanan pengendalian hama profesional terstandar dengan jadwal inspeksi rutin dan sertifikasi kebersihan higienis resmi.",
+        highlights: [
+          "Pengendalian hama terstandar",
+          "Inspeksi rutin",
+          "Sertifikasi kebersihan"
+        ]
+      },
+      {
+        id: "risk-insurance",
+        title: "Risk Insurance",
+        category: "Proteksi Bisnis",
+        badge: "Manajemen Risiko",
+        image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
+        shortDesc: "Analisis risiko bisnis mendalam dan perencanaan proteksi aset perusahaan melalui kemitraan asuransi kredibel dan tepercaya.",
+        highlights: [
+          "Analisis risiko bisnis",
+          "Perencanaan proteksi",
+          "Kerjasama asuransi"
+        ]
+      }
+    ],
+    // Backward-compatibility references for existing components
+    consulting: {
+      category: "Konsultasi & Manajemen",
+      badge: "One Stop Consultant",
+      title: "Layanan Konsultasi Manajemen Terintegrasi",
+      description: "Pendampingan sistem SPPG, audit, pelatihan SDM, dan mitigasi risiko bisnis untuk meningkatkan kepatuhan dan keunggulan operasional.",
       items: [
         {
-          id: "dist-1",
-          title: "Pengadaan & Suplai Produk Berkualitas",
-          image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Pasokan komoditas, barang konsumsi, dan material industri berkualitas prima dengan jaminan ketersediaan stok stabil sepanjang tahun.",
-          highlights: ["Akses harga tangan pertama", "Kontrak pasokan berjangka", "Kontrol kualitas bertingkat"]
+          id: "sppg",
+          title: "Pendampingan SPPG",
+          image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80",
+          shortDesc: "Implementasi sistem kerja terpadu, audit dan monitoring operasional, pelatihan SDM, dan evaluasi berkala.",
+          highlights: ["Implementasi sistem", "Audit dan monitoring", "Pelatihan SDM", "Evaluasi berkala"]
         },
         {
-          id: "dist-2",
-          title: "Manajemen Pergudangan & Hub Logistik (WMS)",
-          image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Fasilitas warehouse modern berstandar tinggi dengan sistem inventaris digital terintegrasi untuk pelacakan barang real-time.",
-          highlights: ["Pelacakan stok berbasis barcode", "Gudang multi-suhu (opsional)", "Penanganan barang tersertifikasi"]
-        },
-        {
-          id: "dist-3",
-          title: "Distribusi Multimoda Seluruh Nusantara",
-          image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Armada darat, laut, dan udara yang siap mengantarkan kiriman partai besar maupun ritel ke 38 provinsi secara tepat waktu.",
-          highlights: ["Armada ber-GPS real-time", "Asuransi muatan penuh", "Jaminan lead time terukur"]
-        },
-        {
-          id: "dist-4",
-          title: "Program Keagenan & Kemitraan Toko",
-          image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Dukungan ekspansi jaringan gerai retail, kemitraan sub-distributor, serta penyediaan materi promosi terpadu di titik penjualan.",
-          highlights: ["Skema modal usaha fleksibel", "Pendampingan sistem kasir/POS", "Dukungan pemasaran lokal"]
+          id: "risk-insurance",
+          title: "Risk Insurance",
+          image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
+          shortDesc: "Analisis risiko bisnis, perencanaan proteksi aset korporasi, dan kerjasama dengan jaringan asuransi terpercaya.",
+          highlights: ["Analisis risiko bisnis", "Perencanaan proteksi", "Kerjasama asuransi", "Konsultasi klaim"]
         }
       ]
     },
-    consulting: {
-      category: "Konsultasi Jasa Bisnis",
-      badge: "Pilar 02 • Advisory & Manajemen",
-      title: "Konsultasi Jasa & Akselerasi Manajemen Bisnis",
-      description: "Dibimbing oleh para praktisi senior dan konsultan berpengalaman, kami membantu perusahaan merancang strategi ekspansi, efisiensi rantai pasok, dan tata kelola korporat.",
+    distributor: {
+      category: "Teknologi & Fasilitas",
+      badge: "Service Management",
+      title: "Layanan Teknologi & Manajemen Fasilitas",
+      description: "Solusi IT terintegrasi dan pengendalian hama terstandar untuk menjaga kelancaran sistem digital serta kebersihan higienis aset perusahaan.",
       items: [
         {
-          id: "cons-1",
-          title: "Konsultasi Strategi Distribusi & Penetrasi Pasar",
-          image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Pemetaan rute distribusi optimal (Route-to-Market), penentuan target regional, dan studi kelayakan pasar bagi produk baru.",
-          highlights: ["Analisis data pasar mendalam", "Pemetaan pesaing & harga", "Blueprint Route-to-Market"]
+          id: "it-solutions",
+          title: "IT Solutions",
+          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
+          shortDesc: "Penyediaan sistem manajemen digital, integrasi data terpusat, dan maintenance & support teknologi berkesinambungan.",
+          highlights: ["Sistem manajemen digital", "Integrasi data", "Maintenance & support", "Keamanan sistem"]
         },
         {
-          id: "cons-2",
-          title: "Audit & Optimasi Operasional Rantai Pasok",
-          image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Evaluasi menyeluruh terhadap alur rantai pasok Anda untuk memangkas inefisiensi, mengurangi biaya logistik, dan mempercepat siklus stok.",
-          highlights: ["Identifikasi bottleneck", "Penghematan biaya hingga 30%", "Standarisasi SOP pergudangan"]
-        },
-        {
-          id: "cons-3",
-          title: "Tata Kelola Manajemen & Kepatuhan Regulasi",
-          image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Pendampingan penyusunan struktur organisasi, sistem tata kelola korporat, perizinan distribusi nasional, dan sertifikasi SNI/BPOM/Halal.",
-          highlights: ["Kepatuhan hukum perdagangan", "Sistem KPI & manajemen kerja", "Dokumentasi SOP terstruktur"]
-        },
-        {
-          id: "cons-4",
-          title: "Transformasi Digital & Integrasi Sistem ERP",
-          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80",
-          shortDesc: "Bimbingan pemilihan dan implementasi software Supply Chain, ERP, dan analitik dashboard untuk memantau performa penjualan secara instan.",
-          highlights: ["Kustomisasi sistem bisnis", "Pelatihan tim internal", "Dashboard analitik eksekutif"]
+          id: "pest-control",
+          title: "Pest Control",
+          image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80",
+          shortDesc: "Pengendalian hama terstandar, inspeksi rutin berkala, dan penerbitan sertifikasi kebersihan higienis untuk fasilitas bisnis.",
+          highlights: ["Pengendalian hama terstandar", "Inspeksi rutin", "Sertifikasi kebersihan", "Metode ramah lingkungan"]
         }
       ]
     }

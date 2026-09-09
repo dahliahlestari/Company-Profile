@@ -9,7 +9,7 @@ export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
-    serviceInterest: 'Kebutuhan Distributor & Pasokan',
+    serviceInterest: 'Pendampingan SPPG',
     email: '',
     phone: '',
     message: ''
@@ -21,7 +21,7 @@ export default function ContactSection() {
     setIsSubmitted(true);
 
     const waText = encodeURIComponent(
-      `Halo Tim SMB Sembada,\n\nNama: ${formData.name}\nPerusahaan: ${formData.company}\nLayanan yang diminati: ${formData.serviceInterest}\nEmail: ${formData.email}\nNo Telp: ${formData.phone}\nPesan: ${formData.message}`
+      `Halo Tim PT. SMB,\n\nNama: ${formData.name}\nPerusahaan: ${formData.company}\nLayanan yang diminati: ${formData.serviceInterest}\nEmail: ${formData.email}\nNo Telp: ${formData.phone}\nPesan: ${formData.message}`
     );
     window.open(`https://wa.me/${info.whatsapp}?text=${waText}`, '_blank');
   };
@@ -209,12 +209,11 @@ export default function ContactSection() {
                       backgroundColor: 'var(--white)'
                     }}
                   >
-                    <option>Kebutuhan Distributor & Pasokan Komoditas</option>
-                    <option>Manajemen Pergudangan & Logistik Multimoda</option>
-                    <option>Program Keagenan & Kemitraan Toko</option>
-                    <option>Konsultasi Strategi Distribusi & Penetrasi Pasar</option>
-                    <option>Audit & Efisiensi Rantai Pasok</option>
-                    <option>Kemitraan Lainnya</option>
+                    <option>Pendampingan SPPG</option>
+                    <option>IT Solutions (Sistem Digital & Integrasi Data)</option>
+                    <option>Pest Control (Pengendalian Hama & Sertifikasi)</option>
+                    <option>Risk Insurance (Analisis Risiko & Proteksi)</option>
+                    <option>One Stop Consultant & Service Management Terpadu</option>
                   </select>
                 </div>
 
@@ -224,7 +223,7 @@ export default function ContactSection() {
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="Jelaskan secara singkat volume distribusi, wilayah target, atau tantangan bisnis..."
+                    placeholder="Jelaskan secara singkat kebutuhan layanan, sistem, atau tantangan bisnis Anda..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     style={{
@@ -264,17 +263,14 @@ export default function ContactSection() {
             }}>
               <span style={{
                 display: 'inline-block',
-                padding: '2px 8px',
-                background: 'rgba(212, 175, 55, 0.15)',
-                color: 'var(--gold-300)',
-                borderRadius: 'var(--radius-full)',
-                fontSize: '0.7rem',
+                color: 'var(--gold-400)',
+                fontSize: '0.72rem',
                 fontWeight: 700,
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                marginBottom: '12px'
+                letterSpacing: '0.08em',
+                marginBottom: '10px'
               }}>
-                Kantor Pusat SMB
+                Kantor Pusat Indonesia
               </span>
 
               <h3 style={{ fontSize: 'clamp(1.1rem, 2vw, 1.25rem)', color: 'var(--white)', marginBottom: '16px' }}>

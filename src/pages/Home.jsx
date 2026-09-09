@@ -18,30 +18,30 @@ export default function Home() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: '1.2fr 0.8fr',
-            gap: 'clamp(28px, 4vw, 56px)',
+            gap: 'clamp(24px, 3.5vw, 48px)',
             alignItems: 'center',
-            marginBottom: 'clamp(48px, 6vw, 72px)'
+            marginBottom: 'clamp(36px, 5vw, 56px)'
           }} className="home-intro-grid">
             
             <div>
               <div className="section-badge">
-                <Award size={14} />
-                <span>Selamat Datang di SMB Sembada</span>
+                <Award size={13} />
+                <span>One Stop Consultant and Service Management</span>
               </div>
-              <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 14px 0' }}>
-                Mitra Strategis Kebutuhan Distributor & <span className="text-gold">Konsultasi Bisnis</span>
+              <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 12px 0' }}>
+                Partner Strategis untuk <span className="text-gold">Kesuksesan Bisnis</span> Anda
               </h2>
-              <p style={{ fontSize: 'clamp(0.86rem, 1.2vw, 0.98rem)', color: 'var(--slate-600)', lineHeight: 1.65, marginBottom: '20px' }}>
+              <p style={{ fontSize: 'clamp(0.86rem, 1.1vw, 0.96rem)', color: 'var(--slate-600)', lineHeight: 1.65, marginBottom: '20px' }}>
                 {info.aboutBrief}
               </p>
               
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <Link to="/who-we-are" className="btn btn-navy btn-md">
-                  <span>Pelajari Tentang Kami</span>
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                <Link to="/layanan" className="btn btn-navy btn-md">
+                  <span>Lihat Layanan Utama</span>
                   <ArrowRight size={14} />
                 </Link>
-                <Link to="/layanan" className="btn btn-outline-navy btn-md">
-                  <span>Lihat Seluruh Solusi</span>
+                <Link to="/who-we-are" className="btn btn-outline-navy btn-md">
+                  <span>Tentang PT. SMB</span>
                 </Link>
               </div>
             </div>
@@ -51,37 +51,44 @@ export default function Home() {
               background: 'var(--navy-900)',
               color: 'var(--white)',
               borderRadius: 'var(--radius-lg)',
-              padding: 'clamp(20px, 3vw, 32px)',
+              padding: 'clamp(18px, 2.5vw, 28px)',
               border: '1px solid rgba(212, 175, 55, 0.3)'
             }}>
-              <span style={{
-                display: 'inline-block',
-                padding: '2px 8px',
-                background: 'rgba(212, 175, 55, 0.15)',
+              <div style={{
                 color: 'var(--gold-400)',
-                borderRadius: '4px',
                 fontSize: '0.72rem',
                 fontWeight: 700,
+                letterSpacing: '0.08em',
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                marginBottom: '10px'
+                marginBottom: '8px'
               }}>
                 Identitas Resmi
-              </span>
-              <h3 style={{ fontSize: 'clamp(1.15rem, 1.8vw, 1.35rem)', color: 'var(--white)', marginBottom: '10px' }}>
+              </div>
+              <h3 style={{ fontSize: 'clamp(1.1rem, 1.5vw, 1.25rem)', color: 'var(--white)', marginBottom: '4px' }}>
                 {info.legalName}
               </h3>
-              <p style={{ fontSize: '0.84rem', color: 'var(--slate-300)', lineHeight: 1.55, marginBottom: '16px' }}>
-                Berfokus memberikan kepastian rantai pasok untuk mitra distributor dan mengawal transformasi bisnis korporasi di 38 provinsi di Indonesia.
+              <div style={{ fontSize: '0.78rem', color: 'var(--gold-300)', fontWeight: 600, marginBottom: '12px' }}>
+                {info.tagline}
+              </div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--slate-300)', lineHeight: 1.55, marginBottom: '14px' }}>
+                Menyediakan ekosistem terpadu satu pintu mulai dari pendampingan sistem, IT solutions, pest control, hingga risk insurance.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--slate-300)' }}>
-                  <CheckCircle2 size={15} color="var(--gold-400)" />
-                  <span>Jaringan Pasokan & Pergudangan Modern WMS</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--slate-300)' }}>
+                  <CheckCircle2 size={14} color="var(--gold-400)" />
+                  <span>Terintegrasi (One Stop Service)</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--slate-300)' }}>
-                  <CheckCircle2 size={15} color="var(--gold-400)" />
-                  <span>Dewan Konsultan Senior & Praktisi Industri</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--slate-300)' }}>
+                  <CheckCircle2 size={14} color="var(--gold-400)" />
+                  <span>Profesional & Bersertifikasi</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--slate-300)' }}>
+                  <CheckCircle2 size={14} color="var(--gold-400)" />
+                  <span>Efisiensi Biaya & Waktu</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--gold-400)' }}>
+                  <CheckCircle2 size={14} color="var(--gold-400)" />
+                  <span>Berorientasi Hasil Nyata</span>
                 </div>
               </div>
             </div>
@@ -101,12 +108,12 @@ export default function Home() {
                   background: 'var(--slate-50)',
                   border: '1px solid var(--slate-200)',
                   borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(14px, 2vw, 20px)'
+                  padding: 'clamp(14px, 2vw, 18px)'
                 }}
               >
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: 'clamp(1.55rem, 2.4vw, 2.2rem)',
+                  fontSize: 'clamp(1.4rem, 2vw, 1.85rem)',
                   fontWeight: 800,
                   color: 'var(--navy-900)',
                   lineHeight: 1,
@@ -116,14 +123,14 @@ export default function Home() {
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '0.88rem',
+                  fontSize: '0.86rem',
                   fontWeight: 700,
                   color: 'var(--gold-700)',
-                  marginBottom: '3px'
+                  marginBottom: '2px'
                 }}>
                   {item.label}
                 </div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--slate-600)', lineHeight: 1.4 }}>
+                <div style={{ fontSize: '0.76rem', color: 'var(--slate-600)', lineHeight: 1.4 }}>
                   {item.description}
                 </div>
               </div>
@@ -133,79 +140,94 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Core Pillars Preview */}
+      {/* 3. Layanan Utama PT. SMB (4 Layanan dari Brosur Resmi) */}
       <section className="section-pad" style={{ background: 'var(--slate-50)', borderTop: '1px solid var(--slate-200)' }}>
         <div className="container">
           <div className="section-header">
             <div className="section-badge">
-              <Briefcase size={14} />
-              <span>Dua Pilar Spesialisasi</span>
+              <Briefcase size={13} />
+              <span>Layanan Terpadu</span>
             </div>
             <h2 className="section-title">
-              Layanan Utama <span className="text-gold">SMB Sembada</span>
+              Layanan Utama <span className="text-gold">PT. SMB</span>
             </h2>
             <p className="section-subtitle">
-              Solusi komprehensif mulai dari pemenuhan fisik rantai pasok hingga advis strategis tingkat dewan direksi.
+              Solusi satu pintu yang dirancang untuk mendukung kepatuhan, keandalan sistem digital, kebersihan higienis, dan mitigasi risiko bisnis.
             </p>
           </div>
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: 'clamp(20px, 3vw, 32px)',
-            marginBottom: '40px'
-          }} className="pillars-grid">
-            
-            {/* Pilar 1: Distributor */}
-            <div className="card-white" style={{ padding: 'clamp(18px, 2.5vw, 30px)', borderTop: '3px solid var(--gold-500)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '0.74rem', fontWeight: 700, color: 'var(--gold-700)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                {services.distributor.badge}
-              </span>
-              <h3 style={{ fontSize: 'clamp(1.15rem, 1.8vw, 1.4rem)', color: 'var(--navy-900)', margin: '6px 0 10px 0' }}>
-                {services.distributor.title}
-              </h3>
-              <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', lineHeight: 1.55, marginBottom: '16px' }}>
-                {services.distributor.description}
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '20px' }}>
-                {services.distributor.items.slice(0, 3).map((item) => (
-                  <div key={item.id} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.82rem', color: 'var(--slate-700)' }}>
-                    <CheckCircle2 size={14} color="var(--gold-600)" />
-                    <span>{item.title}</span>
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '18px',
+            marginBottom: '32px'
+          }}>
+            {services.mainServices.map((item) => (
+              <div
+                key={item.id}
+                className="card-white"
+                style={{
+                  overflow: 'hidden',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  border: '1px solid var(--slate-200)',
+                  borderRadius: 'var(--radius-md)',
+                  background: 'var(--white)'
+                }}
+              >
+                <div style={{
+                  background: item.id === 'pest-control' ? '#1A4D2E' : item.id === 'risk-insurance' ? '#A35709' : 'var(--navy-900)',
+                  padding: '10px 14px',
+                  color: 'var(--white)'
+                }}>
+                  <span style={{ fontSize: '0.84rem', fontWeight: 800, letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+                    {item.title}
+                  </span>
+                </div>
+                <div style={{ height: '140px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
+                <div style={{ padding: '14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--slate-600)', lineHeight: 1.5, marginBottom: '12px' }}>
+                    {item.shortDesc}
+                  </p>
+                  <div style={{ marginTop: 'auto', paddingTop: '10px', borderTop: '1px solid var(--slate-100)', display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                    {item.highlights.map((h, i) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.76rem', color: 'var(--slate-700)' }}>
+                        <CheckCircle2 size={12} color="var(--gold-600)" />
+                        <span>{h}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                  <Link
+                    to="/layanan"
+                    style={{
+                      marginTop: '12px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '5px',
+                      color: 'var(--navy-900)',
+                      fontWeight: 700,
+                      fontSize: '0.78rem'
+                    }}
+                  >
+                    <span>Detail Layanan</span>
+                    <ArrowRight size={12} />
+                  </Link>
+                </div>
               </div>
-              <Link to="/layanan" className="btn btn-outline-navy btn-sm" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>
-                <span>Rincian Kebutuhan Distributor</span>
-                <ArrowRight size={13} />
-              </Link>
-            </div>
+            ))}
+          </div>
 
-            {/* Pilar 2: Consulting */}
-            <div className="card-white" style={{ padding: 'clamp(18px, 2.5vw, 30px)', borderTop: '3px solid var(--navy-800)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '0.74rem', fontWeight: 700, color: 'var(--navy-600)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                {services.consulting.badge}
-              </span>
-              <h3 style={{ fontSize: 'clamp(1.15rem, 1.8vw, 1.4rem)', color: 'var(--navy-900)', margin: '6px 0 10px 0' }}>
-                {services.consulting.title}
-              </h3>
-              <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', lineHeight: 1.55, marginBottom: '16px' }}>
-                {services.consulting.description}
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '20px' }}>
-                {services.consulting.items.slice(0, 3).map((item) => (
-                  <div key={item.id} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.82rem', color: 'var(--slate-700)' }}>
-                    <CheckCircle2 size={14} color="var(--navy-600)" />
-                    <span>{item.title}</span>
-                  </div>
-                ))}
-              </div>
-              <Link to="/layanan" className="btn btn-outline-navy btn-sm" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>
-                <span>Rincian Jasa Konsultasi</span>
-                <ArrowRight size={13} />
-              </Link>
-            </div>
-
+          <div style={{ textAlign: 'center' }}>
+            <Link to="/layanan" className="btn btn-navy btn-md">
+              <span>Lihat Seluruh Solusi Terintegrasi</span>
+              <ArrowRight size={13} />
+            </Link>
           </div>
         </div>
       </section>

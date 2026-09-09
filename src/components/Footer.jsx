@@ -60,10 +60,10 @@ export default function Footer() {
 
           {/* Col 1: Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
               <div style={{
-                width: '38px',
-                height: '38px',
+                width: '36px',
+                height: '36px',
                 background: 'var(--navy-900)',
                 border: '2px solid var(--gold-500)',
                 borderRadius: '8px',
@@ -71,22 +71,22 @@ export default function Footer() {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.1rem', fontWeight: 800, color: 'var(--gold-400)' }}>
+                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 800, color: 'var(--gold-400)' }}>
                   SMB
                 </span>
               </div>
               <div>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 800, color: 'var(--white)' }}>
-                  SEMBADA
+                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 800, color: 'var(--white)' }}>
+                  PT. SMB
                 </span>
-                <div style={{ fontSize: '0.7rem', color: 'var(--gold-400)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                  {info.legalName}
+                <div style={{ fontSize: '0.68rem', color: 'var(--gold-400)', letterSpacing: '0.04em', textTransform: 'uppercase', fontWeight: 600 }}>
+                  One Stop Consultant & Service Management
                 </div>
               </div>
             </div>
 
-            <p style={{ fontSize: '0.88rem', color: 'var(--slate-400)', lineHeight: 1.6, marginBottom: '20px' }}>
-              Penyedia ekosistem rantai pasok terpadu untuk segala kebutuhan distributor dan layanan konsultasi manajemen bisnis berstandar korporat di Indonesia.
+            <p style={{ fontSize: '0.84rem', color: 'var(--slate-400)', lineHeight: 1.6, marginBottom: '18px' }}>
+              Solusi terintegrasi satu pintu untuk pendampingan SPPG, IT solutions, pest control higienis, dan risk insurance terpercaya di Indonesia.
             </p>
 
             <div style={{ display: 'flex', gap: '8px' }}>
@@ -95,8 +95,8 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  width: '34px',
-                  height: '34px',
+                  width: '32px',
+                  height: '32px',
                   borderRadius: '6px',
                   background: 'rgba(255, 255, 255, 0.06)',
                   display: 'flex',
@@ -105,17 +105,17 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="LinkedIn SMB"
+                aria-label="LinkedIn PT. SMB"
               >
-                <SocialIcon type="linkedin" size={15} />
+                <SocialIcon type="linkedin" size={14} />
               </a>
               <a
                 href={info.socials.instagram}
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  width: '34px',
-                  height: '34px',
+                  width: '32px',
+                  height: '32px',
                   borderRadius: '6px',
                   background: 'rgba(255, 255, 255, 0.06)',
                   display: 'flex',
@@ -124,17 +124,17 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="Instagram SMB"
+                aria-label="Instagram PT. SMB"
               >
-                <SocialIcon type="instagram" size={15} />
+                <SocialIcon type="instagram" size={14} />
               </a>
               <a
                 href={info.socials.youtube}
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  width: '34px',
-                  height: '34px',
+                  width: '32px',
+                  height: '32px',
                   borderRadius: '6px',
                   background: 'rgba(255, 255, 255, 0.06)',
                   display: 'flex',
@@ -143,17 +143,17 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="YouTube SMB"
+                aria-label="YouTube PT. SMB"
               >
-                <SocialIcon type="youtube" size={15} />
+                <SocialIcon type="youtube" size={14} />
               </a>
               <a
                 href={info.socials.facebook}
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  width: '34px',
-                  height: '34px',
+                  width: '32px',
+                  height: '32px',
                   borderRadius: '6px',
                   background: 'rgba(255, 255, 255, 0.06)',
                   display: 'flex',
@@ -162,24 +162,24 @@ export default function Footer() {
                   color: 'var(--gold-400)',
                   border: '1px solid rgba(212, 175, 55, 0.2)'
                 }}
-                aria-label="Facebook SMB"
+                aria-label="Facebook PT. SMB"
               >
-                <SocialIcon type="facebook" size={15} />
+                <SocialIcon type="facebook" size={14} />
               </a>
             </div>
           </div>
 
-          {/* Col 2: Kebutuhan Distributor */}
+          {/* Col 2: Layanan Utama */}
           <div>
-            <h4 style={{ fontSize: '0.94rem', color: 'var(--white)', marginBottom: '14px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Solusi Distributor
+            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              Layanan Utama
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
-              {services.distributor.items.map((item) => (
+              {services.mainServices.map((item) => (
                 <li key={item.id}>
                   <Link
                     to="/layanan"
-                    style={{ fontSize: '0.86rem', color: 'var(--slate-400)', transition: 'color 0.15s' }}
+                    style={{ fontSize: '0.84rem', color: 'var(--slate-400)', transition: 'color 0.15s' }}
                     onMouseEnter={(e) => e.target.style.color = 'var(--gold-400)'}
                     onMouseLeave={(e) => e.target.style.color = 'var(--slate-400)'}
                   >
@@ -190,33 +190,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Konsultasi */}
+          {/* Col 3: Keunggulan Kami */}
           <div>
-            <h4 style={{ fontSize: '0.94rem', color: 'var(--white)', marginBottom: '14px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Jasa Konsultasi
+            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              Keunggulan Kami
             </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
-              {services.consulting.items.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    to="/layanan"
-                    style={{ fontSize: '0.86rem', color: 'var(--slate-400)', transition: 'color 0.15s' }}
-                    onMouseEnter={(e) => e.target.style.color = 'var(--gold-400)'}
-                    onMouseLeave={(e) => e.target.style.color = 'var(--slate-400)'}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0, fontSize: '0.84rem', color: 'var(--slate-400)' }}>
+              <li>Terintegrasi (One Stop Service)</li>
+              <li>Profesional & Bersertifikasi</li>
+              <li>Efisiensi Biaya & Waktu</li>
+              <li>Berorientasi Hasil Nyata</li>
             </ul>
           </div>
 
-          {/* Col 4: Kontak */}
+          {/* Col 4: Kantor & Kontak */}
           <div>
-            <h4 style={{ fontSize: '0.94rem', color: 'var(--white)', marginBottom: '14px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               Kantor & Kontak
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.86rem', color: 'var(--slate-400)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.84rem', color: 'var(--slate-400)' }}>
               <div style={{ display: 'flex', gap: '8px' }}>
                 <MapPin size={15} color="var(--gold-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <span>{info.address.street}, {info.address.city}</span>
@@ -228,6 +220,9 @@ export default function Footer() {
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                 <Mail size={15} color="var(--gold-400)" style={{ flexShrink: 0 }} />
                 <span style={{ color: 'var(--gold-300)' }}>{info.email}</span>
+              </div>
+              <div style={{ fontSize: '0.78rem', color: 'var(--gold-400)', fontWeight: 600, marginTop: '4px' }}>
+                {info.slogan}
               </div>
             </div>
           </div>

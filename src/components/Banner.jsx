@@ -73,44 +73,40 @@ export default function Banner() {
       }}>
         <div style={{ maxWidth: '880px' }}>
           
-          {/* Badge */}
+          {/* Tagline Badge (Borderless Clean Text) */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px',
-            padding: '4px 11px',
-            background: 'rgba(212, 175, 55, 0.16)',
             color: 'var(--gold-400)',
-            border: '1px solid var(--gold-500)',
-            borderRadius: 'var(--radius-full)',
             fontFamily: 'var(--font-heading)',
-            fontSize: '0.74rem',
+            fontSize: '0.76rem',
             fontWeight: 700,
-            letterSpacing: '0.05em',
+            letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            marginBottom: '12px'
+            marginBottom: '8px'
           }}>
             <span>{current.badge}</span>
           </div>
 
-          {/* Title */}
+          {/* Title (Apple Scale: Clean, Refined, Never Screaming) */}
           <h2 style={{
-            fontSize: 'clamp(1.35rem, 3.4vw, 3.2rem)',
+            fontSize: 'clamp(1.4rem, 2.6vw, 2.2rem)',
             color: 'var(--white)',
-            lineHeight: 1.2,
+            lineHeight: 1.22,
             fontWeight: 800,
-            marginBottom: '12px'
+            marginBottom: '10px'
           }}>
             {current.title}
           </h2>
 
           {/* Subtitle */}
           <p style={{
-            fontSize: 'clamp(0.86rem, 1.15vw, 1.05rem)',
+            fontSize: 'clamp(0.86rem, 1.05vw, 0.96rem)',
             color: 'var(--slate-200)',
             lineHeight: 1.55,
-            marginBottom: '24px',
-            maxWidth: '720px'
+            marginBottom: '20px',
+            maxWidth: '680px'
           }}>
             {current.subtitle}
           </p>
