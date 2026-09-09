@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Lock, Unlock, PlusCircle, Search, Calendar, Clock, User, 
-  Trash2, X, CheckCircle, AlertCircle, ArrowRight, BookOpen 
+import {
+  Lock, Unlock, PlusCircle, Search, Calendar, Clock, User,
+  Trash2, X, CheckCircle, AlertCircle, ArrowRight, BookOpen
 } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import { getStoredArticles, saveArticle, deleteArticle, verifyPasscode, BLOG_PASSCODE } from '../data/blogData';
@@ -116,15 +116,15 @@ export default function BlogPage() {
   // Filter & Search Logic
   const filteredArticles = articles.filter(item => {
     const matchCat = selectedCategory === 'all' || item.category.toLowerCase() === selectedCategory.toLowerCase();
-    const matchSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                        item.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                        item.content.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.content.toLowerCase().includes(searchQuery.toLowerCase());
     return matchCat && matchSearch;
   });
 
   return (
     <div style={{ background: 'var(--white)', position: 'relative' }}>
-      
+
       {/* 1. Header Page */}
       <PageHeader
         badge="Wawasan & Publikasi Resmi"
@@ -204,7 +204,7 @@ export default function BlogPage() {
                     <Unlock size={11} />
                     <span>Mode Penulis Aktif</span>
                   </span>
-                  
+
                   <button
                     onClick={() => setShowCreateModal(true)}
                     className="btn btn-gold btn-sm"
@@ -232,7 +232,7 @@ export default function BlogPage() {
                   style={{ gap: '5px' }}
                 >
                   <Lock size={12} color="var(--gold-600)" />
-                  <span>Tulis Berita (Akses Sandi)</span>
+                  <span>Tulis Berita</span>
                 </button>
               )}
             </div>
@@ -390,7 +390,7 @@ export default function BlogPage() {
                         marginBottom: '6px'
                       }}
                     >
-                      <h3 
+                      <h3
                         style={{
                           fontSize: '0.98rem',
                           color: 'var(--navy-900)',
@@ -461,8 +461,8 @@ export default function BlogPage() {
       {/* 3. Modal Autentikasi Sandi Penulis */}
       {showPasswordModal && (
         <div className="modal-backdrop" onClick={() => setShowPasswordModal(false)}>
-          <div 
-            className="modal-content" 
+          <div
+            className="modal-content"
             onClick={(e) => e.stopPropagation()}
             style={{ maxWidth: '420px', padding: '22px' }}
           >
@@ -490,7 +490,7 @@ export default function BlogPage() {
             </div>
 
             <p style={{ fontSize: '0.8rem', color: 'var(--slate-600)', marginBottom: '14px', lineHeight: 1.5 }}>
-              Hanya staf redaksi / pengurus PT. SMB yang memiliki kata sandi yang dapat mempublikasikan artikel berita.
+              Hanya staf redaksi / pengurus PT. SMB yang dapat mempublikasikan artikel berita.
             </p>
 
             <form onSubmit={handlePasswordSubmit}>
@@ -525,19 +525,6 @@ export default function BlogPage() {
                 )}
               </div>
 
-              {/* Petunjuk Sandi Default untuk Pemilik Website */}
-              <div style={{
-                background: 'var(--navy-50)',
-                border: '1px solid rgba(212, 175, 55, 0.4)',
-                borderRadius: '6px',
-                padding: '7px 10px',
-                fontSize: '0.72rem',
-                color: 'var(--navy-900)',
-                marginBottom: '14px'
-              }}>
-                ℹ️ <strong>Sandi Bawaan:</strong> <code>{BLOG_PASSCODE}</code>
-              </div>
-
               <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
                 <button
                   type="button"
@@ -561,8 +548,8 @@ export default function BlogPage() {
       {/* 4. Modal Form Editor Artikel Baru */}
       {showCreateModal && (
         <div className="modal-backdrop" onClick={() => setShowCreateModal(false)}>
-          <div 
-            className="modal-content" 
+          <div
+            className="modal-content"
             onClick={(e) => e.stopPropagation()}
             style={{ maxWidth: '620px', padding: '22px' }}
           >
