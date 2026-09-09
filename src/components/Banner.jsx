@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Truck, Users, Clock } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
