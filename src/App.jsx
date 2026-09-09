@@ -13,6 +13,7 @@ import LeadershipPage from './pages/LeadershipPage';
 import ClientsPage from './pages/ClientsPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 export default function App() {
   return (
@@ -32,7 +33,9 @@ export default function App() {
             <Route path="/pengurus" element={<LeadershipPage />} />
             <Route path="/klien" element={<ClientsPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:id" element={<BlogPostPage />} />
             <Route path="/berita" element={<BlogPage />} />
+            <Route path="/berita/:id" element={<BlogPostPage />} />
             <Route path="/kontak" element={<ContactPage />} />
             {/* Fallback to Home */}
             <Route path="*" element={<Navigate to="/" replace />} />

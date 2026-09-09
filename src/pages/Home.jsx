@@ -283,11 +283,16 @@ export default function Home() {
                     overflow: 'hidden'
                   }}
                 >
-                  <div style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+                  <Link
+                    to={`/blog/${article.id}`}
+                    style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)', display: 'block' }}
+                  >
                     <img
                       src={article.thumbnail}
                       alt={article.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.25s ease' }}
+                      onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.025)'}
+                      onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     />
                     <div style={{
                       position: 'absolute',
@@ -303,7 +308,7 @@ export default function Home() {
                     }}>
                       {article.category}
                     </div>
-                  </div>
+                  </Link>
 
                   <div style={{ padding: 'clamp(14px, 2vw, 18px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.72rem', color: 'var(--slate-500)', marginBottom: '6px' }}>
@@ -318,16 +323,28 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <h3 style={{ fontSize: '0.98rem', color: 'var(--navy-900)', lineHeight: 1.35, marginBottom: '6px' }}>
-                      {article.title}
-                    </h3>
+                    <Link to={`/blog/${article.id}`} style={{ textDecoration: 'none' }}>
+                      <h3 
+                        style={{
+                          fontSize: '0.98rem',
+                          color: 'var(--navy-900)',
+                          lineHeight: 1.35,
+                          marginBottom: '6px',
+                          transition: 'color 0.15s ease'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
+                      >
+                        {article.title}
+                      </h3>
+                    </Link>
 
                     <p style={{ fontSize: '0.8rem', color: 'var(--slate-600)', lineHeight: 1.45, marginBottom: '14px' }}>
                       {article.excerpt}
                     </p>
 
                     <Link
-                      to="/blog"
+                      to={`/blog/${article.id}`}
                       style={{
                         marginTop: 'auto',
                         display: 'inline-flex',
@@ -335,7 +352,8 @@ export default function Home() {
                         gap: '4px',
                         fontSize: '0.78rem',
                         fontWeight: 700,
-                        color: 'var(--navy-900)'
+                        color: 'var(--navy-900)',
+                        textDecoration: 'none'
                       }}
                       onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
                       onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}

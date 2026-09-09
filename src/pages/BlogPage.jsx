@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Lock, Unlock, PlusCircle, Search, Calendar, Clock, User, 
-  Trash2, X, CheckCircle, AlertCircle, ArrowRight, BookOpen, Share2 
+  Trash2, X, CheckCircle, AlertCircle, ArrowRight, BookOpen 
 } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import { getStoredArticles, saveArticle, deleteArticle, verifyPasscode, BLOG_PASSCODE } from '../data/blogData';
@@ -10,9 +11,6 @@ export default function BlogPage() {
   const [articles, setArticles] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  
-  // State Pembaca (Modal Baca Artikel)
-  const [readingArticle, setReadingArticle] = useState(null);
 
   // State Autentikasi Penulis
   const [isAuthor, setIsAuthor] = useState(() => {
@@ -68,7 +66,7 @@ export default function BlogPage() {
       setShowPasswordModal(false);
       setInputPasscode('');
       setPassError('');
-      setShowCreateModal(true); // Langsung buka form penulisan artikel
+      setShowCreateModal(true);
     } else {
       setPassError('Kata sandi salah! Pastikan Anda memasukkan sandi penulis yang benar.');
     }
@@ -106,13 +104,12 @@ export default function BlogPage() {
   };
 
   // Handle Hapus Artikel
-  const handleDelete = (id, title) => {
+  const handleDelete = (e, id, title) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (window.confirm(`Yakin ingin menghapus artikel "${title}"?`)) {
       deleteArticle(id);
       loadArticles();
-      if (readingArticle?.id === id) {
-        setReadingArticle(null);
-      }
     }
   };
 
@@ -126,7 +123,8 @@ export default function BlogPage() {
   });
 
   return (
-    <div>
+    <div style={{ background: 'var(--white)', position: 'relative' }}>
+      
       {/* 1. Header Page */}
       <PageHeader
         badge="Wawasan & Publikasi Resmi"
@@ -135,22 +133,25 @@ export default function BlogPage() {
         breadcrumbCurrent="Blog & Berita"
       />
 
-      {/* 2. Main Content */}
-      <section className="section-pad" style={{ background: 'var(--slate-50)', position: 'relative' }}>
+      {/* 2. Main Content (Apple Style: Disciplined Margins & Balanced Spacing) */}
+      <section style={{
+        padding: 'clamp(36px, 4.5vw, 60px) 0',
+        background: 'var(--slate-50)'
+      }}>
         <div className="container">
 
           {/* Top Bar: Controls & Author Authentication Trigger */}
           <div style={{
             background: 'var(--white)',
             border: '1px solid var(--slate-200)',
-            borderRadius: 'var(--radius-lg)',
-            padding: '16px 20px',
-            marginBottom: '32px',
+            borderRadius: 'var(--radius-md)',
+            padding: '14px 18px',
+            marginBottom: '24px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '14px'
+            gap: '12px'
           }}>
             {/* Search Input */}
             <div style={{
@@ -158,12 +159,12 @@ export default function BlogPage() {
               alignItems: 'center',
               gap: '8px',
               background: 'var(--slate-100)',
-              padding: '8px 14px',
+              padding: '7px 12px',
               borderRadius: 'var(--radius-md)',
               width: '100%',
-              maxWidth: '340px'
+              maxWidth: '320px'
             }}>
-              <Search size={15} color="var(--slate-500)" />
+              <Search size={14} color="var(--slate-500)" />
               <input
                 type="text"
                 placeholder="Cari topik atau artikel berita..."
@@ -173,14 +174,14 @@ export default function BlogPage() {
                   border: 'none',
                   background: 'transparent',
                   outline: 'none',
-                  fontSize: '0.84rem',
+                  fontSize: '0.82rem',
                   fontFamily: 'inherit',
                   width: '100%'
                 }}
               />
               {searchQuery && (
                 <button onClick={() => setSearchQuery('')} style={{ color: 'var(--slate-400)', padding: 0 }}>
-                  <X size={14} />
+                  <X size={13} />
                 </button>
               )}
             </div>
@@ -190,17 +191,17 @@ export default function BlogPage() {
               {isAuthor ? (
                 <>
                   <span style={{
-                    fontSize: '0.74rem',
+                    fontSize: '0.72rem',
                     fontWeight: 700,
                     color: '#15803d',
                     background: '#dcfce7',
-                    padding: '4px 10px',
+                    padding: '3px 9px',
                     borderRadius: 'var(--radius-full)',
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '4px'
                   }}>
-                    <Unlock size={12} />
+                    <Unlock size={11} />
                     <span>Mode Penulis Aktif</span>
                   </span>
                   
@@ -208,40 +209,40 @@ export default function BlogPage() {
                     onClick={() => setShowCreateModal(true)}
                     className="btn btn-gold btn-sm"
                   >
-                    <PlusCircle size={14} />
+                    <PlusCircle size={13} />
                     <span>Tulis Berita Baru</span>
                   </button>
 
                   <button
                     onClick={handleLogout}
                     style={{
-                      fontSize: '0.78rem',
+                      fontSize: '0.76rem',
                       color: 'var(--slate-500)',
-                      padding: '4px 8px',
+                      padding: '3px 6px',
                       textDecoration: 'underline'
                     }}
                   >
-                    Keluar Penulis
+                    Keluar
                   </button>
                 </>
               ) : (
                 <button
                   onClick={() => setShowPasswordModal(true)}
                   className="btn btn-outline-navy btn-sm"
-                  style={{ gap: '6px' }}
+                  style={{ gap: '5px' }}
                 >
-                  <Lock size={13} color="var(--gold-600)" />
+                  <Lock size={12} color="var(--gold-600)" />
                   <span>Tulis Berita (Akses Sandi)</span>
                 </button>
               )}
             </div>
           </div>
 
-          {/* Category Filter Tabs */}
+          {/* Category Filter Tabs (Apple Minimalist Pills) */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            gap: '6px',
             flexWrap: 'wrap',
             marginBottom: '28px'
           }}>
@@ -253,9 +254,9 @@ export default function BlogPage() {
                   key={cat}
                   onClick={() => setSelectedCategory(catKey)}
                   style={{
-                    padding: '6px 14px',
+                    padding: '5px 14px',
                     borderRadius: 'var(--radius-full)',
-                    fontSize: '0.8rem',
+                    fontSize: '0.78rem',
                     fontWeight: 600,
                     fontFamily: 'var(--font-heading)',
                     background: isActive ? 'var(--navy-900)' : 'var(--white)',
@@ -270,20 +271,20 @@ export default function BlogPage() {
             })}
           </div>
 
-          {/* Articles Grid */}
+          {/* Articles Grid (Apple Clean Grid Style) */}
           {filteredArticles.length === 0 ? (
             <div style={{
               background: 'var(--white)',
-              borderRadius: 'var(--radius-lg)',
+              borderRadius: 'var(--radius-md)',
               border: '1px solid var(--slate-200)',
-              padding: '48px 20px',
+              padding: '44px 20px',
               textAlign: 'center'
             }}>
-              <BookOpen size={36} color="var(--slate-400)" style={{ margin: '0 auto 12px auto' }} />
-              <h3 style={{ fontSize: '1.1rem', color: 'var(--navy-900)', marginBottom: '6px' }}>
+              <BookOpen size={34} color="var(--slate-400)" style={{ margin: '0 auto 10px auto' }} />
+              <h3 style={{ fontSize: '1.05rem', color: 'var(--navy-900)', marginBottom: '5px' }}>
                 Tidak ada artikel yang sesuai
               </h3>
-              <p style={{ fontSize: '0.84rem', color: 'var(--slate-500)', maxWidth: '400px', margin: '0 auto 16px auto' }}>
+              <p style={{ fontSize: '0.82rem', color: 'var(--slate-500)', maxWidth: '380px', margin: '0 auto 14px auto' }}>
                 Coba ubah kata kunci pencarian atau pilih kategori layanan yang berbeda.
               </p>
               <button
@@ -296,8 +297,8 @@ export default function BlogPage() {
           ) : (
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-              gap: 'clamp(18px, 2.5vw, 26px)'
+              gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))',
+              gap: 'clamp(16px, 2vw, 22px)'
             }}>
               {filteredArticles.map((article) => (
                 <article
@@ -310,10 +311,10 @@ export default function BlogPage() {
                     position: 'relative'
                   }}
                 >
-                  {/* Thumbnail Image */}
-                  <div 
-                    style={{ position: 'relative', height: '180px', overflow: 'hidden', background: 'var(--navy-950)', cursor: 'pointer' }}
-                    onClick={() => setReadingArticle(article)}
+                  {/* Thumbnail Image as Link to Dedicated Article Page */}
+                  <Link
+                    to={`/blog/${article.id}`}
+                    style={{ position: 'relative', height: '175px', overflow: 'hidden', background: 'var(--navy-950)', display: 'block' }}
                   >
                     <img
                       src={article.thumbnail}
@@ -322,131 +323,135 @@ export default function BlogPage() {
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
-                        transition: 'transform 0.3s ease'
+                        transition: 'transform 0.25s ease'
                       }}
-                      onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
+                      onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.025)'}
                       onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     />
                     <div style={{
                       position: 'absolute',
-                      top: '10px',
-                      left: '10px',
+                      top: '8px',
+                      left: '8px',
                       background: 'var(--navy-950)',
                       color: 'var(--gold-400)',
-                      fontSize: '0.68rem',
+                      fontSize: '0.66rem',
                       fontWeight: 700,
                       letterSpacing: '0.04em',
                       textTransform: 'uppercase',
-                      padding: '3px 8px',
-                      borderRadius: '4px'
+                      padding: '2px 7px',
+                      borderRadius: '3px'
                     }}>
                       {article.category}
                     </div>
 
                     {isAuthor && (
                       <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleDelete(article.id, article.title);
-                        }}
+                        onClick={(e) => handleDelete(e, article.id, article.title)}
                         style={{
                           position: 'absolute',
-                          top: '10px',
-                          right: '10px',
+                          top: '8px',
+                          right: '8px',
                           background: 'rgba(239, 68, 68, 0.9)',
                           color: '#ffffff',
                           border: 'none',
-                          borderRadius: '4px',
-                          padding: '5px 7px',
+                          borderRadius: '3px',
+                          padding: '4px 6px',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
-                          gap: '4px',
-                          fontSize: '0.7rem',
+                          gap: '3px',
+                          fontSize: '0.68rem',
                           fontWeight: 700
                         }}
                         title="Hapus artikel ini"
                       >
-                        <Trash2 size={12} />
+                        <Trash2 size={11} />
                         <span>Hapus</span>
                       </button>
                     )}
-                  </div>
+                  </Link>
 
-                  {/* Body Content */}
-                  <div style={{ padding: 'clamp(14px, 2vw, 20px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  {/* Card Body */}
+                  <div style={{ padding: 'clamp(14px, 1.8vw, 18px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     {/* Meta info */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.74rem', color: 'var(--slate-500)', marginBottom: '8px', flexWrap: 'wrap' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                        <Calendar size={12} color="var(--gold-700)" />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.72rem', color: 'var(--slate-500)', marginBottom: '6px', flexWrap: 'wrap' }}>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                        <Calendar size={11} color="var(--gold-700)" />
                         <span>{article.date}</span>
                       </span>
                       <span>•</span>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                        <Clock size={12} color="var(--slate-400)" />
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                        <Clock size={11} color="var(--slate-400)" />
                         <span>{article.readTime}</span>
                       </span>
                     </div>
 
-                    <h3 
-                      onClick={() => setReadingArticle(article)}
+                    {/* Headline Link */}
+                    <Link
+                      to={`/blog/${article.id}`}
                       style={{
-                        fontSize: '1.02rem',
-                        color: 'var(--navy-900)',
-                        marginBottom: '8px',
-                        lineHeight: 1.35,
-                        cursor: 'pointer'
+                        textDecoration: 'none',
+                        display: 'block',
+                        marginBottom: '6px'
                       }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
-                      onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
                     >
-                      {article.title}
-                    </h3>
+                      <h3 
+                        style={{
+                          fontSize: '0.98rem',
+                          color: 'var(--navy-900)',
+                          lineHeight: 1.34,
+                          margin: 0,
+                          transition: 'color 0.15s ease'
+                        }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
+                      >
+                        {article.title}
+                      </h3>
+                    </Link>
 
                     <p style={{
-                      fontSize: '0.82rem',
+                      fontSize: '0.8rem',
                       color: 'var(--slate-600)',
-                      lineHeight: 1.5,
-                      marginBottom: '16px'
+                      lineHeight: 1.48,
+                      marginBottom: '14px'
                     }}>
                       {article.excerpt}
                     </p>
 
-                    {/* Author & Action */}
+                    {/* Footer Author & Link to dedicated page */}
                     <div style={{
                       marginTop: 'auto',
-                      paddingTop: '12px',
+                      paddingTop: '10px',
                       borderTop: '1px solid var(--slate-100)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between'
                     }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.76rem', color: 'var(--slate-700)', fontWeight: 600 }}>
-                        <User size={13} color="var(--gold-600)" />
-                        <span style={{ maxWidth: '140px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.74rem', color: 'var(--slate-700)', fontWeight: 600 }}>
+                        <User size={12} color="var(--gold-600)" />
+                        <span style={{ maxWidth: '130px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                           {article.author}
                         </span>
                       </div>
 
-                      <button
-                        onClick={() => setReadingArticle(article)}
+                      <Link
+                        to={`/blog/${article.id}`}
                         style={{
                           display: 'inline-flex',
                           alignItems: 'center',
-                          gap: '4px',
-                          fontSize: '0.78rem',
+                          gap: '3px',
+                          fontSize: '0.76rem',
                           fontWeight: 700,
                           color: 'var(--navy-900)',
-                          background: 'none',
-                          border: 'none',
-                          cursor: 'pointer'
+                          textDecoration: 'none'
                         }}
                         onMouseEnter={(e) => e.currentTarget.style.color = 'var(--gold-700)'}
                         onMouseLeave={(e) => e.currentTarget.style.color = 'var(--navy-900)'}
                       >
                         <span>Baca</span>
-                        <ArrowRight size={13} />
-                      </button>
+                        <ArrowRight size={12} />
+                      </Link>
                     </div>
 
                   </div>
@@ -464,13 +469,13 @@ export default function BlogPage() {
           <div 
             className="modal-content" 
             onClick={(e) => e.stopPropagation()}
-            style={{ maxWidth: '440px', padding: '24px' }}
+            style={{ maxWidth: '420px', padding: '22px' }}
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <div style={{
-                  width: '32px',
-                  height: '32px',
+                  width: '30px',
+                  height: '30px',
                   borderRadius: '50%',
                   background: 'var(--navy-50)',
                   display: 'flex',
@@ -478,24 +483,24 @@ export default function BlogPage() {
                   justifyContent: 'center',
                   color: 'var(--navy-900)'
                 }}>
-                  <Lock size={16} />
+                  <Lock size={15} />
                 </div>
-                <h3 style={{ fontSize: '1.05rem', color: 'var(--navy-900)', margin: 0 }}>
+                <h3 style={{ fontSize: '1rem', color: 'var(--navy-900)', margin: 0 }}>
                   Akses Penulis Artikel
                 </h3>
               </div>
               <button onClick={() => setShowPasswordModal(false)} style={{ color: 'var(--slate-400)', padding: 0 }}>
-                <X size={18} />
+                <X size={16} />
               </button>
             </div>
 
-            <p style={{ fontSize: '0.82rem', color: 'var(--slate-600)', marginBottom: '16px', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '0.8rem', color: 'var(--slate-600)', marginBottom: '14px', lineHeight: 1.5 }}>
               Hanya staf redaksi / pengurus PT. SMB yang memiliki kata sandi yang dapat mempublikasikan artikel berita.
             </p>
 
             <form onSubmit={handlePasswordSubmit}>
-              <div style={{ marginBottom: '14px' }}>
-                <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
+              <div style={{ marginBottom: '12px' }}>
+                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
                   Kata Sandi Penulis
                 </label>
                 <input
@@ -510,16 +515,16 @@ export default function BlogPage() {
                   }}
                   style={{
                     width: '100%',
-                    padding: '9px 12px',
+                    padding: '8px 12px',
                     borderRadius: 'var(--radius-md)',
                     border: passError ? '1.5px solid #ef4444' : '1px solid var(--slate-300)',
-                    fontSize: '0.88rem',
+                    fontSize: '0.86rem',
                     outline: 'none'
                   }}
                 />
                 {passError && (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#ef4444', fontSize: '0.74rem', marginTop: '5px' }}>
-                    <AlertCircle size={12} />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ef4444', fontSize: '0.72rem', marginTop: '4px' }}>
+                    <AlertCircle size={11} />
                     <span>{passError}</span>
                   </div>
                 )}
@@ -530,10 +535,10 @@ export default function BlogPage() {
                 background: 'var(--navy-50)',
                 border: '1px solid rgba(212, 175, 55, 0.4)',
                 borderRadius: '6px',
-                padding: '8px 10px',
-                fontSize: '0.74rem',
+                padding: '7px 10px',
+                fontSize: '0.72rem',
                 color: 'var(--navy-900)',
-                marginBottom: '16px'
+                marginBottom: '14px'
               }}>
                 ℹ️ <strong>Sandi Bawaan:</strong> <code>{BLOG_PASSCODE}</code>
               </div>
@@ -564,29 +569,29 @@ export default function BlogPage() {
           <div 
             className="modal-content" 
             onClick={(e) => e.stopPropagation()}
-            style={{ maxWidth: '640px', padding: '24px' }}
+            style={{ maxWidth: '620px', padding: '22px' }}
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid var(--slate-200)', paddingBottom: '10px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid var(--slate-200)', paddingBottom: '8px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <PlusCircle size={18} color="var(--gold-600)" />
-                <h3 style={{ fontSize: '1.15rem', color: 'var(--navy-900)', margin: 0 }}>
+                <PlusCircle size={16} color="var(--gold-600)" />
+                <h3 style={{ fontSize: '1.1rem', color: 'var(--navy-900)', margin: 0 }}>
                   Tulis Berita / Artikel Baru
                 </h3>
               </div>
               <button onClick={() => setShowCreateModal(false)} style={{ color: 'var(--slate-400)', padding: 0 }}>
-                <X size={18} />
+                <X size={16} />
               </button>
             </div>
 
             {formNotice && (
-              <div style={{ background: '#fee2e2', color: '#991b1b', padding: '8px 12px', borderRadius: '6px', fontSize: '0.8rem', marginBottom: '12px' }}>
+              <div style={{ background: '#fee2e2', color: '#991b1b', padding: '7px 10px', borderRadius: '6px', fontSize: '0.78rem', marginBottom: '10px' }}>
                 {formNotice}
               </div>
             )}
 
-            <form onSubmit={handleCreateSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <form onSubmit={handleCreateSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '11px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '3px' }}>
                   Judul Artikel *
                 </label>
                 <input
@@ -597,10 +602,10 @@ export default function BlogPage() {
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                   style={{
                     width: '100%',
-                    padding: '8px 12px',
+                    padding: '8px 11px',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--slate-300)',
-                    fontSize: '0.86rem',
+                    fontSize: '0.84rem',
                     outline: 'none'
                   }}
                 />
@@ -608,7 +613,7 @@ export default function BlogPage() {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
+                  <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '3px' }}>
                     Kategori Layanan *
                   </label>
                   <select
@@ -616,10 +621,10 @@ export default function BlogPage() {
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                     style={{
                       width: '100%',
-                      padding: '8px 12px',
+                      padding: '8px 11px',
                       borderRadius: 'var(--radius-md)',
                       border: '1px solid var(--slate-300)',
-                      fontSize: '0.86rem',
+                      fontSize: '0.84rem',
                       outline: 'none',
                       backgroundColor: 'var(--white)'
                     }}
@@ -633,7 +638,7 @@ export default function BlogPage() {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
+                  <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '3px' }}>
                     Nama Penulis / Divisi
                   </label>
                   <input
@@ -643,10 +648,10 @@ export default function BlogPage() {
                     onChange={(e) => setFormData({ ...formData, author: e.target.value })}
                     style={{
                       width: '100%',
-                      padding: '8px 12px',
+                      padding: '8px 11px',
                       borderRadius: 'var(--radius-md)',
                       border: '1px solid var(--slate-300)',
-                      fontSize: '0.86rem',
+                      fontSize: '0.84rem',
                       outline: 'none'
                     }}
                   />
@@ -654,18 +659,18 @@ export default function BlogPage() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '3px' }}>
                   Pilih Preset Foto Thumbnail (atau Tempel URL Gambar)
                 </label>
-                <div style={{ display: 'flex', gap: '6px', marginBottom: '6px', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '5px', marginBottom: '5px', flexWrap: 'wrap' }}>
                   {presetImages.map((preset) => (
                     <button
                       key={preset.label}
                       type="button"
                       onClick={() => setFormData({ ...formData, thumbnail: preset.url })}
                       style={{
-                        padding: '3px 8px',
-                        fontSize: '0.72rem',
+                        padding: '3px 7px',
+                        fontSize: '0.7rem',
                         borderRadius: '4px',
                         border: formData.thumbnail === preset.url ? '1px solid var(--gold-500)' : '1px solid var(--slate-300)',
                         background: formData.thumbnail === preset.url ? 'var(--gold-100)' : 'var(--slate-100)',
@@ -684,17 +689,17 @@ export default function BlogPage() {
                   onChange={(e) => setFormData({ ...formData, thumbnail: e.target.value })}
                   style={{
                     width: '100%',
-                    padding: '8px 12px',
+                    padding: '7px 11px',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--slate-300)',
-                    fontSize: '0.82rem',
+                    fontSize: '0.8rem',
                     outline: 'none'
                   }}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '3px' }}>
                   Ringkasan Singkat (Excerpt)
                 </label>
                 <textarea
@@ -704,10 +709,10 @@ export default function BlogPage() {
                   onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
                   style={{
                     width: '100%',
-                    padding: '8px 12px',
+                    padding: '7px 11px',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--slate-300)',
-                    fontSize: '0.84rem',
+                    fontSize: '0.82rem',
                     outline: 'none',
                     resize: 'vertical'
                   }}
@@ -715,7 +720,7 @@ export default function BlogPage() {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.78rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.76rem', fontWeight: 600, color: 'var(--navy-900)', marginBottom: '3px' }}>
                   Isi Lengkap Artikel *
                 </label>
                 <textarea
@@ -726,17 +731,17 @@ export default function BlogPage() {
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                   style={{
                     width: '100%',
-                    padding: '8px 12px',
+                    padding: '7px 11px',
                     borderRadius: 'var(--radius-md)',
                     border: '1px solid var(--slate-300)',
-                    fontSize: '0.84rem',
+                    fontSize: '0.82rem',
                     outline: 'none',
                     resize: 'vertical'
                   }}
                 />
               </div>
 
-              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px', marginTop: '6px' }}>
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px', marginTop: '4px' }}>
                 <button
                   type="button"
                   onClick={() => setShowCreateModal(false)}
@@ -748,148 +753,11 @@ export default function BlogPage() {
                   type="submit"
                   className="btn btn-gold btn-sm"
                 >
-                  <CheckCircle size={14} />
+                  <CheckCircle size={13} />
                   <span>Publikasikan Sekarang</span>
                 </button>
               </div>
             </form>
-          </div>
-        </div>
-      )}
-
-      {/* 5. Modal Baca Artikel Lengkap (Reader View) */}
-      {readingArticle && (
-        <div className="modal-backdrop" onClick={() => setReadingArticle(null)}>
-          <div 
-            className="modal-content" 
-            onClick={(e) => e.stopPropagation()}
-            style={{ maxWidth: '780px', padding: 0, overflow: 'hidden' }}
-          >
-            {/* Header Image */}
-            <div style={{ position: 'relative', height: '260px', overflow: 'hidden', background: 'var(--navy-950)' }}>
-              <img
-                src={readingArticle.thumbnail}
-                alt={readingArticle.title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-              <button
-                onClick={() => setReadingArticle(null)}
-                style={{
-                  position: 'absolute',
-                  top: '12px',
-                  right: '12px',
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '50%',
-                  background: 'rgba(7, 19, 34, 0.75)',
-                  color: 'var(--white)',
-                  border: 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer'
-                }}
-                aria-label="Tutup artikel"
-              >
-                <X size={18} />
-              </button>
-              <div style={{
-                position: 'absolute',
-                bottom: '12px',
-                left: '16px',
-                background: 'var(--navy-900)',
-                color: 'var(--gold-400)',
-                padding: '4px 10px',
-                borderRadius: '4px',
-                fontSize: '0.72rem',
-                fontWeight: 700,
-                textTransform: 'uppercase'
-              }}>
-                {readingArticle.category}
-              </div>
-            </div>
-
-            {/* Article Content */}
-            <div style={{ padding: 'clamp(20px, 3vw, 32px)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '0.78rem', color: 'var(--slate-500)', marginBottom: '10px', flexWrap: 'wrap' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                  <Calendar size={13} color="var(--gold-700)" />
-                  <span>{readingArticle.date}</span>
-                </span>
-                <span>•</span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                  <User size={13} color="var(--gold-700)" />
-                  <span>{readingArticle.author}</span>
-                </span>
-                <span>•</span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                  <Clock size={13} color="var(--slate-400)" />
-                  <span>{readingArticle.readTime}</span>
-                </span>
-              </div>
-
-              <h2 style={{
-                fontSize: 'clamp(1.25rem, 2.2vw, 1.7rem)',
-                color: 'var(--navy-900)',
-                lineHeight: 1.3,
-                marginBottom: '16px'
-              }}>
-                {readingArticle.title}
-              </h2>
-
-              {readingArticle.excerpt && (
-                <div style={{
-                  padding: '12px 16px',
-                  background: 'var(--navy-50)',
-                  borderLeft: '3px solid var(--gold-500)',
-                  borderRadius: '0 6px 6px 0',
-                  fontSize: '0.88rem',
-                  color: 'var(--slate-700)',
-                  lineHeight: 1.55,
-                  marginBottom: '20px',
-                  fontStyle: 'italic'
-                }}>
-                  {readingArticle.excerpt}
-                </div>
-              )}
-
-              <div style={{
-                fontSize: '0.9rem',
-                color: 'var(--slate-700)',
-                lineHeight: 1.7,
-                whiteSpace: 'pre-line',
-                marginBottom: '24px'
-              }}>
-                {readingArticle.content}
-              </div>
-
-              <div style={{
-                paddingTop: '16px',
-                borderTop: '1px solid var(--slate-200)',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                gap: '10px'
-              }}>
-                <div style={{ fontSize: '0.78rem', color: 'var(--slate-500)' }}>
-                  Publikasi resmi oleh <strong>PT. SMB</strong>
-                </div>
-
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(window.location.href);
-                    alert('Tautan halaman artikel berhasil disalin!');
-                  }}
-                  className="btn btn-outline-navy btn-sm"
-                  style={{ gap: '5px' }}
-                >
-                  <Share2 size={13} />
-                  <span>Salin Tautan</span>
-                </button>
-              </div>
-            </div>
-
           </div>
         </div>
       )}
