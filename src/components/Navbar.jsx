@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Phone, Mail, MessageCircle, Menu, X, ChevronDown, ArrowRight, Globe } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Menu, X, ArrowRight, Globe } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function Navbar() {

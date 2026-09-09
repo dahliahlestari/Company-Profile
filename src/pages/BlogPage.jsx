@@ -5,7 +5,7 @@ import {
   Trash2, X, CheckCircle, AlertCircle, ArrowRight, BookOpen
 } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
-import { getStoredArticles, saveArticle, deleteArticle, verifyPasscode, BLOG_PASSCODE } from '../data/blogData';
+import { getStoredArticles, saveArticle, deleteArticle, verifyPasscode } from '../data/blogData';
 
 export default function BlogPage() {
   const [articles, setArticles] = useState([]);

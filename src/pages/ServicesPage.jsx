@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import Services from '../components/Services';
-import { companyData } from '../data/companyData';
 
 export default function ServicesPage() {
-  const { info } = companyData;
 
   const workflows = [
     {

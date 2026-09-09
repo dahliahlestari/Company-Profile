@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Monitor, ShieldCheck, ShieldAlert, CheckCircle, ArrowRight, Layers } from 'lucide-react';
+import { Users, Monitor, ShieldCheck, ShieldAlert, CheckCircle, Layers } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function Services() {
@@ -140,7 +140,7 @@ export default function Services() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           gap: 'clamp(18px, 2.5vw, 26px)'
         }}>
-          {filteredServices.map((service, idx) => (
+          {filteredServices.map((service) => (
             <div
               key={service.id}
               className="card-white"

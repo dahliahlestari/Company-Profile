@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, Mail, Phone, MapPin, Globe, MessageCircle } from 'lucide-react';
+import { ArrowUp, MessageCircle, Globe } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 const SocialIcon = ({ type, size = 15 }) => {

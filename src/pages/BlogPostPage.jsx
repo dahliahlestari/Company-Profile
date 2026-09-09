@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowLeft, Calendar, Clock, User, Share2, MessageCircle, 
-  ArrowRight, BookOpen, CheckCircle2, ChevronRight 
+  ArrowRight, BookOpen, ChevronRight 
 } from 'lucide-react';
 import { getStoredArticles } from '../data/blogData';
 import { companyData } from '../data/companyData';
 
 export default function BlogPostPage() {
   const { id } = useParams();
-  const navigate = useNavigate();
   const articles = getStoredArticles();
   const { info } = companyData;
 

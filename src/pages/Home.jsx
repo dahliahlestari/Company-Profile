@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, CheckCircle2, Award, Layers, Users, Monitor, ShieldCheck, 
+  ArrowRight, Award, Layers, Users, Monitor, ShieldCheck, 
   ShieldAlert, BookOpen, Calendar, Clock, Sparkles, MessageCircle, 
-  ChevronRight, Building2, TrendingUp, Check
+  Building2, TrendingUp, Check
 } from 'lucide-react';
 import Banner from '../components/Banner';
 import { companyData } from '../data/companyData';
 import { getStoredArticles } from '../data/blogData';
 
 export default function Home() {
-  const { info, stats, mainServices, clients, testimonials } = companyData;
+  const { info, mainServices = [], testimonials = [] } = companyData;
   const [recentArticles, setRecentArticles] = useState([]);
   const [activeTab, setActiveTab] = useState('sppg');
 
@@ -686,12 +686,12 @@ export default function Home() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', paddingTop: '16px', borderTop: '1px solid rgba(0, 0, 0, 0.06)' }}>
                   <img
                     src={item.avatar}
-                    alt={item.name}
+                    alt={item.author || item.name}
                     style={{ width: '42px', height: '42px', borderRadius: '50%', objectFit: 'cover' }}
                   />
                   <div>
                     <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.88rem', fontWeight: 650, color: 'var(--navy-900)' }}>
-                      {item.name}
+                      {item.author || item.name}
                     </div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--slate-apple-light)' }}>
                       {item.role}, {item.company}

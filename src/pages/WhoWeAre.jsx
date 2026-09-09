@@ -4,10 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import Hero from '../components/Hero';
 import VisionMission from '../components/VisionMission';
 import Milestones from '../components/Milestones';
-import { companyData } from '../data/companyData';
-
 export default function WhoWeAre() {
-  const { info } = companyData;
 
   return (
     <div>

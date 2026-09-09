@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Truck, Users, Sparkles, Play, Pause } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Truck, Users, Sparkles, Play, Pause, Clock } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function Banner() {
