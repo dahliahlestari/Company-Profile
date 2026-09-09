@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowUp, Mail, Phone, MapPin, Globe, MessageCircle } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
-const SocialIcon = ({ type, size = 16 }) => {
+const SocialIcon = ({ type, size = 15 }) => {
   if (type === 'linkedin') {
     return (
       <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -41,242 +41,254 @@ export default function Footer() {
 
   return (
     <footer style={{
-      background: 'var(--navy-950)',
-      color: 'var(--slate-300)',
-      borderTop: '2px solid var(--gold-500)',
-      paddingTop: 'clamp(40px, 5vw, 64px)',
-      paddingBottom: '28px',
-      position: 'relative'
+      background: 'var(--apple-dark)',
+      color: 'var(--slate-apple-dark)',
+      fontSize: '0.78rem',
+      lineHeight: 1.5,
+      paddingTop: 'clamp(44px, 5.5vw, 68px)',
+      paddingBottom: '32px',
+      borderTop: '1px solid rgba(255, 255, 255, 0.08)'
     }}>
       <div className="container">
-        
-        {/* Main Footer Columns */}
+
+        {/* Apple Style Footnotes (Numbered superscripts) */}
+        <div style={{
+          paddingBottom: '24px',
+          marginBottom: '28px',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          fontSize: '0.74rem',
+          color: 'var(--slate-apple-dark)',
+          lineHeight: 1.55
+        }}>
+          <div>
+            1. Seluruh layanan pendampingan audit, sertifikasi, dan standardisasi disesuaikan dengan regulasi otoritas berwenang Republik Indonesia serta kebutuhan spesifik industri mitra.
+          </div>
+          <div>
+            2. Angka capaian 1.450+ mitra dan efisiensi hingga 40% didasarkan pada kompilasi data implementasi sistem terpadu PT. SMB dalam rentang operasional profesional korporat.
+          </div>
+          <div>
+            3. Seluruh konsultasi dan pelaksanaan layanan teknis dikoordinasikan secara terpusat oleh entitas resmi PT. Sembada Makmur Bersama.
+          </div>
+        </div>
+
+        {/* Apple Directory 5-Column Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1.3fr 1fr 1.1fr 1.2fr',
-          gap: 'clamp(20px, 3vw, 36px)',
-          marginBottom: 'clamp(32px, 4vw, 48px)'
-        }} className="footer-grid">
+          gridTemplateColumns: 'repeat(5, 1fr)',
+          gap: 'clamp(18px, 2.5vw, 32px)',
+          marginBottom: '36px'
+        }} className="apple-footer-directory">
 
-          {/* Col 1: Brand */}
+          {/* Col 1: Lini Layanan */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-              <div style={{
-                width: '36px',
-                height: '36px',
-                background: 'var(--navy-900)',
-                border: '2px solid var(--gold-500)',
-                borderRadius: '6px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.05rem', fontWeight: 800, color: 'var(--gold-400)' }}>
-                  SMB
-                </span>
-              </div>
-              <div>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 800, color: 'var(--white)' }}>
-                  PT. SMB
-                </span>
-                <div style={{ fontSize: '0.66rem', color: 'var(--gold-400)', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
-                  {info.tagline}
-                </div>
-              </div>
+            <div style={{ color: 'var(--white)', fontWeight: 650, fontSize: '0.8rem', letterSpacing: '-0.01em', marginBottom: '12px' }}>
+              Lini Layanan
             </div>
-
-            <p style={{ fontSize: '0.84rem', color: 'var(--slate-400)', lineHeight: 1.55, marginBottom: '16px' }}>
-              One Stop Consultant and Service Management terpercaya di Indonesia dengan layanan terintegrasi, profesional, dan berorientasi hasil.
-            </p>
-
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <a
-                href={info.socials.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  width: '34px',
-                  height: '34px',
-                  borderRadius: '50%',
-                  background: 'rgba(255, 255, 255, 0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--gold-400)',
-                  border: '1px solid rgba(229, 168, 59, 0.25)',
-                  transition: 'all 0.2s ease'
-                }}
-                aria-label="LinkedIn SMB"
-              >
-                <SocialIcon type="linkedin" size={14} />
-              </a>
-              <a
-                href={info.socials.instagram}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  width: '34px',
-                  height: '34px',
-                  borderRadius: '50%',
-                  background: 'rgba(255, 255, 255, 0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--gold-400)',
-                  border: '1px solid rgba(229, 168, 59, 0.25)',
-                  transition: 'all 0.2s ease'
-                }}
-                aria-label="Instagram SMB"
-              >
-                <SocialIcon type="instagram" size={14} />
-              </a>
-              <a
-                href={info.socials.youtube}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  width: '34px',
-                  height: '34px',
-                  borderRadius: '50%',
-                  background: 'rgba(255, 255, 255, 0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--gold-400)',
-                  border: '1px solid rgba(229, 168, 59, 0.25)',
-                  transition: 'all 0.2s ease'
-                }}
-                aria-label="YouTube SMB"
-              >
-                <SocialIcon type="youtube" size={14} />
-              </a>
-              <a
-                href={info.socials.facebook}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '6px',
-                  background: 'rgba(255, 255, 255, 0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--gold-400)',
-                  border: '1px solid rgba(229, 168, 59, 0.2)'
-                }}
-                aria-label="Facebook SMB"
-              >
-                <SocialIcon type="facebook" size={14} />
-              </a>
-            </div>
-          </div>
-
-          {/* Col 2: Layanan Utama (Flyer) */}
-          <div>
-            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Layanan Utama
-            </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
-              {mainServices.map((item) => (
-                <li key={item.id}>
+              {mainServices.map((service) => (
+                <li key={service.id}>
                   <Link
                     to="/layanan"
-                    style={{ fontSize: '0.82rem', color: 'var(--slate-400)', transition: 'color 0.15s' }}
-                    onMouseEnter={(e) => e.target.style.color = 'var(--gold-400)'}
-                    onMouseLeave={(e) => e.target.style.color = 'var(--slate-400)'}
+                    style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none', transition: 'color 0.15s ease' }}
+                    onMouseEnter={(e) => e.target.style.color = 'var(--white)'}
+                    onMouseLeave={(e) => e.target.style.color = 'var(--slate-apple-dark)'}
                   >
-                    {item.title}
+                    {service.title}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3: Keunggulan Kami (Flyer) */}
+          {/* Col 2: Tentang PT. SMB */}
           <div>
-            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Keunggulan Kami
-            </h4>
+            <div style={{ color: 'var(--white)', fontWeight: 650, fontSize: '0.8rem', letterSpacing: '-0.01em', marginBottom: '12px' }}>
+              Tentang PT. SMB
+            </div>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
-              {visionMission.keunggulanKami.map((item, idx) => (
-                <li key={idx} style={{ fontSize: '0.82rem', color: 'var(--slate-400)', display: 'flex', alignItems: 'baseline', gap: '5px' }}>
-                  <span style={{ color: 'var(--gold-400)', fontWeight: 700 }}>•</span>
-                  <span>{item.title}</span>
+              <li>
+                <Link to="/who-we-are" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>
+                  Profil Korporat
+                </Link>
+              </li>
+              <li>
+                <Link to="/who-we-are" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>
+                  Visi & Misi
+                </Link>
+              </li>
+              <li>
+                <Link to="/pengurus" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>
+                  Dewan Pengurus
+                </Link>
+              </li>
+              <li>
+                <Link to="/who-we-are" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>
+                  Budaya Kerja & Nilai
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Kemitraan & Ekosistem */}
+          <div>
+            <div style={{ color: 'var(--white)', fontWeight: 650, fontSize: '0.8rem', letterSpacing: '-0.01em', marginBottom: '12px' }}>
+              Ekosistem Kemitraan
+            </div>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
+              <li>
+                <Link to="/klien" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>
+                  Daftar Klien & Mitra
+                </Link>
+              </li>
+              <li>
+                <Link to="/klien" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>
+                  Testimoni Industri
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>
+                  Newsroom & Wawasan
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 4: Nilai Utama */}
+          <div>
+            <div style={{ color: 'var(--white)', fontWeight: 650, fontSize: '0.8rem', letterSpacing: '-0.01em', marginBottom: '12px' }}>
+              Nilai & Prinsip
+            </div>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', padding: 0 }}>
+              {visionMission.workingSpirit.map((item) => (
+                <li key={item.id} style={{ color: 'var(--slate-apple-dark)' }}>
+                  {item.name}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 4: Kontak (Flyer) */}
+          {/* Col 5: Kontak & Concierge */}
           <div>
-            <h4 style={{ fontSize: '0.88rem', color: 'var(--white)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              Kantor & Kontak
-            </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.82rem', color: 'var(--slate-400)' }}>
-              <div style={{ display: 'flex', gap: '8px' }}>
-                <MapPin size={14} color="var(--gold-400)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span>{info.address.city}, {info.address.country}</span>
-              </div>
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <Phone size={14} color="var(--gold-400)" style={{ flexShrink: 0 }} />
+            <div style={{ color: 'var(--white)', fontWeight: 650, fontSize: '0.8rem', letterSpacing: '-0.01em', marginBottom: '12px' }}>
+              Saluran Resmi
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <a
+                href={`https://wa.me/${info.whatsapp}`}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: 'var(--gold-400)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 600 }}
+              >
+                <MessageCircle size={13} />
                 <span>{info.phone}</span>
+              </a>
+              <a
+                href={`mailto:${info.email}`}
+                style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}
+              >
+                {info.email}
+              </a>
+              <div style={{ color: 'var(--slate-apple-subtle)', fontSize: '0.72rem', marginTop: '4px' }}>
+                {info.address.city}, {info.address.country}
               </div>
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <Mail size={14} color="var(--gold-400)" style={{ flexShrink: 0 }} />
-                <span style={{ color: 'var(--gold-300)' }}>{info.email}</span>
-              </div>
-              <div style={{ marginTop: '4px', fontSize: '0.78rem', color: 'var(--gold-400)', fontStyle: 'italic' }}>
-                "{info.slogan}"
+
+              {/* Social Icons */}
+              <div style={{ display: 'flex', gap: '8px', marginTop: '10px' }}>
+                <a
+                  href={info.socials.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ width: '30px', height: '30px', borderRadius: '50%', background: 'rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--slate-300)', border: '1px solid rgba(255,255,255,0.1)' }}
+                  aria-label="LinkedIn"
+                >
+                  <SocialIcon type="linkedin" size={13} />
+                </a>
+                <a
+                  href={info.socials.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ width: '30px', height: '30px', borderRadius: '50%', background: 'rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--slate-300)', border: '1px solid rgba(255,255,255,0.1)' }}
+                  aria-label="Instagram"
+                >
+                  <SocialIcon type="instagram" size={13} />
+                </a>
+                <a
+                  href={info.socials.youtube}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ width: '30px', height: '30px', borderRadius: '50%', background: 'rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--slate-300)', border: '1px solid rgba(255,255,255,0.1)' }}
+                  aria-label="YouTube"
+                >
+                  <SocialIcon type="youtube" size={13} />
+                </a>
+                <a
+                  href={info.socials.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ width: '30px', height: '30px', borderRadius: '50%', background: 'rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--slate-300)', border: '1px solid rgba(255,255,255,0.1)' }}
+                  aria-label="Facebook"
+                >
+                  <SocialIcon type="facebook" size={13} />
+                </a>
               </div>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Bar */}
+        {/* Apple Copyright & Country Ribbon */}
         <div style={{
-          paddingTop: '18px',
+          paddingTop: '20px',
           borderTop: '1px solid rgba(255, 255, 255, 0.08)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '12px',
-          fontSize: '0.8rem',
-          color: 'var(--slate-500)'
+          gap: '14px',
+          fontSize: '0.74rem'
         }}>
           <div>
-            Copyright © 2026. <strong>{info.legalName}</strong>. All Rights Reserved.
+            Copyright © {new Date().getFullYear()} {info.legalName}. All rights reserved.
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <Link to="/who-we-are" style={{ color: 'var(--slate-400)' }}>Tentang Kami</Link>
-            <Link to="/layanan" style={{ color: 'var(--slate-400)' }}>Layanan</Link>
-            <Link to="/pengurus" style={{ color: 'var(--slate-400)' }}>Pengurus</Link>
-            <Link to="/klien" style={{ color: 'var(--slate-400)' }}>Klien</Link>
-            <Link to="/blog" style={{ color: 'var(--slate-400)' }}>Blog & Berita</Link>
-            <Link to="/kontak" style={{ color: 'var(--slate-400)' }}>Kontak</Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+            <Link to="/who-we-are" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>Tentang Kami</Link>
+            <span style={{ opacity: 0.3 }}>|</span>
+            <Link to="/layanan" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>Layanan</Link>
+            <span style={{ opacity: 0.3 }}>|</span>
+            <Link to="/klien" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>Klien</Link>
+            <span style={{ opacity: 0.3 }}>|</span>
+            <Link to="/blog" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>Newsroom</Link>
+            <span style={{ opacity: 0.3 }}>|</span>
+            <Link to="/kontak" style={{ color: 'var(--slate-apple-dark)', textDecoration: 'none' }}>Kontak</Link>
+            <span style={{ opacity: 0.3 }}>|</span>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: 'var(--slate-300)' }}>
+              <Globe size={12} color="var(--gold-400)" />
+              <span>Indonesia (Bahasa Indonesia)</span>
+            </div>
+
             <button
               onClick={scrollToTop}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '5px',
-                background: 'rgba(229, 168, 59, 0.15)',
-                color: 'var(--gold-400)',
-                padding: '6px 14px',
+                gap: '4px',
+                padding: '4px 12px',
                 borderRadius: 'var(--radius-pill)',
-                border: '1px solid rgba(229, 168, 59, 0.35)',
+                background: 'rgba(255, 255, 255, 0.08)',
+                color: 'var(--white)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                fontSize: '0.72rem',
                 cursor: 'pointer',
-                fontWeight: 600,
-                fontSize: '0.78rem',
-                transition: 'all 0.2s ease'
+                marginLeft: '6px'
               }}
+              aria-label="Kembali ke atas"
             >
               <span>Ke Atas</span>
-              <ArrowUp size={13} />
+              <ArrowUp size={11} />
             </button>
           </div>
         </div>
@@ -284,13 +296,14 @@ export default function Footer() {
       </div>
 
       <style>{`
-        @media (max-width: 1024px) {
-          .footer-grid {
-            grid-template-columns: 1fr 1fr !important;
+        @media (max-width: 960px) {
+          .apple-footer-directory {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 24px !important;
           }
         }
         @media (max-width: 540px) {
-          .footer-grid {
+          .apple-footer-directory {
             grid-template-columns: 1fr !important;
           }
         }

@@ -38,10 +38,10 @@ export default function ContactSection() {
         <div className="section-header">
           <div className="section-badge">
             <MessageSquare size={13} />
-            <span>Mulai Langkah Kemitraan</span>
+            <span>PT. SMB Specialist Concierge</span>
           </div>
           <h2 className="section-title">
-            Hubungi <span className="text-gold">PT. SMB</span>
+            Konsultasi Langsung dengan <span className="text-gold">Spesialis Kami</span>
           </h2>
           <p className="section-subtitle">
             Konsultasikan kebutuhan Pendampingan SPPG, IT Solutions, Pest Control, Risk Insurance, atau efisiensi operasional bisnis Anda bersama tim konsultan PT. SMB.
@@ -242,7 +242,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   className="btn btn-gold btn-md"
-                  style={{ width: '100%', marginTop: '4px' }}
+                  style={{ width: '100%', marginTop: '6px', minHeight: '48px', borderRadius: 'var(--radius-pill)', justifyContent: 'center', fontWeight: 600 }}
                 >
                   <Send size={15} />
                   <span>Kirim Permintaan & Terhubung via WhatsApp</span>

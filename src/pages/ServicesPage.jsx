@@ -70,25 +70,25 @@ export default function ServicesPage() {
                 style={{
                   background: 'var(--slate-50)',
                   border: '1px solid var(--slate-200)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(16px, 2vw, 24px)',
+                  borderRadius: 'var(--radius-card)',
+                  padding: 'clamp(20px, 2.5vw, 28px)',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '1.4rem',
+                  fontSize: '1.5rem',
                   fontWeight: 800,
                   color: 'var(--gold-600)',
-                  marginBottom: '6px'
+                  marginBottom: '8px'
                 }}>
                   {item.step}
                 </div>
-                <h4 style={{ fontSize: '1.02rem', color: 'var(--navy-900)', marginBottom: '6px' }}>
+                <h4 style={{ fontSize: '1.05rem', color: 'var(--navy-900)', marginBottom: '8px', fontWeight: 650, letterSpacing: '-0.015em' }}>
                   {item.title}
                 </h4>
-                <p style={{ fontSize: '0.82rem', color: 'var(--slate-600)', lineHeight: 1.5, margin: 0 }}>
+                <p style={{ fontSize: '0.84rem', color: 'var(--slate-apple-light)', lineHeight: 1.55, margin: 0 }}>
                   {item.desc}
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function ServicesPage() {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '36px' }}>
-            <Link to="/kontak" className="btn btn-gold btn-md">
+            <Link to="/kontak" className="btn btn-gold btn-md" style={{ borderRadius: 'var(--radius-pill)', padding: '12px 28px', fontWeight: 600 }}>
               <span>Mulai Konsultasi Kebutuhan Anda</span>
               <ArrowRight size={16} />
             </Link>
@@ -106,10 +106,10 @@ export default function ServicesPage() {
 
       <style>{`
         @media (max-width: 1024px) {
-          .workflow-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .workflow-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
         }
         @media (max-width: 540px) {
-          .workflow-grid { grid-template-columns: 1fr !important; }
+          .workflow-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
         }
       `}</style>
     </div>

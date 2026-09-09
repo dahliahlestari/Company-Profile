@@ -232,19 +232,23 @@ export default function Services() {
                   ))}
                 </div>
 
-                <Link
-                  to="/kontak"
-                  className="link-apple"
-                  style={{
-                    marginTop: '16px',
-                    color: 'var(--navy-900)',
-                    fontWeight: 600,
-                    fontSize: '0.84rem'
-                  }}
-                >
-                  <span>Konsultasikan Layanan</span>
-                  <ArrowRight size={13} />
-                </Link>
+                <div style={{ marginTop: '18px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <Link
+                    to="/kontak"
+                    className="btn btn-gold btn-sm"
+                    style={{ borderRadius: 'var(--radius-pill)', justifyContent: 'center', fontWeight: 600, width: '100%' }}
+                  >
+                    <span>Konsultasi Layanan</span>
+                  </Link>
+                  <Link
+                    to="/layanan"
+                    className="link-apple"
+                    style={{ justifyContent: 'center', color: 'var(--navy-900)', fontWeight: 500, fontSize: '0.84rem' }}
+                  >
+                    <span>Pelajari Lebih Lanjut</span>
+                    <span style={{ fontSize: '1.1rem', lineHeight: 1 }}>›</span>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

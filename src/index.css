@@ -5,6 +5,18 @@
    ========================================================================== */
 
 :root {
+  /* Apple iPhone Pure Midnight & Titanium Shades */
+  --apple-black: #000000;
+  --apple-dark: #161617;
+  --apple-card-dark: #1d1d1f;
+  --apple-card-elevated: #242426;
+  --apple-gray-bg: #f5f5f7;
+  --apple-text-dark: #1d1d1f;
+  --apple-text-muted: #86868b;
+  --apple-text-light: #f5f5f7;
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+
   /* Solid Navy & Obsidian Shades (Apple Dark Mode Foundation) */
   --navy-950: #071322;
   --navy-900: #0B192C;
@@ -44,9 +56,11 @@
 
   /* Apple Glass & Borders */
   --bg-glass: rgba(7, 19, 34, 0.82);
+  --bg-glass-dark: rgba(22, 22, 23, 0.85);
   --bg-glass-light: rgba(255, 255, 255, 0.82);
   --border-light: rgba(0, 0, 0, 0.08);
   --border-dark: rgba(255, 255, 255, 0.1);
+  --border-hairline: rgba(255, 255, 255, 0.08);
   --border-gold: rgba(229, 168, 59, 0.3);
 
   /* Subtle minimal shadows */
@@ -58,8 +72,9 @@
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 16px;
-  --radius-card: 24px;   /* Standard Apple feature/bento card radius */
+  --radius-card: 26px;   /* Standard Apple feature/bento card radius */
   --radius-card-sm: 18px;
+  --radius-card-lg: 32px;
   --radius-pill: 980px;  /* Apple's signature capsule/pill button radius */
   --radius-full: 9999px;
 
@@ -69,6 +84,7 @@
   
   --transition-fast: 0.18s cubic-bezier(0.25, 1, 0.5, 1);
   --transition-normal: 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset & Global Base */
@@ -336,7 +352,88 @@ img {
   color: var(--gold-500);
 }
 
-/* Apple Squircle Cards (border-radius: 24px, subtle 1px hairline border) */
+/* Apple iPhone Signature Gradient Text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F0BC54 0%, #E5A83B 50%, #B88028 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gradient-titanium {
+  background: linear-gradient(180deg, #FFFFFF 30%, #A1A1A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gradient-dark {
+  background: linear-gradient(180deg, #1D1D1F 30%, #6E6E73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Apple Local Sub-Navigation Ribbon (apple.com/iphone local nav bar) */
+.apple-local-nav {
+  position: sticky;
+  top: 52px;
+  z-index: 950;
+  background: rgba(7, 19, 34, 0.88);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+/* Apple Bento Cards & Grids (Bento Box Architecture) */
+.bento-card {
+  border-radius: var(--radius-card);
+  padding: clamp(24px, 3.5vw, 38px);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card-dark {
+  background: var(--apple-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--apple-text-light);
+}
+
+.bento-card-dark:hover {
+  border-color: rgba(229, 168, 59, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.bento-card-light {
+  background: var(--apple-gray-bg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--apple-text-dark);
+}
+
+.bento-card-light:hover {
+  border-color: var(--gold-500);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+/* Apple Spec Pills & Badges */
+.spec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.74rem;
+  font-weight: 600;
+  background: rgba(229, 168, 59, 0.12);
+  color: var(--gold-400);
+  border: 1px solid rgba(229, 168, 59, 0.3);
+}
+
+/* Apple Squircle Cards (border-radius: 26px, subtle 1px hairline border) */
 .card-white {
   background: var(--white);
   border: 1px solid var(--slate-200);

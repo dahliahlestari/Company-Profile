@@ -232,6 +232,69 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Apple Local Sub-Navigation Ribbon (apple.com/iphone local nav bar) */}
+      <div className="local-subnav" style={{
+        background: 'rgba(11, 25, 44, 0.94)',
+        backdropFilter: 'saturate(180%) blur(20px)',
+        WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+        padding: '7px 0',
+        fontSize: '0.8rem',
+        transition: 'all 0.2s ease'
+      }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
+            <span style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '0.94rem',
+              fontWeight: 700,
+              color: 'var(--white)',
+              letterSpacing: '-0.02em',
+              whiteSpace: 'nowrap'
+            }}>
+              PT. Sembada Makmur Bersama
+            </span>
+            <span className="localnav-badge" style={{
+              fontSize: '0.66rem',
+              fontWeight: 600,
+              padding: '2px 7px',
+              borderRadius: 'var(--radius-pill)',
+              background: 'rgba(229, 168, 59, 0.15)',
+              color: 'var(--gold-400)',
+              border: '1px solid rgba(229, 168, 59, 0.35)',
+              whiteSpace: 'nowrap'
+            }}>
+              Overview
+            </span>
+          </div>
+
+          <div className="localnav-links" style={{ display: 'flex', alignItems: 'center', gap: '22px' }}>
+            <a href="#highlights" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
+              Ikhtisar
+            </a>
+            <a href="#lineup" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
+              Lini Layanan
+            </a>
+            <a href="#why-smb" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
+              Keunggulan
+            </a>
+            <a href="#mitra" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
+              Klien & Mitra
+            </a>
+            <Link to="/blog" style={{ color: 'var(--slate-300)', fontSize: '0.78rem', fontWeight: 500, textDecoration: 'none', transition: 'color 0.15s ease' }}>
+              Wawasan
+            </Link>
+            <Link
+              to="/kontak"
+              className="btn btn-gold"
+              style={{ padding: '4px 14px', fontSize: '0.76rem', minHeight: '30px', borderRadius: 'var(--radius-pill)' }}
+            >
+              <span>Konsultasi</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* Mobile Menu Drawer (Apple iOS Fullscreen Sheet Style) */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
@@ -357,6 +420,10 @@ export default function Navbar() {
           .desktop-menu { display: none !important; }
           .desktop-cta { display: none !important; }
           .mobile-controls { display: flex !important; }
+        }
+
+        @media (max-width: 900px) {
+          .local-subnav { display: none !important; }
         }
 
         @media (max-width: 768px) {

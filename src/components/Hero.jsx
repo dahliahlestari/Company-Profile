@@ -51,12 +51,12 @@ export default function Hero() {
               fontWeight: 650,
               letterSpacing: '-0.035em'
             }}>
-              Solusi Terintegrasi & Profesional untuk <span className="text-gold">Kesuksesan Bisnis</span> Anda.
+              <span className="text-gradient-titanium">Solusi Terintegrasi & Profesional untuk</span> <span className="text-gradient-gold">Kesuksesan Bisnis</span> Anda.
             </h1>
 
             <p style={{
               fontSize: 'clamp(0.92rem, 1.1vw, 1.02rem)',
-              color: 'var(--slate-300)',
+              color: 'var(--slate-apple-dark)',
               lineHeight: 1.54,
               letterSpacing: '-0.01em',
               marginBottom: '26px',
@@ -65,9 +65,9 @@ export default function Hero() {
               {info.aboutBrief}
             </p>
 
-            {/* Action Buttons: Apple Pill Shaped */}
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-              <Link to="/layanan" className="btn btn-gold btn-md">
+            {/* Action Buttons: Apple Pill Shaped & Chevron Link */}
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
+              <Link to="/layanan" className="btn btn-gold btn-md" style={{ borderRadius: 'var(--radius-pill)', padding: '12px 26px', fontWeight: 600 }}>
                 <span>Jelajahi Layanan Utama</span>
                 <ArrowRight size={14} />
               </Link>
@@ -75,10 +75,12 @@ export default function Hero() {
                 href={`https://wa.me/${info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20tertarik%20untuk%20berkonsultasi.`}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-outline-gold btn-md"
+                className="link-apple"
+                style={{ fontSize: '0.98rem', fontWeight: 500 }}
               >
-                <MessageCircle size={14} />
+                <MessageCircle size={15} />
                 <span>Mulai Percakapan</span>
+                <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>›</span>
               </a>
             </div>
 

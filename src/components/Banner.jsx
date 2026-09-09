@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Truck, Users, Clock } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Truck, Users, Sparkles, Play, Pause } from 'lucide-react';
 import { companyData } from '../data/companyData';
 
 export default function Banner() {
@@ -32,18 +32,19 @@ export default function Banner() {
 
   return (
     <section
+      id="highlights"
       className="banner-section"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       style={{
         position: 'relative',
         width: '100%',
-        background: 'var(--navy-950)',
+        background: 'var(--apple-black)',
         overflow: 'hidden',
-        borderBottom: '1px solid rgba(229, 168, 59, 0.3)'
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
       }}
     >
-      {/* Background Image with Solid Dark Navy Overlay */}
+      {/* Background Image with Cinematic Dark Gradient Tint */}
       <div
         key={current.id}
         style={{
@@ -55,112 +56,154 @@ export default function Banner() {
           transition: 'background-image 0.5s ease-in-out'
         }}
       />
-      {/* Solid Navy Tint Overlay (No heavy multi-gradients) */}
+      {/* Apple Midnight Gradient Overlay (Deep Contrast) */}
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'rgba(7, 19, 34, 0.88)'
+        background: 'linear-gradient(180deg, rgba(7, 19, 34, 0.92) 0%, rgba(11, 25, 44, 0.96) 100%)'
       }} />
 
-      {/* Banner Content Container (Expansive Fullscreen Width) */}
+      {/* Spotlight Content Container (Expansive Apple Viewport) */}
       <div className="container banner-inner-container" style={{
         position: 'relative',
         zIndex: 2,
-        paddingTop: 'clamp(48px, 6vw, 96px)',
-        paddingBottom: 'clamp(48px, 6vw, 96px)',
+        paddingTop: 'clamp(56px, 7vw, 98px)',
+        paddingBottom: 'clamp(56px, 7vw, 98px)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: 'clamp(460px, 60vh, 580px)'
+        minHeight: 'clamp(480px, 64vh, 600px)'
       }}>
-        <div style={{ maxWidth: '820px' }}>
+        <div style={{ maxWidth: '860px' }}>
           
-          {/* Tagline / Eyebrow (Pure Text, No Border, Apple Style) */}
+          {/* Apple Eyebrow: Pure Text, Titanium/Gold Tint */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '6px',
+            gap: '8px',
             color: 'var(--gold-400)',
             fontFamily: 'var(--font-heading)',
-            fontSize: '0.78rem',
-            fontWeight: 600,
-            letterSpacing: '0.06em',
-            textTransform: 'uppercase',
-            marginBottom: '12px'
-          }}>
-            <span>{current.badge}</span>
-          </div>
-
-          {/* Title (Apple Standard Scale) */}
-          <h2 style={{
-            fontSize: 'clamp(1.65rem, 3vw, 2.6rem)',
-            color: 'var(--white)',
-            lineHeight: 1.14,
+            fontSize: '0.8rem',
             fontWeight: 650,
-            letterSpacing: '-0.032em',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
             marginBottom: '14px'
           }}>
-            {current.title}
-          </h2>
+            <Sparkles size={13} />
+            <span>Get the highlights.</span>
+            <span style={{ opacity: 0.4 }}>•</span>
+            <span style={{ color: 'var(--slate-apple-dark)', fontWeight: 500 }}>{current.badge}</span>
+          </div>
 
-          {/* Subtitle */}
+          {/* Title: Apple Display Titanium & Gold Gradient */}
+          <h1 style={{
+            fontSize: 'clamp(2rem, 4.2vw, 3.6rem)',
+            color: 'var(--white)',
+            lineHeight: 1.06,
+            fontWeight: 700,
+            letterSpacing: '-0.038em',
+            marginBottom: '16px'
+          }}>
+            <span className="text-gradient-titanium">{current.title}</span>
+          </h1>
+
+          {/* Subtitle: Apple Titanium Slate Text */}
           <p style={{
-            fontSize: 'clamp(0.92rem, 1.1vw, 1.04rem)',
-            color: 'var(--slate-200)',
-            lineHeight: 1.54,
-            letterSpacing: '-0.01em',
-            marginBottom: '26px',
+            fontSize: 'clamp(0.96rem, 1.2vw, 1.12rem)',
+            color: 'var(--slate-apple-dark)',
+            lineHeight: 1.5,
+            letterSpacing: '-0.015em',
+            marginBottom: '30px',
             maxWidth: '680px'
           }}>
             {current.subtitle}
           </p>
 
-          {/* CTA Buttons: Apple Pill */}
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-            <Link to={current.primaryLink} className="btn btn-gold btn-md">
+          {/* Action CTAs: Apple Pill Button + Chevron Action Link */}
+          <div style={{ display: 'flex', gap: '18px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <Link
+              to={current.primaryLink}
+              className="btn btn-gold btn-md"
+              style={{ borderRadius: 'var(--radius-pill)', padding: '12px 26px', fontWeight: 600 }}
+            >
               <span>{current.primaryBtn}</span>
-              <ArrowRight size={14} />
+              <ArrowRight size={15} />
             </Link>
-            <Link to={current.secondaryLink} className="btn btn-outline-gold btn-md">
+            <Link
+              to={current.secondaryLink}
+              className="link-apple"
+              style={{ fontSize: '1rem', fontWeight: 500 }}
+            >
               <span>{current.secondaryBtn}</span>
+              <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>›</span>
             </Link>
           </div>
 
         </div>
 
-        {/* Carousel Navigation Bar (Bottom Row) */}
+        {/* Carousel Navigation Bar (Apple Progress Capsule Bar) */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginTop: 'clamp(36px, 4vw, 52px)',
-          paddingTop: '18px',
+          marginTop: 'clamp(40px, 4.5vw, 60px)',
+          paddingTop: '20px',
           borderTop: '1px solid rgba(255, 255, 255, 0.08)',
           flexWrap: 'wrap',
           gap: '14px'
         }}>
-          {/* Indicators & Counter */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-            <div style={{ display: 'flex', gap: '6px' }}>
+          {/* Apple Pill Progress Bar & Counter */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              background: 'rgba(255, 255, 255, 0.06)',
+              padding: '6px 12px',
+              borderRadius: 'var(--radius-pill)',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
               {banners.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
                   style={{
-                    width: currentSlide === idx ? '28px' : '8px',
-                    height: '4px',
+                    width: currentSlide === idx ? '32px' : '8px',
+                    height: '5px',
                     borderRadius: 'var(--radius-pill)',
-                    background: currentSlide === idx ? 'var(--gold-500)' : 'rgba(255, 255, 255, 0.22)',
+                    background: currentSlide === idx ? 'var(--gold-500)' : 'rgba(255, 255, 255, 0.25)',
                     border: 'none',
                     cursor: 'pointer',
-                    transition: 'all 0.25s ease',
+                    transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
                     padding: 0
                   }}
                   aria-label={`Buka slide ${idx + 1}`}
                 />
               ))}
             </div>
-            <span style={{ fontSize: '0.8rem', color: 'var(--gold-400)', fontFamily: 'var(--font-heading)', fontWeight: 600, letterSpacing: '0.04em' }}>
+
+            {/* Play/Pause Scrubber Button */}
+            <button
+              onClick={() => setIsPaused(!isPaused)}
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.06)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                color: 'var(--white)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+              aria-label={isPaused ? "Putar tayangan otomatis" : "Jeda tayangan otomatis"}
+            >
+              {isPaused ? <Play size={13} fill="currentColor" /> : <Pause size={13} fill="currentColor" />}
+            </button>
+
+            <span style={{ fontSize: '0.8rem', color: 'var(--slate-apple-dark)', fontFamily: 'var(--font-heading)', fontWeight: 600 }}>
               0{currentSlide + 1} / 0{banners.length}
             </span>
           </div>
@@ -170,8 +213,8 @@ export default function Banner() {
             <button
               onClick={handlePrev}
               style={{
-                width: '36px',
-                height: '36px',
+                width: '38px',
+                height: '38px',
                 borderRadius: '50%',
                 background: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -184,13 +227,13 @@ export default function Banner() {
               }}
               aria-label="Slide sebelumnya"
             >
-              <ChevronLeft size={16} />
+              <ChevronLeft size={17} />
             </button>
             <button
               onClick={handleNext}
               style={{
-                width: '36px',
-                height: '36px',
+                width: '38px',
+                height: '38px',
                 borderRadius: '50%',
                 background: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -203,7 +246,7 @@ export default function Banner() {
               }}
               aria-label="Slide berikutnya"
             >
-              <ChevronRight size={16} />
+              <ChevronRight size={17} />
             </button>
           </div>
         </div>
@@ -212,9 +255,9 @@ export default function Banner() {
 
       {/* Highlights Strip (4 Keunggulan PT. SMB) */}
       <div style={{
-        background: 'var(--navy-900)',
-        borderTop: '1px solid rgba(229, 168, 59, 0.25)',
-        padding: '11px 0'
+        background: 'rgba(11, 25, 44, 0.96)',
+        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+        padding: '13px 0'
       }}>
         <div className="container highlights-strip-grid" style={{
           display: 'flex',
