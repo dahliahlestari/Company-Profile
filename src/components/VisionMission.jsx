@@ -251,7 +251,8 @@ export default function VisionMission() {
         }
         @media (max-width: 600px) {
           .spirit-grid {
-            grid-template-columns: 1fr !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 10px !important;
           }
         }
       `}</style>

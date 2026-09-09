@@ -185,7 +185,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Right Controls: Quick WA + Hamburger Button */}
+          {/* Mobile Right Controls: Quick WA Pill + Apple Circle Toggle */}
           <div className="mobile-controls" style={{ display: 'none', alignItems: 'center', gap: '8px' }}>
             <a 
               href={`https://wa.me/${companyData.info.whatsapp}?text=Halo%20PT.%20SMB,%20saya%20ingin%20berkonsultasi.`} 
@@ -195,13 +195,13 @@ export default function Navbar() {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '4px',
-                padding: '5px 9px',
+                gap: '5px',
+                padding: '6px 12px',
                 background: 'rgba(229, 168, 59, 0.12)',
                 border: '1px solid rgba(229, 168, 59, 0.4)',
-                borderRadius: '6px',
+                borderRadius: 'var(--radius-pill)',
                 color: 'var(--gold-400)',
-                fontSize: '0.74rem',
+                fontSize: '0.76rem',
                 fontWeight: 600
               }}
             >
@@ -213,88 +213,95 @@ export default function Navbar() {
               className="mobile-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{
-                padding: '6px 9px',
-                color: 'var(--gold-400)',
-                background: 'rgba(255,255,255,0.06)',
-                borderRadius: '6px',
-                border: '1px solid rgba(229, 168, 59, 0.3)',
+                width: '36px',
+                height: '36px',
+                borderRadius: '50%',
+                color: 'var(--white)',
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                cursor: 'pointer'
               }}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu Drawer (Fullscreen Backdrop Style) */}
+      {/* Mobile Menu Drawer (Apple iOS Fullscreen Sheet Style) */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
-          {/* Language & Contact Header in Drawer */}
+          {/* Top Bar inside Drawer: Brand & Language Toggle */}
           <div style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            paddingBottom: '12px',
+            paddingBottom: '14px',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-            marginBottom: '4px'
+            marginBottom: '6px'
           }}>
-            <div style={{ fontSize: '0.76rem', color: 'var(--gold-400)', fontWeight: 600 }}>
+            <div style={{ fontSize: '0.74rem', color: 'var(--gold-400)', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
               PT. SMB Navigation
             </div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.78rem', background: 'rgba(255,255,255,0.08)', padding: '2px 8px', borderRadius: '4px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.78rem', background: 'rgba(255, 255, 255, 0.08)', padding: '3px 10px', borderRadius: 'var(--radius-pill)' }}>
               <Globe size={12} color="var(--gold-400)" />
               <button 
                 onClick={() => setLang('ID')} 
-                style={{ color: lang === 'ID' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'ID' ? 700 : 400, fontSize: '0.74rem' }}
+                style={{ color: lang === 'ID' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'ID' ? 700 : 400, fontSize: '0.74rem', background: 'none', border: 'none', cursor: 'pointer' }}
               >
                 ID
               </button>
-              <span style={{ opacity: 0.4 }}>|</span>
+              <span style={{ opacity: 0.4, color: 'var(--slate-500)' }}>|</span>
               <button 
                 onClick={() => setLang('EN')} 
-                style={{ color: lang === 'EN' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'EN' ? 700 : 400, fontSize: '0.74rem' }}
+                style={{ color: lang === 'EN' ? 'var(--gold-400)' : 'var(--slate-400)', fontWeight: lang === 'EN' ? 700 : 400, fontSize: '0.74rem', background: 'none', border: 'none', cursor: 'pointer' }}
               >
                 EN
               </button>
             </div>
           </div>
 
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              onClick={() => setMobileMenuOpen(false)}
-              style={({ isActive }) => ({
-                fontFamily: 'var(--font-heading)',
-                fontSize: '0.92rem',
-                fontWeight: 600,
-                color: isActive ? 'var(--gold-400)' : 'var(--white)',
-                padding: '10px 14px',
-                borderRadius: '6px',
-                background: isActive ? 'var(--navy-800)' : 'var(--navy-900)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                border: isActive ? '1px solid var(--gold-500)' : '1px solid rgba(255,255,255,0.06)'
-              })}
-            >
-              <span>{link.label}</span>
-              <ChevronDown size={14} color="var(--gold-400)" style={{ transform: 'rotate(-90deg)' }} />
-            </NavLink>
-          ))}
+          {/* Navigation Links: Clean Apple Typographic List */}
+          <nav style={{ display: 'flex', flexDirection: 'column' }}>
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                onClick={() => setMobileMenuOpen(false)}
+                style={({ isActive }) => ({
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '1.18rem',
+                  fontWeight: 650,
+                  color: isActive ? 'var(--gold-400)' : 'var(--white)',
+                  padding: '13px 0',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  letterSpacing: '-0.025em',
+                  textDecoration: 'none',
+                  transition: 'color 0.18s ease'
+                })}
+              >
+                <span>{link.label}</span>
+                <ArrowRight size={15} color="var(--slate-500)" />
+              </NavLink>
+            ))}
+          </nav>
 
-          <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {/* Action CTAs: Apple Full-Width Pills */}
+          <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <Link
               to="/kontak"
               onClick={() => setMobileMenuOpen(false)}
               className="btn btn-gold btn-md"
-              style={{ width: '100%' }}
+              style={{ width: '100%', justifyContent: 'center', minHeight: '46px', borderRadius: 'var(--radius-pill)' }}
             >
-              <span>Hubungi Kami / Konsultasi</span>
+              <span>Konsultasi Sekarang</span>
               <ArrowRight size={14} />
             </Link>
             <a
@@ -302,25 +309,29 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
               className="btn btn-outline-gold btn-md"
-              style={{ width: '100%' }}
+              style={{ width: '100%', justifyContent: 'center', minHeight: '46px', borderRadius: 'var(--radius-pill)' }}
             >
-              <MessageCircle size={14} />
+              <MessageCircle size={15} />
               <span>WhatsApp Direct ({companyData.info.phone})</span>
             </a>
           </div>
 
+          {/* Bottom Info */}
           <div style={{
             marginTop: 'auto',
-            paddingTop: '14px',
+            paddingTop: '18px',
             borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-            fontSize: '0.72rem',
+            fontSize: '0.74rem',
             color: 'var(--slate-400)',
             display: 'flex',
             flexDirection: 'column',
-            gap: '3px'
+            gap: '4px'
           }}>
             <div>📧 {companyData.info.email}</div>
             <div>📞 {companyData.info.phone}</div>
+            <div style={{ color: 'var(--slate-500)', fontSize: '0.7rem', marginTop: '2px' }}>
+              © {new Date().getFullYear()} {companyData.info.legalName}
+            </div>
           </div>
         </div>
       )}
@@ -328,19 +339,17 @@ export default function Navbar() {
       <style>{`
         .mobile-drawer {
           position: fixed;
-          top: 90px;
+          top: 86px;
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(7, 19, 34, 0.98);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
+          background: rgba(7, 19, 34, 0.97);
+          backdrop-filter: saturate(180%) blur(24px);
+          -webkit-backdrop-filter: saturate(180%) blur(24px);
           z-index: 999;
-          padding: 20px 16px;
+          padding: 20px 20px 28px 20px;
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          border-top: 1px solid rgba(229, 168, 59, 0.3);
           overflow-y: auto;
         }
 

@@ -417,7 +417,7 @@ export default function Home() {
           .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (max-width: 540px) {
-          .stats-grid { grid-template-columns: 1fr !important; }
+          .stats-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
         }
       `}</style>
     </div>
