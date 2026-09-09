@@ -42,21 +42,21 @@ export default function Services() {
           <div style={{
             display: 'inline-flex',
             background: 'var(--white)',
-            padding: '4px',
+            padding: '3px',
             borderRadius: 'var(--radius-full)',
             border: '1px solid var(--slate-300)',
-            marginTop: '24px',
-            gap: '4px',
+            marginTop: '18px',
+            gap: '3px',
             flexWrap: 'wrap',
             justifyContent: 'center'
           }}>
             <button
               onClick={() => setActiveTab('all')}
               style={{
-                padding: '8px 20px',
+                padding: '6px 16px',
                 borderRadius: 'var(--radius-full)',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '0.88rem',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 background: activeTab === 'all' ? 'var(--navy-900)' : 'transparent',
                 color: activeTab === 'all' ? 'var(--white)' : 'var(--slate-600)',
@@ -68,10 +68,10 @@ export default function Services() {
             <button
               onClick={() => setActiveTab('distributor')}
               style={{
-                padding: '8px 20px',
+                padding: '6px 16px',
                 borderRadius: 'var(--radius-full)',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '0.88rem',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 background: activeTab === 'distributor' ? 'var(--gold-500)' : 'transparent',
                 color: activeTab === 'distributor' ? 'var(--navy-950)' : 'var(--slate-600)',
@@ -83,10 +83,10 @@ export default function Services() {
             <button
               onClick={() => setActiveTab('consulting')}
               style={{
-                padding: '8px 20px',
+                padding: '6px 16px',
                 borderRadius: 'var(--radius-full)',
                 fontFamily: 'var(--font-heading)',
-                fontSize: '0.88rem',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 background: activeTab === 'consulting' ? 'var(--navy-900)' : 'transparent',
                 color: activeTab === 'consulting' ? 'var(--white)' : 'var(--slate-600)',
@@ -100,20 +100,20 @@ export default function Services() {
 
         {/* 1. Pilar Distributor */}
         {(activeTab === 'all' || activeTab === 'distributor') && (
-          <div style={{ marginBottom: '56px' }}>
+          <div style={{ marginBottom: '48px' }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              marginBottom: '24px',
-              paddingBottom: '14px',
+              marginBottom: '20px',
+              paddingBottom: '12px',
               borderBottom: '1px solid var(--slate-300)',
               flexWrap: 'wrap',
-              gap: '12px'
+              gap: '10px'
             }}>
               <div>
                 <span style={{
-                  fontSize: '0.78rem',
+                  fontSize: '0.74rem',
                   fontWeight: 700,
                   color: 'var(--gold-700)',
                   textTransform: 'uppercase',
@@ -121,19 +121,19 @@ export default function Services() {
                 }}>
                   {services.distributor.badge}
                 </span>
-                <h3 style={{ fontSize: 'clamp(1.4rem, 2vw, 1.75rem)', color: 'var(--navy-900)', marginTop: '2px' }}>
+                <h3 style={{ fontSize: 'clamp(1.2rem, 1.8vw, 1.6rem)', color: 'var(--navy-900)', marginTop: '2px' }}>
                   {services.distributor.title}
                 </h3>
               </div>
-              <p style={{ maxWidth: '560px', fontSize: '0.92rem', color: 'var(--slate-600)', margin: 0 }}>
+              <p style={{ maxWidth: '560px', fontSize: '0.86rem', color: 'var(--slate-600)', margin: 0 }}>
                 {services.distributor.description}
               </p>
             </div>
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
-              gap: '24px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '20px'
             }}>
               {services.distributor.items.map((item) => (
                 <div
@@ -148,7 +148,7 @@ export default function Services() {
                   }}
                 >
                   {/* Thumbnail Image */}
-                  <div style={{ position: 'relative', height: '175px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+                  <div style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)' }}>
                     <img
                       src={item.image}
                       alt={item.title}
@@ -160,10 +160,10 @@ export default function Services() {
                     />
                     <div style={{
                       position: 'absolute',
-                      bottom: '12px',
-                      left: '12px',
-                      width: '38px',
-                      height: '38px',
+                      bottom: '10px',
+                      left: '10px',
+                      width: '34px',
+                      height: '34px',
                       borderRadius: '6px',
                       background: 'var(--white)',
                       display: 'flex',
@@ -176,36 +176,36 @@ export default function Services() {
                   </div>
 
                   {/* Card Content Body */}
-                  <div style={{ padding: 'clamp(18px, 2.5vw, 24px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <div style={{ padding: 'clamp(16px, 2vw, 22px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     <h4 style={{
-                      fontSize: '1.15rem',
+                      fontSize: '1.05rem',
                       color: 'var(--navy-900)',
-                      marginBottom: '10px',
-                      lineHeight: 1.35
+                      marginBottom: '8px',
+                      lineHeight: 1.3
                     }}>
                       {item.title}
                     </h4>
 
                     <p style={{
-                      fontSize: '0.88rem',
+                      fontSize: '0.84rem',
                       color: 'var(--slate-600)',
-                      lineHeight: 1.55,
-                      marginBottom: '18px'
+                      lineHeight: 1.5,
+                      marginBottom: '14px'
                     }}>
                       {item.shortDesc}
                     </p>
 
                     <div style={{
                       marginTop: 'auto',
-                      paddingTop: '14px',
+                      paddingTop: '12px',
                       borderTop: '1px solid var(--slate-100)',
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '6px'
+                      gap: '5px'
                     }}>
                       {item.highlights.map((h, idx) => (
-                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--slate-700)' }}>
-                          <CheckCircle size={14} color="var(--gold-600)" />
+                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--slate-700)' }}>
+                          <CheckCircle size={13} color="var(--gold-600)" />
                           <span>{h}</span>
                         </div>
                       ))}
@@ -214,13 +214,13 @@ export default function Services() {
                     <Link
                       to="/kontak"
                       style={{
-                        marginTop: '16px',
+                        marginTop: '14px',
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: '6px',
+                        gap: '5px',
                         color: 'var(--navy-800)',
                         fontWeight: 700,
-                        fontSize: '0.86rem'
+                        fontSize: '0.82rem'
                       }}
                     >
                       <span>Konsultasikan Pengadaan</span>
@@ -248,7 +248,7 @@ export default function Services() {
             }}>
               <div>
                 <span style={{
-                  fontSize: '0.78rem',
+                  fontSize: '0.74rem',
                   fontWeight: 700,
                   color: 'var(--navy-600)',
                   textTransform: 'uppercase',
@@ -256,19 +256,19 @@ export default function Services() {
                 }}>
                   {services.consulting.badge}
                 </span>
-                <h3 style={{ fontSize: 'clamp(1.4rem, 2vw, 1.75rem)', color: 'var(--navy-900)', marginTop: '2px' }}>
+                <h3 style={{ fontSize: 'clamp(1.2rem, 1.8vw, 1.6rem)', color: 'var(--navy-900)', marginTop: '2px' }}>
                   {services.consulting.title}
                 </h3>
               </div>
-              <p style={{ maxWidth: '560px', fontSize: '0.92rem', color: 'var(--slate-600)', margin: 0 }}>
+              <p style={{ maxWidth: '560px', fontSize: '0.86rem', color: 'var(--slate-600)', margin: 0 }}>
                 {services.consulting.description}
               </p>
             </div>
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))',
-              gap: '24px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '20px'
             }}>
               {services.consulting.items.map((item) => (
                 <div
@@ -283,7 +283,7 @@ export default function Services() {
                   }}
                 >
                   {/* Thumbnail Image */}
-                  <div style={{ position: 'relative', height: '175px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+                  <div style={{ position: 'relative', height: '160px', overflow: 'hidden', background: 'var(--navy-950)' }}>
                     <img
                       src={item.image}
                       alt={item.title}
@@ -295,10 +295,10 @@ export default function Services() {
                     />
                     <div style={{
                       position: 'absolute',
-                      bottom: '12px',
-                      left: '12px',
-                      width: '38px',
-                      height: '38px',
+                      bottom: '10px',
+                      left: '10px',
+                      width: '34px',
+                      height: '34px',
                       borderRadius: '6px',
                       background: 'var(--white)',
                       display: 'flex',
@@ -311,36 +311,36 @@ export default function Services() {
                   </div>
 
                   {/* Card Content Body */}
-                  <div style={{ padding: 'clamp(18px, 2.5vw, 24px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <div style={{ padding: 'clamp(14px, 2vw, 20px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                     <h4 style={{
-                      fontSize: '1.15rem',
+                      fontSize: '1.05rem',
                       color: 'var(--navy-900)',
-                      marginBottom: '10px',
+                      marginBottom: '8px',
                       lineHeight: 1.35
                     }}>
                       {item.title}
                     </h4>
 
                     <p style={{
-                      fontSize: '0.88rem',
+                      fontSize: '0.84rem',
                       color: 'var(--slate-600)',
                       lineHeight: 1.55,
-                      marginBottom: '18px'
+                      marginBottom: '14px'
                     }}>
                       {item.shortDesc}
                     </p>
 
                     <div style={{
                       marginTop: 'auto',
-                      paddingTop: '14px',
+                      paddingTop: '12px',
                       borderTop: '1px solid var(--slate-100)',
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '6px'
+                      gap: '5px'
                     }}>
                       {item.highlights.map((h, idx) => (
-                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--slate-700)' }}>
-                          <CheckCircle size={14} color="var(--navy-600)" />
+                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.78rem', color: 'var(--slate-700)' }}>
+                          <CheckCircle size={13} color="var(--navy-600)" />
                           <span>{h}</span>
                         </div>
                       ))}
@@ -349,16 +349,16 @@ export default function Services() {
                     <Link
                       to="/kontak"
                       style={{
-                        marginTop: '16px',
+                        marginTop: '14px',
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: '6px',
+                        gap: '5px',
                         color: 'var(--gold-700)',
                         fontWeight: 700,
-                        fontSize: '0.86rem'
+                        fontSize: '0.82rem'
                       }}
                     >
-                      <span>Ajukan Sesi Konsultasi</span>
+                      <span>Konsultasikan Kebutuhan</span>
                       <ArrowRight size={13} />
                     </Link>
                   </div>

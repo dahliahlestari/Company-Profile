@@ -31,18 +31,18 @@ export default function WhoWeAre() {
           <div className="section-badge">
             <span>Langkah Selanjutnya</span>
           </div>
-          <h2 style={{ fontSize: 'clamp(1.7rem, 2.5vw, 2.2rem)', color: 'var(--navy-900)', marginBottom: '14px' }}>
+          <h2 style={{ fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--navy-900)', marginBottom: '10px' }}>
             Temui Para Ahli di Balik Kesuksesan <span className="text-gold">SMB</span>
           </h2>
-          <p style={{ fontSize: '1rem', color: 'var(--slate-600)', lineHeight: 1.6, marginBottom: '28px' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--slate-600)', lineHeight: 1.6, marginBottom: '22px' }}>
             Ketahui lebih dekat dewan direksi dan konsultan senior yang memimpin tata kelola rantai pasok dan advisory bisnis di SMB Sembada.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' }}>
-            <Link to="/pengurus" className="btn btn-navy btn-lg">
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
+            <Link to="/pengurus" className="btn btn-navy btn-md">
               <span>Meet Our Leadership Team</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={14} />
             </Link>
-            <Link to="/layanan" className="btn btn-outline-navy btn-lg">
+            <Link to="/layanan" className="btn btn-outline-navy btn-md">
               <span>Jelajahi Layanan Kami</span>
             </Link>
           </div>

@@ -30,22 +30,22 @@ export default function LeadershipPage() {
         textAlign: 'center'
       }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <h2 style={{ fontSize: 'clamp(1.7rem, 2.5vw, 2.2rem)', color: 'var(--white)', marginBottom: '14px' }}>
+          <h2 style={{ fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--white)', marginBottom: '10px' }}>
             Ingin Berdiskusi Langsung dengan Tim Ahli <span className="text-gold">SMB?</span>
           </h2>
-          <p style={{ fontSize: '1rem', color: 'var(--slate-300)', lineHeight: 1.6, marginBottom: '28px' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--slate-300)', lineHeight: 1.6, marginBottom: '22px' }}>
             Jadwalkan sesi audiensi atau konsultasi strategis bersama dewan pengurus dan konsultan senior kami untuk membahas peluang kemitraan korporasi Anda.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' }}>
-            <Link to="/kontak" className="btn btn-gold btn-lg">
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
+            <Link to="/kontak" className="btn btn-gold btn-md">
               <span>Jadwalkan Sesi Diskusi</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={14} />
             </Link>
             <a
               href={`https://wa.me/${info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20ingin%20berkonsultasi%20dengan%20tim%20pengurus.`}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-outline-gold btn-lg"
+              className="btn btn-outline-gold btn-md"
             >
               <span>Hubungi via WhatsApp</span>
             </a>

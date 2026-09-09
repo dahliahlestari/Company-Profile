@@ -62,36 +62,36 @@ export default function TeamModal({ member, onClose }) {
           <div style={{ flex: 1, minWidth: '220px' }}>
             <span style={{
               display: 'inline-block',
-              padding: '2px 8px',
+              padding: '2px 7px',
               background: 'rgba(212, 175, 55, 0.2)',
               color: 'var(--gold-300)',
               borderRadius: '3px',
-              fontSize: '0.75rem',
+              fontSize: '0.7rem',
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.05em',
-              marginBottom: '6px'
+              marginBottom: '4px'
             }}>
               {member.category}
             </span>
-            <h3 style={{ fontSize: 'clamp(1.2rem, 2vw, 1.4rem)', color: 'var(--white)', marginBottom: '4px' }}>
+            <h3 style={{ fontSize: 'clamp(1.05rem, 2vw, 1.25rem)', color: 'var(--white)', marginBottom: '3px' }}>
               {member.name}
             </h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--gold-300)', margin: 0 }}>
+            <p style={{ fontSize: '0.82rem', color: 'var(--gold-300)', margin: 0 }}>
               {member.position}
             </p>
           </div>
         </div>
 
         {/* Body Content */}
-        <div style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
+        <div style={{ padding: 'clamp(16px, 2.5vw, 24px)' }}>
           
           {/* Biografi */}
-          <div style={{ marginBottom: '20px' }}>
-            <h4 style={{ fontSize: '0.92rem', color: 'var(--navy-900)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+          <div style={{ marginBottom: '16px' }}>
+            <h4 style={{ fontSize: '0.82rem', color: 'var(--navy-900)', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Profil & Rekam Jejak
             </h4>
-            <p style={{ fontSize: '0.92rem', color: 'var(--slate-700)', lineHeight: 1.65 }}>
+            <p style={{ fontSize: '0.84rem', color: 'var(--slate-700)', lineHeight: 1.6 }}>
               {member.bio}
             </p>
           </div>
@@ -101,19 +101,19 @@ export default function TeamModal({ member, onClose }) {
             <div style={{
               background: 'var(--slate-50)',
               borderRadius: 'var(--radius-md)',
-              padding: '14px',
+              padding: '12px 14px',
               border: '1px solid var(--slate-200)',
               display: 'flex',
               alignItems: 'center',
-              gap: '12px',
-              marginBottom: '20px'
+              gap: '10px',
+              marginBottom: '16px'
             }}>
-              <GraduationCap size={20} color="var(--gold-700)" />
+              <GraduationCap size={18} color="var(--gold-700)" />
               <div>
-                <div style={{ fontSize: '0.74rem', color: 'var(--slate-500)', textTransform: 'uppercase', fontWeight: 600 }}>
+                <div style={{ fontSize: '0.7rem', color: 'var(--slate-500)', textTransform: 'uppercase', fontWeight: 600 }}>
                   Latar Belakang Akademis
                 </div>
-                <div style={{ fontSize: '0.88rem', color: 'var(--navy-900)', fontWeight: 600 }}>
+                <div style={{ fontSize: '0.82rem', color: 'var(--navy-900)', fontWeight: 600 }}>
                   {member.education}
                 </div>
               </div>
@@ -122,11 +122,11 @@ export default function TeamModal({ member, onClose }) {
 
           {/* Area Keahlian */}
           {member.expertise && (
-            <div style={{ marginBottom: '24px' }}>
-              <h4 style={{ fontSize: '0.88rem', color: 'var(--navy-900)', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            <div style={{ marginBottom: '20px' }}>
+              <h4 style={{ fontSize: '0.8rem', color: 'var(--navy-900)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                 Area Keahlian Utama
               </h4>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
                 {member.expertise.map((exp, i) => (
                   <span
                     key={i}
@@ -134,9 +134,9 @@ export default function TeamModal({ member, onClose }) {
                       background: 'var(--navy-50)',
                       color: 'var(--navy-800)',
                       border: '1px solid var(--navy-100)',
-                      padding: '5px 12px',
+                      padding: '4px 10px',
                       borderRadius: 'var(--radius-full)',
-                      fontSize: '0.8rem',
+                      fontSize: '0.75rem',
                       fontWeight: 600
                     }}
                   >

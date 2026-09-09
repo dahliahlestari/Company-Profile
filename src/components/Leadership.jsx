@@ -39,9 +39,9 @@ export default function Leadership() {
           <div style={{
             display: 'inline-flex',
             background: 'var(--slate-100)',
-            padding: '4px',
+            padding: '3px',
             borderRadius: 'var(--radius-full)',
-            marginTop: '20px',
+            marginTop: '16px',
             gap: '4px',
             flexWrap: 'wrap',
             justifyContent: 'center'
@@ -49,9 +49,9 @@ export default function Leadership() {
             <button
               onClick={() => setFilterCategory('all')}
               style={{
-                padding: '7px 18px',
+                padding: '6px 14px',
                 borderRadius: 'var(--radius-full)',
-                fontSize: '0.86rem',
+                fontSize: '0.8rem',
                 fontWeight: 600,
                 fontFamily: 'var(--font-heading)',
                 background: filterCategory === 'all' ? 'var(--navy-900)' : 'transparent',
@@ -64,9 +64,9 @@ export default function Leadership() {
             <button
               onClick={() => setFilterCategory('Dewan Direksi')}
               style={{
-                padding: '7px 18px',
+                padding: '6px 14px',
                 borderRadius: 'var(--radius-full)',
-                fontSize: '0.86rem',
+                fontSize: '0.8rem',
                 fontWeight: 600,
                 fontFamily: 'var(--font-heading)',
                 background: filterCategory === 'Dewan Direksi' ? 'var(--gold-500)' : 'transparent',
@@ -79,9 +79,9 @@ export default function Leadership() {
             <button
               onClick={() => setFilterCategory('Konsultan Senior')}
               style={{
-                padding: '7px 18px',
+                padding: '6px 14px',
                 borderRadius: 'var(--radius-full)',
-                fontSize: '0.86rem',
+                fontSize: '0.8rem',
                 fontWeight: 600,
                 fontFamily: 'var(--font-heading)',
                 background: filterCategory === 'Konsultan Senior' ? 'var(--navy-900)' : 'transparent',
@@ -97,8 +97,8 @@ export default function Leadership() {
         {/* Team Grid (Fluid Expansive Layout) */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-          gap: '24px'
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gap: '20px'
         }}>
           {filteredTeam.map((member) => (
             <div
@@ -112,7 +112,7 @@ export default function Leadership() {
               }}
             >
               {/* Profile Image */}
-              <div style={{ position: 'relative', height: '280px', overflow: 'hidden', background: 'var(--navy-950)' }}>
+              <div style={{ position: 'relative', height: '240px', overflow: 'hidden', background: 'var(--navy-950)' }}>
                 <img
                   src={member.image}
                   alt={member.name}
@@ -125,13 +125,13 @@ export default function Leadership() {
                 />
                 <div style={{
                   position: 'absolute',
-                  top: '14px',
-                  right: '14px',
+                  top: '12px',
+                  right: '12px',
                   background: member.category === 'Dewan Direksi' ? 'var(--gold-500)' : 'var(--navy-900)',
                   color: member.category === 'Dewan Direksi' ? 'var(--navy-950)' : 'var(--white)',
-                  padding: '3px 10px',
+                  padding: '3px 9px',
                   borderRadius: 'var(--radius-full)',
-                  fontSize: '0.72rem',
+                  fontSize: '0.7rem',
                   fontWeight: 700,
                   letterSpacing: '0.04em',
                   textTransform: 'uppercase'
@@ -141,31 +141,31 @@ export default function Leadership() {
               </div>
 
               {/* Info Body */}
-              <div style={{ padding: 'clamp(18px, 2.5vw, 24px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
+              <div style={{ padding: 'clamp(14px, 2vw, 20px)', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{
-                  fontSize: '1.2rem',
+                  fontSize: '1.05rem',
                   color: 'var(--navy-900)',
-                  marginBottom: '4px',
+                  marginBottom: '3px',
                   lineHeight: 1.3
                 }}>
                   {member.name}
                 </h3>
                 
                 <div style={{
-                  fontSize: '0.84rem',
+                  fontSize: '0.78rem',
                   fontWeight: 600,
                   color: 'var(--gold-700)',
-                  marginBottom: '12px',
-                  minHeight: '36px'
+                  marginBottom: '10px',
+                  minHeight: '26px'
                 }}>
                   {member.position}
                 </div>
 
                 <p style={{
-                  fontSize: '0.88rem',
+                  fontSize: '0.82rem',
                   color: 'var(--slate-600)',
                   lineHeight: 1.5,
-                  marginBottom: '16px'
+                  marginBottom: '14px'
                 }}>
                   {member.summary}
                 </p>
@@ -173,7 +173,7 @@ export default function Leadership() {
                 {/* Card Action */}
                 <div style={{
                   marginTop: 'auto',
-                  paddingTop: '14px',
+                  paddingTop: '12px',
                   borderTop: '1px solid var(--slate-100)',
                   display: 'flex',
                   alignItems: 'center',
@@ -187,7 +187,7 @@ export default function Leadership() {
                       gap: '5px',
                       color: 'var(--navy-900)',
                       fontWeight: 700,
-                      fontSize: '0.86rem',
+                      fontSize: '0.8rem',
                       background: 'none',
                       border: 'none',
                       cursor: 'pointer',
@@ -205,8 +205,8 @@ export default function Leadership() {
                     target="_blank"
                     rel="noreferrer"
                     style={{
-                      width: '30px',
-                      height: '30px',
+                      width: '28px',
+                      height: '28px',
                       borderRadius: '50%',
                       background: 'var(--slate-100)',
                       display: 'flex',
@@ -216,7 +216,7 @@ export default function Leadership() {
                     }}
                     aria-label={`LinkedIn ${member.name}`}
                   >
-                    <LinkedinIcon size={14} />
+                    <LinkedinIcon size={13} />
                   </a>
                 </div>
               </div>

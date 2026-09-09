@@ -28,19 +28,19 @@ export default function Home() {
                 <Award size={14} />
                 <span>Selamat Datang di SMB Sembada</span>
               </div>
-              <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 16px 0' }}>
+              <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 14px 0' }}>
                 Mitra Strategis Kebutuhan Distributor & <span className="text-gold">Konsultasi Bisnis</span>
               </h2>
-              <p style={{ fontSize: '1.05rem', color: 'var(--slate-600)', lineHeight: 1.7, marginBottom: '24px' }}>
+              <p style={{ fontSize: 'clamp(0.86rem, 1.2vw, 0.98rem)', color: 'var(--slate-600)', lineHeight: 1.65, marginBottom: '20px' }}>
                 {info.aboutBrief}
               </p>
               
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-                <Link to="/who-we-are" className="btn btn-navy">
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                <Link to="/who-we-are" className="btn btn-navy btn-md">
                   <span>Pelajari Tentang Kami</span>
-                  <ArrowRight size={15} />
+                  <ArrowRight size={14} />
                 </Link>
-                <Link to="/layanan" className="btn btn-outline-navy">
+                <Link to="/layanan" className="btn btn-outline-navy btn-md">
                   <span>Lihat Seluruh Solusi</span>
                 </Link>
               </div>
@@ -51,36 +51,36 @@ export default function Home() {
               background: 'var(--navy-900)',
               color: 'var(--white)',
               borderRadius: 'var(--radius-lg)',
-              padding: 'clamp(24px, 3.5vw, 36px)',
+              padding: 'clamp(20px, 3vw, 32px)',
               border: '1px solid rgba(212, 175, 55, 0.3)'
             }}>
               <span style={{
                 display: 'inline-block',
-                padding: '3px 10px',
+                padding: '2px 8px',
                 background: 'rgba(212, 175, 55, 0.15)',
                 color: 'var(--gold-400)',
                 borderRadius: '4px',
-                fontSize: '0.78rem',
+                fontSize: '0.72rem',
                 fontWeight: 700,
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em',
-                marginBottom: '14px'
+                marginBottom: '10px'
               }}>
                 Identitas Resmi
               </span>
-              <h3 style={{ fontSize: '1.4rem', color: 'var(--white)', marginBottom: '12px' }}>
+              <h3 style={{ fontSize: 'clamp(1.15rem, 1.8vw, 1.35rem)', color: 'var(--white)', marginBottom: '10px' }}>
                 {info.legalName}
               </h3>
-              <p style={{ fontSize: '0.92rem', color: 'var(--slate-300)', lineHeight: 1.6, marginBottom: '20px' }}>
+              <p style={{ fontSize: '0.84rem', color: 'var(--slate-300)', lineHeight: 1.55, marginBottom: '16px' }}>
                 Berfokus memberikan kepastian rantai pasok untuk mitra distributor dan mengawal transformasi bisnis korporasi di 38 provinsi di Indonesia.
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.86rem', color: 'var(--slate-300)' }}>
-                  <CheckCircle2 size={16} color="var(--gold-400)" />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--slate-300)' }}>
+                  <CheckCircle2 size={15} color="var(--gold-400)" />
                   <span>Jaringan Pasokan & Pergudangan Modern WMS</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.86rem', color: 'var(--slate-300)' }}>
-                  <CheckCircle2 size={16} color="var(--gold-400)" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--slate-300)' }}>
+                  <CheckCircle2 size={15} color="var(--gold-400)" />
                   <span>Dewan Konsultan Senior & Praktisi Industri</span>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function Home() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: 'clamp(14px, 2vw, 24px)'
+            gap: 'clamp(12px, 1.8vw, 20px)'
           }} className="stats-grid">
             {stats.map((item, idx) => (
               <div
@@ -101,29 +101,29 @@ export default function Home() {
                   background: 'var(--slate-50)',
                   border: '1px solid var(--slate-200)',
                   borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(18px, 2.5vw, 24px)'
+                  padding: 'clamp(14px, 2vw, 20px)'
                 }}
               >
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: 'clamp(2rem, 3vw, 2.6rem)',
+                  fontSize: 'clamp(1.55rem, 2.4vw, 2.2rem)',
                   fontWeight: 800,
                   color: 'var(--navy-900)',
                   lineHeight: 1,
-                  marginBottom: '6px'
+                  marginBottom: '4px'
                 }}>
                   {item.value}
                 </div>
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '0.96rem',
+                  fontSize: '0.88rem',
                   fontWeight: 700,
                   color: 'var(--gold-700)',
-                  marginBottom: '4px'
+                  marginBottom: '3px'
                 }}>
                   {item.label}
                 </div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--slate-600)', lineHeight: 1.4 }}>
+                <div style={{ fontSize: '0.78rem', color: 'var(--slate-600)', lineHeight: 1.4 }}>
                   {item.description}
                 </div>
               </div>
@@ -157,52 +157,52 @@ export default function Home() {
           }} className="pillars-grid">
             
             {/* Pilar 1: Distributor */}
-            <div className="card-white" style={{ padding: 'clamp(24px, 3.5vw, 36px)', borderTop: '3px solid var(--gold-500)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--gold-700)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+            <div className="card-white" style={{ padding: 'clamp(18px, 2.5vw, 30px)', borderTop: '3px solid var(--gold-500)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ fontSize: '0.74rem', fontWeight: 700, color: 'var(--gold-700)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 {services.distributor.badge}
               </span>
-              <h3 style={{ fontSize: '1.45rem', color: 'var(--navy-900)', margin: '8px 0 12px 0' }}>
+              <h3 style={{ fontSize: 'clamp(1.15rem, 1.8vw, 1.4rem)', color: 'var(--navy-900)', margin: '6px 0 10px 0' }}>
                 {services.distributor.title}
               </h3>
-              <p style={{ fontSize: '0.92rem', color: 'var(--slate-600)', lineHeight: 1.6, marginBottom: '20px' }}>
+              <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', lineHeight: 1.55, marginBottom: '16px' }}>
                 {services.distributor.description}
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '20px' }}>
                 {services.distributor.items.slice(0, 3).map((item) => (
-                  <div key={item.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.86rem', color: 'var(--slate-700)' }}>
-                    <CheckCircle2 size={15} color="var(--gold-600)" />
+                  <div key={item.id} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.82rem', color: 'var(--slate-700)' }}>
+                    <CheckCircle2 size={14} color="var(--gold-600)" />
                     <span>{item.title}</span>
                   </div>
                 ))}
               </div>
               <Link to="/layanan" className="btn btn-outline-navy btn-sm" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>
                 <span>Rincian Kebutuhan Distributor</span>
-                <ArrowRight size={14} />
+                <ArrowRight size={13} />
               </Link>
             </div>
 
             {/* Pilar 2: Consulting */}
-            <div className="card-white" style={{ padding: 'clamp(24px, 3.5vw, 36px)', borderTop: '3px solid var(--navy-800)', display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--navy-600)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+            <div className="card-white" style={{ padding: 'clamp(18px, 2.5vw, 30px)', borderTop: '3px solid var(--navy-800)', display: 'flex', flexDirection: 'column' }}>
+              <span style={{ fontSize: '0.74rem', fontWeight: 700, color: 'var(--navy-600)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 {services.consulting.badge}
               </span>
-              <h3 style={{ fontSize: '1.45rem', color: 'var(--navy-900)', margin: '8px 0 12px 0' }}>
+              <h3 style={{ fontSize: 'clamp(1.15rem, 1.8vw, 1.4rem)', color: 'var(--navy-900)', margin: '6px 0 10px 0' }}>
                 {services.consulting.title}
               </h3>
-              <p style={{ fontSize: '0.92rem', color: 'var(--slate-600)', lineHeight: 1.6, marginBottom: '20px' }}>
+              <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', lineHeight: 1.55, marginBottom: '16px' }}>
                 {services.consulting.description}
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '20px' }}>
                 {services.consulting.items.slice(0, 3).map((item) => (
-                  <div key={item.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.86rem', color: 'var(--slate-700)' }}>
-                    <CheckCircle2 size={15} color="var(--navy-600)" />
+                  <div key={item.id} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '0.82rem', color: 'var(--slate-700)' }}>
+                    <CheckCircle2 size={14} color="var(--navy-600)" />
                     <span>{item.title}</span>
                   </div>
                 ))}
               </div>
               <Link to="/layanan" className="btn btn-outline-navy btn-sm" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>
                 <span>Rincian Jasa Konsultasi</span>
-                <ArrowRight size={14} />
+                <ArrowRight size={13} />
               </Link>
             </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
       <section style={{
         background: 'var(--navy-900)',
         color: 'var(--white)',
-        padding: 'clamp(40px, 5vw, 64px) 0',
+        padding: 'clamp(32px, 4vw, 56px) 0',
         borderTop: '2px solid var(--gold-500)'
       }}>
         <div className="container" style={{
@@ -222,26 +222,26 @@ export default function Home() {
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '24px'
+          gap: '20px'
         }}>
           <div>
-            <h3 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--white)', marginBottom: '8px' }}>
+            <h3 style={{ fontSize: 'clamp(1.2rem, 2vw, 1.75rem)', color: 'var(--white)', marginBottom: '6px' }}>
               Siap Memulai Kemitraan atau Membutuhkan Konsultasi?
             </h3>
-            <p style={{ color: 'var(--slate-300)', fontSize: '0.98rem', margin: 0 }}>
+            <p style={{ color: 'var(--slate-300)', fontSize: '0.84rem', margin: 0 }}>
               Hubungi spesialis kami sekarang untuk mendiskusikan kebutuhan rantai pasok dan pengembangan bisnis Anda.
             </p>
           </div>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            <Link to="/kontak" className="btn btn-gold btn-lg">
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <Link to="/kontak" className="btn btn-gold btn-md">
               <span>Hubungi Kami</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={14} />
             </Link>
             <a
               href={`https://wa.me/${info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20tertarik%20dengan%20layanan%20Anda.`}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-outline-gold btn-lg"
+              className="btn btn-outline-gold btn-md"
             >
               <span>Chat WhatsApp</span>
             </a>

@@ -236,10 +236,10 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               style={({ isActive }) => ({
                 fontFamily: 'var(--font-heading)',
-                fontSize: '1.05rem',
+                fontSize: '0.92rem',
                 fontWeight: 600,
                 color: isActive ? 'var(--gold-400)' : 'var(--white)',
-                padding: '12px 14px',
+                padding: '10px 14px',
                 borderRadius: '6px',
                 background: isActive ? 'var(--navy-800)' : 'var(--navy-900)',
                 display: 'flex',
@@ -249,28 +249,28 @@ export default function Navbar() {
               })}
             >
               <span>{link.label}</span>
-              <ChevronDown size={15} color="var(--gold-400)" style={{ transform: 'rotate(-90deg)' }} />
+              <ChevronDown size={14} color="var(--gold-400)" style={{ transform: 'rotate(-90deg)' }} />
             </NavLink>
           ))}
 
-          <div style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <Link
               to="/kontak"
               onClick={() => setMobileMenuOpen(false)}
-              className="btn btn-gold"
+              className="btn btn-gold btn-md"
               style={{ width: '100%' }}
             >
               <span>Hubungi Kami / Konsultasi</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={14} />
             </Link>
             <a
               href={`https://wa.me/${companyData.info.whatsapp}`}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-outline-gold"
+              className="btn btn-outline-gold btn-md"
               style={{ width: '100%' }}
             >
-              <MessageCircle size={15} />
+              <MessageCircle size={14} />
               <span>WhatsApp Direct</span>
             </a>
           </div>

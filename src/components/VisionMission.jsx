@@ -70,9 +70,9 @@ export default function VisionMission() {
               </div>
 
               <h3 style={{
-                fontSize: 'clamp(1.35rem, 2vw, 1.65rem)',
+                fontSize: 'clamp(1.15rem, 1.8vw, 1.5rem)',
                 color: 'var(--white)',
-                lineHeight: 1.45,
+                lineHeight: 1.4,
                 fontWeight: 700,
                 fontFamily: 'var(--font-heading)'
               }}>
@@ -81,17 +81,17 @@ export default function VisionMission() {
             </div>
 
             <div style={{
-              marginTop: '32px',
-              paddingTop: '18px',
+              marginTop: '24px',
+              paddingTop: '16px',
               borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-              fontSize: '0.86rem',
+              fontSize: '0.82rem',
               color: 'var(--gold-300)',
               fontWeight: 600,
               display: 'flex',
               alignItems: 'center',
               gap: '8px'
             }}>
-              <Sparkles size={16} />
+              <Sparkles size={15} />
               <span>Untuk Indonesia, dari Indonesia, dan Menjangkau Skala Nasional</span>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function VisionMission() {
           <div style={{
             background: 'var(--slate-50)',
             borderRadius: 'var(--radius-lg)',
-            padding: 'clamp(28px, 4vw, 44px)',
+            padding: 'clamp(20px, 3.5vw, 36px)',
             border: '1px solid var(--slate-200)',
             display: 'flex',
             flexDirection: 'column',
@@ -111,38 +111,38 @@ export default function VisionMission() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                padding: '5px 12px',
+                padding: '4px 10px',
                 background: 'var(--navy-100)',
                 color: 'var(--navy-800)',
                 borderRadius: 'var(--radius-full)',
-                fontSize: '0.8rem',
+                fontSize: '0.75rem',
                 fontWeight: 700,
                 letterSpacing: '0.05em',
                 textTransform: 'uppercase',
-                marginBottom: '20px'
+                marginBottom: '16px'
               }}>
-                <Compass size={15} />
+                <Compass size={14} />
                 <span>Misi Utama</span>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 {visionMission.missions.map((misi, i) => (
-                  <div key={i} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                  <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                     <div style={{
-                      minWidth: '26px',
-                      height: '26px',
+                      minWidth: '24px',
+                      height: '24px',
                       borderRadius: '50%',
                       background: 'var(--gold-500)',
                       color: 'var(--navy-950)',
                       fontWeight: 800,
-                      fontSize: '0.82rem',
+                      fontSize: '0.78rem',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center'
                     }}>
                       {i + 1}
                     </div>
-                    <p style={{ margin: 0, fontSize: '0.94rem', color: 'var(--slate-700)', lineHeight: 1.55 }}>
+                    <p style={{ margin: 0, fontSize: '0.88rem', color: 'var(--slate-700)', lineHeight: 1.5 }}>
                       {misi}
                     </p>
                   </div>
@@ -157,20 +157,20 @@ export default function VisionMission() {
         <div id="nilai-kerja" style={{
           background: 'var(--navy-900)',
           borderRadius: 'var(--radius-lg)',
-          padding: 'clamp(32px, 4vw, 56px)',
+          padding: 'clamp(28px, 3.5vw, 48px)',
           color: 'var(--white)',
           border: '1px solid rgba(212, 175, 55, 0.3)'
         }}>
           
-          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(28px, 3.5vw, 44px) auto' }}>
-            <div className="section-badge dark" style={{ marginBottom: '10px' }}>
-              <Award size={14} />
+          <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto clamp(20px, 3vw, 36px) auto' }}>
+            <div className="section-badge dark" style={{ marginBottom: '8px' }}>
+              <Award size={13} />
               <span>Budaya & Nilai Inti</span>
             </div>
-            <h3 style={{ fontSize: 'clamp(1.7rem, 2.5vw, 2.2rem)', color: 'var(--white)', marginBottom: '10px' }}>
+            <h3 style={{ fontSize: 'clamp(1.3rem, 2.2vw, 2rem)', color: 'var(--white)', marginBottom: '8px' }}>
               Working Spirit <span className="text-gold">SMB</span>
             </h3>
-            <p style={{ color: 'var(--slate-300)', fontSize: '0.95rem' }}>
+            <p style={{ color: 'var(--slate-300)', fontSize: '0.88rem' }}>
               Empat pilar nilai kerja yang menjiwai setiap keputusan operasional, etika kemitraan, dan layanan profesional kami.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function VisionMission() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: 'clamp(14px, 2vw, 22px)'
+            gap: 'clamp(12px, 1.8vw, 18px)'
           }} className="spirit-grid">
             {visionMission.workingSpirit.map((spirit) => (
               <div
@@ -187,49 +187,49 @@ export default function VisionMission() {
                   background: 'var(--navy-850)',
                   border: '1px solid rgba(212, 175, 55, 0.25)',
                   borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(20px, 2.5vw, 26px)',
+                  padding: 'clamp(16px, 2vw, 22px)',
                   display: 'flex',
                   flexDirection: 'column',
                   transition: 'border-color 0.2s ease'
                 }}
               >
                 <div style={{
-                  width: '46px',
-                  height: '46px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '8px',
                   background: 'rgba(212, 175, 55, 0.12)',
                   border: '1px solid var(--gold-500)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginBottom: '16px'
+                  marginBottom: '14px'
                 }}>
                   {spiritIcons[spirit.id]}
                 </div>
 
                 <h4 style={{
-                  fontSize: '1.15rem',
+                  fontSize: '1.05rem',
                   color: 'var(--gold-400)',
-                  marginBottom: '6px',
+                  marginBottom: '4px',
                   fontFamily: 'var(--font-heading)'
                 }}>
                   {spirit.name}
                 </h4>
 
                 <div style={{
-                  fontSize: '0.84rem',
+                  fontSize: '0.8rem',
                   color: 'var(--white)',
                   fontWeight: 600,
-                  marginBottom: '10px',
-                  lineHeight: 1.4
+                  marginBottom: '8px',
+                  lineHeight: 1.35
                 }}>
                   {spirit.summary}
                 </div>
 
                 <p style={{
-                  fontSize: '0.86rem',
+                  fontSize: '0.82rem',
                   color: 'var(--slate-300)',
-                  lineHeight: 1.55,
+                  lineHeight: 1.5,
                   marginTop: 'auto'
                 }}>
                   {spirit.description}

@@ -77,39 +77,39 @@ export default function Banner() {
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '8px',
-            padding: '5px 14px',
+            gap: '6px',
+            padding: '4px 11px',
             background: 'rgba(212, 175, 55, 0.16)',
             color: 'var(--gold-400)',
             border: '1px solid var(--gold-500)',
             borderRadius: 'var(--radius-full)',
             fontFamily: 'var(--font-heading)',
-            fontSize: '0.82rem',
+            fontSize: '0.74rem',
             fontWeight: 700,
-            letterSpacing: '0.06em',
+            letterSpacing: '0.05em',
             textTransform: 'uppercase',
-            marginBottom: '18px'
+            marginBottom: '12px'
           }}>
             <span>{current.badge}</span>
           </div>
 
           {/* Title */}
           <h2 style={{
-            fontSize: 'clamp(2rem, 3.8vw, 3.4rem)',
+            fontSize: 'clamp(1.35rem, 3.4vw, 3.2rem)',
             color: 'var(--white)',
-            lineHeight: 1.18,
+            lineHeight: 1.2,
             fontWeight: 800,
-            marginBottom: '18px'
+            marginBottom: '12px'
           }}>
             {current.title}
           </h2>
 
           {/* Subtitle */}
           <p style={{
-            fontSize: 'clamp(1rem, 1.3vw, 1.15rem)',
+            fontSize: 'clamp(0.86rem, 1.15vw, 1.05rem)',
             color: 'var(--slate-200)',
-            lineHeight: 1.65,
-            marginBottom: '32px',
+            lineHeight: 1.55,
+            marginBottom: '24px',
             maxWidth: '720px'
           }}>
             {current.subtitle}

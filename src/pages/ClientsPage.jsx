@@ -33,22 +33,22 @@ export default function ClientsPage() {
             <Handshake size={14} />
             <span>Peluang Kerjasama Baru</span>
           </div>
-          <h2 style={{ fontSize: 'clamp(1.7rem, 2.5vw, 2.2rem)', color: 'var(--navy-900)', marginBottom: '14px' }}>
+          <h2 style={{ fontSize: 'clamp(1.25rem, 2vw, 1.75rem)', color: 'var(--navy-900)', marginBottom: '10px' }}>
             Bergabunglah Menjadi Bagian dari Jaringan <span className="text-gold">SMB</span>
           </h2>
-          <p style={{ fontSize: '1rem', color: 'var(--slate-600)', lineHeight: 1.6, marginBottom: '28px' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--slate-600)', lineHeight: 1.6, marginBottom: '22px' }}>
             Apakah Anda produsen yang membutuhkan jalur distribusi nasional, atau pemilik toko/agen yang mencari pasokan komoditas stabil dan bimbingan bisnis? SMB siap bermitra dengan Anda.
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '14px', flexWrap: 'wrap' }}>
-            <Link to="/kontak" className="btn btn-navy btn-lg">
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
+            <Link to="/kontak" className="btn btn-navy btn-md">
               <span>Daftar Menjadi Mitra</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={14} />
             </Link>
             <a
               href={`https://wa.me/${info.whatsapp}?text=Halo%20SMB%20Sembada,%20saya%20tertarik%20mendaftarkan%20perusahaan%20saya%20menjadi%20mitra%20distributor.`}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-gold btn-lg"
+              className="btn btn-gold btn-md"
             >
               <span>Konsultasi Cepat via WhatsApp</span>
             </a>

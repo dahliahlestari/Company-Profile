@@ -34,26 +34,26 @@ export default function Milestones() {
             position: 'absolute',
             top: 0,
             bottom: 0,
-            left: '28px',
+            left: '24px',
             width: '2px',
             background: 'var(--slate-300)'
           }} />
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
             {milestones.map((item, idx) => (
               <div
                 key={idx}
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
-                  gap: '20px',
+                  gap: '16px',
                   position: 'relative'
                 }}
               >
                 {/* Year Marker Circle (Flat Solid) */}
                 <div style={{
-                  minWidth: '58px',
-                  height: '58px',
+                  minWidth: '48px',
+                  height: '48px',
                   borderRadius: '50%',
                   background: 'var(--navy-900)',
                   border: '2px solid var(--gold-500)',
@@ -63,7 +63,7 @@ export default function Milestones() {
                   justifyContent: 'center',
                   fontFamily: 'var(--font-heading)',
                   fontWeight: 800,
-                  fontSize: '0.88rem',
+                  fontSize: '0.78rem',
                   zIndex: 2
                 }}>
                   {item.year.includes(' - ') ? 'KINI' : item.year}
@@ -75,21 +75,21 @@ export default function Milestones() {
                   background: 'var(--slate-50)',
                   border: '1px solid var(--slate-200)',
                   borderRadius: 'var(--radius-md)',
-                  padding: 'clamp(18px, 2.5vw, 24px)',
+                  padding: 'clamp(14px, 2vw, 20px)',
                   transition: 'border-color 0.15s ease'
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                    <Calendar size={14} color="var(--gold-700)" />
-                    <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--gold-700)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                    <Calendar size={13} color="var(--gold-700)" />
+                    <span style={{ fontSize: '0.74rem', fontWeight: 700, color: 'var(--gold-700)' }}>
                       Tahun {item.year}
                     </span>
                   </div>
 
-                  <h4 style={{ fontSize: '1.18rem', color: 'var(--navy-900)', marginBottom: '6px' }}>
+                  <h4 style={{ fontSize: '1.02rem', color: 'var(--navy-900)', marginBottom: '5px' }}>
                     {item.title}
                   </h4>
 
-                  <p style={{ fontSize: '0.92rem', color: 'var(--slate-600)', lineHeight: 1.55, margin: 0 }}>
+                  <p style={{ fontSize: '0.84rem', color: 'var(--slate-600)', lineHeight: 1.55, margin: 0 }}>
                     {item.description}
                   </p>
                 </div>

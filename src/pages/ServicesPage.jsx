@@ -71,32 +71,32 @@ export default function ServicesPage() {
                   background: 'var(--slate-50)',
                   border: '1px solid var(--slate-200)',
                   borderRadius: 'var(--radius-md)',
-                  padding: '24px',
+                  padding: 'clamp(16px, 2vw, 24px)',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
                 <div style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '1.75rem',
+                  fontSize: '1.4rem',
                   fontWeight: 800,
                   color: 'var(--gold-600)',
-                  marginBottom: '8px'
+                  marginBottom: '6px'
                 }}>
                   {item.step}
                 </div>
-                <h4 style={{ fontSize: '1.1rem', color: 'var(--navy-900)', marginBottom: '8px' }}>
+                <h4 style={{ fontSize: '1.02rem', color: 'var(--navy-900)', marginBottom: '6px' }}>
                   {item.title}
                 </h4>
-                <p style={{ fontSize: '0.88rem', color: 'var(--slate-600)', lineHeight: 1.5, margin: 0 }}>
+                <p style={{ fontSize: '0.82rem', color: 'var(--slate-600)', lineHeight: 1.5, margin: 0 }}>
                   {item.desc}
                 </p>
               </div>
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '48px' }}>
-            <Link to="/kontak" className="btn btn-gold btn-lg">
+          <div style={{ textAlign: 'center', marginTop: '36px' }}>
+            <Link to="/kontak" className="btn btn-gold btn-md">
               <span>Mulai Konsultasi Kebutuhan Anda</span>
               <ArrowRight size={16} />
             </Link>
