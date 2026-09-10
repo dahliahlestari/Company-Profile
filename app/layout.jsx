@@ -45,7 +45,11 @@ export const metadata = {
       'Solusi terintegrasi Pendampingan SPPG, IT Solutions, Pest Control, dan Risk Insurance.',
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 };
 
