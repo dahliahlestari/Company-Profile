@@ -36,7 +36,7 @@ export default function MobileBottomCTA() {
           }`}
           aria-label="Halaman Kontak dan Lokasi"
         >
-          <Mail size={15} className={isContactPage ? 'text-sembada-gold' : 'text-apple-secondary'} />
+          <Mail size={15} className={isContactPage ? 'text-white' : 'text-apple-secondary'} />
           <span>Hubungi Kami</span>
         </Link>
       </div>

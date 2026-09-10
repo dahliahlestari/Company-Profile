@@ -106,7 +106,7 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="Contoh: Hendra Wijaya"
-                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-gold focus:bg-white transition-all"
+                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-navy/30 focus:bg-white transition-all"
               />
             </div>
 
@@ -121,7 +121,7 @@ export default function ContactForm() {
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 placeholder="Contoh: PT Sumber Makmur"
-                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-gold focus:bg-white transition-all"
+                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-navy/30 focus:bg-white transition-all"
               />
             </div>
           </div>
@@ -138,13 +138,13 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder="Contoh: 081234567890"
-                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-gold focus:bg-white transition-all"
+                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-navy/30 focus:bg-white transition-all"
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-xs font-semibold text-apple-dark mb-1.5">
-                Alamat Email Kantor
+                Alamat Email
               </label>
               <input
                 type="email"
@@ -152,7 +152,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="Contoh: info@perusahaan.com"
-                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-gold focus:bg-white transition-all"
+                className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-navy/30 focus:bg-white transition-all"
               />
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function ContactForm() {
               id="service"
               value={formData.service}
               onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark focus:outline-none focus:ring-2 focus:ring-sembada-gold focus:bg-white transition-all"
+              className="w-full h-12 px-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark focus:outline-none focus:ring-2 focus:ring-sembada-navy/30 focus:bg-white transition-all"
             >
               <option value="sppg">Pendampingan SPPG (Audit & Standardisasi)</option>
               <option value="it-solutions">IT Solutions (Digital System & ERP)</option>
@@ -186,21 +186,21 @@ export default function ContactForm() {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="Jelaskan secara ringkas tantangan operasional atau target yang ingin dicapai perusahaan Anda..."
-              className="w-full p-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-gold focus:bg-white transition-all leading-relaxed"
+              className="w-full p-4 rounded-2xl bg-apple-subtle border border-black/[0.08] text-sm text-apple-dark placeholder:text-apple-muted focus:outline-none focus:ring-2 focus:ring-sembada-navy/30 focus:bg-white transition-all leading-relaxed"
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full h-12 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-semibold text-sm transition-all duration-200 active:scale-95 shadow-md flex items-center justify-center gap-2"
+            className="w-full h-12 rounded-full bg-apple-dark hover:bg-black text-white font-semibold text-sm transition-all duration-200 active:scale-95 shadow-md flex items-center justify-center gap-2"
           >
             {isSubmitting ? (
               <span>Mengirim Pesan...</span>
             ) : (
               <>
                 <span>Kirim Permintaan Konsultasi</span>
-                <Send size={15} className="text-sembada-gold" />
+                <Send size={15} className="text-white/80" />
               </>
             )}
           </button>

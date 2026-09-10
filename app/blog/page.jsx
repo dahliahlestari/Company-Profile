@@ -220,7 +220,7 @@ export default function BlogPage() {
         {/* Notification Toast */}
         {notification && (
           <div className="max-w-md mx-auto mt-4 p-3 rounded-2xl bg-apple-dark text-white text-xs font-medium text-center animate-in fade-in flex items-center justify-center gap-2 shadow-lg">
-            <CheckCircle2 size={15} className="text-sembada-gold" />
+            <CheckCircle2 size={15} className="text-emerald-400" />
             <span>{notification}</span>
           </div>
         )}
@@ -281,7 +281,7 @@ export default function BlogPage() {
                     <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between">
                       <div className="space-y-3">
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-white border border-black/[0.06] text-sembada-gold">
+                          <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-apple-gray text-apple-secondary">
                             {featuredArticle.category}
                           </span>
                           <span className="text-[11px] text-apple-muted flex items-center gap-1">
@@ -291,7 +291,7 @@ export default function BlogPage() {
                         </div>
 
                         <Link href={`/blog/${featuredArticle.slug}`} className="block group">
-                          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-dark group-hover:text-sembada-gold transition-colors leading-snug">
+                          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-dark group-hover:text-apple-secondary transition-colors leading-snug">
                             {featuredArticle.title}
                           </h2>
                         </Link>
@@ -321,7 +321,7 @@ export default function BlogPage() {
 
                           <Link
                             href={`/blog/${featuredArticle.slug}`}
-                            className="inline-flex items-center gap-1 text-xs font-semibold text-apple-dark hover:text-sembada-gold transition-colors py-1.5 px-3 rounded-full hover:bg-black/[0.04]"
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-apple-dark hover:text-sembada-navy transition-colors py-1.5 px-3 rounded-full hover:bg-black/[0.04]"
                           >
                             <span>Baca Selengkapnya</span>
                             <ArrowRight size={13} />
@@ -353,7 +353,7 @@ export default function BlogPage() {
                         </div>
 
                         <div className="flex items-center justify-between gap-2 mb-2.5">
-                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-apple-gray text-sembada-gold">
+                          <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-apple-gray text-apple-secondary">
                             {article.category}
                           </span>
                           <span className="text-[11px] text-apple-muted flex items-center gap-1">
@@ -363,7 +363,7 @@ export default function BlogPage() {
                         </div>
 
                         <Link href={`/blog/${article.slug}`} className="block">
-                          <h3 className="text-base font-bold text-apple-dark group-hover:text-sembada-gold transition-colors line-clamp-2 leading-snug mb-2">
+                          <h3 className="text-base font-bold text-apple-dark group-hover:text-apple-secondary transition-colors line-clamp-2 leading-snug mb-2">
                             {article.title}
                           </h3>
                         </Link>
@@ -390,7 +390,7 @@ export default function BlogPage() {
 
                           <Link
                             href={`/blog/${article.slug}`}
-                            className="font-semibold text-apple-dark group-hover:text-sembada-gold inline-flex items-center gap-1"
+                            className="font-semibold text-apple-dark group-hover:text-apple-secondary inline-flex items-center gap-1"
                           >
                             <span>Baca</span>
                             <ArrowRight size={12} />
@@ -422,7 +422,7 @@ export default function BlogPage() {
               <X size={16} />
             </button>
 
-            <div className="w-12 h-12 rounded-2xl bg-sembada-navy text-sembada-gold flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-sembada-navy text-white flex items-center justify-center mb-4">
               <Lock size={22} />
             </div>
 
@@ -430,7 +430,7 @@ export default function BlogPage() {
               Portal Penulis Resmi
             </h3>
             <p className="text-xs text-apple-secondary mt-1 mb-4 leading-relaxed">
-              Hanya tim administrator dan editor PT. SMB yang berwenang menulis dan mempublikasikan artikel berita.
+              Hanya tim administrator dan editor PT SMB yang berwenang menulis dan mempublikasikan artikel berita.
             </p>
 
             <form onSubmit={handleAdminLogin} className="space-y-3">
@@ -481,7 +481,7 @@ export default function BlogPage() {
               <X size={16} />
             </button>
 
-            <div className="flex items-center gap-2 text-xs font-bold text-sembada-gold uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-2 text-xs font-semibold text-apple-secondary uppercase tracking-wider mb-1">
               <Plus size={14} />
               <span>Publikasi Berita Baru</span>
             </div>
@@ -602,7 +602,7 @@ export default function BlogPage() {
                   type="submit"
                   className="h-11 px-6 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-md flex items-center gap-1.5"
                 >
-                  <Plus size={15} className="text-sembada-gold" />
+                  <Plus size={15} className="text-white/80" />
                   <span>Publikasikan Artikel</span>
                 </button>
               </div>

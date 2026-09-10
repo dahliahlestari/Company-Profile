@@ -101,7 +101,7 @@ export default function BlogPostPage() {
 
           {/* Category & Metadata */}
           <div className="flex flex-wrap items-center gap-3 mb-4 text-xs">
-            <span className="font-bold px-3 py-1 rounded-full bg-apple-gray text-sembada-gold">
+            <span className="font-semibold px-3 py-1 rounded-full bg-apple-gray text-apple-secondary">
               {article.category}
             </span>
             <span className="text-apple-muted flex items-center gap-1">
@@ -170,7 +170,7 @@ export default function BlogPostPage() {
           </div>
 
           {/* Article Excerpt Callout */}
-          <div className="p-6 rounded-2xl bg-apple-subtle border-l-4 border-sembada-gold mb-10 text-sm sm:text-base font-medium text-apple-dark italic leading-relaxed">
+          <div className="p-6 rounded-2xl bg-apple-subtle border-l-4 border-sembada-navy/40 mb-10 text-sm sm:text-base font-medium text-apple-dark italic leading-relaxed">
             &ldquo;{article.excerpt}&rdquo;
           </div>
 
@@ -182,7 +182,7 @@ export default function BlogPostPage() {
                   <div key={pIdx} className="bg-apple-gray/50 p-5 rounded-2xl border border-black/[0.04] text-sm sm:text-base space-y-2">
                     {paragraph.split('\n').map((item, i) => (
                       <div key={i} className="flex items-start gap-2.5">
-                        <span className="font-bold text-sembada-gold flex-shrink-0">&bull;</span>
+                        <span className="font-bold text-apple-dark/40 flex-shrink-0">&bull;</span>
                         <span className="text-apple-secondary">{item.replace(/^[-0-9.]+\s*/, '')}</span>
                       </div>
                     ))}
@@ -204,7 +204,7 @@ export default function BlogPostPage() {
                 Butuh Konsultasi Terkait Topik Ini?
               </h3>
               <p className="text-xs sm:text-sm text-apple-muted mt-1">
-                Tim ahli PT. SMB siap memberikan solusi spesifik untuk tantangan bisnis Anda.
+                Tim ahli PT SMB siap memberikan solusi spesifik untuk tantangan bisnis Anda.
               </p>
             </div>
 
@@ -242,11 +242,11 @@ export default function BlogPostPage() {
                       className="object-cover"
                     />
                   </div>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-apple-gray text-sembada-gold">
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-apple-gray text-apple-secondary">
                     {rel.category}
                   </span>
                   <Link href={`/blog/${rel.slug}`}>
-                    <h4 className="text-xs sm:text-sm font-bold text-apple-dark hover:text-sembada-gold transition-colors mt-2 line-clamp-2">
+                    <h4 className="text-xs sm:text-sm font-bold text-apple-dark hover:text-sembada-navy transition-colors mt-2 line-clamp-2">
                       {rel.title}
                     </h4>
                   </Link>

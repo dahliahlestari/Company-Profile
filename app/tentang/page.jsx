@@ -36,10 +36,10 @@ export default function TentangPage() {
           {/* Visi */}
           <ScrollFadeIn delay={100}>
             <Card className="h-full bg-white">
-              <div className="w-12 h-12 rounded-2xl bg-sembada-navy flex items-center justify-center text-sembada-gold mb-5">
+              <div className="w-12 h-12 rounded-2xl bg-sembada-navy flex items-center justify-center text-white mb-5">
                 <Compass size={24} />
               </div>
-              <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+              <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
                 Visi Perusahaan
               </span>
               <h3 className="text-2xl font-bold text-apple-dark mt-2 mb-4">
@@ -54,10 +54,10 @@ export default function TentangPage() {
           {/* Misi */}
           <ScrollFadeIn delay={200}>
             <Card className="h-full bg-white">
-              <div className="w-12 h-12 rounded-2xl bg-sembada-navy flex items-center justify-center text-sembada-gold mb-5">
+              <div className="w-12 h-12 rounded-2xl bg-sembada-navy flex items-center justify-center text-white mb-5">
                 <Target size={24} />
               </div>
-              <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+              <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
                 Misi Perusahaan
               </span>
               <h3 className="text-2xl font-bold text-apple-dark mt-2 mb-4">
@@ -89,7 +89,7 @@ export default function TentangPage() {
       {/* 3. Nilai & Standar Keunggulan (Pillars) */}
       <SectionWrapper bg="white">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+          <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
             Etos & Budaya Kerja
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">
@@ -101,7 +101,7 @@ export default function TentangPage() {
           {pillarsDetail.map((pillar, idx) => (
             <ScrollFadeIn key={pillar.id} delay={idx * 100}>
               <div className="p-6 rounded-3xl bg-apple-gray border border-black/[0.05] h-full flex flex-col">
-                <span className="text-2xl font-black text-sembada-gold mb-2">
+                <span className="text-2xl font-black text-apple-dark/20 mb-2">
                   {pillar.number}
                 </span>
                 <h3 className="text-lg font-bold text-apple-dark mb-1">
@@ -122,7 +122,7 @@ export default function TentangPage() {
       {/* 4. Jejak Langkah Perjalanan (Company Milestones) */}
       <SectionWrapper id="milestones" bg="gray">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+          <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
             Perjalanan Kami
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">
@@ -138,7 +138,7 @@ export default function TentangPage() {
             <ScrollFadeIn key={idx} delay={idx * 100}>
               <div className="p-6 sm:p-8 rounded-3xl bg-white border border-black/[0.06] shadow-apple-subtle flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
                 <div className="sm:w-28 flex-shrink-0">
-                  <span className="text-2xl sm:text-3xl font-black text-sembada-gold">
+                  <span className="text-2xl sm:text-3xl font-black text-apple-dark">
                     {item.year}
                   </span>
                 </div>
@@ -159,7 +159,7 @@ export default function TentangPage() {
       {/* 5. Dewan Pimpinan (Meet Leadership) */}
       <SectionWrapper id="leadership" bg="white">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+          <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
             Kepemimpinan Profesional
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">
@@ -198,7 +198,7 @@ export default function TentangPage() {
                     <h3 className="text-lg sm:text-xl font-bold tracking-tight text-apple-dark leading-snug">
                       {leader.name}
                     </h3>
-                    <p className="text-xs sm:text-sm font-semibold text-sembada-gold mt-1 mb-3">
+                    <p className="text-xs sm:text-sm font-medium text-apple-secondary mt-1 mb-3">
                       {leader.position}
                     </p>
                     <p className="text-xs sm:text-sm text-apple-secondary leading-relaxed">
@@ -219,7 +219,7 @@ export default function TentangPage() {
             className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
           >
             <span>Konsultasikan Kebutuhan Perusahaan Anda</span>
-            <ArrowRight size={16} className="text-sembada-gold" />
+            <ArrowRight size={16} className="text-white/80" />
           </Link>
         </div>
       </SectionWrapper>

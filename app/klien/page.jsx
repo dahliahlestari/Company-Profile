@@ -33,7 +33,7 @@ export default function KlienPage() {
       {/* 2. Client Grid Cards (Adaptive: 2 cols on mobile, 4 cols on desktop) */}
       <SectionWrapper id="daftar-klien" bg="gray">
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+          <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
             Portofolio Kemitraan
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">
@@ -76,7 +76,7 @@ export default function KlienPage() {
       {/* 3. Testimoni Klien ("Apa Kata Mereka") */}
       <SectionWrapper id="testimoni" bg="white">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+          <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
             Apa Kata Mereka
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">
@@ -93,7 +93,7 @@ export default function KlienPage() {
             <ScrollFadeIn key={item.id} delay={idx * 150}>
               <Card className="h-full bg-apple-subtle justify-between">
                 <div>
-                  <Quote size={24} className="text-sembada-gold mb-4 opacity-80" />
+                  <Quote size={24} className="text-sembada-navy/40 mb-4" />
                   <p className="text-xs sm:text-sm text-apple-dark leading-relaxed italic mb-6">
                     &ldquo;{item.quote}&rdquo;
                   </p>
@@ -116,7 +116,7 @@ export default function KlienPage() {
                     <div className="text-[11px] text-apple-muted truncate">
                       {item.role}
                     </div>
-                    <div className="text-[10px] text-sembada-gold font-semibold truncate">
+                    <div className="text-[10px] text-apple-secondary font-medium truncate">
                       {item.company}
                     </div>
                   </div>
@@ -130,7 +130,7 @@ export default function KlienPage() {
       {/* 4. Partnership Opportunity Callout */}
       <section className="py-16 sm:py-24 bg-gradient-to-b from-[#081a36] via-[#0c244d] to-[#040d1c] text-white text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-white/10 text-sembada-gold text-xs font-semibold tracking-wide mb-4">
+          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-white/10 text-white/80 text-xs font-medium tracking-wide mb-4">
             <span>Peluang Kerjasama Baru</span>
           </div>
 

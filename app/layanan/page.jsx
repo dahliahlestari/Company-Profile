@@ -61,7 +61,7 @@ export default function LayananPage() {
                 {/* Left/Content Column */}
                 <div className={`lg:col-span-6 space-y-6 ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}>
                   <div className="flex items-center gap-3">
-                    <span className="text-xs font-bold text-sembada-gold tracking-widest uppercase">
+                    <span className="text-xs font-semibold text-apple-secondary tracking-widest uppercase">
                       {service.badge}
                     </span>
                     <span className="text-xs px-2.5 py-0.5 rounded-full bg-apple-gray text-apple-secondary font-medium">
@@ -71,13 +71,13 @@ export default function LayananPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="w-11 h-11 rounded-2xl bg-apple-gray flex items-center justify-center flex-shrink-0 text-apple-dark">
-                      <Icon size={22} className="text-sembada-gold" />
+                      <Icon size={22} className="text-apple-dark" />
                     </div>
                     <div>
                       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-apple-dark leading-tight">
                         {service.title}
                       </h2>
-                      <p className="text-xs sm:text-sm text-sembada-gold font-medium mt-1">
+                      <p className="text-xs sm:text-sm text-apple-secondary font-normal mt-1">
                         {service.tagline}
                       </p>
                     </div>
@@ -146,7 +146,7 @@ export default function LayananPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40" />
                       <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 shadow-sm text-xs text-apple-dark font-medium flex items-center justify-between">
                         <span>Standar Mutu Terverifikasi & Berizin</span>
-                        <span className="font-bold text-sembada-gold">SEMBADA Resmi</span>
+                        <span className="font-semibold text-apple-dark">SEMBADA Resmi</span>
                       </div>
                     </div>
                   </ScrollFadeIn>
@@ -161,7 +161,7 @@ export default function LayananPage() {
       {/* 3. Alur Kerjasama (Workflow 4 Steps) */}
       <SectionWrapper id="alur" bg="white">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+          <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
             Metodologi Kerja
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">
@@ -176,7 +176,7 @@ export default function LayananPage() {
           {workflows.map((flow, idx) => (
             <ScrollFadeIn key={idx} delay={idx * 100}>
               <div className="p-6 sm:p-7 rounded-3xl bg-apple-gray border border-black/[0.05] h-full flex flex-col">
-                <span className="text-3xl font-black text-sembada-gold mb-3">
+                <span className="text-3xl font-black text-apple-dark/20 mb-3">
                   {flow.step}
                 </span>
                 <h3 className="text-base sm:text-lg font-bold text-apple-dark mb-2">
@@ -197,7 +197,7 @@ export default function LayananPage() {
             className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
           >
             <span>Mulai Konsultasi Kebutuhan Anda</span>
-            <ArrowRight size={16} className="text-sembada-gold" />
+            <ArrowRight size={16} className="text-white/80" />
           </Link>
         </div>
       </SectionWrapper>

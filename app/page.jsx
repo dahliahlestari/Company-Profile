@@ -58,7 +58,7 @@ export default function HomePage() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               <div className="lg:col-span-7 space-y-5 text-left">
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-sembada-gold text-xs font-semibold tracking-wide">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium tracking-wide">
                   <span>PT SMB</span>
                 </div>
 
@@ -72,11 +72,11 @@ export default function HomePage() {
 
                 <div className="pt-2 flex flex-wrap gap-4 text-xs sm:text-sm text-apple-muted">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-sembada-gold" />
+                    <CheckCircle2 size={16} className="text-emerald-400" />
                     <span>Layanan Seluruh Indonesia</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={16} className="text-sembada-gold" />
+                    <CheckCircle2 size={16} className="text-emerald-400" />
                     <span>Standar Sertifikasi ISO+</span>
                   </div>
                 </div>
@@ -84,25 +84,25 @@ export default function HomePage() {
 
               <div className="lg:col-span-5 grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.06] border border-white/[0.08] backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-black text-sembada-gold">100%</div>
+                  <div className="text-2xl sm:text-3xl font-black text-white">100%</div>
                   <div className="text-xs sm:text-sm font-semibold text-white mt-1">Terintegrasi</div>
                   <div className="text-[11px] text-apple-muted mt-0.5">Satu pintu layanan</div>
                 </div>
 
                 <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.06] border border-white/[0.08] backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-black text-sembada-gold">30%+</div>
+                  <div className="text-2xl sm:text-3xl font-black text-white">30%+</div>
                   <div className="text-xs sm:text-sm font-semibold text-white mt-1">Efisiensi Biaya</div>
                   <div className="text-[11px] text-apple-muted mt-0.5">Optimasi sumber daya</div>
                 </div>
 
                 <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.06] border border-white/[0.08] backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-black text-sembada-gold">1.450+</div>
+                  <div className="text-2xl sm:text-3xl font-black text-white">1.450+</div>
                   <div className="text-xs sm:text-sm font-semibold text-white mt-1">Mitra Klien</div>
                   <div className="text-[11px] text-apple-muted mt-0.5">Jaringan nasional</div>
                 </div>
 
                 <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.06] border border-white/[0.08] backdrop-blur-sm">
-                  <div className="text-2xl sm:text-3xl font-black text-sembada-gold">38</div>
+                  <div className="text-2xl sm:text-3xl font-black text-white">38</div>
                   <div className="text-xs sm:text-sm font-semibold text-white mt-1">Provinsi</div>
                   <div className="text-[11px] text-apple-muted mt-0.5">Cakupan jangkauan</div>
                 </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
                 <Card className="h-full group hover:shadow-apple-card transition-all duration-300">
                   {/* Card Header & Badge */}
                   <div className="flex items-center justify-between gap-4 mb-4">
-                    <span className="text-xs font-semibold text-sembada-gold tracking-wider uppercase">
+                    <span className="text-xs font-semibold text-apple-secondary tracking-wider uppercase">
                       {service.badge}
                     </span>
                     <span className="text-xs px-2.5 py-1 rounded-full bg-apple-gray text-apple-secondary font-medium">
@@ -146,14 +146,14 @@ export default function HomePage() {
 
                   {/* Title & Tagline */}
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-2xl bg-apple-gray flex items-center justify-center flex-shrink-0 group-hover:bg-sembada-gold/10 transition-colors">
-                      <IconComponent size={20} className="text-apple-dark group-hover:text-sembada-gold transition-colors" />
+                    <div className="w-10 h-10 rounded-2xl bg-apple-gray flex items-center justify-center flex-shrink-0 group-hover:bg-black/[0.04] transition-colors">
+                      <IconComponent size={20} className="text-apple-dark transition-colors" />
                     </div>
                     <div>
                       <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-dark">
                         {service.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-sembada-gold font-medium mt-0.5">
+                      <p className="text-xs sm:text-sm text-apple-secondary font-normal mt-0.5">
                         {service.tagline}
                       </p>
                     </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
                   <div className="pt-2 border-t border-black/[0.05]">
                     <Link
                       href={`/layanan#${service.id}`}
-                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-apple-dark group-hover:text-sembada-gold transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-apple-dark group-hover:text-apple-secondary transition-colors"
                     >
                       <span>Pelajari detail layanan</span>
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -209,7 +209,7 @@ export default function HomePage() {
             className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
           >
             <span>Lihat Semua Spesifikasi Layanan</span>
-            <ChevronRight size={16} className="text-sembada-gold" />
+            <ChevronRight size={16} className="text-white/80" />
           </Link>
         </div>
       </SectionWrapper>
@@ -217,7 +217,7 @@ export default function HomePage() {
       {/* 3. Keunggulan Nilai (4 Pilar Nilai Kerja) */}
       <SectionWrapper bg="white">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-xs font-semibold text-sembada-gold tracking-wider uppercase">
+          <span className="text-xs font-semibold text-apple-secondary tracking-wider uppercase">
             Standar Kerja SEMBADA
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-apple-dark mt-2">
@@ -232,7 +232,7 @@ export default function HomePage() {
           {companyData.pillarsDetail.map((pillar, idx) => (
             <ScrollFadeIn key={pillar.id} delay={idx * 100}>
               <div className="rounded-3xl p-6 sm:p-7 bg-apple-subtle border border-black/[0.06] hover:border-black/[0.12] transition-all duration-300 h-full flex flex-col">
-                <span className="text-2xl sm:text-3xl font-black text-sembada-gold mb-3">
+                <span className="text-2xl sm:text-3xl font-black text-apple-dark/20 mb-3">
                   {pillar.number}
                 </span>
                 <h3 className="text-lg font-bold text-apple-dark mb-1">
@@ -253,7 +253,7 @@ export default function HomePage() {
       {/* 4. Trusted Clients & Partners Teaser */}
       <SectionWrapper bg="gray">
         <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
-          <span className="text-xs font-semibold text-sembada-gold tracking-wider uppercase">
+          <span className="text-xs font-semibold text-apple-secondary tracking-wider uppercase">
             Kemitraan Nasional
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">
@@ -287,7 +287,7 @@ export default function HomePage() {
         <div className="text-center mt-8">
           <Link
             href="/klien"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-apple-dark hover:text-sembada-gold transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-apple-dark hover:text-sembada-navy transition-colors"
           >
             <span>Lihat testimoni lengkap dari mitra kami</span>
             <ArrowRight size={14} />
@@ -300,7 +300,7 @@ export default function HomePage() {
         <SectionWrapper bg="white">
           <div className="max-w-4xl mx-auto">
             <div className="p-8 sm:p-12 md:p-16 rounded-3xl bg-apple-subtle border border-black/[0.06] text-center relative overflow-hidden">
-              <span className="text-4xl sm:text-5xl font-serif text-sembada-gold select-none leading-none">
+              <span className="text-4xl sm:text-5xl font-serif text-apple-dark/25 select-none leading-none">
                 &ldquo;
               </span>
               <blockquote className="mt-2 text-lg sm:text-2xl md:text-3xl font-medium tracking-tight text-apple-dark leading-relaxed">
@@ -334,7 +334,7 @@ export default function HomePage() {
       {/* 6. Apple Minimalist Final CTA */}
       <section className="py-20 sm:py-28 bg-gradient-to-b from-[#081a36] via-[#0c244d] to-[#040d1c] text-white text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="text-xs font-semibold text-sembada-gold tracking-widest uppercase">
+          <span className="text-xs font-semibold text-white/75 tracking-widest uppercase">
             Langkah Selanjutnya
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mt-3 leading-tight">

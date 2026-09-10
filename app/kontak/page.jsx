@@ -74,7 +74,7 @@ export default function KontakPage() {
           {/* Left Column: Direct Channels & Office Info */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+              <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
                 Respon Cepat
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-apple-dark mt-1">
@@ -129,7 +129,7 @@ export default function KontakPage() {
             {/* Office & Operational Hours Card */}
             <div className="p-6 rounded-3xl bg-white border border-black/[0.06] shadow-apple-subtle space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-sembada-gold mt-1 flex-shrink-0" />
+                <MapPin size={18} className="text-sembada-navy mt-1 flex-shrink-0" />
                 <div>
                   <div className="text-xs font-semibold text-apple-dark">Kantor & Jangkauan Operasional</div>
                   <div className="text-sm font-medium text-apple-secondary mt-0.5">
@@ -142,7 +142,7 @@ export default function KontakPage() {
               </div>
 
               <div className="border-t border-black/[0.05] pt-3 flex items-start gap-3">
-                <Clock size={18} className="text-sembada-gold mt-0.5 flex-shrink-0" />
+                <Clock size={18} className="text-sembada-navy mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="text-xs font-semibold text-apple-dark">Jam Operasional Layanan</div>
                   <div className="text-xs sm:text-sm text-apple-secondary mt-0.5">
@@ -169,7 +169,7 @@ export default function KontakPage() {
       {/* 3. FAQ Section */}
       <SectionWrapper id="faq" bg="white">
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <span className="text-xs font-semibold text-sembada-gold uppercase tracking-wider">
+          <span className="text-xs font-semibold text-apple-secondary uppercase tracking-wider">
             Bantuan & Pertanyaan
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-apple-dark mt-2">

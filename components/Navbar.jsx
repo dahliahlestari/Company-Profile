@@ -60,7 +60,7 @@ export default function Navbar() {
             {/* Brand Logo & Corporate Identity */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-sembada-gold rounded-xl p-1 -m-1"
+              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-sembada-navy/30 rounded-xl p-1 -m-1"
               aria-label="SEMBADA Beranda"
             >
               <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sembada-navy flex items-center justify-center border border-sembada-gold/40 shadow-sm group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
@@ -117,14 +117,14 @@ export default function Navbar() {
                 className="hidden sm:inline-flex items-center gap-2 bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
               >
                 <span>Konsultasi</span>
-                <ArrowRight size={14} className="text-sembada-gold" />
+                <ArrowRight size={14} className="text-white/80" />
               </Link>
 
               {/* Mobile Hamburger Toggle Button (min 44x44px touch target) */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="md:hidden flex items-center justify-center w-11 h-11 rounded-full text-apple-dark bg-black/[0.03] hover:bg-black/[0.06] active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-sembada-gold"
+                className="md:hidden flex items-center justify-center w-11 h-11 rounded-full text-apple-dark bg-black/[0.03] hover:bg-black/[0.06] active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-sembada-navy/30"
                 aria-label="Buka Menu Navigasi"
               >
                 <Menu size={22} />
@@ -194,7 +194,7 @@ export default function Navbar() {
                   >
                     <span>{link.label}</span>
                     {isActive ? (
-                      <span className="w-2 h-2 rounded-full bg-sembada-gold" />
+                      <span className="w-2 h-2 rounded-full bg-sembada-navy" />
                     ) : (
                       <ArrowRight size={18} className="text-apple-muted" />
                     )}
@@ -222,7 +222,7 @@ export default function Navbar() {
               className="flex items-center justify-center gap-2 w-full min-h-[48px] rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-sm font-semibold transition-all active:scale-95 shadow-sm"
             >
               <span>Hubungi Kami Langsung</span>
-              <ArrowRight size={16} className="text-sembada-gold" />
+              <ArrowRight size={16} className="text-white/80" />
             </Link>
 
             <p className="text-center text-[11px] text-apple-muted mt-1">

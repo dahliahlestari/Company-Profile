@@ -30,7 +30,7 @@ export default function FaqAccordion({ faqs = [] }) {
               </span>
               <div
                 className={`w-8 h-8 rounded-full bg-apple-gray flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${
-                  isOpen ? 'rotate-180 bg-sembada-gold/20 text-sembada-gold' : 'text-apple-secondary'
+                  isOpen ? 'rotate-180 bg-sembada-navy text-white' : 'text-apple-secondary'
                 }`}
               >
                 <ChevronDown size={18} />
