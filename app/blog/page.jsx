@@ -188,7 +188,7 @@ export default function BlogPage() {
                 <button
                   type="button"
                   onClick={() => setShowWriteModal(true)}
-                  className="inline-flex items-center gap-1.5 h-10 px-4 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-xs transition-all active:scale-95 shadow-sm"
+                  className="inline-flex items-center gap-1.5 h-10 px-4 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-xs transition-all active:scale-95"
                 >
                   <Plus size={15} />
                   <span>Tulis Berita Baru</span>
@@ -208,7 +208,7 @@ export default function BlogPage() {
               <button
                 type="button"
                 onClick={() => setShowLoginModal(true)}
-                className="inline-flex items-center gap-1.5 h-10 px-3.5 rounded-full bg-white hover:bg-apple-gray text-apple-secondary hover:text-apple-dark text-xs font-medium border border-black/[0.08] transition-colors shadow-apple-subtle"
+                className="inline-flex items-center gap-1.5 h-10 px-3.5 rounded-full bg-white hover:bg-apple-gray text-apple-secondary hover:text-apple-dark text-xs font-medium border border-black/[0.08] transition-colors"
               >
                 <Lock size={13} />
                 <span>Portal Penulis (Admin)</span>
@@ -219,7 +219,7 @@ export default function BlogPage() {
 
         {/* Notification Toast */}
         {notification && (
-          <div className="max-w-md mx-auto mt-4 p-3 rounded-2xl bg-apple-dark text-white text-xs font-medium text-center animate-in fade-in flex items-center justify-center gap-2 shadow-lg">
+          <div className="max-w-md mx-auto mt-4 p-3 rounded-2xl bg-apple-dark text-white text-xs font-medium text-center animate-in fade-in flex items-center justify-center gap-2 shadow-md">
             <CheckCircle2 size={15} className="text-emerald-400" />
             <span>{notification}</span>
           </div>
@@ -237,7 +237,7 @@ export default function BlogPage() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 ${
                   selectedCategory === cat
-                    ? 'bg-apple-dark text-white shadow-sm'
+                    ? 'bg-apple-dark text-white'
                     : 'bg-white text-apple-secondary hover:text-apple-dark border border-black/[0.06]'
                 }`}
               >
@@ -264,7 +264,7 @@ export default function BlogPage() {
             {/* Featured Hero Article */}
             {featuredArticle && (
               <ScrollFadeIn delay={100}>
-                <div className="rounded-3xl border border-black/[0.08] bg-apple-subtle overflow-hidden shadow-apple-subtle hover:shadow-apple-card transition-all duration-300">
+                <div className="rounded-3xl border border-black/[0.08] bg-apple-subtle overflow-hidden hover:border-black/[0.18] transition-all duration-300">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                     
                     <div className="lg:col-span-7 relative min-h-[260px] sm:min-h-[360px] bg-apple-gray">
@@ -460,7 +460,7 @@ export default function BlogPage() {
 
               <button
                 type="submit"
-                className="w-full h-11 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
+                className="w-full h-11 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-semibold transition-all active:scale-95"
               >
                 Buka Kunci Akses Menulis
               </button>
@@ -600,7 +600,7 @@ export default function BlogPage() {
 
                 <button
                   type="submit"
-                  className="h-11 px-6 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-md flex items-center gap-1.5"
+                  className="h-11 px-6 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-bold transition-all active:scale-95 flex items-center gap-1.5"
                 >
                   <Plus size={15} className="text-white/80" />
                   <span>Publikasikan Artikel</span>

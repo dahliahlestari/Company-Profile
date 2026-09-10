@@ -97,8 +97,8 @@ export default function KontakPage() {
                     rel={channel.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className={`block p-5 rounded-3xl border transition-all duration-200 active:scale-[0.99] ${
                       channel.isPrimary
-                        ? 'bg-emerald-50/70 border-emerald-200 hover:border-emerald-300 hover:shadow-sm'
-                        : 'bg-white border-black/[0.06] hover:border-black/[0.12] hover:shadow-apple-subtle'
+                        ? 'bg-emerald-50/70 border-emerald-200 hover:border-emerald-300'
+                        : 'bg-white border-black/[0.06] hover:border-black/[0.16]'
                     }`}
                   >
                     <div className="flex items-start gap-3.5">
@@ -127,7 +127,7 @@ export default function KontakPage() {
             </div>
 
             {/* Office & Operational Hours Card */}
-            <div className="p-6 rounded-3xl bg-white border border-black/[0.06] shadow-apple-subtle space-y-4">
+            <div className="p-6 rounded-3xl bg-white border border-black/[0.06] space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-sembada-navy mt-1 flex-shrink-0" />
                 <div>

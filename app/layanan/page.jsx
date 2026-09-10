@@ -115,7 +115,7 @@ export default function LayananPage() {
                       href={`https://wa.me/${info.whatsapp}?text=Halo%20SEMBADA,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20${encodeURIComponent(service.title)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 h-11 px-5 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-sm"
+                      className="inline-flex items-center gap-2 h-11 px-5 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-medium transition-all active:scale-95"
                     >
                       <MessageCircle size={15} className="text-emerald-400" />
                       <span>Konsultasi {service.shortTitle}</span>
@@ -134,7 +134,7 @@ export default function LayananPage() {
                 {/* Right/Image Column with next/image */}
                 <div className={`lg:col-span-6 ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
                   <ScrollFadeIn delay={100}>
-                    <div className="relative w-full h-64 sm:h-80 md:h-[400px] rounded-3xl overflow-hidden shadow-apple-card border border-black/[0.08] bg-apple-gray">
+                    <div className="relative w-full h-64 sm:h-80 md:h-[400px] rounded-3xl overflow-hidden border border-black/[0.08] bg-apple-gray">
                       <Image
                         src={service.image}
                         alt={service.title}
@@ -144,7 +144,7 @@ export default function LayananPage() {
                         priority={index === 0}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40" />
-                      <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 shadow-sm text-xs text-apple-dark font-medium flex items-center justify-between">
+                      <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 text-xs text-apple-dark font-medium flex items-center justify-between">
                         <span>Standar Mutu Terverifikasi & Berizin</span>
                         <span className="font-semibold text-apple-dark">SEMBADA Resmi</span>
                       </div>
@@ -194,7 +194,7 @@ export default function LayananPage() {
         <div className="text-center mt-14">
           <Link
             href="/kontak"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 active:scale-95"
           >
             <span>Mulai Konsultasi Kebutuhan Anda</span>
             <ArrowRight size={16} className="text-white/80" />

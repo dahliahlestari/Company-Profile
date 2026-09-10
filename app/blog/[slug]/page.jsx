@@ -158,7 +158,7 @@ export default function BlogPostPage() {
           </div>
 
           {/* Hero Thumbnail Image with next/image */}
-          <div className="relative w-full h-64 sm:h-96 md:h-[440px] rounded-3xl overflow-hidden mb-10 shadow-apple-card border border-black/[0.08] bg-apple-gray">
+          <div className="relative w-full h-64 sm:h-96 md:h-[440px] rounded-3xl overflow-hidden mb-10 border border-black/[0.08] bg-apple-gray">
             <Image
               src={article.thumbnail}
               alt={article.title}
@@ -210,7 +210,7 @@ export default function BlogPostPage() {
 
             <Link
               href="/kontak"
-              className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-xs sm:text-sm transition-all flex-shrink-0 shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-xs sm:text-sm transition-all flex-shrink-0 active:scale-95"
             >
               <span>Hubungi Kami</span>
               <ArrowRight size={14} />

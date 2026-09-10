@@ -40,7 +40,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white rounded-3xl p-6 sm:p-10 border border-black/[0.08] shadow-apple-card">
+    <div className="bg-white rounded-3xl p-6 sm:p-10 border border-black/[0.08]">
       <div className="mb-6">
         <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-dark">
           Kirim Pesan Konsultasi
@@ -193,7 +193,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full h-12 rounded-full bg-apple-dark hover:bg-black text-white font-semibold text-sm transition-all duration-200 active:scale-95 shadow-md flex items-center justify-center gap-2"
+            className="w-full h-12 rounded-full bg-apple-dark hover:bg-black text-white font-semibold text-sm transition-all duration-200 active:scale-95 flex items-center justify-center gap-2"
           >
             {isSubmitting ? (
               <span>Mengirim Pesan...</span>

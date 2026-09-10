@@ -62,7 +62,7 @@ export default function HeroSection({
             {primaryBtnText && (
               <Link
                 href={primaryBtnHref}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm sm:text-base transition-all duration-300 shadow-sm hover:shadow-md active:scale-95 group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm sm:text-base transition-all duration-300 active:scale-95 group"
               >
                 <span>{primaryBtnText}</span>
                 <ArrowRight size={16} className="text-white/80 group-hover:translate-x-0.5 transition-transform" />

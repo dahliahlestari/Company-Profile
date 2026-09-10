@@ -48,7 +48,7 @@ export default function KlienPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-6 max-w-6xl mx-auto">
           {clients.map((client, idx) => (
             <ScrollFadeIn key={idx} delay={idx * 50}>
-              <div className="p-5 sm:p-7 rounded-3xl bg-white border border-black/[0.06] shadow-apple-subtle hover:shadow-apple-card hover:border-black/[0.12] transition-all duration-300 flex flex-col items-center text-center h-full min-h-[140px] sm:min-h-[160px] justify-between">
+              <div className="p-5 sm:p-7 rounded-3xl bg-white border border-black/[0.06] hover:border-black/[0.18] transition-all duration-300 flex flex-col items-center text-center h-full min-h-[140px] sm:min-h-[160px] justify-between">
                 
                 {/* Logo Initials Avatar */}
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-apple-gray flex items-center justify-center font-bold text-xs sm:text-sm text-apple-dark mb-3 border border-black/[0.04]">
@@ -145,7 +145,7 @@ export default function KlienPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Link
               href="/kontak"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-sm transition-all active:scale-95 shadow-md"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-sm transition-all active:scale-95"
             >
               <span>Daftar Menjadi Klien Baru</span>
               <ArrowRight size={15} />

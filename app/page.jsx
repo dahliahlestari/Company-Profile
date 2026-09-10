@@ -49,7 +49,7 @@ export default function HomePage() {
       >
         {/* Showcase Spotlight Hero Card (Apple Studio Display / Bento aesthetic) */}
         <ScrollFadeIn delay={150}>
-          <div className="relative mx-auto max-w-5xl rounded-3xl sm:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-gradient-to-br from-[#081a36] via-[#0c244d] to-[#040d1c] text-white p-6 sm:p-10 md:p-14">
+          <div className="relative mx-auto max-w-5xl rounded-3xl sm:rounded-[36px] overflow-hidden border border-white/10 bg-gradient-to-br from-[#081a36] via-[#0c244d] to-[#040d1c] text-white p-6 sm:p-10 md:p-14">
             
             {/* Ambient Lighting Gradient */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-sembada-gold/15 blur-3xl pointer-events-none" />
@@ -133,7 +133,7 @@ export default function HomePage() {
             const IconComponent = serviceIcons[service.id] || Layers;
             return (
               <ScrollFadeIn key={service.id} delay={idx * 100}>
-                <Card className="h-full group hover:shadow-apple-card transition-all duration-300">
+                <Card className="h-full group">
                   {/* Card Header & Badge */}
                   <div className="flex items-center justify-between gap-4 mb-4">
                     <span className="text-xs font-semibold text-apple-secondary tracking-wider uppercase">
@@ -206,7 +206,7 @@ export default function HomePage() {
         <div className="text-center mt-12">
           <Link
             href="/layanan"
-            className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
+            className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 active:scale-95"
           >
             <span>Lihat Semua Spesifikasi Layanan</span>
             <ChevronRight size={16} className="text-white/80" />
@@ -269,7 +269,7 @@ export default function HomePage() {
           {clients.map((client, idx) => (
             <div
               key={idx}
-              className="p-5 sm:p-6 rounded-2xl bg-white border border-black/[0.05] flex flex-col items-center justify-center text-center hover:shadow-apple-subtle hover:border-black/[0.1] transition-all duration-200 min-h-[110px]"
+              className="p-5 sm:p-6 rounded-2xl bg-white border border-black/[0.05] flex flex-col items-center justify-center text-center hover:border-black/[0.14] transition-all duration-200 min-h-[110px]"
             >
               <div className="w-9 h-9 rounded-xl bg-apple-gray flex items-center justify-center font-bold text-xs text-apple-dark mb-2">
                 {client.logoText}
@@ -347,7 +347,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
             <Link
               href="/kontak"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-sm sm:text-base transition-all active:scale-95 shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-sembada-gold hover:bg-sembada-gold-hover text-apple-dark font-bold text-sm sm:text-base transition-all active:scale-95"
             >
               <span>Hubungi Kami Sekarang</span>
               <ArrowRight size={16} />

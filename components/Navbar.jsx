@@ -63,7 +63,7 @@ export default function Navbar() {
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-sembada-navy/30 rounded-xl p-1 -m-1"
               aria-label="SEMBADA Beranda"
             >
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sembada-navy flex items-center justify-center border border-sembada-gold/40 shadow-sm group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sembada-navy flex items-center justify-center border border-sembada-gold/40 group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
                 <span className="font-sans font-black text-xs sm:text-sm text-sembada-gold tracking-wider">
                   SMB
                 </span>
@@ -114,7 +114,7 @@ export default function Navbar() {
               {/* Desktop CTA Button */}
               <Link
                 href="/kontak"
-                className="hidden sm:inline-flex items-center gap-2 bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
+                className="hidden sm:inline-flex items-center gap-2 bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-200 active:scale-95"
               >
                 <span>Konsultasi</span>
                 <ArrowRight size={14} className="text-white/80" />
@@ -210,7 +210,7 @@ export default function Navbar() {
               href={companyData.info.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2.5 w-full min-h-[48px] rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold transition-all active:scale-95 shadow-sm"
+              className="flex items-center justify-center gap-2.5 w-full min-h-[48px] rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold transition-all active:scale-95"
             >
               <MessageCircle size={18} />
               <span>Konsultasi WhatsApp</span>
@@ -219,7 +219,7 @@ export default function Navbar() {
             <Link
               href="/kontak"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full min-h-[48px] rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-sm font-semibold transition-all active:scale-95 shadow-sm"
+              className="flex items-center justify-center gap-2 w-full min-h-[48px] rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-sm font-semibold transition-all active:scale-95"
             >
               <span>Hubungi Kami Langsung</span>
               <ArrowRight size={16} className="text-white/80" />

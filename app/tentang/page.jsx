@@ -136,7 +136,7 @@ export default function TentangPage() {
         <div className="max-w-3xl mx-auto space-y-6 sm:space-y-8">
           {milestones.map((item, idx) => (
             <ScrollFadeIn key={idx} delay={idx * 100}>
-              <div className="p-6 sm:p-8 rounded-3xl bg-white border border-black/[0.06] shadow-apple-subtle flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+              <div className="p-6 sm:p-8 rounded-3xl bg-white border border-black/[0.06] flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
                 <div className="sm:w-28 flex-shrink-0">
                   <span className="text-2xl sm:text-3xl font-black text-apple-dark">
                     {item.year}
@@ -166,14 +166,14 @@ export default function TentangPage() {
             Dipimpin Oleh Praktisi & Pakar Industri Berpengalaman
           </h2>
           <p className="mt-3 text-sm sm:text-base text-apple-secondary">
-            Dewan direksi dan konsultan senior yang mengawal standar integritas, kepatuhan, dan keunggulan eksekusi PT. SMB.
+            Dewan direksi dan konsultan senior yang mengawal standar integritas, kepatuhan, dan keunggulan eksekusi PT SMB.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {leadership.map((leader, idx) => (
             <ScrollFadeIn key={leader.id} delay={idx * 150}>
-              <div className="rounded-3xl border border-black/[0.08] bg-white overflow-hidden shadow-apple-subtle hover:shadow-apple-card hover:border-black/[0.12] transition-all duration-300 flex flex-col h-full group">
+              <div className="rounded-3xl border border-black/[0.08] bg-white overflow-hidden hover:border-black/[0.18] transition-all duration-300 flex flex-col h-full group">
 
                 {/* Prominent 1:1 Square Portrait Photo (Not Circular) */}
                 <div className="relative w-full aspect-square bg-apple-gray overflow-hidden">
@@ -186,7 +186,7 @@ export default function TentangPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
                   <div className="absolute bottom-3.5 left-4">
-                    <span className="text-[10px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-apple-dark shadow-sm">
+                    <span className="text-[10px] sm:text-[11px] font-semibold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-apple-dark">
                       {leader.category}
                     </span>
                   </div>
@@ -216,7 +216,7 @@ export default function TentangPage() {
         <div className="mt-16 text-center">
           <Link
             href="/kontak"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 active:scale-95"
           >
             <span>Konsultasikan Kebutuhan Perusahaan Anda</span>
             <ArrowRight size={16} className="text-white/80" />
