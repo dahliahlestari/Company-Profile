@@ -128,7 +128,7 @@ export default function KlienPage() {
       </SectionWrapper>
 
       {/* 4. Partnership Opportunity Callout */}
-      <section className="py-16 sm:py-24 bg-apple-dark text-white text-center">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-[#081a36] via-[#0c244d] to-[#040d1c] text-white text-center">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-white/10 text-sembada-gold text-xs font-semibold tracking-wide mb-4">
             <span>Peluang Kerjasama Baru</span>

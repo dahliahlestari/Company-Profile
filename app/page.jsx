@@ -49,7 +49,7 @@ export default function HomePage() {
       >
         {/* Showcase Spotlight Hero Card (Apple Studio Display / Bento aesthetic) */}
         <ScrollFadeIn delay={150}>
-          <div className="relative mx-auto max-w-5xl rounded-3xl sm:rounded-[36px] overflow-hidden border border-black/[0.08] shadow-2xl bg-apple-dark text-white p-6 sm:p-10 md:p-14">
+          <div className="relative mx-auto max-w-5xl rounded-3xl sm:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-gradient-to-br from-[#081a36] via-[#0c244d] to-[#040d1c] text-white p-6 sm:p-10 md:p-14">
             
             {/* Ambient Lighting Gradient */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-sembada-gold/15 blur-3xl pointer-events-none" />
@@ -206,7 +206,7 @@ export default function HomePage() {
         <div className="text-center mt-12">
           <Link
             href="/layanan"
-            className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-apple-dark hover:bg-black text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
+            className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
           >
             <span>Lihat Semua Spesifikasi Layanan</span>
             <ChevronRight size={16} className="text-sembada-gold" />
@@ -332,7 +332,7 @@ export default function HomePage() {
       )}
 
       {/* 6. Apple Minimalist Final CTA */}
-      <section className="py-20 sm:py-28 bg-apple-dark text-white text-center relative overflow-hidden">
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#081a36] via-[#0c244d] to-[#040d1c] text-white text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <span className="text-xs font-semibold text-sembada-gold tracking-widest uppercase">
             Langkah Selanjutnya

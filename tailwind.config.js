@@ -9,21 +9,22 @@ module.exports = {
     extend: {
       colors: {
         apple: {
-          dark: '#1d1d1f',
-          secondary: '#6e6e73',
-          muted: '#86868b',
-          gray: '#f5f5f7',
-          subtle: '#fafafc',
-          border: 'rgba(0, 0, 0, 0.08)',
+          dark: '#081a36', // Deep rich corporate navy blue from the PT SMB flyer
+          secondary: '#556987',
+          muted: '#8295ab',
+          gray: '#f5f7fa',
+          subtle: '#fafbfe',
+          border: 'rgba(8, 26, 54, 0.08)',
           'border-dark': 'rgba(255, 255, 255, 0.12)',
         },
         sembada: {
           gold: '#e5a83b',
           'gold-hover': '#d4952b',
           'gold-light': '#fdf6e9',
-          navy: '#0b192c',
-          'navy-dark': '#071322',
-          'navy-card': '#0e223b',
+          navy: '#081a36',
+          'navy-dark': '#040d1c',
+          'navy-card': '#0c244d',
+          'navy-light': '#123770',
         },
       },
       fontFamily: {

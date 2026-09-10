@@ -115,7 +115,7 @@ export default function LayananPage() {
                       href={`https://wa.me/${info.whatsapp}?text=Halo%20SEMBADA,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20${encodeURIComponent(service.title)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 h-11 px-5 rounded-full bg-apple-dark hover:bg-black text-white text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-sm"
+                      className="inline-flex items-center gap-2 h-11 px-5 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-sm"
                     >
                       <MessageCircle size={15} className="text-emerald-400" />
                       <span>Konsultasi {service.shortTitle}</span>
@@ -194,7 +194,7 @@ export default function LayananPage() {
         <div className="text-center mt-14">
           <Link
             href="/kontak"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-black text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
           >
             <span>Mulai Konsultasi Kebutuhan Anda</span>
             <ArrowRight size={16} className="text-sembada-gold" />

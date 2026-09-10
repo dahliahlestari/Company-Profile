@@ -114,7 +114,7 @@ export default function Navbar() {
               {/* Desktop CTA Button */}
               <Link
                 href="/kontak"
-                className="hidden sm:inline-flex items-center gap-2 bg-apple-dark hover:bg-black text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
+                className="hidden sm:inline-flex items-center gap-2 bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
               >
                 <span>Konsultasi</span>
                 <ArrowRight size={14} className="text-sembada-gold" />
@@ -219,7 +219,7 @@ export default function Navbar() {
             <Link
               href="/kontak"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full min-h-[48px] rounded-full bg-apple-dark hover:bg-black text-white text-sm font-semibold transition-all active:scale-95 shadow-sm"
+              className="flex items-center justify-center gap-2 w-full min-h-[48px] rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-sm font-semibold transition-all active:scale-95 shadow-sm"
             >
               <span>Hubungi Kami Langsung</span>
               <ArrowRight size={16} className="text-sembada-gold" />

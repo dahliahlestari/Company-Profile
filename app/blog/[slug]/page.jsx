@@ -198,7 +198,7 @@ export default function BlogPostPage() {
           </div>
 
           {/* Article Footer CTA */}
-          <div className="mt-14 p-8 rounded-3xl bg-apple-dark text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="mt-14 p-8 rounded-3xl bg-gradient-to-br from-[#081a36] via-[#0c244d] to-[#040d1c] border border-white/10 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-white">
                 Butuh Konsultasi Terkait Topik Ini?

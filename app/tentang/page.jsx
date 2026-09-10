@@ -216,7 +216,7 @@ export default function TentangPage() {
         <div className="mt-16 text-center">
           <Link
             href="/kontak"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-black text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
+            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-medium text-sm transition-all duration-300 shadow-sm active:scale-95"
           >
             <span>Konsultasikan Kebutuhan Perusahaan Anda</span>
             <ArrowRight size={16} className="text-sembada-gold" />

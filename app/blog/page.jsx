@@ -460,7 +460,7 @@ export default function BlogPage() {
 
               <button
                 type="submit"
-                className="w-full h-11 rounded-full bg-apple-dark hover:bg-black text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
+                className="w-full h-11 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-semibold transition-all shadow-sm active:scale-95"
               >
                 Buka Kunci Akses Menulis
               </button>
@@ -600,7 +600,7 @@ export default function BlogPage() {
 
                 <button
                   type="submit"
-                  className="h-11 px-6 rounded-full bg-apple-dark hover:bg-black text-white text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-md flex items-center gap-1.5"
+                  className="h-11 px-6 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white text-xs sm:text-sm font-bold transition-all active:scale-95 shadow-md flex items-center gap-1.5"
                 >
                   <Plus size={15} className="text-sembada-gold" />
                   <span>Publikasikan Artikel</span>

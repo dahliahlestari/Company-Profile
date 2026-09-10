@@ -193,7 +193,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full h-12 rounded-full bg-apple-dark hover:bg-black text-white font-semibold text-sm transition-all duration-200 active:scale-95 shadow-md flex items-center justify-center gap-2"
+            className="w-full h-12 rounded-full bg-apple-dark hover:bg-sembada-navy-dark text-white font-semibold text-sm transition-all duration-200 active:scale-95 shadow-md flex items-center justify-center gap-2"
           >
             {isSubmitting ? (
               <span>Mengirim Pesan...</span>
